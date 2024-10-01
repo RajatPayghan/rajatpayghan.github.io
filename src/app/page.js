@@ -1,14 +1,21 @@
+import { MenuContent } from "@/components/menu-content";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Link } from "lucide-react";
-import Image from "next/image";
+import { ALargeSmall, HomeIcon, Icon } from "lucide-react";
+
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button>
-        Hello
-      </Button>
+    <>
+    <div className="w-96">
     </div>
+    <Button variant="outline">
+      <Button size="icon" variant="ghost">
+        <HomeIcon size={20}></HomeIcon>
+      </Button>
+      <div className="w-48 flex justify-start">
+        Home
+      </div>
+    </Button>
+    </>
   );
 }
