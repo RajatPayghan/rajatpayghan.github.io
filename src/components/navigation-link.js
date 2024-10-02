@@ -42,7 +42,8 @@ export const NavigationLink = memo(({ href, label, icon, shortcutNumber }) => {
       href={href}
       className={cn(
         'group flex items-center justify-between rounded-lg p-2',
-        isActive ? 'bg-black text-white' : 'hover:bg-gray-200'
+        isActive ? 'bg-neutral-950 text-white' : 'hover:bg-neutral-200',
+        'lg:w-64'
       )}
     >
       <span className="flex items-center gap-2">
