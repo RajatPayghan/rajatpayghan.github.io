@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { NavigationLink } from './navigation-link'
 import { PROFILES, LINKS } from '@/lib/constants'
+import Image from 'next/image'
 
 export const MenuContent = () => (
   <div className="flex w-full h-full flex-col text-sm gap-8">
@@ -8,7 +9,7 @@ export const MenuContent = () => (
     <div className="flex flex-col gap-4">
       {/* Top Name Card */}
       <Link href="/" className="link-card inline-flex items-center gap-4 p-2 rounded-lg bg-neutral-100 hover:bg-neutral-200">
-        <img
+        <Image
           src="/assets/me.avif"
           alt="Rajat Payghan"
           width={56}

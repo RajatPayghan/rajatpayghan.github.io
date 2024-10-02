@@ -9,8 +9,8 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <>
+    <ScrollArea className="min-w-full min-h-full bg-dots">
       This is writing
-    </>
+    </ScrollArea>
   );
 }

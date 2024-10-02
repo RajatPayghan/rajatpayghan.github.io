@@ -2,6 +2,7 @@ import { MenuContent } from "@/components/menu-content";
 import { Button } from "@/components/ui/button";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -11,13 +12,20 @@ import { Suspense } from "react";
 export default function Home() {
   return (
     <ScrollArea className="max-w-screen-md min-h-full">
-      <div className="pt-24">
-        <div className="text-lg font-thin">
-          Hi 👋🏼 I'm Rajat Payghan, a product engineer, designer, .I <HoverCard><HoverCardTrigger className="underline underline-offset-2">
-          manage</HoverCardTrigger><HoverCardContent>I have managed digital products for Saas, B2B, B2C, marketing etc</HoverCardContent></HoverCard>, <HoverCard><HoverCardTrigger className="underline underline-offset-2">
-          design</HoverCardTrigger><HoverCardContent>I have worked with multiple startups to bring to life their 0 to 1 product</HoverCardContent></HoverCard> and sometimes <HoverCard><HoverCardTrigger className="underline underline-offset-2">
-          develop</HoverCardTrigger><HoverCardContent>I have a B.Tech degree in Computer Science, and have developed multiple applications for BITS Pilani student community</HoverCardContent></HoverCard> engaging digital experiences. I 
-          Nulla adipisicing tempor est commodo commodo minim in magna qui. Elit nulla velit anim ex anim aliqua. Aute aute laboris duis culpa ut. Ullamco fugiat ex ad cillum sit qui veniam aliquip veniam esse occaecat pariatur pariatur.
+      <div className="pt-24 flex flex-col gap-8">
+        <div className="text-lg text-neutral-600">
+        Hi there! 👋 I'm <span className="text-neutral-800">Rajat Payghan</span>, a product engineer passionate about crafting digital experiences. I <HoverCard><HoverCardTrigger className="underline underline-offset-2 text-neutral-800">manage</HoverCardTrigger><HoverCardContent className="text-sm">I lead product teams, prioritize features, and drive development from concept to successful launch.</HoverCardContent></HoverCard>, <HoverCard><HoverCardTrigger className="underline underline-offset-2 text-neutral-800">
+          design</HoverCardTrigger><HoverCardContent className="text-sm">I create user-centered interfaces, prototype interactions, and transform complex ideas into intuitive experiences.</HoverCardContent></HoverCard>, and sometimes <HoverCard><HoverCardTrigger className="underline underline-offset-2 text-neutral-800">
+          develop</HoverCardTrigger><HoverCardContent className="text-sm">I write clean, efficient code to build robust features and optimize performance</HoverCardContent></HoverCard> engaging digital products that make a difference.
+        </div>
+        <div className="text-lg font-thin text-neutral-600">
+          When I'm not swimming around the vast ocean of the internet, you'll find me grooving to EDM, playing football, or savoring a perfect cup of coffee. I thrive on bringing ideas to life and creating solutions that delight users.
+        </div>
+        <div className="text-lg font-thin text-neutral-600">
+          Currently, I'm optimizing global pricing processes as a Process Intern at <Link href={"https://www.adeccogroup.com/"} className="text-lg hover:bg-neutral-200 text-neutral-600 hover:underline underline-offset-2">The Adecco Group</Link>. Previously, I've worn multiple hats at innovative startups to establisged organisations; from shaping the future of E-Commerce in India as a Designer and Product Manager at <Link href={"https://sellersetu.in/"} className="text-lg hover:bg-neutral-200 text-neutral-600 hover:underline underline-offset-2">SellerSetu</Link>, to developing dashboards for the <Link href={"https://imdpune.gov.in/"} className="text-lg hover:bg-neutral-200 text-neutral-600 hover:underline underline-offset-2">Indian Meteorological Department</Link> in Pune.
+        </div>
+        <div className="text-lg font-thin text-neutral-600">
+          My passion for innovation extends beyond my professional life. I've had the privilege of giving back to my alma mater, BITS Pilani, as the <span className="text-neutral-800">Head of Product</span> for the Students' Union Technical Team. There, I led a talented group of designers and developers in creating impactful applications. We brought to life projects like the SU App and Studydeck, which enhance the quality of campus life and education for a 6000+ growing community of students.
         </div>
       </div>
     </ScrollArea>
