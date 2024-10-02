@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           <div className="relative lg:flex bg-neutral-50 min-h-screen p-4" suppressHydrationWarning>
               <MenuContent />
             </div>
-            <div className="flex flex-1" suppressHydrationWarning>{children}</div>
+            <div className="flex flex-1 justify-center" suppressHydrationWarning>{children}</div>
           </div>
         </main>
       </body>

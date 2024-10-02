@@ -7,7 +7,7 @@ export const MenuContent = () => (
     {/* Above the Break Line */}
     <div className="flex flex-col gap-4">
       {/* Top Name Card */}
-      <Link href="/" className="link-card inline-flex items-center gap-4 p-2 rounded bg-neutral-100 hover:bg-neutral-200">
+      <Link href="/" className="link-card inline-flex items-center gap-4 p-2 rounded-lg bg-neutral-100 hover:bg-neutral-200">
         <img
           src="/assets/me.avif"
           alt="Rajat Payghan"
@@ -19,7 +19,7 @@ export const MenuContent = () => (
           nopin="nopin"
         />
         <div className="flex flex-col">
-          <span className="font-semibold tracking-tight">Rajat Payghan</span>
+          <span className="font-regular text-lg">Rajat Payghan</span>
           <span className="text-gray-600">Product Engineer</span>
         </div>
       </Link>
