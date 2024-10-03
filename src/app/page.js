@@ -9,7 +9,6 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    // max-w-screen-md
       <div className="relative overflow-hidden max-w-screen-md h-full overflow-y-auto no-scrollbar">
         <div className="pt-24 flex flex-col gap-8">
           <div className="text-lg text-neutral-600">
