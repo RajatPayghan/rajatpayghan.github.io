@@ -1,3 +1,5 @@
+
+// ICONS
 import {
   GithubIcon,
   LinkedinIcon,
@@ -11,6 +13,7 @@ import {
   ArmchairIcon
 } from 'lucide-react'
 
+// SIDEMENU ONLINE PROFILES
 export const PROFILES = {
   github: {
     title: 'GitHub',
@@ -38,6 +41,7 @@ export const PROFILES = {
   }
 }
 
+// ROUTING LINKS
 export const LINKS = [
   {
     href: '/',
@@ -64,4 +68,45 @@ export const LINKS = [
     label: 'Bookmarks',
     icon: <BookmarkIcon size={16} />
   }
+]
+
+
+// WORK EXPERIENCE
+export const WORKS = [
+  {
+    href: 'https://campsite.co',
+    title: 'The Adecco Group',
+    subtitle: 'CEO',
+    date: '2022—\u00a0\u00a0',
+  },
+  {
+    href: 'https://github.com/mobile',
+    title: 'GitHub',
+    subtitle: 'Product Designer',
+    date: '2018—22',
+  },
+  {
+    href: 'https://designdetails.fm',
+    title: 'Design Details Podcast',
+    subtitle: 'Co-host',
+    date: '2014—\u00a0\u00a0',
+  },
+  {
+    href: 'https://github.com/withspectrum/spectrum',
+    title: 'Spectrum.chat',
+    subtitle: 'Co-founder',
+    date: '2017—18',
+  },
+  {
+    href: 'https://facebook.com',
+    title: 'Facebook',
+    subtitle: 'Product Designer',
+    date: '2015—17',
+  },
+  {
+    href: 'https://buffer.com',
+    title: 'Buffer',
+    subtitle: 'Product Designer',
+    date: '2013—15',
+  },
 ]
