@@ -10,9 +10,18 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: 0;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: 0;  /* Firefox */
+  }
 }
-
-
 
 @layer base {
   :root {
@@ -76,6 +85,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    @apply no-scrollbar;
   }
   ::selection {
     @apply bg-black text-white;
@@ -107,6 +117,10 @@ body {
   hr {
     @apply my-6 border-neutral-200;
   }
+
+  div {
+    @apply no-scrollbar;
+  }
 }
 
 @layer utilities {
@@ -125,14 +139,5 @@ body {
 
   .bg-grid {
     @apply bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px];
-  }
-
-  .hide-scrollbar {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  }
-  
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
   }
 }

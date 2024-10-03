@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     // max-w-screen-md
-      <ScrollArea className="max-w-screen-md h-full overflow-y-auto hide-scrollbar">
+      <div className="relative overflow-hidden max-w-screen-md h-full overflow-y-auto no-scrollbar">
         <div className="pt-24 flex flex-col gap-8">
           <div className="text-lg text-neutral-600">
           Hi there! 👋 I'm <span className="text-neutral-800">Rajat Payghan</span>, a product engineer passionate about crafting digital experiences. I <HoverCard><HoverCardTrigger className="underline underline-offset-2 text-neutral-800">manage</HoverCardTrigger><HoverCardContent className="text-sm">I lead product teams, prioritize features, and drive development from concept to successful launch.</HoverCardContent></HoverCard>, <HoverCard><HoverCardTrigger className="underline underline-offset-2 text-neutral-800">
@@ -41,6 +41,6 @@ export default function Home() {
           }}
           />
         </div>
-      </ScrollArea>
+      </div>
   );
 }
