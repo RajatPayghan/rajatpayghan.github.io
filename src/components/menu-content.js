@@ -10,7 +10,7 @@ export const MenuContent = () => (
       {/* Top Name Card */}
       <Link href="/" className="link-card inline-flex items-center gap-4 p-2 rounded-lg bg-neutral-100 hover:bg-neutral-200">
         <Image
-          src="/assets/me.avif"
+          src="./assets/me.avif"
           alt="Rajat Payghan"
           width={56}
           height={56}
