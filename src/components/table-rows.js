@@ -8,13 +8,13 @@ function TableRow({ href, title, subtitle, date }) {
       href={href}
       className="flex sm:items-center flex-col sm:flex-row gap-0.5 sm:gap-4 group"
     >
-      <strong className="line-clamp-2 font-medium text-gray-1000 group-hover:text-blue-600 group-hover:underline dark:text-gray-100 dark:group-hover:text-blue-500">
+      <strong className="line-clamp-2 font-medium text-gray-1000 group-hover:text-neutral-600 group-hover:underline group-hover:bg-neutral-100">
         {title}
       </strong>
       <span className="hidden sm:flex flex-1 border-t border-gray-300 border-dashed shrink dark:border-gray-800" />
-      {subtitle && <span className="flex-none text-tertiary">{subtitle}</span>}
+      {subtitle && <span className="flex-none text-neutral-500">{subtitle}</span>}
       {date && (
-        <span className="flex-none font-mono text-quaternary">{date}</span>
+        <span className="flex-none font-mono text-neutral-800">{date}</span>
       )}
     </a>
   )

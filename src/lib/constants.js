@@ -74,39 +74,33 @@ export const LINKS = [
 // WORK EXPERIENCE
 export const WORKS = [
   {
-    href: 'https://campsite.co',
+    href: 'https://www.adeccogroup.com/',
     title: 'The Adecco Group',
-    subtitle: 'CEO',
-    date: '2022—\u00a0\u00a0',
+    subtitle: 'Process Intern',
+    date: '2024 — \u00a0\u00a0',
   },
   {
-    href: 'https://github.com/mobile',
-    title: 'GitHub',
+    href: 'https://bits-sutechteam.org/',
+    title: 'Students Union Tech Team',
+    subtitle: 'Head of Product',
+    date: '2022 — 24',
+  },
+  {
+    href: 'https://sellersetu.in/',
+    title: 'SellerSetu',
+    subtitle: 'Product Manager',
+    date: '2022 — 24',
+  },
+  {
+    href: 'https://imdpune.gov.in',
+    title: 'Indian Met. Dept. Pune',
+    subtitle: 'Frontend Developer',
+    date: '2023 — 23',
+  },
+  {
+    href: '',
+    title: 'Freelance Designer',
     subtitle: 'Product Designer',
-    date: '2018—22',
-  },
-  {
-    href: 'https://designdetails.fm',
-    title: 'Design Details Podcast',
-    subtitle: 'Co-host',
-    date: '2014—\u00a0\u00a0',
-  },
-  {
-    href: 'https://github.com/withspectrum/spectrum',
-    title: 'Spectrum.chat',
-    subtitle: 'Co-founder',
-    date: '2017—18',
-  },
-  {
-    href: 'https://facebook.com',
-    title: 'Facebook',
-    subtitle: 'Product Designer',
-    date: '2015—17',
-  },
-  {
-    href: 'https://buffer.com',
-    title: 'Buffer',
-    subtitle: 'Product Designer',
-    date: '2013—15',
-  },
+    date: '2021 — \u00a0\u00a0',
+  }
 ]
