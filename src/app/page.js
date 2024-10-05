@@ -11,7 +11,7 @@ export default function Home() {
   return (
       
     <div className="relative overflow-hidden max-w-screen-md h-full overflow-y-auto no-scrollbar">
-      <div className="pt-24 flex flex-col gap-12">
+      <div className="pt-16 lg:pt-24 flex flex-col gap-8 lg:gap-12">
         {/* First About Me section */}
         <SectionContainer>
           <SectionTitle></SectionTitle>
@@ -80,7 +80,7 @@ export default function Home() {
         </SectionContainer>
 
         {/* Spacer */}
-        <div className="h-36 w-full"></div>
+        <div className="h-24 lg:h-36 w-full"></div>
       </div>
     </div>
   );

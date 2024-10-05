@@ -4,7 +4,7 @@ import { PROFILES, LINKS } from '@/lib/constants'
 import Image from 'next/image'
 
 export const MenuContent = () => (
-  <div className="flex w-full h-full flex-col text-sm gap-8">
+  <div className="flex w-full h-full flex-col text-sm gap-6 lg:gap-8">
     {/* Above the Break Line */}
     <div className="flex flex-col gap-4">
       {/* Top Name Card */}
@@ -16,7 +16,6 @@ export const MenuContent = () => (
           height={56}
           loading="lazy"
           className="rounded-full border shadow-sm"
-          // eslint-disable-next-line react/no-unknown-property
           nopin="nopin"
         />
         <div className="flex flex-col">
