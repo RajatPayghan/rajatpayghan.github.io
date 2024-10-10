@@ -32,12 +32,12 @@ export const PROFILES = {
   },
   youtube: {
     title: 'YouTube',
-    url: 'https://www.youtube.com/c/jagermanmusic',
+    url: 'https://www.youtube.com/@rajatpayghan1384',
     icon: <YoutubeIcon size={16} />
   },
   readcv: {
-    title: 'Read.cv',
-    url: 'https://read.cv/onur'
+    title: 'Mail',
+    url: 'mailto:rajat.payghan@gmail.com'
   }
 }
 
