@@ -1,11 +1,11 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline/next';
 
-function SplineHome() {
+function SplineHome({sceneLink}) {
   return (
-    <div className="w-full aspect-video relative overflow-hidden bg-neutral-100">
+    <div className="w-full aspect-video relative overflow-hidden bg-neutral-100 rounded-xl">
       <Spline 
-      scene="https://prod.spline.design/MWg7T9pvG4cTrW9r/scene.splinecode"
+      scene={sceneLink}
       style={{
         position: 'absolute',
         top: 0,
@@ -19,3 +19,5 @@ function SplineHome() {
 }
 
 export default SplineHome
+
+// "https://prod.spline.design/MWg7T9pvG4cTrW9r/scene.splinecode"

@@ -62,12 +62,13 @@ export const LINKS = [
     href: '/stack',
     label: 'Stack',
     icon: <Wand2Icon size={16} />
-  },
-  {
-    href: '/bookmarks',
-    label: 'Bookmarks',
-    icon: <BookmarkIcon size={16} />
   }
+  // ,
+  // {
+  //   href: '/bookmarks',
+  //   label: 'Bookmarks',
+  //   icon: <BookmarkIcon size={16} />
+  // }
 ]
 
 

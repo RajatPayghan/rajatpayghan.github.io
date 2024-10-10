@@ -5,6 +5,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 import { ScrollArea } from "@/components/ui/scroll-area"
 import Link from "next/link";
 import {WORKS} from '@/lib/constants'
+import { WHATSNEW, SONG } from "@/lib/one-place-changer";
 import { SectionContainer, SectionContent, SectionTitle } from "@/components/sections";
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
           <SectionContainer>
             <SectionTitle/>
             <SectionContent>
-              <SplineHome/>
+              <SplineHome sceneLink={"https://prod.spline.design/MWg7T9pvG4cTrW9r/scene.splinecode"}/>
             </SectionContent>
           </SectionContainer>
 
@@ -61,7 +62,7 @@ export default function Home() {
           <SectionContainer>
             <SectionTitle>What's New</SectionTitle>
             <SectionContent>
-              Currently, I'm collaborating with various global units, optimizing global pricing processes, and developing cross platform tools to improve efficiency as a Process Intern at <Link href={"https://www.adeccogroup.com/"} className="text-lg hover:bg-neutral-200 text-neutral-800 hover:underline underline-offset-2">The Adecco Group</Link>. I am also building my personal website (yup, its this website) and listening to Dayglow.
+              {WHATSNEW.text}
             </SectionContent>
           </SectionContainer>
           
@@ -71,11 +72,10 @@ export default function Home() {
             <SectionContent>
               <iframe
                 style={{ borderRadius: "12px" }}
-                src="https://open.spotify.com/embed/track/2imK2X4ah7bVms1TjSAB19?utm_source=generator&theme=0"
+                src={SONG.src}
                 width="100%"
                 height="152"
                 frameBorder="0"
-                allowFullScreen
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
               />
