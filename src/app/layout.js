@@ -23,16 +23,13 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         {/* The Main Area */}
-        <main className="h-screen bg-white"> 
-          {/*  */}
-          <div className="flex h-screen">
-            {/* Container for Left Menu */}
-            <div className="relative lg:flex bg-neutral-50 min-h-screen p-4 hidden" suppressHydrationWarning>
-              <MenuContent />
-            </div>
-            <div className="flex flex-1 justify-center max-h-screen" suppressHydrationWarning>
-              {children}
-            </div>
+        <main className="h-screen bg-white flex flex-1"> 
+          {/* Container for Left Menu */}
+          <div className="relative lg:flex bg-neutral-50 min-h-screen p-4 hidden" suppressHydrationWarning>
+            <MenuContent />
+          </div>
+          <div className="flex flex-1 justify-center max-h-screen" suppressHydrationWarning>
+            {children}
           </div>
         </main>
       </body>
