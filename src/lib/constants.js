@@ -17,7 +17,7 @@ import {
 export const PROFILES = {
   github: {
     title: 'GitHub',
-    url: 'https://github.com/suyalcinkaya',
+    url: 'https://github.com/RajatPayghan',
     icon: <GithubIcon size={16} />
   },
   linkedin: {
