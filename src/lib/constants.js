@@ -25,11 +25,11 @@ export const PROFILES = {
     url: 'https://www.linkedin.com/in/rajatpayghan',
     icon: <LinkedinIcon size={16} />
   },
-  instagram: {
-    title: 'Instagram',
-    url: 'https://www.instagram.com/rajat.payghan',
-    icon: <InstagramIcon size={16} />
-  },
+  // instagram: {
+  //   title: 'Instagram',
+  //   url: 'https://www.instagram.com/rajat.payghan',
+  //   icon: <InstagramIcon size={16} />
+  // },
   youtube: {
     title: 'YouTube',
     url: 'https://www.youtube.com/@rajatpayghan1384',
