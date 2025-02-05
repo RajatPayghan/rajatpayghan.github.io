@@ -141,3 +141,17 @@ body {
     @apply bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px];
   }
 }
+
+@layer containers {
+  .container-wrapper{
+    @apply w-full grid justify-items-center overflow-y-auto no-scrollbar
+  }
+
+  .container-md {
+    @apply max-w-screen-md min-h-min sm:p-4 pt-16 lg:pt-24
+  }
+
+  .container-lg {
+    @apply max-w-screen-lg min-h-min sm:p-4 pt-16 lg:pt-24
+  }
+}

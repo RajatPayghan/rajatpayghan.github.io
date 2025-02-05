@@ -10,12 +10,12 @@ import { SectionContainer, SectionContent, SectionTitle } from "@/components/sec
 
 export default function Home() {
   return (
-    <div className="w-full grid justify-items-center overflow-y-auto no-scrollbar">
+    <div className="container-wrapper">
       {/* Container for scroll */}
 
       {/* Container for central width */}
-      <div className="max-w-screen-md min-h-min sm:p-4">
-        <div className="pt-16 lg:pt-24 flex flex-col gap-8 lg:gap-12">
+      <div className="container-md">
+        <div className="flex flex-col gap-8 lg:gap-12">
           {/* First About Me section */}
           <SectionContainer>
             <SectionTitle></SectionTitle>
@@ -48,7 +48,7 @@ export default function Home() {
             <SectionContent>
             {WORKS.map((job) => (
                         <TableRow
-                          href={job.href}
+                          // href={job.href}
                           title={job.title}
                           subtitle={job.subtitle}
                           date={job.date}

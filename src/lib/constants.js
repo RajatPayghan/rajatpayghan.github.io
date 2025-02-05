@@ -25,11 +25,6 @@ export const PROFILES = {
     url: 'https://www.linkedin.com/in/rajatpayghan',
     icon: <LinkedinIcon size={16} />
   },
-  // instagram: {
-  //   title: 'Instagram',
-  //   url: 'https://www.instagram.com/rajat.payghan',
-  //   icon: <InstagramIcon size={16} />
-  // },
   youtube: {
     title: 'YouTube',
     url: 'https://www.youtube.com/@rajatpayghan1384',
@@ -75,10 +70,16 @@ export const LINKS = [
 // WORK EXPERIENCE
 export const WORKS = [
   {
+    href: 'https://www.wellsfargo.com/',
+    title: 'Wells Fargo Tech',
+    subtitle: 'Software Engineer',
+    date: '2025 — \u00a0\u00a0',
+  },
+  {
     href: 'https://www.adeccogroup.com/',
     title: 'The Adecco Group',
     subtitle: 'Process Intern',
-    date: '2024 — \u00a0\u00a0',
+    date: '2024 — 24',
   },
   {
     href: 'https://bits-sutechteam.org/',
