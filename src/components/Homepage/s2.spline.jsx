@@ -1,0 +1,23 @@
+// This is the Spline section in the home page
+import {
+  SectionContainer,
+  SectionContent,
+  SectionTitle,
+} from '@/components/sections';
+import SplineHome from '@/components/spline-home';
+import React from 'react';
+
+export default function SectionTwo() {
+  return (
+    <SectionContainer>
+      <SectionTitle />
+      <SectionContent>
+        <SplineHome
+          sceneLink={
+            'https://prod.spline.design/MWg7T9pvG4cTrW9r/scene.splinecode'
+          }
+        />
+      </SectionContent>
+    </SectionContainer>
+  );
+}
