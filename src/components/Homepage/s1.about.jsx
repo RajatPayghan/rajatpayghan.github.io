@@ -4,8 +4,6 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/sections';
-import Link from 'next/link';
-import { WORKS } from '@/lib/constants';
 import {
   HoverCard,
   HoverCardContent,

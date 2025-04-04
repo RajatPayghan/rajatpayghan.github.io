@@ -13,15 +13,17 @@ export default function SectionFour() {
     <SectionContainer>
       <SectionTitle>My Work</SectionTitle>
       <SectionContent>
-        {WORKS.map((job) => (
-          <TableRow
-            // href={job.href}
-            title={job.title}
-            subtitle={job.subtitle}
-            date={job.date}
-            key={job.href}
-          />
-        ))}
+        <div className='flex flex-col gap-6 md:gap-2'>
+          {WORKS.map((job) => (
+            <TableRow
+              // href={job.href}
+              title={job.title}
+              subtitle={job.subtitle}
+              date={job.date}
+              key={job.href}
+            />
+          ))}
+        </div>
       </SectionContent>
     </SectionContainer>
   );
