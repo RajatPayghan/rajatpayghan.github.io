@@ -1,9 +1,9 @@
-import SectionOne from '@/components/Homepage/s1.about';
-import SectionTwo from '@/components/Homepage/s2.spline';
-import SectionThree from '@/components/Homepage/s3.casual';
-import SectionFour from '@/components/Homepage/s4.works';
-import SectionFive from '@/components/Homepage/s5.whatsnew';
-import SectionSix from '@/components/Homepage/s6.spotify';
+import Home_About from '@/components/Homepage/s1.about';
+import Home_Casual from '@/components/Homepage/s3.casual';
+import Home_Spline from '@/components/Homepage/s2.spline';
+import Home_Spotify from '@/components/Homepage/s6.spotify';
+import Home_WhatsNew from '@/components/Homepage/s5.whatsnew';
+import Home_Works from '@/components/Homepage/s4.works';
 
 export default function Home() {
   return (
@@ -14,22 +14,22 @@ export default function Home() {
       <div className='container-md'>
         <div className='flex flex-col gap-8 lg:gap-12'>
           {/* First About Me section */}
-          <SectionOne />
+          <Home_About />
 
           {/* Spline Section */}
-          <SectionTwo />
+          <Home_Spline />
 
           {/* Casual Info */}
-          <SectionThree />
+          <Home_Casual />
 
           {/* Work Section */}
-          <SectionFour />
+          <Home_Works />
 
           {/* Currently */}
-          <SectionFive />
+          <Home_WhatsNew />
 
           {/* Spotify Song Link */}
-          <SectionSix />
+          <Home_Spotify />
 
           {/* Spacer */}
           <div className='h-24 lg:h-36 w-full'></div>

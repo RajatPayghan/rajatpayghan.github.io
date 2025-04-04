@@ -7,7 +7,7 @@ import {
 import SplineHome from '@/components/spline-home';
 import React from 'react';
 
-export default function SectionTwo() {
+export default function Home_Spline() {
   return (
     <SectionContainer>
       <SectionTitle />

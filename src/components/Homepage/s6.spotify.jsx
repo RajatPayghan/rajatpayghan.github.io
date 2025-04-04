@@ -7,7 +7,7 @@ import {
 import { SONG } from '@/lib/one-place-changer';
 import React from 'react';
 
-export default function SectionSix() {
+export default function Home_Spotify() {
   return (
     <SectionContainer>
       <SectionTitle>Recent Fav</SectionTitle>

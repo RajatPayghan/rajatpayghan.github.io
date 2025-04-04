@@ -7,7 +7,7 @@ import {
 import Link from 'next/link';
 import React from 'react';
 
-export default function SectionThree() {
+export default function Home_Casual() {
   return (
     <SectionContainer>
       <SectionTitle></SectionTitle>

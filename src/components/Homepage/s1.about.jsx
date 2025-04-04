@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/hover-card';
 import React from 'react';
 
-export default function SectionOne() {
+export default function Home_About() {
   return (
     <SectionContainer>
       <SectionTitle></SectionTitle>

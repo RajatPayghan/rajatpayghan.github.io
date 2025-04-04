@@ -7,7 +7,7 @@ import {
 import { WHATSNEW } from '@/lib/one-place-changer';
 import React from 'react';
 
-export default function SectionFive() {
+export default function Home_WhatsNew() {
   return (
     <SectionContainer>
       <SectionTitle>What's New</SectionTitle>

@@ -8,7 +8,7 @@ import TableRow from '@/components/table-rows';
 import React from 'react';
 import { WORKS } from '@/lib/constants';
 
-export default function SectionFour() {
+export default function Home_Works() {
   return (
     <SectionContainer>
       <SectionTitle>My Work</SectionTitle>
@@ -16,7 +16,7 @@ export default function SectionFour() {
         <div className='flex flex-col gap-6 md:gap-2'>
           {WORKS.map((job) => (
             <TableRow
-              // href={job.href}
+              href={job.href}
               title={job.title}
               subtitle={job.subtitle}
               date={job.date}
