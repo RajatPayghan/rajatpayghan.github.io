@@ -1,9 +1,10 @@
 // ICONS
 import {
-  GithubIcon,
-  LinkedinIcon,
-  InstagramIcon,
-  YoutubeIcon,
+  Github,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Mail,
   SparklesIcon,
   PencilLineIcon,
   NavigationIcon,
@@ -12,28 +13,36 @@ import {
   ArmchairIcon,
 } from 'lucide-react';
 
+const ICON_SIZE = 32;
+const STROKE_WIDTH = 2;
+
 // SIDEMENU ONLINE PROFILES
-export const PROFILES = {
-  github: {
+export const PROFILES = [
+  {
     title: 'GitHub',
     url: 'https://github.com/RajatPayghan',
-    icon: <GithubIcon size={16} />,
+    color: '#333333',
+    icon: <Github size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
-  linkedin: {
+  {
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/rajatpayghan',
-    icon: <LinkedinIcon size={16} />,
+    color: '#0077B5',
+    icon: <Linkedin size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
-  youtube: {
+  {
     title: 'YouTube',
     url: 'https://www.youtube.com/@rajatpayghan1384',
-    icon: <YoutubeIcon size={16} />,
+    color: '#FF0000',
+    icon: <Youtube size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
-  readcv: {
+  {
     title: 'Mail',
     url: 'mailto:rajat.payghan@gmail.com',
+    color: '#34A853',
+    icon: <Mail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
-};
+];
 
 // ROUTING LINKS
 export const LINKS = [

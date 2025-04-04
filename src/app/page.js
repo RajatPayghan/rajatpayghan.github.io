@@ -4,6 +4,7 @@ import Home_Spline from '@/components/Homepage/s2.spline';
 import Home_Spotify from '@/components/Homepage/s6.spotify';
 import Home_WhatsNew from '@/components/Homepage/s5.whatsnew';
 import Home_Works from '@/components/Homepage/s4.works';
+import Home_Online from '@/components/Homepage/s7.online';
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
 
           {/* Spotify Song Link */}
           <Home_Spotify />
+
+          {/* Socials Online Links */}
+          <Home_Online />
 
           {/* Spacer */}
           <div className='h-24 lg:h-36 w-full'></div>
