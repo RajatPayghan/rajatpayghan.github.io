@@ -18,8 +18,8 @@ body {
   }
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: 0;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: 0; /* Firefox */
   }
 }
 
@@ -143,15 +143,15 @@ body {
 }
 
 @layer containers {
-  .container-wrapper{
-    @apply w-full grid justify-items-center overflow-y-auto no-scrollbar
+  .container-wrapper {
+    @apply w-full grid justify-items-center overflow-y-auto no-scrollbar;
   }
 
   .container-md {
-    @apply max-w-screen-md min-h-min sm:p-4 pt-16 lg:pt-24
+    @apply max-w-screen-md min-h-min p-16 sm:p-16 lg:pt-24;
   }
 
   .container-lg {
-    @apply max-w-screen-lg min-h-min sm:p-4 pt-16 lg:pt-24
+    @apply max-w-screen-lg min-h-min p-16 sm:p-4 lg:pt-24;
   }
 }
