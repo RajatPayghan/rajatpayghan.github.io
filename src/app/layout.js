@@ -1,5 +1,7 @@
 import localFont from 'next/font/local';
 import './globals.css';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -25,7 +27,9 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>
-        <main className='max-h-screen flex flex-1 bg-white'>{children}</main>
+        <main className='h-screen overflow-y-auto flex flex-1 bg-white'>
+          {children}
+        </main>
       </body>
     </html>
   );
