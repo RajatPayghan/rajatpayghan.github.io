@@ -1,8 +1,7 @@
-
 export const WHATSNEW = {
-  text: 'Currently, I am collaborating with various global units, optimizing global pricing processes, and developing cross platform tools to improve efficiency as a Process Intern at The Adecco Group. I am also building my personal website (yup, its this website) and listening to Lost Stories.'
-}
+  text: 'Currently, I am completing my last semester as a Computer Science Undergrad in BITS Pilani. I recently collaborated with various global units, optimized global pricing processes and developed cross platform tools to improve efficiency as a Process Intern at The Adecco Group. I am also building my personal website (yup, its this website) and listening to Trivecta.',
+};
 
 export const SONG = {
-  src: 'https://open.spotify.com/embed/track/2imK2X4ah7bVms1TjSAB19?utm_source=generator&theme=0'
-}
+  src: 'https://open.spotify.com/embed/track/0A4sGNGQSOj7ZBg6BNLhRz?utm_source=generator&theme=0',
+};
