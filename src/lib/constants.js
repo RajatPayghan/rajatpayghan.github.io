@@ -1,5 +1,6 @@
 // ICONS
 import {
+  Phone,
   Github,
   Linkedin,
   Instagram,
@@ -41,6 +42,12 @@ export const PROFILES = [
     url: 'mailto:rajat.payghan@gmail.com',
     color: '#34A853',
     icon: <Mail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+  },
+  {
+    title: 'Phone',
+    url: 'tel:+919834324959',
+    color: '#008080',
+    icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
 ];
 
