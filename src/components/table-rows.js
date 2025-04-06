@@ -13,10 +13,10 @@ function TableRow({ href, title, subtitle, date }) {
       </strong>
       <span className='hidden sm:flex flex-1 border-t border-gray-300 border-dashed shrink dark:border-gray-800' />
       {subtitle && (
-        <span className='flex-none text-sm text-neutral-500'>{subtitle}</span>
+        <span className='flex-none text-sm text-neutral-500 '>{subtitle}</span>
       )}
       {date && (
-        <span className='flex-none font-mono text-sm text-neutral-800'>
+        <span className='flex-none font-mono text-sm text-neutral-800 dark:text-neutral-700'>
           {date}
         </span>
       )}

@@ -15,7 +15,7 @@ export default function Home_Casual() {
         When I'm not{' '}
         <Link
           href={'https://www.reddit.com/r/Piracy/'}
-          className='cursor-default hover:text-neutral-700'
+          className='cursor-default hover:text-neutral-700 dark:hover:text-neutral-400'
         >
           sailing around the high seas
         </Link>{' '}

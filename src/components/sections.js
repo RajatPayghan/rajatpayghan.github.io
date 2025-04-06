@@ -10,7 +10,7 @@ export function SectionContainer(props) {
 export function SectionTitle(props) {
   return (
     <div
-      className='lg:col-span-2 text-sm lg:text-normal text-neutral-500 pt-0 lg:text-right'
+      className='lg:col-span-2 text-sm lg:text-normal text-neutral-500 pt-0 lg:text-right dark:text-neutral-600'
       {...props}
     />
   );
@@ -19,7 +19,7 @@ export function SectionTitle(props) {
 export function SectionContent(props) {
   return (
     <div
-      className='lg:col-span-10 text-base lg:text-lg font-thin text-neutral-800'
+      className='lg:col-span-10 text-base lg:text-lg font-thin text-neutral-800 dark:text-neutral-400'
       {...props}
     />
   );

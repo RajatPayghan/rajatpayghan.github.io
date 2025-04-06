@@ -30,7 +30,7 @@ export default function Home() {
         size='icon'
         className='absolute bottom-2 right-2'
       >
-        <ArrowDown />
+        <ArrowDown color='#fafafa' />
       </Button>
       {/* Container for central width */}
       <div className='container-md'>
