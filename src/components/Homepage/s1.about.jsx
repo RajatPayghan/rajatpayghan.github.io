@@ -16,7 +16,7 @@ export default function Home_About() {
     <SectionContainer>
       <SectionTitle></SectionTitle>
       <SectionContent>
-        <div>Hi there! 👋 </div>
+        <div className='mb-4'>Hi there! 👋 </div>
         I'm{' '}
         <span className='text-neutral-900 dark:text-neutral-50'>
           Rajat Payghan
