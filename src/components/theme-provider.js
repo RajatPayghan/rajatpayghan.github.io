@@ -6,8 +6,8 @@ export function ThemeProvider({ children }) {
   return (
     <NextThemesProvider
       attribute='class'
-      defaultTheme='light' // this makes dark the default
-      enableSystem={false} // ignore system preference
+      defaultTheme='dark' // this makes dark the default
+      enableSystem={true} // ignore system preference
     >
       {children}
     </NextThemesProvider>
