@@ -16,7 +16,7 @@ export default function Home_Online() {
         <div className='flex flex-col md:flex-row gap-4'>
           {PROFILES.map((link) => (
             <OnlineCard
-              key={link.href}
+              key={link.title}
               title={link.title}
               icon={link.icon}
               url={link.url}

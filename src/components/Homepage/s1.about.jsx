@@ -16,10 +16,14 @@ export default function Home_About() {
     <SectionContainer>
       <SectionTitle></SectionTitle>
       <SectionContent>
-        Hi there! 👋 I'm <span className='text-neutral-800'>Rajat Payghan</span>
+        <div>Hi there! 👋 </div>
+        I'm{' '}
+        <span className='text-neutral-900 dark:text-neutral-50'>
+          Rajat Payghan
+        </span>
         , a product engineer passionate about crafting digital experiences. I{' '}
         <HoverCard>
-          <HoverCardTrigger className='underline underline-offset-2 text-neutral-800'>
+          <HoverCardTrigger className='underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
             develop
           </HoverCardTrigger>
           <HoverCardContent className='text-sm'>
@@ -29,7 +33,7 @@ export default function Home_About() {
         </HoverCard>
         ,{' '}
         <HoverCard>
-          <HoverCardTrigger className='underline underline-offset-2 text-neutral-800'>
+          <HoverCardTrigger className='underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
             manage
           </HoverCardTrigger>
           <HoverCardContent className='text-sm'>
@@ -39,7 +43,7 @@ export default function Home_About() {
         </HoverCard>{' '}
         and sometimes{' '}
         <HoverCard>
-          <HoverCardTrigger className='underline underline-offset-2 text-neutral-800'>
+          <HoverCardTrigger className='underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
             design
           </HoverCardTrigger>
           <HoverCardContent className='text-sm'>
