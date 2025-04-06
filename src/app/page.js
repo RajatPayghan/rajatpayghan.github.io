@@ -8,6 +8,7 @@ import Home_Works from '@/components/Homepage/s4.works';
 import Home_Online from '@/components/Homepage/s7.online';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import Home_Image from '@/components/Homepage/s2.image';
 
 export default function Home() {
   const scrollToBottom = () => {
@@ -38,7 +39,7 @@ export default function Home() {
           <Home_About />
 
           {/* Spline Section */}
-          <Home_Spline />
+          <Home_Image />
 
           {/* Casual Info */}
           <Home_Casual />
