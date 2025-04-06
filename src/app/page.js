@@ -1,7 +1,6 @@
 'use client';
 import Home_About from '@/components/Homepage/s1.about';
 import Home_Casual from '@/components/Homepage/s3.casual';
-import Home_Spline from '@/components/Homepage/s2.spline';
 import Home_Spotify from '@/components/Homepage/s6.spotify';
 import Home_WhatsNew from '@/components/Homepage/s5.whatsnew';
 import Home_Works from '@/components/Homepage/s4.works';

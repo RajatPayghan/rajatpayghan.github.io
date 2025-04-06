@@ -1,22 +1,25 @@
-// This is the Spline section in the home page
-import {
-  SectionContainer,
-  SectionContent,
-  SectionTitle,
-} from '@/components/sections';
-import React from 'react';
+import React, { useRef } from 'react';
+import useShaderImageEffect from '@/hooks/useImageShaderEffect';
+import '../css/shader.css';
 
-export default function Home_Image() {
+export default function HomeImage() {
+  const containerRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useShaderImageEffect(containerRef, imageRef);
+
   return (
-    <SectionContainer>
-      <SectionTitle />
-      <SectionContent>
-        <img
-          src='assets/profile.avif'
-          className='rounded-lg w-full sm:h-96 h-80 object-cover'
-          alt='Rajat Payghan'
-        />
-      </SectionContent>
-    </SectionContainer>
+    <div
+      ref={containerRef}
+      id='imageContainer'
+      className='w-full sm:h-96 h-80 rounded-lg'
+    >
+      <img
+        ref={imageRef}
+        src='/assets/profile.avif'
+        alt='Profile'
+        className='opacity-0'
+      />
+    </div>
   );
 }
