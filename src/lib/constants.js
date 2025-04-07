@@ -1,18 +1,5 @@
 // ICONS
-import {
-  Phone,
-  Github,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Mail,
-  SparklesIcon,
-  PencilLineIcon,
-  NavigationIcon,
-  Wand2Icon,
-  BookmarkIcon,
-  ArmchairIcon,
-} from 'lucide-react';
+import { Phone, Github, Linkedin, Youtube, Mail } from 'lucide-react';
 
 const ICON_SIZE = 32;
 const STROKE_WIDTH = 2;
@@ -49,36 +36,6 @@ export const PROFILES = [
     color: '#008080',
     icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
-];
-
-// ROUTING LINKS
-export const LINKS = [
-  {
-    href: '/',
-    label: 'Home',
-    icon: <SparklesIcon size={16} />,
-  },
-  {
-    href: '/writing',
-    label: 'Writing',
-    icon: <PencilLineIcon size={16} />,
-  },
-  {
-    href: '/journey',
-    label: 'Journey',
-    icon: <NavigationIcon size={16} />,
-  },
-  {
-    href: '/stack',
-    label: 'Stack',
-    icon: <Wand2Icon size={16} />,
-  },
-  // ,
-  // {
-  //   href: '/bookmarks',
-  //   label: 'Bookmarks',
-  //   icon: <BookmarkIcon size={16} />
-  // }
 ];
 
 // WORK EXPERIENCE

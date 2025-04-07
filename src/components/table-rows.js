@@ -8,7 +8,7 @@ function TableRow({ href, title, subtitle, date }) {
       href={href}
       className='flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 group'
     >
-      <strong className='line-clamp-2 font-medium text-gray-1000 group-hover:text-neutral-600 group-hover:underline group-hover:bg-neutral-100'>
+      <strong className='line-clamp-2 font-medium text-gray-1000 group-hover:text-neutral-600 group-hover:underline dark:group-hover:text-neutral-200 group-hover:bg-neutral-100 dark:group-hover:bg-neutral-900'>
         {title}
       </strong>
       <span className='hidden sm:flex flex-1 border-t border-gray-300 border-dashed shrink dark:border-gray-800' />

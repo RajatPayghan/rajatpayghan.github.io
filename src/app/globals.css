@@ -90,6 +90,11 @@ body {
   ::selection {
     @apply bg-black text-white;
   }
+  @media (prefers-color-scheme: dark) {
+    ::selection {
+      @apply bg-white text-black;
+    }
+  }
   html,
   body {
     @apply bg-white;
