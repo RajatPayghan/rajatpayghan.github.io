@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------
 //
 
-const FLAG_DOCK = false;
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
 // Imports
 // -----------------------------------------------------------------
 //
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </div>
 
-      {FLAG_DOCK && (
+      {FEATURE_FLAGS.enableDock && ( // From lib/feature-flags
         <Dock
           items={DOCK_ITEMS}
           panelHeight={70}
@@ -79,7 +79,12 @@ export default function Home() {
         />
       )}
 
-      <div className='pointer-events-none fixed bottom-0 left-0 right-0 h-[20vh] z-20 bg-gradient-to-t from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
+      {FEATURE_FLAGS.showHomepageShade && (
+        <>
+          <div className='pointer-events-none fixed bottom-0 left-0 right-0 h-[20vh] z-20 bg-gradient-to-t from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
+          <div className='pointer-events-none fixed top-0 left-0 right-0 h-[20vh] z-20 bg-gradient-to-b from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
+        </>
+      )}
     </div>
   );
 }
