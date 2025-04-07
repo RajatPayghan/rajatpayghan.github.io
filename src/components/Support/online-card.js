@@ -17,7 +17,7 @@ export function OnlineCard({ title, url, icon, color }) {
       <Button
         variant='secondary'
         className={cn(
-          'w-full flex items-center gap-2 transition-colors duration-300 group-hover:bg-[color:var(--hover-bg)] group-hover:text-white'
+          'w-full flex items-center gap-2 transition-colors duration-300 group-hover:bg-[color:var(--hover-bg)] group-hover:text-white dark:bg-neutral-800 dark:text-neutral-100'
         )}
       >
         <span>{icon}</span>

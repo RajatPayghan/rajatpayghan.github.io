@@ -37,9 +37,9 @@ export default function Home() {
         onClick={scrollToBottom}
         variant='outline'
         size='icon'
-        className='absolute bottom-2 right-2 z-40'
+        className='absolute bottom-2 right-2 z-40 bg-neutral-50 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800'
       >
-        <ArrowDown className='dark:text-neutral-100 text-neutral-900' />
+        <ArrowDown className='dark:text-neutral-50 text-neutral-700' />
       </Button>
       {/* Container for central width */}
       <div className='container-md'>
