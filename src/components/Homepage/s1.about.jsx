@@ -3,7 +3,7 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/sections';
+} from '@/components/Support/sections';
 import {
   HoverCard,
   HoverCardContent,

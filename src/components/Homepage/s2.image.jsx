@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import useShaderImageEffect from '@/hooks/useImageShaderEffect';
+import useShaderImageEffect from '@/components/hooks/useImageShaderEffect';
 import '../css/shader.css';
 
 export default function HomeImage() {

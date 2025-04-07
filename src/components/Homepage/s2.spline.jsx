@@ -3,8 +3,8 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/sections';
-import SplineHome from '@/components/spline-home';
+} from '@/components/Support/sections';
+import SplineHome from '@/components/Support/spline-home';
 import React from 'react';
 
 export default function Home_Spline() {

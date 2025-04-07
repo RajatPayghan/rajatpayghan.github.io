@@ -3,8 +3,8 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/sections';
-import TableRow from '@/components/table-rows';
+} from '@/components/Support/sections';
+import TableRow from '@/components/Support/table-rows';
 import React from 'react';
 import { WORKS } from '@/lib/constants';
 

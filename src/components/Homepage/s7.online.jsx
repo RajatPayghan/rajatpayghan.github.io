@@ -3,9 +3,9 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/sections';
+} from '@/components/Support/sections';
 import React from 'react';
-import { OnlineCard } from '../online-card';
+import { OnlineCard } from '../Support/online-card';
 import { PROFILES } from '@/lib/constants';
 
 export default function Home_Online() {

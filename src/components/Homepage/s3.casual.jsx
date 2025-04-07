@@ -3,7 +3,7 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/sections';
+} from '@/components/Support/sections';
 import Link from 'next/link';
 import React from 'react';
 
