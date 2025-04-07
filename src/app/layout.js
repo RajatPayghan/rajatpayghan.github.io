@@ -1,7 +1,5 @@
 import localFont from 'next/font/local';
 import './globals.css';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { ThemeProvider } from '@/components/Support/theme-provider';
 
 const geistSans = localFont({

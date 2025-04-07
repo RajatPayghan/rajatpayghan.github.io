@@ -1,8 +1,55 @@
 // ICONS
-import { Phone, Github, Linkedin, Youtube, Mail } from 'lucide-react';
+import { Phone, Github, Linkedin, Youtube, Mail, Home } from 'lucide-react';
 
 const ICON_SIZE = 32;
 const STROKE_WIDTH = 2;
+
+export const DOCK_ITEMS = [
+  {
+    icon: (
+      <Home
+        className='dark:text-neutral-100 text-neutral-900'
+        size={ICON_SIZE}
+        strokeWidth={1}
+      />
+    ),
+    label: 'Home',
+    onClick: () => alert('Home!'),
+  },
+  {
+    icon: (
+      <Linkedin
+        className='dark:text-neutral-100 text-neutral-900'
+        size={ICON_SIZE}
+        strokeWidth={1}
+      />
+    ),
+    label: 'Linkedin',
+    onClick: () => alert('Archive!'),
+  },
+  {
+    icon: (
+      <Github
+        className='dark:text-neutral-100 text-neutral-900'
+        size={ICON_SIZE}
+        strokeWidth={1}
+      />
+    ),
+    label: 'Github',
+    onClick: () => alert('Profile!'),
+  },
+  {
+    icon: (
+      <Mail
+        className='dark:text-neutral-100 text-neutral-900'
+        size={ICON_SIZE}
+        strokeWidth={1}
+      />
+    ),
+    label: 'Mail',
+    onClick: () => alert('Settings!'),
+  },
+];
 
 // SIDEMENU ONLINE PROFILES
 export const PROFILES = [

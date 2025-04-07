@@ -1,12 +1,22 @@
 'use client';
+// Feature Flags
+// -----------------------------------------------------------------
+//
+
+const FLAG_DOCK = false;
+// Imports
+// -----------------------------------------------------------------
+//
+import { Button } from '@/components/ui/button';
+import { ArrowDown } from 'lucide-react';
+import { DOCK_ITEMS } from '@/lib/constants';
+import Dock from '@/components/Support/dock';
 import Home_About from '@/components/Homepage/s1.about';
 import Home_Casual from '@/components/Homepage/s3.casual';
 import Home_Spotify from '@/components/Homepage/s6.spotify';
 import Home_WhatsNew from '@/components/Homepage/s5.whatsnew';
 import Home_Works from '@/components/Homepage/s4.works';
 import Home_Online from '@/components/Homepage/s7.online';
-import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
 import Home_Image from '@/components/Homepage/s2.image';
 
 export default function Home() {
@@ -27,7 +37,7 @@ export default function Home() {
         onClick={scrollToBottom}
         variant='outline'
         size='icon'
-        className='absolute bottom-2 right-2'
+        className='absolute bottom-2 right-2 z-40'
       >
         <ArrowDown className='dark:text-neutral-100 text-neutral-900' />
       </Button>
@@ -59,6 +69,17 @@ export default function Home() {
           <div className='h-24 lg:h-36 w-full'></div>
         </div>
       </div>
+
+      {FLAG_DOCK && (
+        <Dock
+          items={DOCK_ITEMS}
+          panelHeight={70}
+          baseItemSize={50}
+          magnification={60}
+        />
+      )}
+
+      <div className='pointer-events-none fixed bottom-0 left-0 right-0 h-[20vh] z-20 bg-gradient-to-t from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
     </div>
   );
 }
