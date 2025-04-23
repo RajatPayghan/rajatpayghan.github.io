@@ -1,12 +1,10 @@
 'use client';
 // Feature Flags
 // -----------------------------------------------------------------
-//
-
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
+
 // Imports
 // -----------------------------------------------------------------
-//
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { DOCK_ITEMS } from '@/lib/constants';
@@ -16,8 +14,8 @@ import Home_Casual from '@/components/Homepage/s3.casual';
 import Home_Spotify from '@/components/Homepage/s6.spotify';
 import Home_WhatsNew from '@/components/Homepage/s5.whatsnew';
 import Home_Works from '@/components/Homepage/s4.works';
-import Home_Online from '@/components/Homepage/s7.online';
 import Home_Image from '@/components/Homepage/s2.image';
+import Home_Socials from '@/components/Homepage/s7.online';
 
 export default function Home() {
   const scrollToBottom = () => {
@@ -63,7 +61,7 @@ export default function Home() {
           <Home_Spotify />
 
           {/* Socials Online Links */}
-          <Home_Online />
+          <Home_Socials />
 
           {/* Spacer */}
           <div className='h-24 lg:h-36 w-full'></div>
@@ -81,8 +79,8 @@ export default function Home() {
 
       {FEATURE_FLAGS.showHomepageShade && (
         <>
-          <div className='pointer-events-none fixed bottom-0 left-0 right-0 h-[8vh] md:h-[20vh] z-20 bg-gradient-to-t from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
-          <div className='pointer-events-none fixed top-0 left-0 right-0 h-[8vh] md:h-[20vh] z-20 bg-gradient-to-b from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
+          <div className='pointer-events-none fixed bottom-0 left-0 right-0 h-[8vh] md:h-[10vh] z-20 bg-gradient-to-t from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
+          <div className='pointer-events-none fixed top-0 left-0 right-0 h-[8vh] md:h-[10vh] z-20 bg-gradient-to-b from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
         </>
       )}
     </div>

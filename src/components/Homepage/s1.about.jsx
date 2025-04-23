@@ -10,6 +10,8 @@ import {
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
 import React from 'react';
+import { OnlineLink } from '../Support/online-link';
+import { CONTACTS } from '@/lib/constants';
 
 export default function Home_About() {
   return (
@@ -23,7 +25,7 @@ export default function Home_About() {
         </span>
         , a product engineer passionate about crafting digital experiences. I{' '}
         <HoverCard>
-          <HoverCardTrigger className='underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
+          <HoverCardTrigger className='hover:underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
             develop
           </HoverCardTrigger>
           <HoverCardContent className='text-sm'>
@@ -33,7 +35,7 @@ export default function Home_About() {
         </HoverCard>
         ,{' '}
         <HoverCard>
-          <HoverCardTrigger className='underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
+          <HoverCardTrigger className='hover:underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
             manage
           </HoverCardTrigger>
           <HoverCardContent className='text-sm'>
@@ -43,7 +45,7 @@ export default function Home_About() {
         </HoverCard>{' '}
         and sometimes{' '}
         <HoverCard>
-          <HoverCardTrigger className='underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
+          <HoverCardTrigger className='hover:underline underline-offset-2 text-neutral-900 dark:text-neutral-50'>
             design
           </HoverCardTrigger>
           <HoverCardContent className='text-sm'>
@@ -52,6 +54,16 @@ export default function Home_About() {
           </HoverCardContent>
         </HoverCard>{' '}
         engaging digital products that make a difference.
+        <div className='flex flex-row gap-4 mt-8'>
+          {CONTACTS.map((link, index) => (
+            <OnlineLink
+              key={link.title}
+              title={link.title}
+              url={link.url}
+              isLast={index === CONTACTS.length - 1}
+            ></OnlineLink>
+          ))}
+        </div>
       </SectionContent>
     </SectionContainer>
   );

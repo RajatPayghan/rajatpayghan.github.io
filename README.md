@@ -3,8 +3,9 @@ Welcome to my portfolio website. It's a work in progress, so do revisit this pag
 
 
 # Up Next
-- Dock
-- Dark/Light mode toggle
+- Dock (Cancelled Post Experimentation)
+- Dark/Light mode toggle (Cancelled)
+- New Contact Links
 - Interactive Elements
 - Boost performance
 - Blog (Someday)

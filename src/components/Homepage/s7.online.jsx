@@ -6,15 +6,15 @@ import {
 } from '@/components/Support/sections';
 import React from 'react';
 import { OnlineCard } from '../Support/online-card';
-import { PROFILES } from '@/lib/constants';
+import { SOCIALS } from '@/lib/constants';
 
-export default function Home_Online() {
+export default function Home_Socials() {
   return (
     <SectionContainer>
       <SectionTitle>Online</SectionTitle>
       <SectionContent>
         <div className='flex flex-col md:flex-row gap-4'>
-          {PROFILES.map((link) => (
+          {SOCIALS.map((link) => (
             <OnlineCard
               key={link.title}
               title={link.title}

@@ -1,7 +1,7 @@
 // ICONS
 import { Phone, Github, Linkedin, Youtube, Mail, Home } from 'lucide-react';
 
-const ICON_SIZE = 32;
+const ICON_SIZE = 16;
 const STROKE_WIDTH = 2;
 
 export const DOCK_ITEMS = [
@@ -51,8 +51,25 @@ export const DOCK_ITEMS = [
   },
 ];
 
-// SIDEMENU ONLINE PROFILES
-export const PROFILES = [
+// CONTACTS : Contacts in About Me Section
+export const CONTACTS = [
+  {
+    title: 'EMail',
+    url: 'mailto:rajat.payghan@gmail.com',
+    color: '#34A853',
+    icon: <Mail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+  },
+  {
+    title: 'Phone',
+    url: 'tel:+919834324959',
+    color: '#008080',
+    icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+    isLast: true,
+  },
+];
+
+// SOCIALS : Links to Social Profiles
+export const SOCIALS = [
   {
     title: 'GitHub',
     url: 'https://github.com/RajatPayghan',
@@ -70,18 +87,6 @@ export const PROFILES = [
     url: 'https://www.youtube.com/@rajatpayghan1384',
     color: '#FF0000',
     icon: <Youtube size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
-  },
-  {
-    title: 'Mail',
-    url: 'mailto:rajat.payghan@gmail.com',
-    color: '#34A853',
-    icon: <Mail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
-  },
-  {
-    title: 'Phone',
-    url: 'tel:+919834324959',
-    color: '#008080',
-    icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
 ];
 
