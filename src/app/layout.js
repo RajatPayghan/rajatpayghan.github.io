@@ -1,3 +1,8 @@
+// Feature Flags
+// -----------------------------------------------------------------
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+
+// -----------------------------------------------------------------
 import localFont from 'next/font/local';
 import './globals.css';
 import { ThemeProvider } from '@/components/Support/theme-provider';
@@ -28,7 +33,7 @@ export default function RootLayout({ children }) {
     >
       <body suppressHydrationWarning>
         <main className='h-screen overflow-y-auto flex flex-1 bg-white dark:bg-neutral-950'>
-          <SmoothCursor />
+          {FEATURE_FLAGS.enableSmoothCursor && <SmoothCursor />}
           <ThemeProvider>{children}</ThemeProvider>
         </main>
       </body>
