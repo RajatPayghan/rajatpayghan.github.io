@@ -5,5 +5,5 @@ export const FEATURE_FLAGS = {
     defaultTheme: 'dark',
   },
   showHomepageShade: true,
-  enableSmoothCursor: false,
+  enableSmoothCursor: true,
 };
