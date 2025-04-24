@@ -5,9 +5,11 @@ import { FEATURE_FLAGS } from '@/lib/feature-flags';
 
 // Imports
 // -----------------------------------------------------------------
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { DOCK_ITEMS } from '@/lib/constants';
+import { SmoothCursor } from '@/components/Support/smooth-cursor';
 import Dock from '@/components/Support/dock';
 import Home_About from '@/components/Homepage/s1.about';
 import Home_Casual from '@/components/Homepage/s3.casual';
@@ -18,6 +20,8 @@ import Home_Image from '@/components/Homepage/s2.image';
 import Home_Socials from '@/components/Homepage/s7.online';
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
   const scrollToBottom = () => {
     const container = document.getElementById('container-wrapper');
     if (container) {
@@ -27,6 +31,18 @@ export default function Home() {
       });
     }
   };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth <= 768); // you can tune this breakpoint
+      }
+    };
+    checkMobile();
+    // Optionally, update on resize
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <div className='container-wrapper' id='container-wrapper'>
@@ -83,6 +99,8 @@ export default function Home() {
           <div className='pointer-events-none fixed top-0 left-0 right-0 h-[8vh] md:h-[10vh] z-20 bg-gradient-to-b from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
         </>
       )}
+
+      {FEATURE_FLAGS.enableSmoothCursor && !isMobile && <SmoothCursor />}
     </div>
   );
 }
