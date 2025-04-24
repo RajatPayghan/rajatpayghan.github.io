@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { DOCK_ITEMS } from '@/lib/constants';
 import { SmoothCursor } from '@/components/Support/smooth-cursor';
+import { cn } from '@/lib/utils';
 import Dock from '@/components/Support/dock';
 import Home_About from '@/components/Homepage/s1.about';
 import Home_Casual from '@/components/Homepage/s3.casual';
@@ -95,8 +96,20 @@ export default function Home() {
 
       {FEATURE_FLAGS.showHomepageShade && (
         <>
-          <div className='pointer-events-none fixed bottom-0 left-0 right-0 h-[8vh] md:h-[10vh] z-20 bg-gradient-to-t from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
-          <div className='pointer-events-none fixed top-0 left-0 right-0 h-[8vh] md:h-[10vh] z-20 bg-gradient-to-b from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' />
+          <div
+            className={cn(
+              'pointer-events-none',
+              'fixed bottom-0 left-0 right-0 h-[8vh] md:h-[10vh] z-20', // Positioning
+              'bg-gradient-to-t from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' // Colour
+            )}
+          />
+          <div
+            className={cn(
+              'pointer-events-none',
+              'fixed top-0 left-0 right-0 h-[8vh] md:h-[10vh] z-20', // Positioning
+              'bg-gradient-to-b from-white/100 to-white/0 dark:from-neutral-950/100 dark:to-neutral-950/0' // Colour
+            )}
+          />
         </>
       )}
 
