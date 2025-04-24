@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import './globals.css';
 import { ThemeProvider } from '@/components/Support/theme-provider';
+import { SmoothCursor } from '@/components/Support/smooth-cursor';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
     >
       <body suppressHydrationWarning>
         <main className='h-screen overflow-y-auto flex flex-1 bg-white dark:bg-neutral-950'>
+          <SmoothCursor />
           <ThemeProvider>{children}</ThemeProvider>
         </main>
       </body>
