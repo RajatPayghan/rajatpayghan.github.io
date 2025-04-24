@@ -1,8 +1,3 @@
-// Feature Flags
-// -----------------------------------------------------------------
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
-
-// -----------------------------------------------------------------
 import localFont from 'next/font/local';
 import './globals.css';
 import { ThemeProvider } from '@/components/Support/theme-provider';
