@@ -12,8 +12,3 @@ Welcome to my portfolio website. It's a work in progress, so do revisit this pag
 
 # To Do List
 - Refactor css classes using `cn`
-
-
-
-
-This is a change
