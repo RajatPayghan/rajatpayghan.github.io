@@ -12,7 +12,7 @@ export function OnlineLink({ title, url, isLast }) {
       >
         <div
           className={cn(
-            'uppercase text-sm font-mono',
+            'uppercase text-xs md:text-sm font-mono',
             'text-white md:text-neutral-300 hover:text-white',
             'underline underline-offset-4  md:no-underline md:hover:underline '
           )}
