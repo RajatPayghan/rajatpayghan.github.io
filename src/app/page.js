@@ -62,17 +62,17 @@ export default function Home() {
         <div className='container-md'>
           <div className='flex flex-col gap-8 lg:gap-12'>
             {/* First About Me section */}
-            <BlurFade>
+            <BlurFade delay={1.5}>
               <Home_About />
             </BlurFade>
 
             {/* Spline Section */}
-            <BlurFade delay={0.6}>
-              <Home_Image />
+            <BlurFade delay={0.2}>
+              <Home_Image delay={1800} />
             </BlurFade>
 
             {/* Casual Info */}
-            <BlurFade delay={1}>
+            <BlurFade delay={1.8}>
               <Home_Casual />
             </BlurFade>
 
