@@ -21,7 +21,11 @@ export default function HomeImage({ delay }) {
   useShaderImageEffect(containerRef, imageRef);
 
   return (
-    <div className='relative w-full sm:h-96 h-80'>
+    <div
+      className={`relative w-full sm:h-96 h-80 transition-all duration-700 ${
+        grayscale ? 'grayscale' : 'grayscale-0'
+      }`}
+    >
       {/* Image container */}
       <div
         ref={containerRef}
