@@ -23,6 +23,7 @@ import Home_Socials from '@/components/Homepage/s7.online';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
+  const [enableScroll, setEnableScroll] = useState(false);
 
   const scrollToBottom = () => {
     const container = document.getElementById('container-wrapper');
@@ -46,8 +47,21 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setEnableScroll(true);
+    }, 1800); // after 1 second
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className='container-wrapper' id='container-wrapper'>
+    <div
+      className={`container-wrapper ${
+        enableScroll ? 'overflow-auto' : 'overflow-hidden'
+      }`}
+      id='container-wrapper'
+    >
       {/* Container for scroll : container-wrapper as it has overflow-y*/}
       <Button
         onClick={scrollToBottom}
@@ -77,7 +91,7 @@ export default function Home() {
             </BlurFade>
 
             {/* Work Section */}
-            <BlurFade inView={true}>
+            <BlurFade delay={2}>
               <Home_Works />
             </BlurFade>
 
