@@ -77,7 +77,8 @@ export default function Home() {
         className={cn(
           'absolute bottom-2 right-2 z-40',
           'bg-neutral-50 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800',
-          `${isLoading ? 'opacity-0' : 'opacity-100'}`
+          `${isLoading ? 'opacity-0' : 'opacity-100'}`,
+          `${isLoading ? 'pointer-events-none' : 'pointer-events-auto'}`
         )}
       >
         <ArrowDown className='dark:text-neutral-50 text-neutral-700' />
