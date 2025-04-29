@@ -1,7 +1,8 @@
 'use client';
-// Feature Flags
+// Feature Flags & Constants
 // -----------------------------------------------------------------
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
+const LOADING_SEC_DELAY = 1.8;
 
 // Imports
 // -----------------------------------------------------------------
@@ -22,9 +23,11 @@ import Home_Image from '@/components/Homepage/s2.image';
 import Home_Socials from '@/components/Homepage/s7.online';
 
 export default function Home() {
+  // STATES
   const [isMobile, setIsMobile] = useState(false);
   const [isLoading, setisLoading] = useState(true);
 
+  // Function to scroll to bottom of the page
   const scrollToBottom = () => {
     const container = document.getElementById('container-wrapper');
     if (container) {
@@ -35,10 +38,11 @@ export default function Home() {
     }
   };
 
+  // Check if mobile or not using isMobile
   useEffect(() => {
     const checkMobile = () => {
       if (typeof window !== 'undefined') {
-        setIsMobile(window.innerWidth <= 768); // you can tune this breakpoint
+        setIsMobile(window.innerWidth <= 768); // STANDARD : Mobile Breakpoint
       }
     };
     checkMobile();
@@ -47,10 +51,11 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Change isLoading after loading delay
   useEffect(() => {
     const timer = setTimeout(() => {
       setisLoading(false);
-    }, 1800); // after 1.8 second
+    }, LOADING_SEC_DELAY * 1000); // after 1.8 second
 
     return () => clearTimeout(timer);
   }, []);
@@ -58,12 +63,13 @@ export default function Home() {
   return (
     <div
       // Container for scroll : container-wrapper as it has overflow-y
-      className={`container-wrapper ${
-        isLoading ? 'overflow-hidden' : 'overflow-auto'
-      }`}
+      className={cn(
+        `container-wrapper`,
+        `${isLoading ? 'overflow-hidden' : 'overflow-auto'}`
+      )}
       id='container-wrapper'
     >
-      {/* Button for scroll : container-wrapper as it has overflow-y*/}
+      {/* Button for scroll */}
       <Button
         onClick={scrollToBottom}
         variant='outline'
@@ -76,41 +82,35 @@ export default function Home() {
       >
         <ArrowDown className='dark:text-neutral-50 text-neutral-700' />
       </Button>
+
       <BlurFade duration={0.8}>
         {/* Container for central width */}
         <div className='container-md'>
           <div className='flex flex-col gap-8 lg:gap-12'>
-            {/* First About Me section */}
-            <BlurFade delay={1.5}>
+            <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
               <Home_About />
             </BlurFade>
 
-            {/* Spline Section */}
-            <BlurFade delay={0.2}>
-              <Home_Image delay={1800} />
+            <BlurFade delay={0.1}>
+              <Home_Image delay={LOADING_SEC_DELAY * 1000} />
             </BlurFade>
 
-            {/* Casual Info */}
-            <BlurFade delay={1.8}>
+            <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
               <Home_Casual />
             </BlurFade>
 
-            {/* Work Section */}
-            <BlurFade delay={2}>
+            <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
               <Home_Works />
             </BlurFade>
 
-            {/* Currently */}
             <BlurFade inView={true}>
               <Home_WhatsNew />
             </BlurFade>
 
-            {/* Spotify Song Link */}
             <BlurFade inView={true}>
               <Home_Spotify />
             </BlurFade>
 
-            {/* Socials Online Links */}
             <BlurFade inView={true}>
               <Home_Socials />
             </BlurFade>

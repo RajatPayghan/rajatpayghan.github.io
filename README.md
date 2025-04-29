@@ -6,6 +6,9 @@ Welcome to my portfolio website. It's a work in progress, so do revisit this pag
 - Dock `(Cancelled Post Experimentation)`
 - Dark/Light mode toggle `(Cancelled)`
 - New Contact Links `(Done)`
+- New icons
+- Scale image on loading
+- New small logo
 - Interactive Elements
 - Boost performance
 - Blog (Someday)
