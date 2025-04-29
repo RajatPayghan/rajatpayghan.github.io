@@ -23,7 +23,7 @@ import Home_Socials from '@/components/Homepage/s7.online';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
-  const [enableScroll, setEnableScroll] = useState(false);
+  const [isLoading, setisLoading] = useState(true);
 
   const scrollToBottom = () => {
     const container = document.getElementById('container-wrapper');
@@ -49,25 +49,30 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setEnableScroll(true);
-    }, 1800); // after 1 second
+      setisLoading(false);
+    }, 1800); // after 1.8 second
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div
+      // Container for scroll : container-wrapper as it has overflow-y
       className={`container-wrapper ${
-        enableScroll ? 'overflow-auto' : 'overflow-hidden'
+        isLoading ? 'overflow-hidden' : 'overflow-auto'
       }`}
       id='container-wrapper'
     >
-      {/* Container for scroll : container-wrapper as it has overflow-y*/}
+      {/* Button for scroll : container-wrapper as it has overflow-y*/}
       <Button
         onClick={scrollToBottom}
         variant='outline'
         size='icon'
-        className='absolute bottom-2 right-2 z-40 bg-neutral-50 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800'
+        className={cn(
+          'absolute bottom-2 right-2 z-40',
+          'bg-neutral-50 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800',
+          `${isLoading ? 'opacity-0' : 'opacity-100'}`
+        )}
       >
         <ArrowDown className='dark:text-neutral-50 text-neutral-700' />
       </Button>
