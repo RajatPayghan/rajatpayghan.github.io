@@ -19,6 +19,7 @@ export default function Home_Spotify() {
           height='152'
           allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
           loading='lazy'
+          className='cursor-none'
         />
       </SectionContent>
     </SectionContainer>
