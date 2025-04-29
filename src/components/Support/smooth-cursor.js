@@ -97,9 +97,9 @@ const PointerCursorSVG = () => {
 
 export function SmoothCursor({
   springConfig = {
-    damping: 45,
+    damping: 28,
     stiffness: 400,
-    mass: 1,
+    mass: 0.5,
     restDelta: 0.001,
   },
 }) {
@@ -115,13 +115,15 @@ export function SmoothCursor({
   const cursorY = useSpring(0, springConfig);
   const rotation = useSpring(0, {
     ...springConfig,
-    damping: 60,
-    stiffness: 300,
+    damping: 20,
+    stiffness: 500,
+    mass: 0.5,
   });
   const scale = useSpring(1, {
     ...springConfig,
-    stiffness: 500,
-    damping: 35,
+    stiffness: 600,
+    damping: 30,
+    mass: 0.4,
   });
 
   useEffect(() => {
