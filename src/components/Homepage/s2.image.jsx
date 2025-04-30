@@ -10,12 +10,22 @@ export default function HomeImage({ delay }) {
   const imageRef = useRef(null);
 
   const [isLoading, setisLoading] = useState(true);
+  const [position, setPosition] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setisLoading(false);
     }, delay); // after 1 second
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    // Animate to right after mount
+    const timeout = setTimeout(() => {
+      setPosition(100);
+    }, 100); // slight delay to allow initial render
+
+    return () => clearTimeout(timeout);
   }, []);
 
   useShaderImageEffect(containerRef, imageRef);
@@ -52,13 +62,24 @@ export default function HomeImage({ delay }) {
       {/* NumberTicker container */}
       <div
         className={cn(
-          'pointer-events-none absolute inset-0 w-full h-full ',
-          'flex items-end justify-end',
-          'transition-all duration-700 ',
+          'pointer-events-none absolute inset-0 w-full h-full',
+          'transition-opacity duration-700',
           `${isLoading ? 'opacity-100' : 'opacity-0'}`
         )}
       >
-        <NumberTicker value={100} className='font-mono text-3xl text-white' />
+        <NumberTicker
+          value={100}
+          className={cn(
+            'font-mono text-4xl text-white',
+            'transition-all ease-in-out  duration-700 absolute bottom-0'
+          )}
+          style={{
+            right: `${100 - position}%`,
+            transitionProperty: 'right',
+            transitionDuration: `${delay + 200}ms`,
+            transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
+          }}
+        />
       </div>
     </div>
   );
