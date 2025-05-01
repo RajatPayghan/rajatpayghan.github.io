@@ -15,7 +15,7 @@ export const DOCK_ITEMS = [
       />
     ),
     label: 'Home',
-    onClick: () => alert('Home!'),
+    href: '/',
   },
   {
     icon: (
@@ -26,7 +26,7 @@ export const DOCK_ITEMS = [
       />
     ),
     label: 'Linkedin',
-    onClick: () => alert('Archive!'),
+    href: 'https://google.com',
   },
   {
     icon: (
@@ -37,7 +37,7 @@ export const DOCK_ITEMS = [
       />
     ),
     label: 'Github',
-    onClick: () => alert('Profile!'),
+    href: 'https://google.com',
   },
   {
     icon: (
@@ -48,7 +48,7 @@ export const DOCK_ITEMS = [
       />
     ),
     label: 'Mail',
-    onClick: () => alert('Settings!'),
+    href: '/blog',
   },
 ];
 

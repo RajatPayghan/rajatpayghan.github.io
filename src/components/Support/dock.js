@@ -17,6 +17,7 @@ import {
 } from 'react';
 
 import '../css/dock.css';
+import Link from 'next/link';
 
 function DockItem({
   children,
@@ -142,19 +143,20 @@ export default function Dock({
         aria-label='Application dock'
       >
         {items.map((item, index) => (
-          <DockItem
-            key={index}
-            onClick={item.onClick}
-            className={item.className}
-            mouseX={mouseX}
-            spring={spring}
-            distance={distance}
-            magnification={magnification}
-            baseItemSize={baseItemSize}
-          >
-            <DockIcon>{item.icon}</DockIcon>
-            <DockLabel>{item.label}</DockLabel>
-          </DockItem>
+          <Link href={item.href} key={index}>
+            <DockItem
+              onClick={item.onClick}
+              className={item.className}
+              mouseX={mouseX}
+              spring={spring}
+              distance={distance}
+              magnification={magnification}
+              baseItemSize={baseItemSize}
+            >
+              <DockIcon>{item.icon}</DockIcon>
+              <DockLabel>{item.label}</DockLabel>
+            </DockItem>
+          </Link>
         ))}
       </motion.div>
     </motion.div>

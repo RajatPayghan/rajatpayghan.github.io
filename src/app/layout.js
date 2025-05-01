@@ -1,4 +1,7 @@
 import localFont from 'next/font/local';
+import Dock from '@/components/Support/dock';
+import { DOCK_ITEMS } from '@/lib/constants';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import './globals.css';
 import { ThemeProvider } from '@/components/Support/theme-provider';
 
@@ -27,7 +30,17 @@ export default function RootLayout({ children }) {
     >
       <body suppressHydrationWarning>
         <main className='h-screen overflow-y-auto flex flex-1 bg-white dark:bg-neutral-950'>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            {children}
+            {FEATURE_FLAGS.enableDock && ( // From lib/feature-flags
+              <Dock
+                items={DOCK_ITEMS}
+                panelHeight={70}
+                baseItemSize={50}
+                magnification={58}
+              />
+            )}
+          </ThemeProvider>
         </main>
       </body>
     </html>

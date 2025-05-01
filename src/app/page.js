@@ -122,14 +122,14 @@ export default function Home() {
         </div>
       </BlurFade>
 
-      {FEATURE_FLAGS.enableDock && ( // From lib/feature-flags
+      {/* {FEATURE_FLAGS.enableDock && ( // From lib/feature-flags
         <Dock
           items={DOCK_ITEMS}
           panelHeight={70}
           baseItemSize={50}
           magnification={60}
         />
-      )}
+      )} */}
 
       {FEATURE_FLAGS.showHomepageShade && (
         <>
