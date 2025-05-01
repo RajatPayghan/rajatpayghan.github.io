@@ -10,7 +10,7 @@ import {
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
 import React from 'react';
-import { OnlineLink } from '../../support/online-link';
+import { OnlineLink } from '@/components/support/online-link';
 import { CONTACTS } from '@/lib/constants';
 
 export default function Home_About() {

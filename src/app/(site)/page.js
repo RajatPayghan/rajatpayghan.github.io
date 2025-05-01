@@ -9,11 +9,9 @@ const LOADING_SEC_DELAY = 1.8;
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-import { DOCK_ITEMS } from '@/lib/constants';
 import { SmoothCursor } from '@/components/layout/smooth-cursor';
 import { BlurFade } from '@/components/support/blur-fade';
 import { cn } from '@/lib/utils';
-import Dock from '@/components/layout/dock';
 import Home_About from '@/components/homepage/sections/s1.about';
 import Home_Casual from '@/components/homepage/sections/s3.casual';
 import Home_Spotify from '@/components/homepage/sections/s6.spotify';
@@ -130,6 +128,7 @@ export default function Home() {
           magnification={60}
         />
       )} */}
+      {FEATURE_FLAGS.enableSmoothCursor && !isMobile && <SmoothCursor />}
 
       {FEATURE_FLAGS.showHomepageShade && (
         <>
