@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import useShaderImageEffect from '@/components/hooks/useImageShaderEffect';
-import '../css/shader.css';
+import '@/styles/shader.css';
 import { useState, useEffect } from 'react';
-import { NumberTicker } from '../Support/count-ticker';
+import { NumberTicker } from '../../support/count-ticker';
 import { cn } from '@/lib/utils';
 
 export default function HomeImage({ delay }) {

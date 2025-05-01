@@ -3,9 +3,9 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/Support/sections';
+} from '@/components/homepage/sections';
 import React from 'react';
-import { OnlineCard } from '../Support/online-card';
+import { OnlineCard } from '../../support/online-card';
 import { SOCIALS } from '@/lib/constants';
 
 export default function Home_Socials() {

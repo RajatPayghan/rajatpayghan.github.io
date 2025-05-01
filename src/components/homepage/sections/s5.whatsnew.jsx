@@ -3,7 +3,7 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/Support/sections';
+} from '@/components/homepage/sections';
 import { WHATSNEW } from '@/lib/one-place-changer';
 import React from 'react';
 

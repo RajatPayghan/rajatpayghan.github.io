@@ -16,7 +16,7 @@ import {
   useState,
 } from 'react';
 
-import '../css/dock.css';
+import '@/styles/dock.css';
 import Link from 'next/link';
 
 function DockItem({

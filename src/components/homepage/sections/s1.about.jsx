@@ -3,14 +3,14 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/Support/sections';
+} from '@/components/homepage/sections';
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
 import React from 'react';
-import { OnlineLink } from '../Support/online-link';
+import { OnlineLink } from '../../support/online-link';
 import { CONTACTS } from '@/lib/constants';
 
 export default function Home_About() {
