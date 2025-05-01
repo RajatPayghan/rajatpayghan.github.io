@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { SmoothCursor } from '@/components/layout/smooth-cursor';
-import { BlurFade } from '@/components/support/blur-fade';
+import { BlurFade } from '@/components/helpers/blur-fade';
 import { cn } from '@/lib/utils';
 import Home_About from '@/components/homepage/sections/s1.about';
 import Home_Casual from '@/components/homepage/sections/s3.casual';
