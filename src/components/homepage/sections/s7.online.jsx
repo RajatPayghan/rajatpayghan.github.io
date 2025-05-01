@@ -1,12 +1,16 @@
 // This is the Whats New section in the home page
+
+// Imports
+// -----------------------------------------------------------------
+import React from 'react';
 import {
   SectionContainer,
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import React from 'react';
 import { OnlineCard } from '@/components/homepage/online-card';
 import { SOCIALS } from '@/lib/constants';
+// -----------------------------------------------------------------
 
 export default function Home_Socials() {
   return (

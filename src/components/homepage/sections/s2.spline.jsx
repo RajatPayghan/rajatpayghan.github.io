@@ -1,11 +1,16 @@
 // This is the Spline section in the home page
+
+// Imports
+// -----------------------------------------------------------------
+import React from 'react';
+
 import {
   SectionContainer,
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
 import SplineHome from '@/components/homepage/spline-home';
-import React from 'react';
+// -----------------------------------------------------------------
 
 export default function Home_Spline() {
   return (

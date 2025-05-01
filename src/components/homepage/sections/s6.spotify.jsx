@@ -1,11 +1,15 @@
 // This is the Whats New section in the home page
+
+// Imports
+// -----------------------------------------------------------------
+import React from 'react';
 import {
   SectionContainer,
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
 import { SONG } from '@/lib/one-place-changer';
-import React from 'react';
+// -----------------------------------------------------------------
 
 export default function Home_Spotify() {
   return (

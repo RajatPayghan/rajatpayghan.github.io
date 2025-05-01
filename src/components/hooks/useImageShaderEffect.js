@@ -4,8 +4,11 @@
 // - float strength = smoothstep(0.3, 0.0, pixelDistanceToMouse); // How far effect reached on 0.3
 // - vec2 uvOffset = strength * - mouseDirection * 0.2; // 0.2 lower is subtler movement
 
+// Imports
+// -----------------------------------------------------------------
 import { useEffect } from 'react';
 import * as THREE from 'three';
+// -----------------------------------------------------------------
 
 const vertexShader = `
   varying vec2 vUv;

@@ -1,9 +1,14 @@
+// Imports
+// -----------------------------------------------------------------
 import React, { useRef } from 'react';
-import useShaderImageEffect from '@/components/hooks/useImageShaderEffect';
-import '@/styles/shader.css';
 import { useState, useEffect } from 'react';
-import { NumberTicker } from '@/components/homepage/count-ticker';
+
 import { cn } from '@/lib/utils';
+import { useShaderImageEffect } from '@/components/hooks/useImageShaderEffect';
+import { NumberTicker } from '@/components/homepage/count-ticker';
+
+import '@/styles/shader.css';
+// -----------------------------------------------------------------
 
 export default function HomeImage({ delay }) {
   const containerRef = useRef(null);

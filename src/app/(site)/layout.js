@@ -1,9 +1,21 @@
+// Import Order
+// - Built-in or core Node.js modules (not relevant here).
+// - Third-party packages (e.g., React, Next.js utilities).
+// - Alias imports or absolute imports from project paths (e.g., @/lib/...).
+// - Relative imports (e.g., ./globals.css).
+// - Side-effect imports (e.g., global styles) at the end (sometimes at the top depending on the style guide).
+
+// Imports
+// -----------------------------------------------------------------
 import localFont from 'next/font/local';
-import Dock from '@/components/layout/dock';
+
+import { ThemeProvider } from '@/components/layout/theme-provider';
+import { Dock } from '@/components/layout/dock';
 import { DOCK_ITEMS } from '@/lib/constants';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
+
 import './globals.css';
-import { ThemeProvider } from '@/components/layout/theme-provider';
+// -----------------------------------------------------------------
 
 const geistSans = localFont({
   src: '../../assets/fonts/GeistVF.woff',

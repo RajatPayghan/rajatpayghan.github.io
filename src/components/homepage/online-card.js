@@ -1,8 +1,12 @@
 'use client';
 
+// Imports
+// -----------------------------------------------------------------
 import Link from 'next/link';
-import { Button } from '../ui/button';
-import { cn } from '@/lib/utils'; // optional utility for merging classNames
+
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+// -----------------------------------------------------------------
 
 export function OnlineCard({ title, url, icon, color }) {
   return (

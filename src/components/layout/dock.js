@@ -1,5 +1,9 @@
 'use client';
 
+// Imports
+// -----------------------------------------------------------------
+import Link from 'next/link';
+
 import {
   motion,
   useMotionValue,
@@ -17,7 +21,7 @@ import {
 } from 'react';
 
 import '@/styles/dock.css';
-import Link from 'next/link';
+// -----------------------------------------------------------------
 
 function DockItem({
   children,

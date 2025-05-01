@@ -1,12 +1,17 @@
 // This is the My Work section in the home page
+
+// Imports
+// -----------------------------------------------------------------
+import React from 'react';
+
 import {
   SectionContainer,
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import TableRow from '@/components/homepage/table-rows';
-import React from 'react';
+import { TableRow } from '@/components/homepage/table-rows';
 import { WORKS } from '@/lib/constants';
+// -----------------------------------------------------------------
 
 export default function Home_Works() {
   return (

@@ -1,11 +1,16 @@
 // This is the Casual section in the home page
+
+// Imports
+// -----------------------------------------------------------------
+import Link from 'next/link';
+import React from 'react';
+
 import {
   SectionContainer,
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import Link from 'next/link';
-import React from 'react';
+// -----------------------------------------------------------------
 
 export default function Home_Casual() {
   return (

@@ -1,7 +1,10 @@
 'use client';
 
+// Imports
+// -----------------------------------------------------------------
 import { motion, useSpring } from 'motion/react';
 import React, { useEffect, useRef, useState } from 'react';
+// -----------------------------------------------------------------
 
 const DefaultCursorSVG = () => {
   return (

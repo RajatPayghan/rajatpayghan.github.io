@@ -1,5 +1,8 @@
+// Imports
+// -----------------------------------------------------------------
 import React from 'react';
 import Spline from '@splinetool/react-spline';
+// -----------------------------------------------------------------
 
 function SplineHome({ sceneLink }) {
   return (

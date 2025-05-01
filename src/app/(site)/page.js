@@ -1,17 +1,15 @@
 'use client';
-// Feature Flags & Constants
-// -----------------------------------------------------------------
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
-const LOADING_SEC_DELAY = 1.8;
 
 // Imports
 // -----------------------------------------------------------------
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import { SmoothCursor } from '@/components/layout/smooth-cursor';
 import { BlurFade } from '@/components/common/blur-fade';
-import { cn } from '@/lib/utils';
 import Home_About from '@/components/homepage/sections/s1.about';
 import Home_Casual from '@/components/homepage/sections/s3.casual';
 import Home_Spotify from '@/components/homepage/sections/s6.spotify';
@@ -19,6 +17,9 @@ import Home_WhatsNew from '@/components/homepage/sections/s5.whatsnew';
 import Home_Works from '@/components/homepage/sections/s4.works';
 import Home_Image from '@/components/homepage/sections/s2.image';
 import Home_Socials from '@/components/homepage/sections/s7.online';
+// -----------------------------------------------------------------
+
+const LOADING_SEC_DELAY = 1.8;
 
 export default function Home() {
   // STATES

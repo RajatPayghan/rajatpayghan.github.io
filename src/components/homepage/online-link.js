@@ -1,7 +1,11 @@
 'use client';
 
+// Imports
+// -----------------------------------------------------------------
 import Link from 'next/link';
+
 import { cn } from '@/lib/utils';
+// -----------------------------------------------------------------
 
 export function OnlineLink({ title, url, isLast }) {
   return (

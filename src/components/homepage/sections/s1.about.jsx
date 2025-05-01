@@ -1,4 +1,10 @@
 // This is the about me section in the home page
+
+// Imports
+// -----------------------------------------------------------------
+import React from 'react';
+
+import { CONTACTS } from '@/lib/constants';
 import {
   SectionContainer,
   SectionContent,
@@ -9,9 +15,8 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
-import React from 'react';
 import { OnlineLink } from '@/components/homepage/online-link';
-import { CONTACTS } from '@/lib/constants';
+// -----------------------------------------------------------------
 
 export default function Home_About() {
   return (
