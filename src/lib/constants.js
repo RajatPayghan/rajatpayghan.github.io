@@ -1,5 +1,6 @@
 // ICONS
-import { Phone, Github, Linkedin, Youtube, Mail, Home } from 'lucide-react';
+import { Phone, Mail, Home } from 'lucide-react';
+import { GitHub, LinkedIn, YouTube } from './icons';
 
 const ICON_SIZE = 16;
 const STROKE_WIDTH = 2;
@@ -18,7 +19,7 @@ export const DOCK_ITEMS = [
   },
   {
     icon: (
-      <Linkedin
+      <LinkedIn
         className='dark:text-neutral-100 text-neutral-900'
         size={ICON_SIZE}
         strokeWidth={1}
@@ -29,7 +30,7 @@ export const DOCK_ITEMS = [
   },
   {
     icon: (
-      <Github
+      <GitHub
         className='dark:text-neutral-100 text-neutral-900'
         size={ICON_SIZE}
         strokeWidth={1}
@@ -74,19 +75,19 @@ export const SOCIALS = [
     title: 'GitHub',
     url: 'https://github.com/RajatPayghan',
     color: '#333333',
-    icon: <Github size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+    icon: <GitHub size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
   {
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/rajatpayghan',
     color: '#0077B5',
-    icon: <Linkedin size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+    icon: <LinkedIn size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
   {
     title: 'YouTube',
     url: 'https://www.youtube.com/@rajatpayghan1384',
     color: '#FF0000',
-    icon: <Youtube size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+    icon: <YouTube size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
 ];
 
