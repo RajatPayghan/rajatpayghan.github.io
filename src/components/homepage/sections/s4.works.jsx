@@ -9,7 +9,7 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import { TableRow } from '@/components/homepage/table-rows';
+import TableRow from '@/components/homepage/table-rows';
 import { WORKS } from '@/lib/constants';
 // -----------------------------------------------------------------
 

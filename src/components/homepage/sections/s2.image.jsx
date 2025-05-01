@@ -3,8 +3,8 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 
+import useShaderImageEffect from '@/components/hooks/useImageShaderEffect';
 import { cn } from '@/lib/utils';
-import { useShaderImageEffect } from '@/components/hooks/useImageShaderEffect';
 import { NumberTicker } from '@/components/homepage/count-ticker';
 
 import '@/styles/shader.css';

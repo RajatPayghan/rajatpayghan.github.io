@@ -8,7 +8,7 @@ Welcome to my portfolio website. It's a work in progress, so do revisit this pag
 - New Contact Links `(Done)`
 - Scale image on loading `(Done)`
 - New favicon `(Done)`
-- New icons
+- New icons `(Done)`
 - Interactive Elements 
 - Boost performance
 - Blog (Someday)
