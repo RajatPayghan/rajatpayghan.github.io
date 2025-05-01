@@ -5,7 +5,7 @@ import {
   SectionTitle,
 } from '@/components/homepage/sections';
 import React from 'react';
-import { OnlineCard } from '@/components/helpers/online-card';
+import { OnlineCard } from '@/components/homepage/online-card';
 import { SOCIALS } from '@/lib/constants';
 
 export default function Home_Socials() {
