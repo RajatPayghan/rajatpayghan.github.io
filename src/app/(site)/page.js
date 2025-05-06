@@ -17,6 +17,7 @@ import Home_WhatsNew from '@/components/homepage/sections/s5.whatsnew';
 import Home_Works from '@/components/homepage/sections/s4.works';
 import Home_Image from '@/components/homepage/sections/s2.image';
 import Home_Socials from '@/components/homepage/sections/s7.online';
+import GlowingGridBackground from '@/components/common/glowing-grid';
 // -----------------------------------------------------------------
 
 const LOADING_SEC_DELAY = 1.8;
@@ -68,6 +69,8 @@ export default function Home() {
       )}
       id='container-wrapper'
     >
+      {FEATURE_FLAGS.showGlowBG && !isMobile && <GlowingGridBackground />}
+
       {/* Button for scroll */}
       <Button
         onClick={scrollToBottom}
@@ -121,14 +124,6 @@ export default function Home() {
         </div>
       </BlurFade>
 
-      {/* {FEATURE_FLAGS.enableDock && ( // From lib/feature-flags
-        <Dock
-          items={DOCK_ITEMS}
-          panelHeight={70}
-          baseItemSize={50}
-          magnification={60}
-        />
-      )} */}
       {FEATURE_FLAGS.enableSmoothCursor && !isMobile && <SmoothCursor />}
 
       {FEATURE_FLAGS.showHomepageShade && (

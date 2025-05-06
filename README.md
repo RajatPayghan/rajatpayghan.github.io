@@ -9,6 +9,8 @@ Welcome to my portfolio website. It's a work in progress, so do revisit this pag
 - Scale image on loading `(Done)`
 - New favicon `(Done)`
 - New icons `(Done)`
+- Custom loading screen
+- Contentful Integration
 - Interactive Elements 
 - Boost performance
 - Blog (Someday)

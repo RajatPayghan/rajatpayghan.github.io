@@ -6,4 +6,5 @@ export const FEATURE_FLAGS = {
   },
   showHomepageShade: true,
   enableSmoothCursor: true,
+  showGlowBG: true,
 };
