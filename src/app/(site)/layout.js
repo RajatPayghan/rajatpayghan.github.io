@@ -23,13 +23,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang='en'
-      // className={`${instrumentRegular} ${instrumentItalic}`}
-      // className={`${geistSans.variable} ${geistMono.variable}`}
-      suppressHydrationWarning
-    >
-      <body suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning>
+      <body>
         <main className='h-screen overflow-y-auto flex flex-1 bg-white dark:bg-neutral-950'>
           <ThemeProvider>
             {children}
