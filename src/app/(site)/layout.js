@@ -10,7 +10,7 @@
 import localFont from 'next/font/local';
 
 import { ThemeProvider } from '@/components/layout/theme-provider';
-import { Dock } from '@/components/layout/dock';
+import Dock from '@/components/layout/dock';
 import { DOCK_ITEMS } from '@/lib/constants';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 
