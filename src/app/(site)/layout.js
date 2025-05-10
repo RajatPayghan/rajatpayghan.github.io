@@ -7,7 +7,6 @@
 
 // Imports
 // -----------------------------------------------------------------
-import localFont from 'next/font/local';
 
 import { ThemeProvider } from '@/components/layout/theme-provider';
 import Dock from '@/components/layout/dock';
@@ -16,17 +15,6 @@ import { FEATURE_FLAGS } from '@/lib/feature-flags';
 
 import './globals.css';
 // -----------------------------------------------------------------
-
-const geistSans = localFont({
-  src: '../../assets/fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: '../../assets/fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-});
 
 export const metadata = {
   title: 'Rajat Payghan',
@@ -37,7 +25,8 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang='en'
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      // className={`${instrumentRegular} ${instrumentItalic}`}
+      // className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>
