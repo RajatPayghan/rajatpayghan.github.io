@@ -15,7 +15,6 @@ import { DOCK_ITEMS } from '@/lib/constants';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 
 import './globals.css';
-import GlowingGridBackground from '@/components/common/glowing-grid';
 // -----------------------------------------------------------------
 
 const geistSans = localFont({
