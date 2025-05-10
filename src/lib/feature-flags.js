@@ -1,7 +1,7 @@
 export const FEATURE_FLAGS = {
   enableDock: false,
   darkMode: {
-    enableSystem: true,
+    enableSystem: false,
     defaultTheme: 'dark',
   },
   showHomepageShade: true,
