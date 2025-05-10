@@ -20,7 +20,7 @@ import Home_Socials from '@/components/homepage/sections/s7.online';
 import GlowingGridBackground from '@/components/common/glowing-grid';
 // -----------------------------------------------------------------
 
-const LOADING_SEC_DELAY = 1.8;
+const LOADING_SEC_DELAY = FEATURE_FLAGS.loading.loadingSecDelay;
 
 export default function Home() {
   // STATES
@@ -29,7 +29,7 @@ export default function Home() {
 
   // Function to scroll to bottom of the page
   const scrollToBottom = () => {
-    const container = document.getElementById('container-wrapper');
+    const container = document.querySelector('.scrollable-content');
     if (container) {
       container.scrollTo({
         top: container.scrollHeight,
@@ -61,14 +61,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      // Container for scroll : container-wrapper as it has overflow-y
-      className={cn(
-        `container-wrapper`,
-        `${isLoading ? 'overflow-hidden' : 'overflow-auto'}`
-      )}
-      id='container-wrapper'
-    >
+    <div className='container-wrapper'>
       {FEATURE_FLAGS.showGlowBG && !isMobile && <GlowingGridBackground />}
 
       {/* Button for scroll */}

@@ -11,9 +11,9 @@
 import { ThemeProvider } from '@/components/layout/theme-provider';
 import Dock from '@/components/layout/dock';
 import { DOCK_ITEMS } from '@/lib/constants';
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
 
 import './globals.css';
+import ScrollManager from '@/components/layout/scroll-manager';
 // -----------------------------------------------------------------
 
 export const metadata = {
@@ -25,19 +25,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body>
-        <main className='h-screen overflow-y-auto flex flex-1 bg-white dark:bg-neutral-950'>
+        <ScrollManager>
           <ThemeProvider>
-            {children}
-            {FEATURE_FLAGS.enableDock && ( // From lib/feature-flags
-              <Dock
-                items={DOCK_ITEMS}
-                panelHeight={70}
-                baseItemSize={50}
-                magnification={58}
-              />
-            )}
+            <div className='app-shell'>
+              <main id='scroll-container' className='scrollable-content'>
+                {children}
+              </main>
+            </div>
           </ThemeProvider>
-        </main>
+        </ScrollManager>
       </body>
     </html>
   );

@@ -158,6 +158,14 @@
   .container-lg {
     @apply max-w-screen-lg min-h-min p-16 sm:p-4 lg:pt-24;
   }
+
+  .app-shell {
+    @apply flex flex-col h-screen w-full bg-white dark:bg-neutral-950;
+  }
+
+  .scrollable-content {
+    @apply flex-1 no-scrollbar;
+  }
 }
 
 /* === Font Faces === */

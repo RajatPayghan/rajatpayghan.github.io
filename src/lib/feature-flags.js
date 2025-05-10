@@ -7,4 +7,7 @@ export const FEATURE_FLAGS = {
   showHomepageShade: true,
   enableSmoothCursor: true,
   showGlowBG: true,
+  loading: {
+    loadingSecDelay: 1.8,
+  },
 };
