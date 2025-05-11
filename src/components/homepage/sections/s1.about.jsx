@@ -48,12 +48,27 @@ export default function Home_About() {
             {isMobile ? (
               <>
                 <div>
-                  <span className='text-neutral-50'>
-                    Hey, I'm Rajat! I design,
-                  </span>
+                  <span className='text-neutral-50'>Hey, I'm Rajat!</span> I
+                  design,
                 </div>
                 <div className='flex flex-col gap-2 text-3xl'>
-                  <div>develop & manage delicious</div>
+                  <div>
+                    develop & manage{' '}
+                    <span className='relative group transition-all duration-300 hover:text-neutral-50'>
+                      delicious
+                      <img
+                        src='/assets/Delicious-Badge.webp' // replace with actual path
+                        alt='Delicious Icon'
+                        className={cn(
+                          'absolute -top-5 -right-12 -z-10', // Positioning
+                          'w-12 h-12', // Sizing
+                          'opacity-100 ', // Visibility
+                          'transform scale-75 rotate-0 visible:scale-110 group-hover:-rotate-12',
+                          'transition-all duration-300' // Animation
+                        )}
+                      />
+                    </span>
+                  </div>
                   <div>digital experiences</div>
                 </div>
               </>
@@ -66,8 +81,20 @@ export default function Home_About() {
                 <div>
                   {' '}
                   develop & manage{' '}
-                  <span className='transition-all duration-300 hover:text-rose-700'>
+                  <span className='relative group transition-all duration-300 hover:text-neutral-50'>
                     delicious
+                    <img
+                      src='/assets/Delicious-Badge.webp' // replace with actual path
+                      alt='Delicious Icon'
+                      className={cn(
+                        'absolute -top-5 -right-12 -z-10', // Positioning
+                        'w-16 h-16', // Sizing
+                        'opacity-0 group-hover:opacity-100', // Visibility
+                        'transform scale-75 rotate-0 group-hover:scale-110 group-hover:-rotate-12',
+
+                        'transition-all duration-300' // Animation
+                      )}
+                    />
                   </span>
                 </div>
                 <div> digital experiences</div>
