@@ -35,7 +35,14 @@ export default function Home_About() {
       <SectionTitle></SectionTitle>
       <SectionContent>
         <div className='flex flex-col gap-8'>
-          <div className='font-instrument text-4xl md:text-5xl text-neutral-400 flex flex-col gap-4'>
+          {/* TODO : Add cn and have different classes for text size, gap and stuff for mobile */}
+          <div
+            className={cn(
+              'flex flex-col gap-4',
+              'font-instrument text-5xl md:text-5xl text-neutral-400',
+              'mt-16 md:mt-0'
+            )}
+          >
             <div>
               <span className='text-neutral-50'> Hey, I'm Rajat!</span> I
               design,
