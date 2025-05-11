@@ -7,7 +7,7 @@ export function SectionContainer(props) {
 export function SectionTitle(props) {
   return (
     <div
-      className='lg:col-span-2 text-sm lg:text-normal text-neutral-500 pt-0 dark:text-neutral-600'
+      className='lg:col-span-2 text-xl lg:text-normal text-neutral-500 pt-0 dark:text-neutral-500 font-instrument italic tracking-wide'
       {...props}
     />
   );

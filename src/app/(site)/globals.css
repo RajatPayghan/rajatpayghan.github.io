@@ -152,11 +152,7 @@
   }
 
   .container-md {
-    @apply max-w-screen-sm min-h-min p-8 pt-16 sm:p-16 lg:pt-24;
-  }
-
-  .container-lg {
-    @apply max-w-screen-lg min-h-min p-16 sm:p-4 lg:pt-24;
+    @apply max-w-screen-sm p-8 pt-0 min-h-min sm:p-16 lg:pt-16;
   }
 
   .app-shell {

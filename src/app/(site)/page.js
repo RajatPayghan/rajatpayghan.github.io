@@ -62,15 +62,21 @@ export default function Home() {
               <Home_About />
             </BlurFade>
 
-            <BlurFade delay={0.1}>
-              <Home_Image delay={LOADING_SEC_DELAY * 1000} />
-            </BlurFade>
+            {FEATURE_FLAGS.loading.loadingActive ? (
+              <BlurFade delay={0.1}>
+                <Home_Image delay={LOADING_SEC_DELAY * 1000} />
+              </BlurFade>
+            ) : (
+              <BlurFade delay={0.6}>
+                <Home_Image delay={0} />
+              </BlurFade>
+            )}
 
-            <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
+            <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
               <Home_Casual />
             </BlurFade>
 
-            <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
+            <BlurFade delay={LOADING_SEC_DELAY + 1}>
               <Home_Works />
             </BlurFade>
 
