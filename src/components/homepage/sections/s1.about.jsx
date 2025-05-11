@@ -15,6 +15,7 @@ import {
 } from '@/components/homepage/sections';
 import { OnlineLink } from '@/components/homepage/online-link';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/components/hooks/useIsMobile';
 // -----------------------------------------------------------------
 
 const libreBaskerville = Libre_Baskerville({
@@ -30,28 +31,51 @@ const departureMono = localFont({
 });
 
 export default function Home_About() {
+  const isMobile = useIsMobile();
   return (
     <SectionContainer>
       <SectionTitle></SectionTitle>
       <SectionContent>
         <div className='flex flex-col gap-8'>
           {/* TODO : Add cn and have different classes for text size, gap and stuff for mobile */}
+          {/* TODO : Change font size based on mobile to all  */}
           <div
             className={cn(
-              'flex flex-col gap-4',
-              'font-instrument text-5xl md:text-5xl text-neutral-400',
-              'mt-16 md:mt-0'
+              'flex flex-col gap-2',
+              'font-instrument text-3xl md:text-5xl text-neutral-400'
             )}
           >
-            <div>
-              <span className='text-neutral-50'> Hey, I'm Rajat!</span> I
-              design,
-            </div>
-            <div>develop & manage delicious</div>
-            <div>digital experiences</div>
+            {isMobile ? (
+              <>
+                <div>
+                  <span className='text-neutral-50'>
+                    Hey, I'm Rajat! I design,
+                  </span>
+                </div>
+                <div className='flex flex-col gap-2 text-3xl'>
+                  <div>develop & manage delicious</div>
+                  <div>digital experiences</div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <span className='text-neutral-50'> Hey, I'm Rajat!</span> I
+                  design,
+                </div>
+                <div>
+                  {' '}
+                  develop & manage{' '}
+                  <span className='transition-all duration-300 hover:text-rose-700'>
+                    delicious
+                  </span>
+                </div>
+                <div> digital experiences</div>
+              </>
+            )}
           </div>
 
-          <div className='flex flex-col gap-1 text-lg text-neutral-200 font-geist font-normal'>
+          <div className='flex flex-col gap-1 text-sm md:text-lg text-neutral-200 font-geist font-normal'>
             <span>
               In a perfect world, I engineer solutions at the intersection of
               <span className={cn(`${libreBaskerville.className}`, 'italic')}>
