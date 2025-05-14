@@ -17,6 +17,7 @@ import Home_Works from '@/components/homepage/sections/s4.works';
 import Home_Image from '@/components/homepage/sections/s2.image';
 import Home_Socials from '@/components/homepage/sections/s7.online';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
+import { cn } from '@/lib/utils';
 // -----------------------------------------------------------------
 
 const LOADING_SEC_DELAY = FEATURE_FLAGS.loading.loadingSecDelay; // From lib/feature-flags.js
@@ -46,12 +47,16 @@ export default function Home() {
       <BlurFade duration={0.8}>
         {/* Container for central width */}
         <div className='container-md'>
-          <div className='flex flex-col gap-8 lg:gap-12 mt-16 md:mt-0'>
+          <div className='flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0'>
             <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
               <Home_About />
             </BlurFade>
 
-            {FEATURE_FLAGS.loading.loadingActive ? (
+            <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
+              <Home_Socials />
+            </BlurFade>
+
+            {/* {FEATURE_FLAGS.loading.loadingActive ? (
               <BlurFade delay={0.1}>
                 <Home_Image delay={LOADING_SEC_DELAY * 1000} />
               </BlurFade>
@@ -59,7 +64,7 @@ export default function Home() {
               <BlurFade delay={0.6}>
                 <Home_Image delay={0} />
               </BlurFade>
-            )}
+            )} */}
 
             <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
               <Home_Casual />
@@ -77,13 +82,14 @@ export default function Home() {
               <Home_Spotify />
             </BlurFade>
 
-            <BlurFade inView={true}>
+            {/* <BlurFade inView={true}>
               <Home_Socials />
-            </BlurFade>
+            </BlurFade> */}
 
             {/* Spacer */}
             <div className='h-24 lg:h-36 w-full'></div>
           </div>
+          <div className='text-neutral-600 text-lg'>© Rajat Payghan</div>
         </div>
       </BlurFade>
 

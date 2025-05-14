@@ -40,6 +40,16 @@ export default function Home_About() {
         <div className='flex flex-col gap-8'>
           {/* TODO : Add cn and have different classes for text size, gap and stuff for mobile */}
           {/* TODO : Change font size based on mobile to all  */}
+
+          <img
+            src='/assets/profile-c&z.avif'
+            className={cn(
+              'h-32 w-28 md:h-36 md:w-28 object-cover',
+              'transition duration-300',
+              'rounded-full',
+              'hover:scale-105 hover:rotate-2'
+            )}
+          />
           <div
             className={cn(
               'flex flex-col gap-2',
@@ -48,26 +58,38 @@ export default function Home_About() {
           >
             {isMobile ? (
               // Mobile Div
-              <>
+              <div className='flex flex-col gap-0'>
+                <div className='mb-2'>
+                  <span className='text-neutral-50'>
+                    {' '}
+                    Hey, I'm <span className='italic'>Rajat.</span>
+                  </span>{' '}
+                </div>
                 <div>
-                  <span className='text-neutral-50'>Hey, I'm Rajat!</span> I
-                  design,
+                  <div>I design, develop & manage</div>
+                  <div>delicious digital experiences</div>
                 </div>
-                <div className='flex flex-col gap-2 text-3xl'>
-                  <div>develop & manage delicious</div>
-                  <div>digital experiences</div>
-                </div>
-              </>
+              </div>
             ) : (
               // Desktop Div
               <>
                 <div>
-                  <span className='text-neutral-50'> Hey, I'm Rajat!</span> I
-                  design,
+                  <span className='text-neutral-50'>
+                    {' '}
+                    Hey, I'm <span className='italic'>Rajat.</span>
+                  </span>{' '}
+                  I design,
                 </div>
-                <div className='group inline-block'>
+                <div className='inline-block'>
                   develop & manage{' '}
-                  <span className='inline-block transform transition-all duration-500 ease-out hover:text-neutral-50 hover:rotate-2 hover:scale-105'>
+                  <span
+                    className={cn(
+                      'inline-block group',
+                      'transform hover:rotate-2 hover:scale-105',
+                      'transition-all duration-500 ease-out',
+                      'hover:text-neutral-50 italic'
+                    )}
+                  >
                     delicious
                     <img
                       src='/assets/Delicious-Badge.webp'
@@ -100,7 +122,7 @@ export default function Home_About() {
             <span>Welcome to my lil corner of the internet!</span>
           </div>
 
-          <div className='flex flex-row gap-4'>
+          {/* <div className='flex flex-row gap-4'>
             {CONTACTS.map((link, index) => (
               <OnlineLink
                 key={link.title}
@@ -109,7 +131,7 @@ export default function Home_About() {
                 isLast={index === CONTACTS.length - 1}
               ></OnlineLink>
             ))}
-          </div>
+          </div> */}
         </div>
       </SectionContent>
     </SectionContainer>

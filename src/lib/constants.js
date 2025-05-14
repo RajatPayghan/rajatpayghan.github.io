@@ -1,6 +1,6 @@
 // ICONS
 import { Phone, Mail, Home } from 'lucide-react';
-import { GitHub, LinkedIn, YouTube } from './icons';
+import { GitHub, LinkedIn, YouTube, Gmail } from './icons';
 
 const ICON_SIZE = 16;
 const STROKE_WIDTH = 2;
@@ -55,18 +55,18 @@ export const DOCK_ITEMS = [
 // CONTACTS : Contacts in About Me Section
 export const CONTACTS = [
   {
-    title: 'EMail',
+    title: 'Email',
     url: 'mailto:rajat.payghan@gmail.com',
     color: '#34A853',
-    icon: <Mail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+    icon: <Gmail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
-  {
-    title: 'Phone',
-    url: 'tel:+919834324959',
-    color: '#008080',
-    icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
-    isLast: true,
-  },
+  // {
+  //   title: 'Phone',
+  //   url: 'tel:+919834324959',
+  //   color: '#008080',
+  //   icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
+  //   isLast: true,
+  // },
 ];
 
 // SOCIALS : Links to Social Profiles
@@ -107,7 +107,7 @@ export const WORKS = [
   },
   {
     href: 'https://bits-sutechteam.org/',
-    title: 'Students Union Tech Team',
+    title: "Students' Union Tech Team",
     subtitle: 'Head of Product',
     date: '2022 — 24',
   },

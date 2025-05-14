@@ -15,7 +15,7 @@ import {
 export default function Home_Casual() {
   return (
     <SectionContainer>
-      <SectionTitle></SectionTitle>
+      <SectionTitle>About Me</SectionTitle>
       <SectionContent>
         When I'm not{' '}
         <Link
