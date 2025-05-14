@@ -3,6 +3,7 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
+import Image from 'next/image';
 
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -46,53 +47,37 @@ export default function Home_About() {
             )}
           >
             {isMobile ? (
+              // Mobile Div
               <>
                 <div>
                   <span className='text-neutral-50'>Hey, I'm Rajat!</span> I
                   design,
                 </div>
                 <div className='flex flex-col gap-2 text-3xl'>
-                  <div>
-                    develop & manage{' '}
-                    <span className='relative group transition-all duration-300 hover:text-neutral-50'>
-                      delicious
-                      <img
-                        src='/assets/Delicious-Badge.webp' // replace with actual path
-                        alt='Delicious Icon'
-                        className={cn(
-                          'absolute -top-5 -right-12 -z-10', // Positioning
-                          'w-12 h-12', // Sizing
-                          'opacity-100 ', // Visibility
-                          'transform scale-75 rotate-0 visible:scale-110 group-hover:-rotate-12',
-                          'transition-all duration-300' // Animation
-                        )}
-                      />
-                    </span>
-                  </div>
+                  <div>develop & manage delicious</div>
                   <div>digital experiences</div>
                 </div>
               </>
             ) : (
+              // Desktop Div
               <>
                 <div>
                   <span className='text-neutral-50'> Hey, I'm Rajat!</span> I
                   design,
                 </div>
-                <div>
-                  {' '}
+                <div className='group inline-block'>
                   develop & manage{' '}
-                  <span className='relative group transition-all duration-300 hover:text-neutral-50'>
+                  <span className='inline-block transform transition-all duration-500 ease-out hover:text-neutral-50 hover:rotate-2 hover:scale-105'>
                     delicious
                     <img
-                      src='/assets/Delicious-Badge.webp' // replace with actual path
+                      src='/assets/Delicious-Badge.webp'
                       alt='Delicious Icon'
                       className={cn(
-                        'absolute -top-5 -right-12 -z-10', // Positioning
-                        'w-16 h-16', // Sizing
-                        'opacity-0 group-hover:opacity-100', // Visibility
+                        'absolute -top-5 -right-12 -z-10',
+                        'w-16 h-16',
+                        'opacity-0 group-hover:opacity-100',
                         'transform scale-75 rotate-0 group-hover:scale-110 group-hover:-rotate-12',
-
-                        'transition-all duration-300' // Animation
+                        'transition-all duration-500 ease-out'
                       )}
                     />
                   </span>
