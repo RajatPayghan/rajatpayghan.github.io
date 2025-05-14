@@ -3,6 +3,7 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
+import { FONT_CONTROL } from '@/lib/css-mission-control';
 import {
   SectionContainer,
   SectionContent,
@@ -15,7 +16,9 @@ export default function Home_WhatsNew() {
   return (
     <SectionContainer>
       <SectionTitle>What's New</SectionTitle>
-      <SectionContent>{WHATSNEW.text}</SectionContent>
+      <SectionContent>
+        <div className={FONT_CONTROL.base}>{WHATSNEW.text}</div>
+      </SectionContent>
     </SectionContainer>
   );
 }

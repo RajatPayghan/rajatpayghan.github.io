@@ -52,42 +52,27 @@ export const DOCK_ITEMS = [
   },
 ];
 
-// CONTACTS : Contacts in About Me Section
-export const CONTACTS = [
+// SOCIALS : Links to All Stuff
+export const SOCIALS = [
   {
     title: 'Email',
     url: 'mailto:rajat.payghan@gmail.com',
     color: '#34A853',
-    icon: <Gmail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
-  // {
-  //   title: 'Phone',
-  //   url: 'tel:+919834324959',
-  //   color: '#008080',
-  //   icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
-  //   isLast: true,
-  // },
-];
-
-// SOCIALS : Links to Social Profiles
-export const SOCIALS = [
+  {
+    title: 'Resume',
+    url: 'https://drive.google.com/file/d/1Qhv6ZdEHSbvjMXVwkE9HiqcsqlNHdSk2/view',
+    color: '#FF0000',
+  },
   {
     title: 'GitHub',
     url: 'https://github.com/RajatPayghan',
     color: '#333333',
-    icon: <GitHub size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
   {
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/rajatpayghan',
     color: '#0077B5',
-    icon: <LinkedIn size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
-  },
-  {
-    title: 'YouTube',
-    url: 'https://www.youtube.com/@rajatpayghan1384',
-    color: '#FF0000',
-    icon: <YouTube size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
 ];
 

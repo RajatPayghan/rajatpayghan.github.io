@@ -47,24 +47,14 @@ export default function Home() {
       <BlurFade duration={0.8}>
         {/* Container for central width */}
         <div className='container-md'>
-          <div className='flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0'>
+          <div className={cn('flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0')}>
             <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
               <Home_About />
             </BlurFade>
 
-            <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
+            {/* <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
               <Home_Socials />
-            </BlurFade>
-
-            {/* {FEATURE_FLAGS.loading.loadingActive ? (
-              <BlurFade delay={0.1}>
-                <Home_Image delay={LOADING_SEC_DELAY * 1000} />
-              </BlurFade>
-            ) : (
-              <BlurFade delay={0.6}>
-                <Home_Image delay={0} />
-              </BlurFade>
-            )} */}
+            </BlurFade> */}
 
             <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
               <Home_Casual />
