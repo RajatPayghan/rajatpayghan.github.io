@@ -29,8 +29,10 @@ export default function Home_Works() {
               title={job.title}
               subtitle={job.subtitle}
               imgSrc={job.imgSrc}
-              date={job.date}
-              key={job.href}
+              dateStart={job.dateStart}
+              dateEnd={job.dateEnd}
+              isCurr={job.isCurr}
+              key={job.title}
             />
           ))}
         </div>
