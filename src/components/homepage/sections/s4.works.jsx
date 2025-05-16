@@ -28,6 +28,7 @@ export default function Home_Works() {
               href={job.href}
               title={job.title}
               subtitle={job.subtitle}
+              imgSrc={job.imgSrc}
               date={job.date}
               key={job.href}
             />

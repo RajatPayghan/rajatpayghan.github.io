@@ -1,6 +1,4 @@
 import { ThemeProvider } from '@/components/layout/theme-provider';
-import Dock from '@/components/layout/dock';
-import { DOCK_ITEMS } from '@/lib/constants';
 
 import './globals.css';
 import ScrollManager from '@/components/layout/scroll-manager';

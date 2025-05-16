@@ -4,7 +4,7 @@
 // -----------------------------------------------------------------
 import React from 'react';
 import { BlurFade } from '@/components/common/blur-fade';
-import { FONT_CONTROL, FONT_CTRLS } from '@/lib/css-mission-control';
+import { FONT_CONTROL } from '@/lib/css-mission-control';
 
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -35,7 +35,7 @@ export default function Home_About() {
       {/* TODO : Change font size based on mobile to all  */}
 
       <img
-        src='/assets/profile-c&z.avif'
+        src='/assets/misc-images/profile-c&z.avif'
         className={cn(
           'h-24 w-20 md:h-36 md:w-28 object-cover mt-4 bg-red-500',
           'transition duration-300',
@@ -82,7 +82,7 @@ export default function Home_About() {
                   tasty
                 </span>
                 <img
-                  src='/assets/Delicious-Badge.webp'
+                  src='/assets/misc-images/Delicious-Badge.webp'
                   alt='Delicious Icon'
                   className={cn(
                     'absolute left-1/2 -translate-x-1/2 -translate-y-3/4 z-10',
