@@ -62,7 +62,9 @@ function TableRow({
               {dateStart} -{' '}
               {isCurr ? (
                 <>
-                  <span className='text-emerald-800'>{dateEnd}</span>
+                  <span className='text-emerald-800 group-hover:text-emerald-500 group-hover:animate-pulse'>
+                    {dateEnd}
+                  </span>
                 </>
               ) : (
                 dateEnd
