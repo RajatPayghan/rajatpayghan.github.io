@@ -2,6 +2,7 @@ import { ThemeProvider } from '@/components/layout/theme-provider';
 
 import './globals.css';
 import ScrollManager from '@/components/layout/scroll-manager';
+import Footer from '@/components/layout/footer';
 
 export const metadata = {
   title: 'Rajat Payghan',
@@ -15,8 +16,14 @@ export default function RootLayout({ children }) {
         <ScrollManager>
           <ThemeProvider>
             <div className='app-shell'>
-              <main id='scroll-container' className='scrollable-content'>
-                {children}
+              <main
+                id='scroll-container'
+                className='scroll-controller centerize-controller'
+              >
+                <div className='width-controller spacing-padding-controller'>
+                  {children}
+                  <Footer />
+                </div>
               </main>
             </div>
           </ThemeProvider>

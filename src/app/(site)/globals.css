@@ -151,6 +151,22 @@
     @apply w-full grid justify-items-center overflow-y-auto no-scrollbar;
   }
 
+  .scroll-controller {
+    @apply overflow-y-auto no-scrollbar;
+  }
+
+  .centerize-controller {
+    @apply flex flex-1 justify-center;
+  }
+
+  .width-controller {
+    @apply max-w-screen-sm min-h-min;
+  }
+
+  .spacing-padding-controller {
+    @apply p-8 pt-0 sm:p-16 lg:pt-16;
+  }
+
   .container-md {
     @apply max-w-screen-sm p-8 pt-0 min-h-min sm:p-16 lg:pt-16;
   }

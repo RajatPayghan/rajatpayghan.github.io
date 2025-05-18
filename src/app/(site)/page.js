@@ -38,48 +38,34 @@ export default function Home() {
   }, []);
 
   return (
-    <div className='container-wrapper'>
+    <div className=''>
       {FEATURE_FLAGS.showGlowBG && !isMobile && <GlowingGridBackground />}
 
       <ScrollBottomButton isLoading={isLoading} />
 
       {/* TODO : Change font size based on mobile to all  */}
       <BlurFade duration={0.8}>
-        {/* Container for central width */}
-        <div className='container-md'>
-          <div className={cn('flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0')}>
-            <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
-              <Home_About />
-            </BlurFade>
+        {' '}
+        <div className={cn('flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0')}>
+          <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
+            <Home_About />
+          </BlurFade>
 
-            {/* <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
-              <Home_Socials />
-            </BlurFade> */}
+          <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
+            <Home_Casual />
+          </BlurFade>
 
-            <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
-              <Home_Casual />
-            </BlurFade>
+          <BlurFade delay={LOADING_SEC_DELAY + 1}>
+            <Home_Works />
+          </BlurFade>
 
-            <BlurFade delay={LOADING_SEC_DELAY + 1}>
-              <Home_Works />
-            </BlurFade>
+          <BlurFade inView={true}>
+            <Home_WhatsNew />
+          </BlurFade>
 
-            <BlurFade inView={true}>
-              <Home_WhatsNew />
-            </BlurFade>
-
-            <BlurFade inView={true}>
-              <Home_Spotify />
-            </BlurFade>
-
-            {/* <BlurFade inView={true}>
-              <Home_Socials />
-            </BlurFade> */}
-
-            {/* Spacer */}
-            <div className='h-24 lg:h-36 w-full'></div>
-          </div>
-          <div className='text-neutral-600 text-lg'>© Rajat Payghan</div>
+          <BlurFade inView={true}>
+            <Home_Spotify />
+          </BlurFade>
         </div>
       </BlurFade>
 
