@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils';
 import { NumberTicker } from '@/components/homepage/count-ticker';
 
 import '@/styles/shader.css';
+import { FEATURE_FLAGS } from '@/lib/feature-flags';
+const TRANSITION_ACTIVE = FEATURE_FLAGS.loading.loadingActive;
 // -----------------------------------------------------------------
 
 export default function HomeImage({ delay }) {
@@ -39,7 +41,9 @@ export default function HomeImage({ delay }) {
     <div
       className={cn(
         `relative w-full sm:h-96 h-80`,
-        `transition-all duration-700`,
+        `${
+          TRANSITION_ACTIVE ? 'transition-all duration-700' : 'transition-none'
+        }`,
         `${isLoading ? 'grayscale' : 'grayscale-0'}`,
         `${isLoading ? 'scale-105' : 'scale-100'}`,
         `${isLoading ? '-top-16' : 'top-0'}`,

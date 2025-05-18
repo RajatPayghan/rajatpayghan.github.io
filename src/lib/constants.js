@@ -1,6 +1,6 @@
 // ICONS
 import { Phone, Mail, Home } from 'lucide-react';
-import { GitHub, LinkedIn, YouTube } from './icons';
+import { GitHub, LinkedIn, YouTube, Gmail } from './icons';
 
 const ICON_SIZE = 16;
 const STROKE_WIDTH = 2;
@@ -52,42 +52,27 @@ export const DOCK_ITEMS = [
   },
 ];
 
-// CONTACTS : Contacts in About Me Section
-export const CONTACTS = [
+// SOCIALS : Links to All Stuff
+export const SOCIALS = [
   {
-    title: 'EMail',
+    title: 'Email',
     url: 'mailto:rajat.payghan@gmail.com',
     color: '#34A853',
-    icon: <Mail size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
   {
-    title: 'Phone',
-    url: 'tel:+919834324959',
-    color: '#008080',
-    icon: <Phone size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
-    isLast: true,
+    title: 'Resume',
+    url: 'https://drive.google.com/file/d/1Qhv6ZdEHSbvjMXVwkE9HiqcsqlNHdSk2/view',
+    color: '#FF0000',
   },
-];
-
-// SOCIALS : Links to Social Profiles
-export const SOCIALS = [
   {
     title: 'GitHub',
     url: 'https://github.com/RajatPayghan',
     color: '#333333',
-    icon: <GitHub size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
   {
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/rajatpayghan',
     color: '#0077B5',
-    icon: <LinkedIn size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
-  },
-  {
-    title: 'YouTube',
-    url: 'https://www.youtube.com/@rajatpayghan1384',
-    color: '#FF0000',
-    icon: <YouTube size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
   },
 ];
 
@@ -97,36 +82,54 @@ export const WORKS = [
     href: 'https://www.wellsfargo.com/',
     title: 'Wells Fargo Tech',
     subtitle: 'Software Engineer',
-    date: '2025 — \u00a0\u00a0',
+    isCurr: true,
+    dateStart: '2025',
+    dateEnd: 'Now',
+    imgSrc: '/assets/work-logos/Logo-WF.avif',
   },
   {
     href: 'https://www.adeccogroup.com/',
     title: 'The Adecco Group',
     subtitle: 'Process Intern',
-    date: '2024 — 24',
+    isCurr: false,
+    dateStart: '2025',
+    dateEnd: '24\u00a0',
+    imgSrc: '/assets/work-logos/Logo-TAG.avif',
   },
   {
     href: 'https://bits-sutechteam.org/',
-    title: 'Students Union Tech Team',
+    title: "Students' Union Tech Team",
     subtitle: 'Head of Product',
-    date: '2022 — 24',
+    isCurr: false,
+    dateStart: '2022',
+    dateEnd: '24\u00a0',
+    imgSrc: '/assets/work-logos/Logo-SUTT.avif',
   },
   {
     href: 'https://sellersetu.in/',
     title: 'SellerSetu',
     subtitle: 'Product Manager',
-    date: '2022 — 24',
+    isCurr: false,
+    dateStart: '2022',
+    dateEnd: '24\u00a0',
+    imgSrc: '/assets/work-logos/Logo-SellerSetu.avif',
   },
   {
     href: 'https://imdpune.gov.in',
     title: 'Indian Met. Dept. Pune',
     subtitle: 'Frontend Developer',
-    date: '2023 — 23',
+    isCurr: false,
+    dateStart: '2023',
+    dateEnd: '23\u00a0',
+    imgSrc: '/assets/work-logos/Logo-IMD.avif',
   },
   {
     href: '',
     title: 'Freelance Designer',
     subtitle: 'Product Designer',
-    date: '2021 — 25',
+    isCurr: true,
+    dateStart: '2021',
+    dateEnd: 'Now',
+    imgSrc: '/assets/work-logos/Logo-FD.avif',
   },
 ];

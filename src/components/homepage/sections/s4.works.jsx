@@ -3,6 +3,8 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
+import { cn } from '@/lib/utils';
+import { FONT_CONTROL } from '@/lib/css-mission-control';
 
 import {
   SectionContainer,
@@ -18,14 +20,19 @@ export default function Home_Works() {
     <SectionContainer>
       <SectionTitle>My Work</SectionTitle>
       <SectionContent>
-        <div className='flex flex-col gap-6 md:gap-2'>
+        <div
+          className={cn('flex flex-col gap-6 md:gap-2', `${FONT_CONTROL.base}`)}
+        >
           {WORKS.map((job) => (
             <TableRow
               href={job.href}
               title={job.title}
               subtitle={job.subtitle}
-              date={job.date}
-              key={job.href}
+              imgSrc={job.imgSrc}
+              dateStart={job.dateStart}
+              dateEnd={job.dateEnd}
+              isCurr={job.isCurr}
+              key={job.title}
             />
           ))}
         </div>

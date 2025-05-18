@@ -8,6 +8,7 @@ export const FEATURE_FLAGS = {
   enableSmoothCursor: true,
   showGlowBG: true,
   loading: {
-    loadingSecDelay: 1.8,
+    loadingSecDelay: 0,
+    loadingActive: false,
   },
 };

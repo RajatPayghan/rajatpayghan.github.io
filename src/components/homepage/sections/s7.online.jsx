@@ -3,32 +3,31 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
-import {
-  SectionContainer,
-  SectionContent,
-  SectionTitle,
-} from '@/components/homepage/sections';
-import { OnlineCard } from '@/components/homepage/online-card';
+import { OnlineLink } from '../online-link';
 import { SOCIALS } from '@/lib/constants';
+import { FONT_CONTROL } from '@/lib/css-mission-control';
+import { cn } from '@/lib/utils';
 // -----------------------------------------------------------------
 
 export default function Home_Socials() {
   return (
-    <SectionContainer>
-      <SectionTitle>Online</SectionTitle>
-      <SectionContent>
-        <div className='flex flex-col md:flex-row gap-4'>
-          {SOCIALS.map((link) => (
-            <OnlineCard
-              key={link.title}
-              title={link.title}
-              icon={link.icon}
-              url={link.url}
-              color={link.color}
-            ></OnlineCard>
-          ))}
-        </div>
-      </SectionContent>
-    </SectionContainer>
+    <div
+      className={cn(
+        'flex flex-row ',
+        'md:flex-row gap-3 md:gap-5',
+        'max-w-full min-w-full',
+        `${FONT_CONTROL.social}`
+      )}
+    >
+      {SOCIALS.map((link, index) => (
+        <OnlineLink
+          key={link.title}
+          title={link.title}
+          icon={link.icon}
+          url={link.url}
+          color={link.color}
+        ></OnlineLink>
+      ))}
+    </div>
   );
 }

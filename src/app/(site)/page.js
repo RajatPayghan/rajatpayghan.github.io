@@ -16,6 +16,8 @@ import Home_WhatsNew from '@/components/homepage/sections/s5.whatsnew';
 import Home_Works from '@/components/homepage/sections/s4.works';
 import Home_Image from '@/components/homepage/sections/s2.image';
 import Home_Socials from '@/components/homepage/sections/s7.online';
+import { useIsMobile } from '@/components/hooks/useIsMobile';
+import { cn } from '@/lib/utils';
 // -----------------------------------------------------------------
 
 const LOADING_SEC_DELAY = FEATURE_FLAGS.loading.loadingSecDelay; // From lib/feature-flags.js
@@ -23,21 +25,8 @@ const MOBILE_BREAKPOINT = 768; // Screen size in px
 
 export default function Home() {
   // STATES
-  const [isMobile, setIsMobile] = useState(false);
   const [isLoading, setisLoading] = useState(true);
-
-  // Check if mobile or not using isMobile
-  useEffect(() => {
-    const checkMobile = () => {
-      if (typeof window !== 'undefined') {
-        setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
-      }
-    };
-    checkMobile();
-    // Optionally, update on resize
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  const isMobile = useIsMobile(MOBILE_BREAKPOINT);
 
   // Change isLoading after loading delay
   useEffect(() => {
@@ -49,46 +38,31 @@ export default function Home() {
   }, []);
 
   return (
-    <div className='container-wrapper'>
-      {FEATURE_FLAGS.showGlowBG && !isMobile && <GlowingGridBackground />}
-
+    <div className=''>
       <ScrollBottomButton isLoading={isLoading} />
 
+      {/* TODO : Change font size based on mobile to all  */}
       <BlurFade duration={0.8}>
-        {/* Container for central width */}
-        <div className='container-md'>
-          <div className='flex flex-col gap-8 lg:gap-12'>
-            <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
-              <Home_About />
-            </BlurFade>
+        <div className={cn('flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0')}>
+          <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
+            <Home_About />
+          </BlurFade>
 
-            <BlurFade delay={0.1}>
-              <Home_Image delay={LOADING_SEC_DELAY * 1000} />
-            </BlurFade>
+          <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
+            <Home_Casual />
+          </BlurFade>
 
-            <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
-              <Home_Casual />
-            </BlurFade>
+          <BlurFade delay={LOADING_SEC_DELAY + 1}>
+            <Home_Works />
+          </BlurFade>
 
-            <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
-              <Home_Works />
-            </BlurFade>
+          <BlurFade inView={true}>
+            <Home_WhatsNew />
+          </BlurFade>
 
-            <BlurFade inView={true}>
-              <Home_WhatsNew />
-            </BlurFade>
-
-            <BlurFade inView={true}>
-              <Home_Spotify />
-            </BlurFade>
-
-            <BlurFade inView={true}>
-              <Home_Socials />
-            </BlurFade>
-
-            {/* Spacer */}
-            <div className='h-24 lg:h-36 w-full'></div>
-          </div>
+          <BlurFade inView={true}>
+            <Home_Spotify />
+          </BlurFade>
         </div>
       </BlurFade>
 

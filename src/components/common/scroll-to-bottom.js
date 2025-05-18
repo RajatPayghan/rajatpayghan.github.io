@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 export default function ScrollBottomButton({ isLoading }) {
   // Function to scroll to bottom of the page
   const scrollToBottom = () => {
-    const container = document.querySelector('.scrollable-content');
+    const container = document.querySelector('.scroll-controller');
     if (container) {
       container.scrollTo({
         top: container.scrollHeight,

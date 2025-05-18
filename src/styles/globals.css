@@ -147,24 +147,31 @@
 
 /* === Container Utilities === */
 @layer containers {
-  .container-wrapper {
-    @apply w-full grid justify-items-center overflow-y-auto no-scrollbar;
+  .scroll-controller {
+    @apply overflow-y-auto no-scrollbar;
   }
 
-  .container-md {
-    @apply max-w-screen-sm min-h-min p-8 pt-16 sm:p-16 lg:pt-24;
+  .centerize-controller {
+    @apply flex flex-1 justify-center;
   }
 
-  .container-lg {
-    @apply max-w-screen-lg min-h-min p-16 sm:p-4 lg:pt-24;
+  .width-controller {
+    @apply max-w-screen-sm min-h-min;
+  }
+
+  .spacing-padding-controller {
+    @apply p-8 pt-0 sm:p-16 lg:pt-16;
   }
 
   .app-shell {
     @apply flex flex-col h-screen w-full bg-white dark:bg-neutral-950;
   }
+}
 
-  .scrollable-content {
-    @apply flex-1 no-scrollbar;
+/* === Custom Text Styles === */
+@layer text {
+  .link-fade {
+    @apply text-sm text-neutral-500 dark:text-neutral-200 hover:text-neutral-800 dark:hover:text-neutral-400 transition-colors;
   }
 }
 
