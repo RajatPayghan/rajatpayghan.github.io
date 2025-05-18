@@ -2,8 +2,10 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
 import { MoveRight } from 'lucide-react';
+import Badge from '../common/badge';
 
 function TableRow({
+  isFirst,
   href,
   title,
   subtitle,
@@ -22,10 +24,29 @@ function TableRow({
       className={cn(
         'relative group flex flex-row gap-4 sm:gap-4',
         'bg-neutral-900 p-4 px-6 rounded-md',
-        'md:bg-transparent md:p-0 md:rounded-none'
+        'md:bg-transparent md:p-0 md:rounded-none md:drop-shadow-none'
       )}
     >
       <div className='relative flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 w-full'>
+        {isFirst && !isMobile && (
+          <div className='absolute -left-6'>
+            <div className='absolute h-2 w-2 rounded-full bg-green-100 animate-ping ' />
+            <div className='relative h-2 w-2 rounded-full bg-green-400' />
+          </div>
+        )}
+
+        {/* {isFirst && isMobile && (
+          <div className='absolute -right-6 -top-5'>
+            <div className='absolute h-4 w-4 rounded-full bg-green-100 animate-ping ' />
+            <div className='relative h-4 w-4 rounded-full bg-green-400' />
+          </div>
+        )} */}
+
+        {isFirst && isMobile && (
+          <div className='absolute right-8 top-1 sm:hidden'>
+            <Badge isActive={true}>Active</Badge>
+          </div>
+        )}
         <div
           className={cn(
             'flex flex-row gap-2',

@@ -88,6 +88,15 @@ export const WORKS = [
     imgSrc: '/assets/work-logos/Logo-WF.avif',
   },
   {
+    href: '',
+    title: 'Freelance Designer',
+    subtitle: 'Product Designer',
+    isCurr: true,
+    dateStart: '2021',
+    dateEnd: 'Now',
+    imgSrc: '/assets/work-logos/Logo-FD.avif',
+  },
+  {
     href: 'https://www.adeccogroup.com/',
     title: 'The Adecco Group',
     subtitle: 'Process Intern',
@@ -122,14 +131,5 @@ export const WORKS = [
     dateStart: '2023',
     dateEnd: '23\u00a0',
     imgSrc: '/assets/work-logos/Logo-IMD.avif',
-  },
-  {
-    href: '',
-    title: 'Freelance Designer',
-    subtitle: 'Product Designer',
-    isCurr: true,
-    dateStart: '2021',
-    dateEnd: 'Now',
-    imgSrc: '/assets/work-logos/Logo-FD.avif',
   },
 ];

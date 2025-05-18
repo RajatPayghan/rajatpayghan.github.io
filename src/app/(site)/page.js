@@ -13,7 +13,7 @@ import Home_About from '@/components/homepage/sections/s1.about';
 import Home_Casual from '@/components/homepage/sections/s3.casual';
 import Home_WhatsNew from '@/components/homepage/sections/s5.whatsnew';
 import Home_Works from '@/components/homepage/sections/s4.works';
-import Home_Spotify from '@/components/homepage/sections/archive.spotify';
+import Home_Spotify from '@/components/homepage/sections/s6.spotify';
 import Home_Image from '@/components/homepage/sections/archive.image';
 import Home_Socials from '@/components/homepage/sections/archive.online';
 import { useIsMobile } from '@/components/hooks/useIsMobile';

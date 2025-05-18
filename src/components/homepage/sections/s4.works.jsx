@@ -23,8 +23,9 @@ export default function Home_Works() {
         <div
           className={cn('flex flex-col gap-6 md:gap-2', `${FONT_CONTROL.base}`)}
         >
-          {WORKS.map((job) => (
+          {WORKS.map((job, index) => (
             <TableRow
+              isFirst={index == 0}
               href={job.href}
               title={job.title}
               subtitle={job.subtitle}
