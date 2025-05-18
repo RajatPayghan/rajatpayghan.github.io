@@ -11,7 +11,7 @@ import localFont from 'next/font/local';
 
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
-import Home_Socials from './s7.online';
+import Home_Socials from './archive.online';
 import { Separator } from '@/components/ui/separator';
 // -----------------------------------------------------------------
 

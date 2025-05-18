@@ -3,5 +3,13 @@ export const WHATSNEW = {
 };
 
 export const SONG = {
-  src: 'https://open.spotify.com/embed/track/5nhRFhuduS8GQ3uD1fsWZW?utm_source=generator&theme=0',
+  embedCode:
+    'https://open.spotify.com/embed/track/5nhRFhuduS8GQ3uD1fsWZW?utm_source=generator&theme=0',
+  title: 'Language',
+  artist: 'Adam Pearce',
+  album: 'Language',
+  coverSrc:
+    'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0277242c98439791981e723d7a',
+  srcSpotify:
+    'https://open.spotify.com/track/5nhRFhuduS8GQ3uD1fsWZW?si=fmM08k-MSxmqtzBt0DEVLg',
 };

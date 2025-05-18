@@ -16,7 +16,15 @@ export default function Home_Spotify() {
     <SectionContainer>
       <SectionTitle>Recent Fav</SectionTitle>
       <SectionContent>
-        <div></div>
+        <iframe
+          style={{ borderRadius: '12px' }}
+          src={SONG.embedCode}
+          width='100%'
+          height='152'
+          allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+          loading='lazy'
+          className='cursor-none'
+        />
       </SectionContent>
     </SectionContainer>
   );

@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic';
 import { PinHead } from '@/lib/icons';
 import Badge from '../common/badge';
 import { useIsMobile } from '../hooks/useIsMobile';
+import Goodbye from './goodbyes';
+import { Separator } from '../ui/separator';
 
 const Time = dynamic(() => import('./footer-time'), {
   ssr: false,
@@ -15,17 +17,17 @@ const Time = dynamic(() => import('./footer-time'), {
 export default function Footer() {
   const isDesktop = !useIsMobile();
   return (
-    <footer className='m:px-0 flex w-full justify-center  pt-10 sm:pt-20'>
+    <footer className='m:px-0 flex flex-col w-full justify-center  pt-10 sm:pt-20'>
       <div
         className={cn(
-          'flex justify-between',
-          'pt-12 pb-8 md:pb-0',
+          'flex flex-col gap-2 justify-between',
+          'pt-12 pb-8 md:pb-8',
           'w-full max-w-main z-20',
-          'border-t border-solid border-neutral-900',
           'text-[16px]'
         )}
       >
-        <div className='flex flex-col flex-1 gap-2 md:gap-4'>
+        <Separator className='bg-neutral-900 mb-6' />
+        <div className='flex flex-row flex-1 items-center justify-between w-full'>
           <div className='flex gap-4'>
             <Link href='/'>Home</Link>
             <div className='w-fit flex items-top gap-2 group'>
@@ -37,6 +39,11 @@ export default function Footer() {
               </div>
             </div>
           </div>
+
+          <Goodbye />
+        </div>
+
+        <div className='flex-row flex justify-between'>
           <div className='flex flex-row gap-1.5 text-sm text-neutral-600'>
             <PinHead />
             <span>Pune, India</span>
@@ -47,10 +54,7 @@ export default function Footer() {
               </>
             )}
           </div>
-        </div>
-        <div className='flex flex-col items-top gap-2 md:gap-4 items-end justify-end sm:justify-between'>
-          <div className=''>Made with ♥︎ & ☕︎</div>
-          <div className='text-sm text-neutral-600'>© Rajat Payghan, 2025</div>
+          <div className='text-sm'>© 2025 Rajat Payghan</div>
         </div>
       </div>
     </footer>
