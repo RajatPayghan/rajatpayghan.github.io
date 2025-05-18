@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils';
 import { FONT_CONTROL } from '@/lib/css-mission-control';
 import { Spotify } from '@/lib/icons';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
+import Badge from '@/components/common/badge';
 // -----------------------------------------------------------------
 
 export default function Home_Spotify() {
@@ -39,7 +40,7 @@ export default function Home_Spotify() {
                   </div>
                 </div>
               </div>
-              <div className='flex align-middle pr-3 justify-between w-full h-fit text-xs '>
+              <div className='flex align-middle pr-1 justify-between w-full h-fit text-xs '>
                 <span className='flex flex-row gap-1 items-center text-neutral-700 md:group-hover:text-green-400'>
                   <Spotify
                     className={cn(
@@ -53,11 +54,11 @@ export default function Home_Spotify() {
                   Play on Spotify
                 </span>
                 <div className='flex flex-row gap-2 items-center'>
-                  <div className='relative'>
+                  {/* <div className='relative'>
                     <div className='absolute h-1 w-1 rounded-full bg-green-100 animate-ping ' />
                     <div className='relative h-1 w-1 rounded-full bg-green-400' />
-                  </div>{' '}
-                  Added on {SONG.favDate}
+                  </div>{' '} */}
+                  Added on <Badge isActive={true}>{SONG.favDate}</Badge>
                 </div>
               </div>
             </div>
