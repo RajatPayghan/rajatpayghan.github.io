@@ -38,9 +38,10 @@ export default function Home_About() {
         src='/assets/misc-images/profile-c&z.avif'
         className={cn(
           'h-24 w-20 md:h-36 md:w-28 object-cover mt-4 bg-red-500',
-          'transition duration-300',
+          'transition-all duration-300',
           'rounded-full',
-          'hover:scale-105 hover:rotate-2'
+          'hover:scale-105 hover:rotate-2',
+          'active:scale-100 active:-rotate-1 active:opacity-90'
         )}
       />
       <div
@@ -89,7 +90,7 @@ export default function Home_About() {
                     'w-16 h-16',
                     'transition-all duration-500 ease-out',
                     'opacity-0 group-hover:opacity-100',
-                    'scale-50 rotate-0 group-hover:scale-110 group-hover:-rotate-12'
+                    'scale-50 rotate-90 group-hover:scale-110 group-hover:-rotate-12'
                   )}
                 />
               </span>{' '}
