@@ -147,10 +147,6 @@
 
 /* === Container Utilities === */
 @layer containers {
-  .container-wrapper {
-    @apply w-full grid justify-items-center overflow-y-auto no-scrollbar;
-  }
-
   .scroll-controller {
     @apply overflow-y-auto no-scrollbar;
   }
@@ -167,16 +163,15 @@
     @apply p-8 pt-0 sm:p-16 lg:pt-16;
   }
 
-  .container-md {
-    @apply max-w-screen-sm p-8 pt-0 min-h-min sm:p-16 lg:pt-16;
-  }
-
   .app-shell {
     @apply flex flex-col h-screen w-full bg-white dark:bg-neutral-950;
   }
+}
 
-  .scrollable-content {
-    @apply flex-1 no-scrollbar;
+/* === Custom Text Styles === */
+@layer text {
+  .link-fade {
+    @apply text-sm text-neutral-500 dark:text-neutral-200 hover:text-neutral-800 dark:hover:text-neutral-400 transition-colors;
   }
 }
 

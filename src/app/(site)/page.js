@@ -39,13 +39,10 @@ export default function Home() {
 
   return (
     <div className=''>
-      {FEATURE_FLAGS.showGlowBG && !isMobile && <GlowingGridBackground />}
-
       <ScrollBottomButton isLoading={isLoading} />
 
       {/* TODO : Change font size based on mobile to all  */}
       <BlurFade duration={0.8}>
-        {' '}
         <div className={cn('flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0')}>
           <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
             <Home_About />
