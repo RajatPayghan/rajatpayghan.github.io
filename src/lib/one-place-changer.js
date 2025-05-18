@@ -8,8 +8,7 @@ export const SONG = {
   title: 'Language',
   artist: 'Adam Pearce',
   album: 'Language',
-  coverSrc:
-    'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0277242c98439791981e723d7a',
+  coverSrc: 'https://i.scdn.co/image/ab67616d0000b27377242c98439791981e723d7a',
   hrefSpotify:
     'https://open.spotify.com/track/5nhRFhuduS8GQ3uD1fsWZW?si=fmM08k-MSxmqtzBt0DEVLg',
   favDate: '10 May, 2025',
