@@ -164,7 +164,7 @@
   }
 
   .app-shell {
-    @apply flex flex-col h-screen w-full bg-white dark:bg-neutral-950;
+    @apply flex flex-col h-dvh w-full bg-white dark:bg-neutral-950;
   }
 }
 

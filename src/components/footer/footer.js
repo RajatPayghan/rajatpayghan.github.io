@@ -15,7 +15,7 @@ const Time = dynamic(() => import('./footer-time'), {
 export default function Footer() {
   const isDesktop = !useIsMobile();
   return (
-    <footer className='m:px-0 flex w-full justify-center pt-10 sm:pt-20'>
+    <footer className='m:px-0 flex w-full justify-center  pt-10 sm:pt-20'>
       <div
         className={cn(
           'flex justify-between',
@@ -25,7 +25,7 @@ export default function Footer() {
           'text-[16px]'
         )}
       >
-        <div className='flex flex-col flex-1 gap-4'>
+        <div className='flex flex-col flex-1 gap-2 md:gap-4'>
           <div className='flex gap-4'>
             <Link href='/'>Home</Link>
             <div className='w-fit flex items-top gap-2 group'>
@@ -48,7 +48,7 @@ export default function Footer() {
             )}
           </div>
         </div>
-        <div className='flex flex-col items-top gap-4 items-end justify-end sm:justify-between'>
+        <div className='flex flex-col items-top gap-2 md:gap-4 items-end justify-end sm:justify-between'>
           <div className=''>Made with ♥︎ & ☕︎</div>
           <div className='text-sm text-neutral-600'>© Rajat Payghan, 2025</div>
         </div>
