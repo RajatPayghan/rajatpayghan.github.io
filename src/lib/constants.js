@@ -101,7 +101,7 @@ export const WORKS = [
     title: 'The Adecco Group',
     subtitle: 'Process Intern',
     isCurr: false,
-    dateStart: '2025',
+    dateStart: '2024',
     dateEnd: '24\u00a0',
     imgSrc: '/assets/work-logos/Logo-TAG.avif',
   },

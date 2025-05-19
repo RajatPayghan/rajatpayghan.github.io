@@ -1,5 +1,8 @@
 export const WHATSNEW = {
-  text: "Recently, I completed my last semester as a Computer Science Undergrad in BITS Pilani. In Q3 & Q4 of 2024, I collaborated with various global units, optimized global pricing processes and developed cross platform tools to improve efficiency as a Process Intern at The Adecco Group. I am also tinkering with my personal website in Next.js (yup, it's this website) and listening to Adam Pearce.",
+  work: 'I recently completed my final semester as a Computer Science undergraduate at BITS Pilani. In the latter half of 2024, I worked as a Process Intern at The Adecco Group, where I enhanced global pricing processes and developed cross-department tools to improve efficiency.',
+  casual: '',
+  lastLine:
+    'On the side, I’ve been tinkering with my personal website (yes, the one you’re on) in Next.js and listening to Adam Pearce.',
 };
 
 // For coverSrc, go to inspect on web spotify and grab the image cdn url

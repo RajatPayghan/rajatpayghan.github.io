@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import { SmoothCursor } from '@/components/layout/smooth-cursor';
 import { BlurFade } from '@/components/common/blur-fade';
-import GlowingGridBackground from '@/components/common/glowing-grid';
 import Shade from '@/components/common/shade';
 import ScrollBottomButton from '@/components/common/scroll-to-bottom';
 
@@ -14,8 +13,6 @@ import Home_Casual from '@/components/homepage/sections/v1.casual';
 import Home_WhatsNew from '@/components/homepage/sections/v1.whatsnew';
 import Home_Works from '@/components/homepage/sections/v2.works';
 import Home_Spotify from '@/components/homepage/sections/v2.spotify';
-import Home_Image from '@/components/homepage/sections/archive.image';
-import Home_Socials from '@/components/homepage/sections/v2.about-online';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
 // -----------------------------------------------------------------

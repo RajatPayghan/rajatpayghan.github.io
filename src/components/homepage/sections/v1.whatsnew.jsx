@@ -18,7 +18,11 @@ export default function Home_WhatsNew() {
     <SectionContainer>
       <SectionTitle>What's New</SectionTitle>
       <SectionContent>
-        <div className='font-base'>{WHATSNEW.text}</div>
+        <div className='font-base flex flex-col gap-2'>
+          <div>{WHATSNEW.work}</div>
+          <div>{WHATSNEW.casual}</div>
+          <div>{WHATSNEW.lastLine}</div>
+        </div>
       </SectionContent>
     </SectionContainer>
   );
