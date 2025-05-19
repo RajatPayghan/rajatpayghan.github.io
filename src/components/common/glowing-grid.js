@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { useTheme } from 'next-themes'; // ✅ Added for theme detection
 import { FEATURE_FLAGS } from '@/lib/feature-flags';
 import { useIsMobile } from '../hooks/useIsMobile';
 
@@ -7,6 +8,10 @@ export default function GlowingGridBackground() {
   const ref = useRef(null);
   const isDesktop = !useIsMobile();
   const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 });
+  const { resolvedTheme } = useTheme();
+
+  // ❗ Wait until theme is available to avoid hydration mismatch
+  if (!resolvedTheme) return null;
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -19,37 +24,35 @@ export default function GlowingGridBackground() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  return (
-    <>
-      {FEATURE_FLAGS.showGlowBG && isDesktop && (
-        <div className='fixed inset-0 pointer-events-none z-0'>
-          {/* Grid layer */}
-          <div
-            ref={ref}
-            className='absolute inset-0'
-            style={{
-              backgroundColor: 'transparent',
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%230c0c0c' stroke-width='1'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E")`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '32px 32px',
-            }}
-          />
+  const gridStroke = resolvedTheme === 'dark' ? '0c0c0c' : 'fcfcfc';
+  const glowStroke = resolvedTheme === 'dark' ? 'ffffff' : '000000';
 
-          {/* Glow only on grid via blend mask */}
-          <div
-            className='absolute inset-0'
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E")`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '32px 32px',
-              maskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%)`,
-              WebkitMaskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%)`,
-              mixBlendMode: 'overlay',
-              opacity: 0.6,
-            }}
-          />
-        </div>
-      )}
-    </>
+  return (
+    <div className='fixed inset-0 pointer-events-none z-0'>
+      {/* Grid layer */}
+      <div
+        ref={ref}
+        className='absolute inset-0'
+        style={{
+          backgroundColor: 'transparent',
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23${gridStroke}' stroke-width='1'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '32px 32px',
+        }}
+      />
+      {/* Glow layer */}
+      <div
+        className='absolute inset-0'
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23${glowStroke}' stroke-width='1'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '32px 32px',
+          maskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%)`,
+          WebkitMaskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%)`,
+          mixBlendMode: 'overlay',
+          opacity: 0.6,
+        }}
+      />
+    </div>
   );
 }
