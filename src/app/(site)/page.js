@@ -39,20 +39,19 @@ export default function Home() {
 
   return (
     <div className=''>
-      <ScrollBottomButton isLoading={isLoading} />
-
       {/* TODO : Change font size based on mobile to all  */}
-      <BlurFade duration={0.8}>
+      <ScrollBottomButton isLoading={isLoading} />
+      <BlurFade duration={0}>
         <div className={cn('flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0')}>
-          <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
+          <BlurFade delay={LOADING_SEC_DELAY}>
             <Home_About />
           </BlurFade>
 
-          <BlurFade delay={LOADING_SEC_DELAY + 0.8}>
+          <BlurFade delay={LOADING_SEC_DELAY + 0.4}>
             <Home_Casual />
           </BlurFade>
 
-          <BlurFade delay={LOADING_SEC_DELAY + 1}>
+          <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
             <Home_Works />
           </BlurFade>
 

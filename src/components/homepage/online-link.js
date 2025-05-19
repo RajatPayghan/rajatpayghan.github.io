@@ -2,8 +2,8 @@
 
 // Imports
 // -----------------------------------------------------------------
-import Link from 'next/link';
 import { ArrowUpRight, MoveRight } from 'lucide-react';
+import '@/styles/font-control.css';
 
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
@@ -26,6 +26,7 @@ export function OnlineLink({ title, url, isLast }) {
             'bg-neutral-50 md:bg-neutral-50 dark:bg-neutral-900 rounded-full px-4 py-2', // Pill shape design
             'transition-all duration-300 ease-in-out', // Transition Settings
             'border dark:border-none border-neutral-100', // Transition Settings
+            'font-social', // Transition Settings
             !!!isMobile && 'pr-2 md:pr-4' // Give room for arrow
           )}
         >
@@ -61,7 +62,7 @@ export function OnlineLink({ title, url, isLast }) {
 
           {isMobile && (
             <ArrowUpRight
-              size={12}
+              size={9}
               className='dark:text-amber-400 text-green-700'
             />
           )}

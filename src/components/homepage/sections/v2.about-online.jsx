@@ -5,7 +5,7 @@
 import React from 'react';
 import { OnlineLink } from '../online-link';
 import { SOCIALS } from '@/lib/constants';
-import { FONT_CONTROL } from '@/lib/css-mission-control';
+import '@/styles/font-control.css';
 import { cn } from '@/lib/utils';
 // -----------------------------------------------------------------
 
@@ -14,10 +14,8 @@ export default function Home_Socials() {
     <div
       className={cn(
         'flex flex-row ',
-        'transform scale-90 md:scale-100 -translate-x-8 md:translate-x-0',
         'md:flex-row gap-2 md:gap-5',
-        'max-w-full min-w-full',
-        `${FONT_CONTROL.social}`
+        'max-w-full min-w-full'
       )}
     >
       {SOCIALS.map((link, index) => (

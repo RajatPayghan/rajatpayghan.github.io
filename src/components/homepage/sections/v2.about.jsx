@@ -3,8 +3,9 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
+import '@/styles/font-control.css';
+
 import { BlurFade } from '@/components/common/blur-fade';
-import { FONT_CONTROL } from '@/lib/css-mission-control';
 
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -37,23 +38,25 @@ export default function Home_About() {
   useEffect(() => {
     setMounted(true);
   }, []);
+
   return (
-    <div className={cn('flex flex-col gap-8', `${FONT_CONTROL.base}`)}>
+    <div className={cn('flex flex-col gap-8', 'font-base')}>
       <img
         src='/assets/misc-images/profile-c&z.avif'
         className={cn(
-          'h-24 w-20 md:h-36 md:w-28 object-cover mt-4 bg-red-500',
-          'transition-all duration-300',
-          'rounded-full',
-          'md:hover:scale-105 md:hover:rotate-2',
-          'md:active:scale-100 md:active:-rotate-1 md:active:opacity-90',
-          'active:scale-90 active:-rotate-2 active:opacity-90'
+          'h-24 w-20 md:h-36 md:w-28 object-cover mt-4 bg-red-500', // Size & layout
+          'transition-all duration-300', // Animation
+          'rounded-full', // Shape
+          'md:hover:scale-105 md:hover:rotate-2', // Hover (medium+)
+          'md:active:scale-100 md:active:-rotate-1 md:active:opacity-90', // Active (medium+)
+          'active:scale-90 active:-rotate-2 active:opacity-90' // Active (mobile)
         )}
       />
       <div
         className={cn(
-          'flex flex-col gap-2',
-          'font-instrument leading-normal text-4xl md:text-5xl dark:text-neutral-400 text-neutral-500'
+          'flex flex-col gap-2', // Layout
+          'font-instrument leading-normal text-4xl md:text-5xl', // Typography
+          'dark:text-neutral-400 text-neutral-500' // Colours
         )}
       >
         {isMobile ? (
@@ -76,7 +79,7 @@ export default function Home_About() {
           // Desktop Div
           <>
             <div>
-              <span className='dark:text-neutral-50 text-neutral-900'>
+              <span className='text-neutral-900 dark:text-neutral-50'>
                 {' '}
                 Hey, I'm <span className='italic'>Rajat —</span>
               </span>{' '}
@@ -84,7 +87,11 @@ export default function Home_About() {
             </div>
             <div className='inline-block'>
               crafting{' '}
-              <span className={cn('inline-block relative text-center group')}>
+              <span
+                className={cn(
+                  'inline-block relative text-center group' // Group wrapper
+                )}
+              >
                 <span className='block opacity-100 group-hover:opacity-0 duration-300 ease-in-out'>
                   tasty
                 </span>
@@ -97,11 +104,11 @@ export default function Home_About() {
                     }
                     alt='Delicious Icon'
                     className={cn(
-                      'absolute left-1/2 -translate-x-1/2 -translate-y-3/4 z-10',
-                      'w-16 h-16',
-                      'transition-all duration-500 ease-out',
-                      'opacity-0 group-hover:opacity-100',
-                      'scale-50 rotate-90 group-hover:scale-110 group-hover:-rotate-12'
+                      'absolute left-1/2 -translate-x-1/2 -translate-y-3/4 z-10', // Positioning
+                      'w-16 h-16', // Size
+                      'transition-all duration-500 ease-out', // Transition
+                      'opacity-0 group-hover:opacity-100', // Fade in
+                      'scale-50 rotate-90 group-hover:scale-110 group-hover:-rotate-12' // Transform effects
                     )}
                   />
                 )}
@@ -124,12 +131,14 @@ export default function Home_About() {
         </span>
         <span>Welcome to my lil corner of the internet!</span>
       </div>
-      <BlurFade delay={0.6}>
+
+      <BlurFade delay={0.2}>
         <Home_Socials />
       </BlurFade>
+
       <Separator
         decorative={true}
-        className='dark:bg-neutral-900 bg-neutral-100'
+        className='bg-neutral-100 dark:bg-neutral-900' // Color theme ordering
       />
     </div>
   );

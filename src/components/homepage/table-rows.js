@@ -4,7 +4,7 @@ import { useIsMobile } from '../hooks/useIsMobile';
 import { ArrowRight, ArrowUpRight, MoveRight } from 'lucide-react';
 import Badge from '../common/badge';
 
-function TableRow({
+export default function TableRow({
   isFirst,
   href,
   title,
@@ -17,42 +17,50 @@ function TableRow({
   const isMobile = useIsMobile();
 
   return (
-    <a
+    <a // Parent Pill
       target='_blank'
       rel='noopener noreferrer'
       href={href}
       className={cn(
-        'relative group flex flex-row gap-4 sm:gap-4',
+        'relative group flex gap-4 sm:gap-4',
         'bg-neutral-50 dark:bg-neutral-900 p-4 px-6 rounded-md',
-        'border md:border-none dark:border-none border-neutral-100',
-        'dark:md:bg-transparent md:bg-transparent md:p-0 md:rounded-none md:drop-shadow-none'
+        'border border-neutral-100 dark:border-none md:border-none',
+        'md:bg-transparent dark:md:bg-transparent md:p-0 md:rounded-none md:drop-shadow-none'
       )}
     >
       <div className='relative flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 w-full'>
+        {/* Desktop: Green Ping to left */}
         {isFirst && !isMobile && (
           <div className='absolute -left-6'>
-            <div className='absolute h-2 w-2 rounded-full bg-green-700 dark:bg-green-100 animate-ping ' />
+            <div className='absolute h-2 w-2 rounded-full bg-green-700 dark:bg-green-100 animate-ping' />
             <div className='relative h-2 w-2 rounded-full bg-green-600 dark:bg-green-400' />
           </div>
         )}
 
+        {/* Mobile: Active badge */}
         {isFirst && isMobile && (
           <div className='absolute right-8 top-1 -translate-y-1 sm:hidden'>
             <Badge isActive={true}>Active</Badge>
           </div>
         )}
+
+        {/* Main Link */}
         <div
           className={cn(
-            'flex flex-row gap-2',
-            'font-medium text-gray-1000',
-            'group-hover:text-neutral-600 group-hover:underline',
-            'dark:group-hover:text-neutral-200',
-            'md:group-hover:bg-neutral-100 md:dark:group-hover:bg-neutral-900'
+            // Main link
+            'flex gap-2', // layout
+            'font-medium text-gray-900 dark:text-neutral-400', // Font colors
+            'group-hover:text-neutral-600 dark:group-hover:text-neutral-200', // Colour on hover
+            'group-hover:underline', // Unnderline
+            'md:group-hover:bg-neutral-100 md:dark:group-hover:bg-neutral-900', // Background change on hover
+            'transition-colors duration-300' // Animation
           )}
         >
           <strong className='relative max-w-fit min-w-fit font-medium text-neutral-800 dark:text-neutral-400'>
             {title}
           </strong>
+
+          {/* Mobile: Right Arrow */}
           {isMobile && (
             <>
               <span className='w-full'></span>
@@ -64,43 +72,36 @@ function TableRow({
           )}
         </div>
 
-        <span className='hidden sm:flex flex-1 border-t border-neutral-300 border-dashed dark:border-neutral-800' />
+        {/* Flex dashed line */}
+        <span className='hidden sm:flex flex-1 border-t border-dashed border-neutral-300 dark:border-neutral-800' />
 
-        <div className='flex flex-row md:flex-row gap-2'>
+        {/* Mobile-Bottom & Desktop-Right */}
+        <div className='flex gap-2'>
+          {/* Subtitle */}
           {subtitle && (
             <span className='flex-none text-sm text-neutral-600 dark:text-neutral-500'>
               {subtitle}
             </span>
           )}
 
+          {/* Spacer */}
           {isMobile && <span className='w-full' />}
 
+          {/* Dates */}
           {dateStart && (
             <span className='flex-none font-mono text-sm text-neutral-400 dark:text-neutral-700'>
               {dateStart} -{' '}
               {isCurr ? (
-                <>
-                  <span className='text-emerald-700 dark:group-hover:text-emerald-500 group-hover:text-emerald-900 transition-all duration-300'>
-                    {dateEnd}
-                  </span>
-                </>
+                <span className='transition-colors duration-300 text-emerald-700 group-hover:text-emerald-900 dark:group-hover:text-emerald-500'>
+                  {dateEnd}
+                </span>
               ) : (
                 dateEnd
               )}
             </span>
           )}
         </div>
-        {/* {!isMobile && (
-          <div className='absolute -right-5 h-0 opacity-0 group-hover:opacity-100 overflow-clip group-hover:h-4 transition-all duration-300'>
-            <ArrowUpRight
-              size={16}
-              className='text-neutral-400 dark:text-neutral-600'
-            />
-          </div>
-        )} */}
       </div>
     </a>
   );
 }
-
-export default TableRow;

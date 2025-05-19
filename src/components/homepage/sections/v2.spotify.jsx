@@ -8,13 +8,13 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import Link from 'next/link';
 import { SONG } from '@/lib/one-place-changer';
 import { cn } from '@/lib/utils';
-import { FONT_CONTROL } from '@/lib/css-mission-control';
 import { Spotify } from '@/lib/icons';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import Badge from '@/components/common/badge';
+import '@/styles/font-control.css';
+import { Play } from 'lucide-react';
 // -----------------------------------------------------------------
 
 export default function Home_Spotify() {
@@ -24,7 +24,7 @@ export default function Home_Spotify() {
       <SectionTitle>Recent Fav</SectionTitle>
       <SectionContent>
         <a href={SONG.hrefSpotify} rel='noopener noreferrer' target='_blank'>
-          <div className={FONT_CONTROL.base}>
+          <div className='font-base'>
             <div
               className={cn(
                 'flex flex-col gap-4 p-2 w-full h-fit',
@@ -57,15 +57,22 @@ export default function Home_Spotify() {
                           : 'w-0 group-hover:w-3 transition-all duration-300'
                       }`
                     )}
+                  />
+                  <Play
+                    className={cn(
+                      'fill-neutral-400 dark:fill-neutral-700',
+                      `${
+                        isMobile
+                          ? 'hidden'
+                          : 'w-2 group-hover:w-0 transition-all duration-300'
+                      }`
+                    )}
                   />{' '}
-                  Play on Spotify
+                  Play Song
                 </span>
+
                 <div className='flex flex-row gap-2 items-center'>
-                  {/* <div className='relative'>
-                    <div className='absolute h-1 w-1 rounded-full bg-green-100 animate-ping ' />
-                    <div className='relative h-1 w-1 rounded-full bg-green-400' />
-                  </div>{' '} */}
-                  Added on{' '}
+                  Liked on{' '}
                   <Badge isSubtle={true} isActive={true}>
                     {SONG.favDate}
                   </Badge>

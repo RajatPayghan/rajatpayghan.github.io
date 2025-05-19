@@ -5,7 +5,7 @@
 
 /* === Debugging === */
 
-/* @layer base {
+/* @layer debug {
   * {
     outline: 1px solid red;
   }
@@ -75,12 +75,12 @@
   }
 
   /* Base Element Resets */
-  * {
+  :where(*) {
     @apply border-border;
   }
 
   html {
-    @apply overflow-hidden scroll-smooth antialiased bg-white;
+    @apply scroll-smooth antialiased bg-white overflow-x-hidden;
     text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;

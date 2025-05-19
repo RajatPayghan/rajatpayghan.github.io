@@ -13,6 +13,7 @@ import {
 } from '@/components/homepage/sections';
 import TableRow from '@/components/homepage/table-rows';
 import { WORKS } from '@/lib/constants';
+import '@/styles/font-control.css';
 // -----------------------------------------------------------------
 
 export default function Home_Works() {
@@ -20,9 +21,7 @@ export default function Home_Works() {
     <SectionContainer>
       <SectionTitle>My Work</SectionTitle>
       <SectionContent>
-        <div
-          className={cn('flex flex-col gap-6 md:gap-2', `${FONT_CONTROL.base}`)}
-        >
+        <div className={cn('flex flex-col gap-6 md:gap-2 font-base')}>
           {WORKS.map((job, index) => (
             <TableRow
               isFirst={index == 0}

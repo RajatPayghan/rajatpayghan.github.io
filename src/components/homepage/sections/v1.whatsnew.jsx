@@ -10,6 +10,7 @@ import {
   SectionTitle,
 } from '@/components/homepage/sections';
 import { WHATSNEW } from '@/lib/one-place-changer';
+import '@/styles/font-control.css';
 // -----------------------------------------------------------------
 
 export default function Home_WhatsNew() {
@@ -17,7 +18,7 @@ export default function Home_WhatsNew() {
     <SectionContainer>
       <SectionTitle>What's New</SectionTitle>
       <SectionContent>
-        <div className={FONT_CONTROL.base}>{WHATSNEW.text}</div>
+        <div className='font-base'>{WHATSNEW.text}</div>
       </SectionContent>
     </SectionContainer>
   );

@@ -1,12 +1,11 @@
 import { ThemeProvider } from '@/components/layout/theme-provider';
 
 import '@/styles/globals.css';
+import '@/styles/font-control.css';
 import ScrollManager from '@/components/layout/scroll-manager';
 import Footer from '@/components/footer/footer';
 import GlowingGridBackground from '@/components/common/glowing-grid';
 import { cn } from '@/lib/utils';
-import { FONT_CONTROL } from '@/lib/css-mission-control';
-import { Separator } from '@radix-ui/react-separator';
 
 export const metadata = {
   title: 'Rajat Payghan',
@@ -19,7 +18,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <ScrollManager>
           <ThemeProvider>
-            <div className={cn('app-shell', `${FONT_CONTROL.base}`)}>
+            <div className={cn('app-shell', 'font-base')}>
               <main
                 id='scroll-container'
                 className='scroll-controller centerize-controller'
