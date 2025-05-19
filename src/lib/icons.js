@@ -121,4 +121,39 @@ const Spotify = (props) => (
   </svg>
 );
 
-export { GitHub, LinkedIn, YouTube, Gmail, PinHead, Spotify };
+const Moon = (props) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='1em'
+      height='1em'
+      viewBox='0 0 12 12'
+      {...props}
+    >
+      <path
+        fill='currentColor'
+        d='M2 8a5 5 0 0 0 4.6-6.964a5 5 0 1 1-5.2 6.929Q1.697 8 2 8'
+      ></path>
+    </svg>
+  );
+};
+
+const Sun = (props) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='1em'
+      height='1em'
+      viewBox='0 0 16 16'
+      {...props}
+    >
+      <circle cx='8' cy='8' r='4.5' fill='currentColor'></circle>
+      <path
+        fill='currentColor'
+        d='M8 0a.5.5 0 0 1 .5.5V2h-1V.5A.5.5 0 0 1 8 0m-.5 15.5a.5.5 0 0 0 1 0V14h-1zM0 8a.5.5 0 0 1 .5-.5H2v1H.5A.5.5 0 0 1 0 8m15.5.5a.5.5 0 0 0 0-1H14v1zM1.072 4a.5.5 0 0 1 .683-.183l1.299.75l-.5.866l-1.3-.75A.5.5 0 0 1 1.073 4m13.173 8.183a.5.5 0 1 0 .5-.866l-1.299-.75l-.5.866zM4 14.928a.5.5 0 0 1-.183-.683l.75-1.299l.866.5l-.75 1.3a.5.5 0 0 1-.683.182m8.183-13.173a.5.5 0 1 0-.866-.5l-.75 1.299l.866.5zM4 1.072a.5.5 0 0 1 .683.183l.75 1.299l-.866.5l-.75-1.3A.5.5 0 0 1 4 1.073m7.317 13.673a.5.5 0 1 0 .866-.5l-.75-1.299l-.866.5zM1.072 12a.5.5 0 0 1 .183-.683l1.299-.75l.5.866l-1.3.75A.5.5 0 0 1 1.073 12m13.673-7.317a.5.5 0 1 0-.5-.866l-1.299.75l.5.866z'
+      ></path>
+    </svg>
+  );
+};
+
+export { GitHub, LinkedIn, YouTube, Gmail, PinHead, Spotify, Moon, Sun };

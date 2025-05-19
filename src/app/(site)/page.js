@@ -15,7 +15,7 @@ import Home_WhatsNew from '@/components/homepage/sections/v1.whatsnew';
 import Home_Works from '@/components/homepage/sections/v2.works';
 import Home_Spotify from '@/components/homepage/sections/v2.spotify';
 import Home_Image from '@/components/homepage/sections/archive.image';
-import Home_Socials from '@/components/homepage/sections/archive.online';
+import Home_Socials from '@/components/homepage/sections/v2.about-online';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
 // -----------------------------------------------------------------

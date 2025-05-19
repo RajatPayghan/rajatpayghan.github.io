@@ -25,15 +25,22 @@ export default function Home_Spotify() {
       <SectionContent>
         <a href={SONG.hrefSpotify} rel='noopener noreferrer' target='_blank'>
           <div className={FONT_CONTROL.base}>
-            <div className='flex flex-col gap-4 p-2 w-full h-fit bg-neutral-900/50 border border-neutral-900 rounded-md group active:scale-95 transition-all duration-300'>
-              <div className='flex flex-row gap-3 md:gap-4 p-0 w-full h-16 bg-neutral-900 rounded-md'>
+            <div
+              className={cn(
+                'flex flex-col gap-4 p-2 w-full h-fit',
+                'bg-neutral-100/20 dark:bg-neutral-900/50',
+                'border border-neutral-200 dark:border-neutral-900',
+                'rounded-md group active:scale-95 transition-all duration-300'
+              )}
+            >
+              <div className='flex flex-row gap-3 md:gap-4 p-0 w-full h-16 dark:bg-neutral-900 bg-neutral-100 rounded-md'>
                 <img
                   src={SONG.coverSrc}
                   className='object-cover h-full rounded-md'
                 />
                 <div className='flex flex-col justify-center h-full gap-0'>
                   <div className='text-lg'>{SONG.title}</div>
-                  <div className='flex flex-row gap-2 text-sm text-neutral-600'>
+                  <div className='flex flex-row gap-2 text-sm text-neutral-400 dark:text-neutral-600'>
                     <span>{SONG.artist}</span>
                     <span>•</span>
                     <span>{SONG.album}</span>
@@ -41,7 +48,7 @@ export default function Home_Spotify() {
                 </div>
               </div>
               <div className='flex align-middle pr-1 justify-between w-full h-fit text-xs '>
-                <span className='flex flex-row gap-1 items-center text-neutral-700 md:group-hover:text-green-400'>
+                <span className='flex flex-row gap-1 items-center text-neutral-400 dark:text-neutral-700 dark:md:group-hover:text-green-400 md:group-hover:text-green-600'>
                   <Spotify
                     className={cn(
                       `${
@@ -58,7 +65,10 @@ export default function Home_Spotify() {
                     <div className='absolute h-1 w-1 rounded-full bg-green-100 animate-ping ' />
                     <div className='relative h-1 w-1 rounded-full bg-green-400' />
                   </div>{' '} */}
-                  Added on <Badge isActive={true}>{SONG.favDate}</Badge>
+                  Added on{' '}
+                  <Badge isSubtle={true} isActive={true}>
+                    {SONG.favDate}
+                  </Badge>
                 </div>
               </div>
             </div>

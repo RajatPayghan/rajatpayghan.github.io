@@ -14,7 +14,8 @@ export default function Home_Socials() {
     <div
       className={cn(
         'flex flex-row ',
-        'md:flex-row gap-3 md:gap-5',
+        'transform scale-90 md:scale-100 -translate-x-8 md:translate-x-0',
+        'md:flex-row gap-2 md:gap-5',
         'max-w-full min-w-full',
         `${FONT_CONTROL.social}`
       )}

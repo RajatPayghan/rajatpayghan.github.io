@@ -11,7 +11,7 @@ import localFont from 'next/font/local';
 
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
-import Home_Socials from './archive.online';
+import Home_Socials from './v2.about-online';
 import { Separator } from '@/components/ui/separator';
 // -----------------------------------------------------------------
 
@@ -48,14 +48,14 @@ export default function Home_About() {
       <div
         className={cn(
           'flex flex-col gap-2',
-          'font-instrument leading-normal text-4xl md:text-5xl text-neutral-400'
+          'font-instrument leading-normal text-4xl md:text-5xl dark:text-neutral-400 text-neutral-500'
         )}
       >
         {isMobile ? (
           // Mobile Div
           <div className='flex flex-col gap-0'>
             <div className='mb-2'>
-              <span className='text-neutral-50'>
+              <span className='dark:text-neutral-50 text-neutral-900'>
                 {' '}
                 Hey, I'm <span className='italic'>Rajat —</span>
               </span>
@@ -71,7 +71,7 @@ export default function Home_About() {
           // Desktop Div
           <>
             <div>
-              <span className='text-neutral-50'>
+              <span className='dark:text-neutral-50 text-neutral-900'>
                 {' '}
                 Hey, I'm <span className='italic'>Rajat —</span>
               </span>{' '}
@@ -116,7 +116,10 @@ export default function Home_About() {
       <BlurFade delay={0.6}>
         <Home_Socials />
       </BlurFade>
-      <Separator decorative={true} className='bg-neutral-900' />
+      <Separator
+        decorative={true}
+        className='dark:bg-neutral-900 bg-neutral-100'
+      />
     </div>
   );
 }

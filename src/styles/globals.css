@@ -3,6 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === Debugging === */
+
+/* @layer base {
+  * {
+    outline: 1px solid red;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+} */
+
 /* === Base Styles === */
 @layer base {
   /* Root Variables */
@@ -156,7 +168,7 @@
   }
 
   .width-controller {
-    @apply max-w-screen-sm min-h-min;
+    @apply w-screen max-w-screen-sm min-h-min;
   }
 
   .spacing-padding-controller {

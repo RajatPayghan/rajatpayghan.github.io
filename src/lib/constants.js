@@ -124,6 +124,15 @@ export const WORKS = [
     imgSrc: '/assets/work-logos/Logo-SellerSetu.avif',
   },
   {
+    href: 'https://drshellysastitvajewels.com/',
+    title: 'Astitva Jewels',
+    subtitle: 'Creative Director',
+    isCurr: false,
+    dateStart: '2023',
+    dateEnd: '23\u00a0',
+    imgSrc: '/assets/work-logos/Logo-FL.avif',
+  },
+  {
     href: 'https://imdpune.gov.in',
     title: 'Indian Met. Dept. Pune',
     subtitle: 'Frontend Developer',

@@ -3,7 +3,7 @@
 // Imports
 // -----------------------------------------------------------------
 import Link from 'next/link';
-import { MoveRight } from 'lucide-react';
+import { ArrowUpRight, MoveRight } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
@@ -21,10 +21,11 @@ export function OnlineLink({ title, url, isLast }) {
       >
         <div
           className={cn(
-            'flex flex-row items-centre group', // Items in a row
-            'hover:text-white hover:font-medium', // Individual hover states
-            'bg-neutral-900 rounded-full px-4 py-2', // Pill shape design
+            'flex flex-row items-centre justify-center group gap-1', // Items in a row
+            'dark:hover:text-white dark:font-regular md:font-light md:hover:font-medium', // Individual hover states
+            'bg-neutral-50 md:bg-neutral-50 dark:bg-neutral-900 rounded-full px-4 py-2', // Pill shape design
             'transition-all duration-300 ease-in-out', // Transition Settings
+            'border dark:border-none border-neutral-100', // Transition Settings
             !!!isMobile && 'pr-2 md:pr-4' // Give room for arrow
           )}
         >
@@ -56,6 +57,13 @@ export function OnlineLink({ title, url, isLast }) {
                 className='opacity-0 group-hover:opacity-100 transition-opacity duration-300'
               />
             </div>
+          )}
+
+          {isMobile && (
+            <ArrowUpRight
+              size={12}
+              className='dark:text-amber-400 text-green-700'
+            />
           )}
         </div>
       </a>

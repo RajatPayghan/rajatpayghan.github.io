@@ -8,6 +8,7 @@ import Badge from '../common/badge';
 import { useIsMobile } from '../hooks/useIsMobile';
 import Goodbye from './goodbyes';
 import { Separator } from '../ui/separator';
+import ThemeSwitcherButtonIcon from '../layout/theme-switcher';
 
 const Time = dynamic(() => import('./footer-time'), {
   ssr: false,
@@ -26,12 +27,14 @@ export default function Footer() {
           'text-[16px]'
         )}
       >
-        <Separator className='bg-neutral-900 mb-6' />
+        <Separator className='dark:bg-neutral-900 bg-neutral-200 mb-6' />
         <div className='flex flex-row flex-1 items-center justify-between w-full'>
-          <div className='flex gap-4'>
+          <div className='flex flex-row flex-1 items-center gap-4'>
             <Link href='/'>Home</Link>
             <div className='w-fit flex items-top gap-2 group'>
-              <span className='text-neutral-600 peer'>Blog</span>
+              <span className='text-neutral-400 dark:text-neutral-600 peer'>
+                Blog
+              </span>
               <div className='relative opacity-0 peer-hover:opacity-100 transition-all duration-700 md:duration-300'>
                 <Badge isActive={false} className='opacity-0'>
                   Coming Soon
@@ -44,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div className='flex-row flex justify-between'>
-          <div className='flex flex-row gap-1.5 text-sm text-neutral-600'>
+          <div className='flex flex-row gap-1.5 text-sm dark:text-neutral-600 text-neutral-400'>
             <PinHead />
             <span>Pune, India</span>
             {isDesktop && (
@@ -54,7 +57,10 @@ export default function Footer() {
               </>
             )}
           </div>
-          <div className='text-sm'>© 2025 Rajat Payghan</div>
+          <div className='text-sm flex flex-row gap-2 items-center'>
+            <ThemeSwitcherButtonIcon />
+            2025 Rajat Payghan
+          </div>
         </div>
       </div>
     </footer>
