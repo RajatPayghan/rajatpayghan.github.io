@@ -9,6 +9,7 @@ import { FONT_CONTROL } from '@/lib/css-mission-control';
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
 import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
@@ -29,13 +30,15 @@ const departureMono = localFont({
 });
 
 export default function Home_About() {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <div className={cn('flex flex-col gap-8', `${FONT_CONTROL.base}`)}>
-      {/* TODO : Add cn and have different classes for text size, gap and stuff for mobile */}
-      {/* TODO : Change font size based on mobile to all  */}
-
       <img
         src='/assets/misc-images/profile-c&z.avif'
         className={cn(
@@ -85,21 +88,23 @@ export default function Home_About() {
                 <span className='block opacity-100 group-hover:opacity-0 duration-300 ease-in-out'>
                   tasty
                 </span>
-                <img
-                  src={
-                    resolvedTheme === 'light'
-                      ? '/assets/misc-images/Delicious-Light.webp'
-                      : '/assets/misc-images/Delicious-Dark.webp'
-                  }
-                  alt='Delicious Icon'
-                  className={cn(
-                    'absolute left-1/2 -translate-x-1/2 -translate-y-3/4 z-10',
-                    'w-16 h-16',
-                    'transition-all duration-500 ease-out',
-                    'opacity-0 group-hover:opacity-100',
-                    'scale-50 rotate-90 group-hover:scale-110 group-hover:-rotate-12'
-                  )}
-                />
+                {mounted && (
+                  <img
+                    src={
+                      resolvedTheme === 'light'
+                        ? '/assets/misc-images/Delicious-LightAlt.webp'
+                        : '/assets/misc-images/Delicious-Dark.webp'
+                    }
+                    alt='Delicious Icon'
+                    className={cn(
+                      'absolute left-1/2 -translate-x-1/2 -translate-y-3/4 z-10',
+                      'w-16 h-16',
+                      'transition-all duration-500 ease-out',
+                      'opacity-0 group-hover:opacity-100',
+                      'scale-50 rotate-90 group-hover:scale-110 group-hover:-rotate-12'
+                    )}
+                  />
+                )}
               </span>{' '}
               digital products
             </div>

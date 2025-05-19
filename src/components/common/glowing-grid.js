@@ -34,6 +34,7 @@ export default function GlowingGridBackground() {
 
   const gridStroke = resolvedTheme === 'dark' ? '0c0c0c' : 'fcfcfc';
   const glowStroke = resolvedTheme === 'dark' ? 'ffffff' : '000000';
+  const opacity = resolvedTheme === 'dark' ? 0.6 : 1;
 
   return (
     <>
@@ -60,7 +61,7 @@ export default function GlowingGridBackground() {
               maskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%)`,
               WebkitMaskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%)`,
               mixBlendMode: 'overlay',
-              opacity: 0.6,
+              opacity: `${opacity}`,
             }}
           />
         </div>
