@@ -15,6 +15,7 @@ import Home_Works from '@/components/homepage/sections/v2.works';
 import Home_Spotify from '@/components/homepage/sections/v2.spotify';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
+import Home_Pixellum from '@/components/homepage/sections/v0.pixellum';
 // -----------------------------------------------------------------
 
 const LOADING_SEC_DELAY = FEATURE_FLAGS.loading.loadingSecDelay; // From lib/feature-flags.js
@@ -50,6 +51,10 @@ export default function Home() {
 
           <BlurFade delay={LOADING_SEC_DELAY + 0.6}>
             <Home_Works />
+          </BlurFade>
+
+          <BlurFade inView={true}>
+            <Home_Pixellum />
           </BlurFade>
 
           <BlurFade inView={true}>

@@ -3,7 +3,6 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
-import { FONT_CONTROL } from '@/lib/css-mission-control';
 import {
   SectionContainer,
   SectionContent,
