@@ -1,5 +1,5 @@
 // This is the about me section in the home page
-
+'use client';
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
@@ -8,6 +8,7 @@ import { FONT_CONTROL } from '@/lib/css-mission-control';
 
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
+import { useTheme } from 'next-themes';
 
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
@@ -28,6 +29,7 @@ const departureMono = localFont({
 });
 
 export default function Home_About() {
+  const { resolvedTheme, setTheme } = useTheme();
   const isMobile = useIsMobile();
   return (
     <div className={cn('flex flex-col gap-8', `${FONT_CONTROL.base}`)}>
@@ -61,7 +63,7 @@ export default function Home_About() {
               </span>
             </div>
             <div>
-              <div>A Creative Dev crafting</div>
+              <div>A creative dev crafting</div>
               <div>
                 <span className='italic'>tasty</span> digital products.
               </div>
@@ -84,7 +86,11 @@ export default function Home_About() {
                   tasty
                 </span>
                 <img
-                  src='/assets/misc-images/Delicious-Badge.webp'
+                  src={
+                    resolvedTheme === 'light'
+                      ? '/assets/misc-images/Delicious-Light.webp'
+                      : '/assets/misc-images/Delicious-Dark.webp'
+                  }
                   alt='Delicious Icon'
                   className={cn(
                     'absolute left-1/2 -translate-x-1/2 -translate-y-3/4 z-10',

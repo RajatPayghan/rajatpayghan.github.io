@@ -27,6 +27,14 @@ export default function GlowingGridBackground() {
   const gridStroke = resolvedTheme === 'dark' ? '0c0c0c' : 'fcfcfc';
   const glowStroke = resolvedTheme === 'dark' ? 'ffffff' : '000000';
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted || !resolvedTheme) return null;
+
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>
       {/* Grid layer */}
