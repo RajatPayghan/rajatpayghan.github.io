@@ -9,10 +9,14 @@ export default function GlowingGridBackground() {
   const isDesktop = !useIsMobile();
   const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 });
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  // ❗ Wait until theme is available to avoid hydration mismatch
-  if (!resolvedTheme) return null;
+  // Ensure this runs once after hydration
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
+  // Set up mouse tracking
   useEffect(() => {
     const handleMouseMove = (e) => {
       const rect = ref.current?.getBoundingClientRect();
@@ -24,16 +28,12 @@ export default function GlowingGridBackground() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  if (!mounted || !resolvedTheme) {
+    return null;
+  }
+
   const gridStroke = resolvedTheme === 'dark' ? '0c0c0c' : 'fcfcfc';
   const glowStroke = resolvedTheme === 'dark' ? 'ffffff' : '000000';
-
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted || !resolvedTheme) return null;
 
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>
