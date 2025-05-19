@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import { ArrowDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const BOTTOM_LIMIT_TO_HIDE_BUTTON = 8;
+const BOTTOM_LIMIT_TO_HIDE_BUTTON = 12;
 
 export default function ScrollBottomButton({ isLoading }) {
   const [isAtBottom, setIsAtBottom] = useState(true);
@@ -43,22 +43,41 @@ export default function ScrollBottomButton({ isLoading }) {
     }
   };
 
-  const hidden = isAtBottom || isLoading;
+  const scrollToTop = () => {
+    const container = document.querySelector('.scroll-controller');
+    if (container) {
+      container.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const hidden = isLoading;
 
   return (
     <Button
-      onClick={scrollToBottom}
+      onClick={isAtBottom ? scrollToTop : scrollToBottom}
       variant='outline'
       size='icon'
       className={cn(
-        'absolute bottom-2 right-2 z-40 transition-opacity duration-300',
-        'bg-neutral-50 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800',
+        'absolute bottom-2 right-2 z-40',
+        'transition-opacity duration-300',
+        'bg-neutral-50 dark:bg-neutral-900',
+        'border-neutral-200 dark:border-neutral-800',
         hidden
           ? 'opacity-0 pointer-events-none'
-          : 'opacity-100 pointer-events-auto'
+          : 'opacity-100 pointer-events-auto',
+        isAtBottom && 'opacity-50'
       )}
     >
-      <ArrowDown className='dark:text-neutral-50 text-neutral-700' />
+      <ArrowDown
+        className={cn(
+          'dark:text-neutral-100 text-neutral-700',
+          'transform transition-transform duration-300',
+          isAtBottom ? 'rotate-180' : 'rotate-0'
+        )}
+      />
     </Button>
   );
 }
