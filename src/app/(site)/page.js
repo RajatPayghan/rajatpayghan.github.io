@@ -9,11 +9,11 @@ import Shade from '@/components/common/shade';
 import ScrollBottomButton from '@/components/common/scroll-to-bottom';
 
 // Sections
-import Home_About from '@/components/homepage/sections/s1.about';
-import Home_Casual from '@/components/homepage/sections/s3.casual';
-import Home_WhatsNew from '@/components/homepage/sections/s5.whatsnew';
-import Home_Works from '@/components/homepage/sections/s4.works';
-import Home_Spotify from '@/components/homepage/sections/s6.spotify';
+import Home_About from '@/components/homepage/sections/v2.about';
+import Home_Casual from '@/components/homepage/sections/v1.casual';
+import Home_WhatsNew from '@/components/homepage/sections/v1.whatsnew';
+import Home_Works from '@/components/homepage/sections/v2.works';
+import Home_Spotify from '@/components/homepage/sections/v2.spotify';
 import Home_Image from '@/components/homepage/sections/archive.image';
 import Home_Socials from '@/components/homepage/sections/archive.online';
 import { useIsMobile } from '@/components/hooks/useIsMobile';

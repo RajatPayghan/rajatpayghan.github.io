@@ -40,8 +40,9 @@ export default function Home_About() {
           'h-24 w-20 md:h-36 md:w-28 object-cover mt-4 bg-red-500',
           'transition-all duration-300',
           'rounded-full',
-          'hover:scale-105 hover:rotate-2',
-          'active:scale-100 active:-rotate-1 active:opacity-90'
+          'md:hover:scale-105 md:hover:rotate-2',
+          'md:active:scale-100 md:active:-rotate-1 md:active:opacity-90',
+          'active:scale-90 active:-rotate-2 active:opacity-90'
         )}
       />
       <div
