@@ -23,7 +23,7 @@ export default function Home_Spotify() {
     <SectionContainer>
       <SectionTitle>Recent Fav</SectionTitle>
       <SectionContent>
-        <Link href={SONG.hrefSpotify}>
+        <a href={SONG.hrefSpotify} rel='noopener noreferrer' target='_blank'>
           <div className={FONT_CONTROL.base}>
             <div className='flex flex-col gap-4 p-2 w-full h-fit bg-neutral-900/50 border border-neutral-900 rounded-md group active:scale-95 transition-all duration-300'>
               <div className='flex flex-row gap-3 md:gap-4 p-0 w-full h-16 bg-neutral-900 rounded-md'>
@@ -63,7 +63,7 @@ export default function Home_Spotify() {
               </div>
             </div>
           </div>
-        </Link>
+        </a>
       </SectionContent>
     </SectionContainer>
   );
