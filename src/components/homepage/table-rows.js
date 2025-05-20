@@ -84,7 +84,7 @@ export default function TableRow({
             <span className='relative flex-none font-mono text-sm text-neutral-400 dark:text-neutral-700'>
               {dateStart} -{' '}
               {isCurr ? (
-                <span className='transition-colors duration-300 text-emerald-700 group-hover:text-emerald-900 dark:group-hover:text-emerald-500'>
+                <span className='transition-colors duration-300 dark:text-emerald-500 text-emerald-700 group-hover:text-emerald-900 dark:group-hover:text-emerald-300'>
                   {dateEnd}
                 </span>
               ) : (
@@ -92,7 +92,7 @@ export default function TableRow({
               )}
               {/* Desktop: Green Ping to right */}
               {isFirst && !isMobile && (
-                <div className='absolute -right-2 top-1'>
+                <div className='absolute -right-4 top-2'>
                   <div className='absolute size-1 rounded-full bg-green-700 dark:bg-green-100 animate-ping' />
                   <div className='relative size-1 rounded-full bg-green-600 dark:bg-green-400' />
                 </div>
