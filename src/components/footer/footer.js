@@ -31,16 +31,17 @@ export default function Footer() {
         <div className='flex flex-row flex-1 items-center justify-between w-full'>
           <div className='flex flex-row flex-1 items-center gap-4'>
             <Link href='/'>Home</Link>
-            <Link href='/blog' className='w-fit flex items-top gap-2 group'>
-              <span className='text-neutral-400 dark:text-neutral-600 peer'>
+            <div className='relative w-fit flex items-top gap-2 group'>
+              <Link
+                href='/blog'
+                className='text-neutral-400 dark:text-neutral-600 peer'
+              >
                 Blog
-              </span>
-              <div className='relative opacity-0 peer-hover:opacity-100 transition-all duration-700 md:duration-300'>
-                <Badge isActive={false} className='opacity-0'>
-                  Coming Soon
-                </Badge>
+              </Link>
+              <div className='relative -translate-x-4 scale-75 md:translate-x-0 md:scale-100 md:opacity-0 md:peer-hover:opacity-100 transition-all duration-700 md:duration-300'>
+                <Badge isActive={false}>Coming Soon</Badge>
               </div>
-            </Link>
+            </div>
           </div>
 
           <Goodbye />

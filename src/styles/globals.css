@@ -160,7 +160,7 @@
 /* === Container Utilities === */
 @layer containers {
   .scroll-controller {
-    @apply overflow-y-auto no-scrollbar;
+    @apply overflow-y-auto no-scrollbar overscroll-none;
   }
 
   .centerize-controller {
