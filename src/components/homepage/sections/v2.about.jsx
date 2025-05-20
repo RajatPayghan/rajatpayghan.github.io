@@ -4,6 +4,7 @@
 // -----------------------------------------------------------------
 import React from 'react';
 import '@/styles/font-control.css';
+import '@/styles/homepage.css';
 
 import { BlurFade } from '@/components/common/blur-fade';
 
@@ -41,17 +42,16 @@ export default function Home_About() {
 
   return (
     <div className={cn('flex flex-col gap-8', 'font-base')}>
-      <img
-        src='/assets/misc-images/profile-c&z.avif'
-        className={cn(
-          'h-24 w-20 md:h-36 md:w-28 object-cover mt-4', // Size & layout
-          'transition-all duration-300', // Animation
-          'rounded-full', // Shape
-          'md:hover:scale-105 md:hover:rotate-2', // Hover (medium+)
-          'md:active:scale-100 md:active:-rotate-1 md:active:opacity-90', // Active (medium+)
-          'active:scale-90 active:-rotate-2 active:opacity-90' // Active (mobile)
-        )}
-      />
+      <div className='relative group'>
+        <img
+          src='/assets/misc-images/profile-c&z.avif'
+          className='home-image'
+        />
+        <img
+          src='/assets/homepage/ThisIsRajat-LightMode.png'
+          className='home-image-name'
+        />
+      </div>
       <div
         className={cn(
           'flex flex-col gap-2', // Layout
