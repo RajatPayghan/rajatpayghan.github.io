@@ -62,7 +62,7 @@ export default function Home_Pixellum() {
               In 2024, along with{' '}
               <a
                 href='https://www.linkedin.com/in/rishita-gupta-0166bb24a/'
-                className='underline underline-offset-4 hover:text-[#8BFA4A]'
+                className='underline underline-offset-4 hover:text-[#293A20] dark:hover:text-[#8BFA4A]'
               >
                 Rishita
               </a>
