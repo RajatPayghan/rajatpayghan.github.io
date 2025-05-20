@@ -7,10 +7,10 @@
   @apply active:scale-90 active:-rotate-2 active:opacity-90; /* Active (mobile) */
 }
 .home-image-name {
-  @apply absolute top-0 left-20 size-24;
+  @apply absolute top-0 left-20 size-24 z-50;
   @apply md:top-0 md:left-32 md:size-36;
   @apply fill-red-500;
   @apply transition-all duration-500;
-  @apply opacity-0 group-hover:opacity-100;
+  @apply opacity-0 dark:group-hover:opacity-30 group-hover:opacity-100;
   @apply rotate-2 group-hover:rotate-0;
 }
