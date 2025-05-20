@@ -31,7 +31,7 @@ export default function Footer() {
         <div className='flex flex-row flex-1 items-center justify-between w-full'>
           <div className='flex flex-row flex-1 items-center gap-4'>
             <Link href='/'>Home</Link>
-            <div className='w-fit flex items-top gap-2 group'>
+            <Link href='/blog' className='w-fit flex items-top gap-2 group'>
               <span className='text-neutral-400 dark:text-neutral-600 peer'>
                 Blog
               </span>
@@ -40,7 +40,7 @@ export default function Footer() {
                   Coming Soon
                 </Badge>
               </div>
-            </div>
+            </Link>
           </div>
 
           <Goodbye />

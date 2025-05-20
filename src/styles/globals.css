@@ -170,6 +170,9 @@
   .width-controller {
     @apply w-screen max-w-screen-sm min-h-min;
   }
+  .width-controller-blog {
+    @apply w-screen max-w-screen-md min-h-min;
+  }
 
   .spacing-padding-controller {
     @apply p-8 pt-0 sm:p-16 lg:pt-16;
