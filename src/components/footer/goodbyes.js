@@ -4,25 +4,24 @@ export default function Goodbye() {
 
   const GOODBYES = [
     <>Sincerely,</>,
-    <>My battery is low!</>,
+    <>My battery’s low,</>,
     <>Keep smiling,</>,
-    <>Sent from my heart,</>,
-    <>Thanks for stopping by,</>,
-    <>Aaannnnddd..... scene,</>,
-    <>Drink some water,</>,
+    <>Thanks again,</>,
+    <>Scene over,</>,
+    <>Drink water,</>,
     <>Obsessively,</>,
-    <>And thats&apos;s a wrap,</>,
-    <>See you tomorrrow,</>,
+    <>That’s a wrap,</>,
+    <>See you soon,</>,
     <>Big hug,</>,
-    <>See you in the future,</>,
-    <>Warm goodbyes,</>,
+    <>Warm vibes,</>,
     <>Stay fun,</>,
-    <>From your friend,</>,
-    <>I will see myself out,</>,
+    <>Your friend,</>,
+    <>I’m off!,</>,
     <>Stay hydrated,</>,
-    <>Here&apos;s to the crazy ones,</>,
-    <>Made with ♥︎ & ☕︎ by</>,
+    <>Be weird,</>,
+    <>Made with ♥︎,</>,
   ];
+
   // Get the current date
   const today = new Date();
 

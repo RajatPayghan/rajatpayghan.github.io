@@ -29,14 +29,6 @@ export default function TableRow({
       )}
     >
       <div className='relative flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 w-full'>
-        {/* Desktop: Green Ping to left */}
-        {isFirst && !isMobile && (
-          <div className='absolute -left-6'>
-            <div className='absolute h-2 w-2 rounded-full bg-green-700 dark:bg-green-100 animate-ping' />
-            <div className='relative h-2 w-2 rounded-full bg-green-600 dark:bg-green-400' />
-          </div>
-        )}
-
         {/* Mobile: Active badge */}
         {isFirst && isMobile && (
           <div className='absolute right-8 top-1 -translate-y-1 sm:hidden'>
@@ -89,7 +81,7 @@ export default function TableRow({
 
           {/* Dates */}
           {dateStart && (
-            <span className='flex-none font-mono text-sm text-neutral-400 dark:text-neutral-700'>
+            <span className='relative flex-none font-mono text-sm text-neutral-400 dark:text-neutral-700'>
               {dateStart} -{' '}
               {isCurr ? (
                 <span className='transition-colors duration-300 text-emerald-700 group-hover:text-emerald-900 dark:group-hover:text-emerald-500'>
@@ -97,6 +89,13 @@ export default function TableRow({
                 </span>
               ) : (
                 dateEnd
+              )}
+              {/* Desktop: Green Ping to right */}
+              {isFirst && !isMobile && (
+                <div className='absolute -right-2 top-1'>
+                  <div className='absolute size-1 rounded-full bg-green-700 dark:bg-green-100 animate-ping' />
+                  <div className='relative size-1 rounded-full bg-green-600 dark:bg-green-400' />
+                </div>
               )}
             </span>
           )}

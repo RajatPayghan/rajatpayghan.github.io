@@ -1,5 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .pixellum-container {
   @apply flex w-full flex-row-reverse mt-4;
+  @apply gap-0 md:hover:gap-6 md:hover:w-[calc(100%+6rem)] md:hover:-translate-x-6;
+  @apply transform transition-all duration-300;
 }
 
 .pixellum-card {
@@ -7,8 +13,28 @@
   @apply rounded-lg;
   @apply bg-cover;
   @apply bg-neutral-100 border border-neutral-200;
-  @apply dark:bg-neutral-900 border dark:border-neutral-800;
+  @apply dark:bg-neutral-800 border dark:border-neutral-700;
   @apply hover:-translate-y-1;
   @apply shadow-sm hover:shadow-md;
   @apply transform transition-transform duration-300;
+  @apply md:group-hover:rotate-0;
+  @apply dark:border-[#293A20];
+}
+
+.pixellum-request-portfolio {
+  @apply flex flex-col justify-center align-middle items-center;
+  @apply text-xs md:text-sm;
+  @apply transition-all duration-300;
+  @apply bg-[#8BFA4A] text-black;
+  @apply dark:bg-[#8BFA4A] dark:text-black;
+  @apply md:bg-neutral-100 md:dark:bg-neutral-800;
+  @apply md:text-neutral-400 md:dark:text-neutral-500;
+  @apply md:hover:bg-[#8BFA4A] md:hover:text-black;
+}
+
+.pixellum-request-arrow {
+  @apply absolute top-1 right-0 transition duration-300;
+  @apply size-4 md:size-8;
+  @apply group-hover:scale-90;
+  @apply text-neutral-200 group-hover:text-neutral-300 dark:text-neutral-700 dark:group-hover:text-[#8BFA4A];
 }
