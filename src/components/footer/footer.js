@@ -46,7 +46,7 @@ export default function Footer() {
           <Goodbye />
         </div>
 
-        <div className='flex-row flex justify-between'>
+        <div className='flex-row flex justify-between align-middle items-center'>
           <div className='flex flex-row gap-1.5 text-sm dark:text-neutral-600 text-neutral-400'>
             <PinHead />
             <span>Pune, India</span>
@@ -58,10 +58,12 @@ export default function Footer() {
             )}
           </div>
           <div className='text-sm flex flex-row gap-2 items-center'>
-            <ThemeSwitcherButtonIcon />
             2025 Rajat Payghan
           </div>
         </div>
+      </div>
+      <div className='w-full flex justify-center'>
+        <ThemeSwitcherButtonIcon />
       </div>
     </footer>
   );
