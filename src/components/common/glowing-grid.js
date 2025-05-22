@@ -32,9 +32,9 @@ export default function GlowingGridBackground() {
     return null;
   }
 
-  const gridStroke = resolvedTheme === 'dark' ? '0c0c0c' : 'fcfcfc';
-  const glowStroke = resolvedTheme === 'dark' ? 'ffffff' : '000000';
-  const opacity = resolvedTheme === 'dark' ? 0.6 : 1;
+  const gridStroke = resolvedTheme === 'dark' ? '141414' : 'f4f4f4';
+  const glowStroke = resolvedTheme === 'dark' ? '777777' : '777777';
+  const opacity = resolvedTheme === 'dark' ? 0.75 : 1;
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function GlowingGridBackground() {
             className='absolute inset-0'
             style={{
               backgroundColor: 'transparent',
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23${gridStroke}' stroke-width='1'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23${gridStroke}' stroke-width='1'%3E%3Ccircle cx='16' cy='16' r='1' /%3E%3C/svg%3E")`,
               backgroundRepeat: 'repeat',
               backgroundSize: '32px 32px',
             }}
@@ -55,7 +55,7 @@ export default function GlowingGridBackground() {
           <div
             className='absolute inset-0'
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23${glowStroke}' stroke-width='1'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23${glowStroke}' stroke-width='1'%3E%3Ccircle cx='16' cy='16' r='1' /%3E%3C/svg%3E")`,
               backgroundRepeat: 'repeat',
               backgroundSize: '32px 32px',
               maskImage: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%)`,
