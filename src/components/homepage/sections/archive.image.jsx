@@ -4,11 +4,11 @@ import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 
 import useShaderImageEffect from '@/components/hooks/useImageShaderEffect';
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 import { NumberTicker } from '@/components/homepage/count-ticker';
 
 import '@/styles/shader.css';
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { FEATURE_FLAGS } from '@/constants/feature-flags';
 const TRANSITION_ACTIVE = FEATURE_FLAGS.loading.loadingActive;
 // -----------------------------------------------------------------
 

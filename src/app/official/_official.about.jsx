@@ -11,7 +11,7 @@ import localFont from 'next/font/local';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import Home_Socials from '@/components/homepage/sections/v2.about-online';
 import { Separator } from '@/components/ui/separator';

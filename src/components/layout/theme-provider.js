@@ -3,7 +3,7 @@
 // Imports
 // -----------------------------------------------------------------
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { FEATURE_FLAGS } from '@/constants/feature-flags';
 // -----------------------------------------------------------------
 
 export function ThemeProvider({ children }) {

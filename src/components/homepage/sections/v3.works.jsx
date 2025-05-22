@@ -1,12 +1,12 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 
 import {
   SectionContainer,
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import { WORKS } from '@/lib/constants';
+import { WORKS } from '@/constants/constants';
 import WorkRow from '../work-rows';
 
 export default function Home_Works() {

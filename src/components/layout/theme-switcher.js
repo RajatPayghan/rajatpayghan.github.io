@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { Sun, Moon } from '@/lib/icons';
+import { Sun, Moon } from '@/constants/icons';
 import { useIsMobile } from '../hooks/useIsMobile';
 
 export default function ThemeSwitcherButtonIcon() {

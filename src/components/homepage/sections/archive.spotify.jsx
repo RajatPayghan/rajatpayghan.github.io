@@ -8,7 +8,7 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import { SONG } from '@/lib/one-place-changer';
+import { SONG } from '@/constants/one-place-changer';
 // -----------------------------------------------------------------
 
 export default function Home_Spotify() {

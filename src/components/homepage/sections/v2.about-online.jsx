@@ -1,8 +1,8 @@
 import React from 'react';
 import { OnlineLink } from '../online-link';
-import { SOCIALS } from '@/lib/constants';
+import { SOCIALS } from '@/constants/constants';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 
 export default function Home_Socials() {
   return (

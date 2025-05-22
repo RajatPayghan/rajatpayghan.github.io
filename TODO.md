@@ -1,4 +1,5 @@
-- [ ] Spotify
+- [x] Font issues
 - [ ] Refactor pages structure
+- [ ] Spotify
 - [ ] Extract classes to css files
 - [ ] Clean up positioning issues

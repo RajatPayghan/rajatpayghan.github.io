@@ -6,7 +6,7 @@ import '@/styles/font-control.css';
 import ScrollManager from '@/components/layout/scroll-manager';
 import Footer from '@/components/footer/footer';
 import GlowingGridBackground from '@/components/common/glowing-grid';
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 
 export const metadata = {
   title: 'Rajat Payghan',

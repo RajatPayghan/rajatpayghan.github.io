@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 import '@/styles/globals.css';
 import dynamic from 'next/dynamic';
-import { PinHead } from '@/lib/icons';
+import { PinHead } from '@/constants/icons';
 import Badge from '../common/badge';
 import { useIsMobile } from '../hooks/useIsMobile';
 import Goodbye from './goodbyes';

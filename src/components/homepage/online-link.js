@@ -1,7 +1,7 @@
 'use client';
 import { ArrowUpRight, MoveRight } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
 
 export function OnlineLink({ title, url, isLast }) {

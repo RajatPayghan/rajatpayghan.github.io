@@ -56,6 +56,7 @@ module.exports = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      // 2. Change sans to desired font name from globals.css/@font
       fontFamily: {
         sans: ['"Geist Sans"', 'sans-serif'],
         geist: ['"Geist Sans"', 'sans-serif'],

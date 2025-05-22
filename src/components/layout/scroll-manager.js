@@ -2,8 +2,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { cn } from '@/constants/utils';
+import { FEATURE_FLAGS } from '@/constants/feature-flags';
 
 export default function ScrollManager({ children }) {
   const [isLoading, setIsLoading] = useState(true);

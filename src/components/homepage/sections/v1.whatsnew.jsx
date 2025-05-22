@@ -4,7 +4,7 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import { WHATSNEW } from '@/lib/one-place-changer';
+import { WHATSNEW } from '@/constants/one-place-changer';
 
 export default function Home_WhatsNew() {
   return (

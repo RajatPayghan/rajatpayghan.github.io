@@ -5,7 +5,7 @@ import {
   SectionTitle,
 } from '@/components/homepage/sections';
 import '@/styles/pixellum.css';
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';

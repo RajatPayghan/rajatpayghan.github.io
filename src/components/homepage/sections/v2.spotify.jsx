@@ -4,9 +4,9 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import { SONG } from '@/lib/one-place-changer';
-import { cn } from '@/lib/utils';
-import { Spotify } from '@/lib/icons';
+import { SONG } from '@/constants/one-place-changer';
+import { cn } from '@/constants/utils';
+import { Spotify } from '@/constants/icons';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import Badge from '@/components/common/badge';
 import { Play } from 'lucide-react';

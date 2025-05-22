@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { FEATURE_FLAGS } from '@/lib/feature-flags';
+import { FEATURE_FLAGS } from '@/constants/feature-flags';
 import { SmoothCursor } from '@/components/layout/smooth-cursor';
 import { BlurFade } from '@/components/common/blur-fade';
 import Shade from '@/components/common/shade';
@@ -14,7 +14,7 @@ import Home_WhatsNew from '@/components/homepage/sections/v1.whatsnew';
 import Home_Works from '@/components/homepage/sections/v3.works';
 import Home_Spotify from '@/components/homepage/sections/v2.spotify';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 import Home_Pixellum from '@/components/homepage/sections/v1.pixellum';
 import Loading from './loading';
 // -----------------------------------------------------------------

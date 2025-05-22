@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { spotifyApi } from '../lib/spotify.js';
+import { spotifyApi } from '../constants/spotify.js';
 
 const scopes = ['user-read-currently-playing'];
 const state = 'user-read-playback-state';

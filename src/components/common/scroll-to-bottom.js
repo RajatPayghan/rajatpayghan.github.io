@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import { ArrowDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 
 const BOTTOM_LIMIT_TO_HIDE_BUTTON = 12;
 

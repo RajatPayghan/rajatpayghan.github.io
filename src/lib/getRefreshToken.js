@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { spotifyApi } from '../lib/spotify.js';
+import { spotifyApi } from '../constants/spotify.js';
 
 const args = process.argv.slice(2);
 const code = args[0];

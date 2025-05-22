@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 import { Newsreader } from 'next/font/google';
 const libreBaskerville = Newsreader({
   subsets: ['latin'],
