@@ -17,7 +17,6 @@ import { useIsMobile } from '@/components/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
 import Home_Pixellum from '@/components/homepage/sections/v1.pixellum';
 import Loading from './loading';
-// -----------------------------------------------------------------
 
 const LOADING_SEC_DELAY = FEATURE_FLAGS.loading.loadingSecDelay; // From lib/feature-flags.js
 const MOBILE_BREAKPOINT = 768; // Screen size in px

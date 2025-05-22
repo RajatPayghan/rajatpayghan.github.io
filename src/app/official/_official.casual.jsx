@@ -19,7 +19,7 @@ export default function Home_Casual() {
     <SectionContainer>
       <SectionTitle>About Me</SectionTitle>
       <SectionContent>
-        <div className={cn('font-base')}>
+        <>
           Outside of work, I enjoy unwinding listening to EDM, making the most
           of a good cup of coffee, and exploring various personal coding and
           design projects. I genuinely enjoy the process of{' '}
@@ -30,7 +30,7 @@ export default function Home_Casual() {
             building things that are useful, thoughtfully crafted and delight
             users.
           </span>
-        </div>
+        </>
       </SectionContent>
     </SectionContainer>
   );

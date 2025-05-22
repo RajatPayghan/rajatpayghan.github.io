@@ -24,7 +24,7 @@ export default function Home_Spotify() {
       <SectionTitle>Recent Fav</SectionTitle>
       <SectionContent>
         <a href={SONG.hrefSpotify} rel='noopener noreferrer' target='_blank'>
-          <div className='font-base'>
+          <>
             <div
               className={cn(
                 'flex flex-col gap-4 p-2 w-full h-fit',
@@ -79,7 +79,7 @@ export default function Home_Spotify() {
                 </div>
               </div>
             </div>
-          </div>
+          </>
         </a>
       </SectionContent>
     </SectionContainer>

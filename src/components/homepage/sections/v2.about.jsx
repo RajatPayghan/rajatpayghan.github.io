@@ -1,23 +1,17 @@
-// This is the about me section in the home page
 'use client';
-// Imports
-// -----------------------------------------------------------------
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
 import '@/styles/font-control.css';
 import '@/styles/homepage.css';
 
 import { BlurFade } from '@/components/common/blur-fade';
-
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
 import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
-
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import Home_Socials from './v2.about-online';
 import { Separator } from '@/components/ui/separator';
-// -----------------------------------------------------------------
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -41,7 +35,8 @@ export default function Home_About() {
   }, []);
 
   return (
-    <div className={cn('flex flex-col gap-8', 'font-base')}>
+    <div className={cn('flex flex-col gap-8')}>
+      {/* Profile Image Section */}
       <div className='relative group'>
         <img
           src='/assets/misc-images/profile-c&z.avif'
@@ -52,77 +47,45 @@ export default function Home_About() {
           className='home-image-name'
         />
       </div>
+
+      {/* Heading Text */}
       <div
         className={cn(
-          'flex flex-col gap-2', // Layout
-          'font-instrument leading-normal text-4xl md:text-5xl', // Typography
-          'dark:text-neutral-400 text-neutral-500' // Colours
+          'flex flex-col gap-0 md:gap-2',
+          'font-instrument leading-normal text-4xl md:text-5xl',
+          'dark:text-neutral-400 text-neutral-500'
         )}
       >
         {isMobile ? (
-          // Mobile Div
-          <div className='flex flex-col gap-0'>
-            <div className='mb-2'>
-              <span className='dark:text-neutral-50 text-neutral-900'>
-                {' '}
-                Hey, I'm <span className='italic'>Rajat —</span>
-              </span>
+          <>
+            <div className='mb-2 dark:text-neutral-50 text-neutral-900'>
+              Hey, I'm <span className='italic'>Rajat —</span>
             </div>
             <div>
               <div>A creative dev crafting</div>
               <div>
-                <span className='italic'>tasty</span> digital products.
+                <span className='italic'>tasty</span> digital things.
               </div>
             </div>
-          </div>
+          </>
         ) : (
-          // Desktop Div
           <>
             <div>
               <span className='text-neutral-900 dark:text-neutral-50'>
-                {' '}
                 Hey, I'm <span className='italic'>Rajat —</span>
               </span>{' '}
               a creative dev
             </div>
-            <div className='inline-block'>
-              crafting{' '}
-              <span
-                className={cn(
-                  'inline-block relative text-center group' // Group wrapper
-                )}
-              >
-                <span className='block opacity-100 group-hover:opacity-0 duration-300 ease-in-out'>
-                  tasty
-                </span>
-                {mounted && (
-                  <img
-                    src={
-                      resolvedTheme === 'light'
-                        ? '/assets/misc-images/Delicious-LightAlt.webp'
-                        : '/assets/misc-images/Delicious-Dark.webp'
-                    }
-                    alt='Delicious Icon'
-                    className={cn(
-                      'absolute left-1/2 -translate-x-1/2 -translate-y-3/4 z-10', // Positioning
-                      'w-16 h-16', // Size
-                      'transition-all duration-500 ease-out', // Transition
-                      'opacity-0 group-hover:opacity-100', // Fade in
-                      'scale-50 rotate-90 group-hover:scale-110 group-hover:-rotate-12' // Transform effects
-                    )}
-                  />
-                )}
-              </span>{' '}
-              digital products
-            </div>
+            <div className='inline-block'>crafting tasty digital things</div>
           </>
         )}
       </div>
 
-      <div className='flex flex-col gap-1'>
+      {/* Bio Section */}
+      <div className='flex flex-col gap-1 font-sans'>
         <span>
           In a perfect world, I engineer solutions at the intersection of
-          <span className={cn(`${libreBaskerville.className}`, 'italic')}>
+          <span className={cn(libreBaskerville.className, 'italic')}>
             {' '}
             creativity
           </span>{' '}
@@ -132,14 +95,13 @@ export default function Home_About() {
         <span>Welcome to my lil corner of the internet!</span>
       </div>
 
+      {/* Social Links */}
       <BlurFade delay={0.2}>
         <Home_Socials />
       </BlurFade>
 
-      <Separator
-        decorative={true}
-        className='bg-neutral-100 dark:bg-neutral-900' // Color theme ordering
-      />
+      {/* Divider */}
+      <Separator decorative className='bg-neutral-100 dark:bg-neutral-900' />
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function Home_Works() {
     <SectionContainer>
       <SectionTitle>My Work</SectionTitle>
       <SectionContent>
-        <div className={cn('flex flex-col gap-4 md:gap-0 font-base')}>
+        <div className={cn('flex flex-col gap-4 md:gap-0')}>
           {WORKS.map((job, index) => (
             <WorkRow
               isFirst={index == 0}

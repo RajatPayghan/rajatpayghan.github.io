@@ -40,7 +40,7 @@ export default function Home_About() {
   }, []);
 
   return (
-    <div className={cn('flex flex-col gap-8', 'font-base')}>
+    <div className={cn('flex flex-col gap-8')}>
       <div className='relative group'>
         <img
           src='/assets/misc-images/profile-c&z.avif'

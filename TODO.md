@@ -1,0 +1,4 @@
+- [ ] Spotify
+- [ ] Refactor pages structure
+- [ ] Extract classes to css files
+- [ ] Clean up positioning issues

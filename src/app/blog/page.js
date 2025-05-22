@@ -12,7 +12,7 @@ export default function Blog() {
         </span>
       </BlurFade>
       <BlurFade delay={1}>
-        <div className='font-geist text-sm'>
+        <div className='text-sm'>
           Till then, make yourself at{' '}
           <Link href='/' className='underline underline-offset-4'>
             home

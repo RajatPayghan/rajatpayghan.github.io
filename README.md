@@ -15,5 +15,3 @@ Welcome to my portfolio website. It's a work in progress, so do revisit this pag
 - Boost performance
 - Blog (Someday)
 
-# To Do List
-- Refactor css classes using `cn`

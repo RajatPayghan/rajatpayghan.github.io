@@ -43,7 +43,7 @@ export default function Home_Pixellum() {
       </SectionTitle>
       <SectionContent>
         <div className='flex flex-col gap-12'>
-          <div className='font-base pixellum-container group'>
+          <div className='pixellum-container group'>
             <a
               href={MAIL_REQUEST_PORTFOLIO}
               className='relative pixellum-card pixellum-request-portfolio rotate-6 group'

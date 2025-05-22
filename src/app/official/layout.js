@@ -2,6 +2,7 @@ import { ThemeProvider } from '@/components/layout/theme-provider';
 
 import '@/styles/globals.css';
 import '@/styles/font-control.css';
+
 import ScrollManager from '@/components/layout/scroll-manager';
 import Footer from '@/components/footer/footer';
 import GlowingGridBackground from '@/components/common/glowing-grid';

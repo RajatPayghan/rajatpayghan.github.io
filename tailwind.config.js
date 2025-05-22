@@ -57,7 +57,8 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        geist: ['"Geist Sans"', 'sans-serif'],
+        sans: ['Hanken Grotesque', 'sans-serif'],
+        hanken: ['Hanken Grotesque', 'sans-serif'],
         geistmono: ['"Geist Mono"', 'monospace'],
         instrument: ['"Instrument Serif"', 'serif'],
       },
