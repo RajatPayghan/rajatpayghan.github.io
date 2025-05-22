@@ -2,7 +2,7 @@
   @apply h-24 w-20 md:h-36 md:w-28 object-cover mt-4; /* Layout */
   @apply transition-all duration-300; /* Transition */
   @apply rounded-full; /* Shape */
-  @apply md:hover:scale-150 md:hover:rotate-2; /* Hover (medium) */
+  @apply md:hover:scale-110 md:hover:rotate-2; /* Hover (medium) */
   @apply md:active:scale-100 md:active:-rotate-1 md:active:opacity-90; /* Active (medium) */
   @apply active:scale-90 active:-rotate-2 active:opacity-90; /* Active (mobile) */
 }
