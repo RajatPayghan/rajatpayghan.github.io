@@ -11,7 +11,7 @@ import ScrollBottomButton from '@/components/common/scroll-to-bottom';
 import Home_About from '@/components/homepage/sections/v2.about';
 import Home_Casual from '@/components/homepage/sections/v1.casual';
 import Home_WhatsNew from '@/components/homepage/sections/v1.whatsnew';
-import Home_Works from '@/components/homepage/sections/v2.works';
+import Home_Works from '@/components/homepage/sections/v3.works';
 import Home_Spotify from '@/components/homepage/sections/v2.spotify';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
