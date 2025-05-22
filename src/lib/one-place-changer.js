@@ -17,3 +17,6 @@ export const SONG = {
     'https://open.spotify.com/track/5nhRFhuduS8GQ3uD1fsWZW?si=fmM08k-MSxmqtzBt0DEVLg',
   favDate: '18 May, 2025',
 };
+
+export const LIL_CORNER_CONTENT =
+  'This little website is my cozy corner of the internet—part journal, part gallery, part daydream. It’s where I share the things I create and care about, free from the noise of algorithms or the pressure to perform. Think of it as a digital living room, filled with pieces of me. I hope exploring it feels a bit like stumbling into a story—familiar, surprising, and maybe even a little magical.';
