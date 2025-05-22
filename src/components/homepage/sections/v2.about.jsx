@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import '@/styles/font-control.css';
 import '@/styles/homepage.css';
 
 import { BlurFade } from '@/components/common/blur-fade';
@@ -82,7 +81,7 @@ export default function Home_About() {
       </div>
 
       {/* Bio Section */}
-      <div className='flex flex-col gap-1 font-sans'>
+      <div className='flex flex-col gap-1'>
         <span>
           In a perfect world, I engineer solutions at the intersection of
           <span className={cn(libreBaskerville.className, 'italic')}>

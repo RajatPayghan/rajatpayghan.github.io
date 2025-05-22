@@ -86,8 +86,14 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Main font control here */
   body {
-    @apply bg-background text-foreground no-scrollbar font-sans text-base text-gray-900;
+    @apply bg-background text-foreground no-scrollbar;
+    @apply font-sans;
+    @apply text-[16px] md:text-lg; /* Font size */
+    @apply dark:font-normal font-normal; /* Font weight */
+    @apply text-neutral-700 dark:text-neutral-400; /* Text color */
+    @apply tracking-normal leading-normal md:leading-normal; /* Tracking and line height */
   }
 
   ::selection {

@@ -1,7 +1,3 @@
-// This is the Whats New section in the home page
-
-// Imports
-// -----------------------------------------------------------------
 import React from 'react';
 import {
   SectionContainer,
@@ -9,8 +5,6 @@ import {
   SectionTitle,
 } from '@/components/homepage/sections';
 import { WHATSNEW } from '@/lib/one-place-changer';
-import '@/styles/font-control.css';
-// -----------------------------------------------------------------
 
 export default function Home_WhatsNew() {
   return (

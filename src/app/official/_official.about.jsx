@@ -2,7 +2,6 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
-import '@/styles/font-control.css';
 import '@/styles/homepage.css';
 
 import { BlurFade } from '@/components/common/blur-fade';

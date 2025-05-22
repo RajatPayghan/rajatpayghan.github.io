@@ -27,7 +27,5 @@ export function SectionTitle(props) {
 }
 
 export function SectionContent(props) {
-  return (
-    <div className='lg:col-span-10 text-base lg:text-lg font-thin' {...props} />
-  );
+  return <div className='lg:col-span-10 text-base lg:text-lg' {...props} />;
 }

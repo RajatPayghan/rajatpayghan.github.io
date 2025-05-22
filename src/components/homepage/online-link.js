@@ -1,13 +1,8 @@
 'use client';
-
-// Imports
-// -----------------------------------------------------------------
 import { ArrowUpRight, MoveRight } from 'lucide-react';
-import '@/styles/font-control.css';
 
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
-// -----------------------------------------------------------------
 
 export function OnlineLink({ title, url, isLast }) {
   const isMobile = useIsMobile();
@@ -22,7 +17,7 @@ export function OnlineLink({ title, url, isLast }) {
         <div
           className={cn(
             'flex flex-row items-centre justify-center group gap-1', // Items in a row
-            'dark:hover:text-white dark:font-regular md:font-light md:hover:font-medium', // Individual hover states
+            'dark:hover:text-white dark:font-regular md:font-normal md:hover:font-medium', // Individual hover states
             'bg-neutral-50 md:bg-neutral-50 dark:bg-neutral-900 rounded-full px-4 py-2', // Pill shape design
             'transition-all duration-300 ease-in-out', // Transition Settings
             'border dark:border-none border-neutral-100', // Transition Settings

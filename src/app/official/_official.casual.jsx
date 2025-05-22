@@ -9,9 +9,6 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import { cn } from '@/lib/utils';
-import { FONT_CONTROL } from '@/lib/css-mission-control';
-import '@/styles/font-control.css';
 // -----------------------------------------------------------------
 
 export default function Home_Casual() {

@@ -1,21 +1,13 @@
-// This is the My Work section in the home page
-
-// Imports
-// -----------------------------------------------------------------
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { FONT_CONTROL } from '@/lib/css-mission-control';
 
 import {
   SectionContainer,
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import TableRow from '@/components/homepage/table-rows';
 import { WORKS } from '@/lib/constants';
-import '@/styles/font-control.css';
 import WorkRow from '../work-rows';
-// -----------------------------------------------------------------
 
 export default function Home_Works() {
   return (

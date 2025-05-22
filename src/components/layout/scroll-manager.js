@@ -17,7 +17,7 @@ export default function ScrollManager({ children }) {
   }, []);
 
   return (
-    <div className='app-shell'>
+    <div>
       <main
         className={cn(
           `scrollable-content`,

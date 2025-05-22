@@ -1,16 +1,9 @@
 /* font-control.css */
 
-.font-base {
-  @apply text-[16px] md:text-lg; /* Font size */
-  @apply dark:font-light font-normal; /* Font weight */
-  @apply text-neutral-700 dark:text-neutral-400; /* Text color */
-  @apply tracking-normal leading-normal md:leading-normal; /* Tracking and line height */
-}
-
 .font-social {
   @apply uppercase; /* Text transform */
   @apply text-[9px] md:text-xs; /* Font size */
-  @apply font-normal dark:font-normal dark:md:font-light;
+  @apply font-normal dark:font-normal dark:md:font-normal;
   @apply tracking-tight; /* Letter spacing */
   @apply text-neutral-900 dark:text-white dark:md:text-neutral-400 md:text-neutral-900; /* Text color */
 }

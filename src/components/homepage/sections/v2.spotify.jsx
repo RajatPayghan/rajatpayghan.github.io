@@ -1,7 +1,3 @@
-// This is the Whats New section in the home page
-
-// Imports
-// -----------------------------------------------------------------
 import React from 'react';
 import {
   SectionContainer,
@@ -13,9 +9,7 @@ import { cn } from '@/lib/utils';
 import { Spotify } from '@/lib/icons';
 import { useIsMobile } from '@/components/hooks/useIsMobile';
 import Badge from '@/components/common/badge';
-import '@/styles/font-control.css';
 import { Play } from 'lucide-react';
-// -----------------------------------------------------------------
 
 export default function Home_Spotify() {
   const isMobile = useIsMobile();

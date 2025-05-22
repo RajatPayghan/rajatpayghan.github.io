@@ -4,7 +4,6 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/homepage/sections';
-import '@/styles/font-control.css';
 import '@/styles/pixellum.css';
 import { cn } from '@/lib/utils';
 

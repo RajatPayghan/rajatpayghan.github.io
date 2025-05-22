@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <ScrollManager>
           <ThemeProvider>
-            <div className={cn('app-shell', 'font-base')}>
+            <div className='app-shell'>
               <main
                 id='scroll-container'
                 className='scroll-controller centerize-controller'
