@@ -41,7 +41,7 @@ export default function Home() {
       {/* TODO : Change font size based on mobile to all  */}
       <ScrollBottomButton isLoading={isLoading} />
       <BlurFade duration={0}>
-        <div className={cn('flex flex-col gap-12 lg:gap-12 mt-16 md:mt-0')}>
+        <div className={cn('flex flex-col gap-16 lg:gap-16 mt-16 md:mt-0')}>
           <BlurFade delay={LOADING_SEC_DELAY}>
             <Home_About />
           </BlurFade>
