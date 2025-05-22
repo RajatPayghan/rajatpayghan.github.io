@@ -2,14 +2,13 @@
   @apply h-24 w-20 md:h-36 md:w-28 object-cover mt-4; /* Layout */
   @apply transition-all duration-300; /* Transition */
   @apply rounded-full; /* Shape */
-  @apply md:hover:scale-105 md:hover:rotate-2; /* Hover (medium) */
+  @apply md:hover:scale-150 md:hover:rotate-2; /* Hover (medium) */
   @apply md:active:scale-100 md:active:-rotate-1 md:active:opacity-90; /* Active (medium) */
   @apply active:scale-90 active:-rotate-2 active:opacity-90; /* Active (mobile) */
 }
 .home-image-name {
-  @apply absolute top-0 left-20 size-24 z-50;
+  @apply absolute top-0 left-20 size-24 z-50 aspect-square;
   @apply md:top-0 md:left-32 md:size-36;
-  @apply fill-red-500;
   @apply transition-all duration-500;
   @apply opacity-0 dark:group-hover:opacity-30 group-hover:opacity-100;
   @apply rotate-2 group-hover:rotate-0;
