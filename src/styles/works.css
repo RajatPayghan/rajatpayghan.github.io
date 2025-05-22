@@ -1,0 +1,58 @@
+/* Layout */
+.work-row {
+  @apply relative flex flex-row md:flex-row gap-1 md:gap-0; /* Flex */
+  @apply p-4 pl-4; /* Padding */
+  @apply md:px-1 md:py-2 md:hover:pr-3; /* MD - Padding */
+  @apply border md:border-none border-neutral-100 dark:border-neutral-800; /* Border */
+  @apply rounded-md md:rounded-md; /* Radius */
+  @apply bg-neutral-50 md:bg-transparent; /* Light - BG */
+  @apply dark:bg-neutral-900 dark:md:bg-transparent; /* Dark - BG */
+  @apply transition-all duration-300; /* Transition */
+  @apply md:drop-shadow-none; /* MD - Shadow */
+  @apply md:hover:bg-neutral-100; /* Light - Hover */
+  @apply dark:md:hover:bg-neutral-900; /* Dark - Hover */
+}
+
+/* Date */
+.work-date {
+  @apply flex flex-col md:flex-row md:gap-2; /* Text */
+  @apply text-sm; /* Text */
+  @apply w-1/4 md:w-1/3; /* Text */
+  @apply font-mono text-neutral-400 dark:text-neutral-700; /* Text */
+}
+
+/* Content */
+.work-content {
+  @apply flex flex-col md:flex-row w-full md:items-center; /* Flex */
+}
+
+/* Title */
+.work-title {
+  @apply flex gap-1 items-center;
+  @apply text-base md:text-base font-medium max-w-fit min-w-fit; /* Text */
+  @apply transition-all duration-300; /* Transition */
+  @apply dark:text-neutral-400 dark:group-hover:text-neutral-200; /* Dark - Text */
+}
+
+/* Spacer */
+.spacer {
+  @apply hidden md:flex md:w-full; /* Spacer */
+}
+
+/* Subtitle */
+.work-subtitle {
+  @apply max-w-fit min-w-fit; /* Text */
+  @apply text-sm md:text-base; /* Text */
+  @apply text-neutral-600 dark:text-neutral-500; /* Text */
+}
+
+.now-modifier {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.arrow {
+  @apply size-3 md:size-4;
+  @apply text-neutral-500;
+  @apply opacity-100 md:opacity-0 md:group-hover:opacity-100;
+  @apply transition-all duration-300;
+}
