@@ -62,9 +62,21 @@ export default function Home_Pixellum() {
               In 2024, along with{' '}
               <a
                 href='https://www.linkedin.com/in/rishita-gupta-0166bb24a/'
-                className='underline underline-offset-4 hover:text-[#293A20] dark:hover:text-[#8BFA4A]'
+                className={cn(
+                  'inline-block px-1 align-middle rounded-full bg-neutral-100 dark:bg-neutral-900',
+                  'hover:bg-[#8BFA4A] dark:hover:bg-[#8BFA4A] hover:text-black '
+                )}
               >
-                Rishita
+                <div className='flex gap-2 items-center'>
+                  <div className='rounded-full size-6 overflow-clip'>
+                    <img
+                      src='/assets/misc-images/Rishita.jpeg'
+                      className='scale-125'
+                    />
+                  </div>
+                  <span>Rishita</span>
+                  <ArrowUpRight className='size-4' />
+                </div>
               </a>
               , I launched Studio Pixellum — a small{' '}
               <span className='italic font-medium text-neutral-900 dark:text-neutral-200'>
