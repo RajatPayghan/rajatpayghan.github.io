@@ -5,12 +5,19 @@
 
 import { SONG } from '@/constants/one-place-changer';
 import SpotifyPresenter from './presenter';
-import { getNowPlaying } from './resolveSpotifyData';
+import { getPlayingContent } from './data';
+import SpotifyFallback from './fallback';
 
 export default async function SpotifyMiddleware({ isMobile }) {
-  const status = await getNowPlaying();
+  const { isPlaying, fallback, song } = await getPlayingContent();
 
-  console.log(status);
-
-  return <></>;
+  return (
+    <>
+      {fallback ? (
+        <SpotifyFallback />
+      ) : (
+        <SpotifyPresenter isPlaying={isPlaying} song={song} />
+      )}
+    </>
+  );
 }

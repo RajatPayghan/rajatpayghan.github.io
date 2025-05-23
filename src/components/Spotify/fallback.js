@@ -7,8 +7,9 @@ import { Spotify as SpotifyIcon } from '@/constants/icons';
 import { cn } from '@/constants/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
 import '@/styles/spotify.css';
+import { SONG } from '@/constants/one-place-changer';
 
-export default function SpotifyPresenter({ song, isPlaying }) {
+export default function SpotifyPresenter({ song = SONG, isPlaying = false }) {
   const isMobile = useIsMobile();
   return (
     <div>
@@ -19,13 +20,9 @@ export default function SpotifyPresenter({ song, isPlaying }) {
             <div className='song-info'>
               <div className='song-title'>{song.title}</div>
               <div className='song-meta'>
-                <span className='whitespace-nowrap overflow-hidden text-ellipsis'>
-                  {song.artist}
-                </span>
+                <span>{song.artist}</span>
                 <span>•</span>
-                <span className='whitespace-nowrap overflow-hidden text-ellipsis'>
-                  {song.album}
-                </span>
+                <span>{song.album}</span>
               </div>
             </div>
           </div>
@@ -47,11 +44,8 @@ export default function SpotifyPresenter({ song, isPlaying }) {
             </span>
 
             <div className='timestamp'>
-              {isPlaying ? 'Playing' : 'Played'}
-              <Badge
-                isSubtle={isPlaying ? false : true}
-                isActive={isPlaying ? true : false}
-              >
+              Played on{' '}
+              <Badge isSubtle={true} isActive={true}>
                 {song.timestamp}
               </Badge>
             </div>

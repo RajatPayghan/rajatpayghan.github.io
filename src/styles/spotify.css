@@ -1,0 +1,70 @@
+.spotify-container {
+  @apply flex flex-col gap-4 p-2 w-full h-fit 
+         bg-neutral-100/20 dark:bg-neutral-900/50 
+         border border-neutral-200 dark:border-neutral-900 
+         rounded-md active:scale-95 
+         transition-all duration-300;
+}
+
+.spotify-card {
+  @apply flex flex-row gap-3 md:gap-4 p-0 w-full h-16  overflow-hidden
+         dark:bg-neutral-900 bg-neutral-100 
+         rounded-md;
+}
+
+.album-image {
+  @apply object-cover h-full rounded-md;
+}
+
+.album-image-playing {
+  @apply object-cover h-full rounded-full;
+}
+
+.song-info {
+  @apply flex flex-col justify-center h-full gap-0;
+}
+
+.song-title {
+  @apply text-lg;
+}
+
+.song-meta {
+  @apply flex flex-row gap-2 text-sm 
+         text-neutral-400 dark:text-neutral-600;
+}
+
+.controls {
+  @apply flex align-middle pr-1 justify-between 
+         w-full h-fit text-xs;
+}
+
+.play-label {
+  @apply flex flex-row gap-1 items-center 
+         text-neutral-400 dark:text-neutral-700 
+         dark:md:group-hover:text-green-400 
+         md:group-hover:text-green-600;
+}
+
+.spotify-icon-mobile {
+  @apply w-3 grayscale opacity-20;
+}
+
+.spotify-icon-desktop {
+  @apply w-0 group-hover:w-3 transition-all duration-300;
+}
+
+.play-icon {
+  @apply fill-neutral-400 dark:fill-neutral-700;
+}
+
+.play-icon-mobile {
+  @apply hidden;
+}
+
+.play-icon-desktop {
+  @apply w-2 group-hover:w-0 transition-all duration-300;
+}
+
+.timestamp {
+  @apply flex flex-row gap-2 items-center;
+}

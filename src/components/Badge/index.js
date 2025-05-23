@@ -16,7 +16,7 @@ export default function Badge({ isSubtle = false, isActive, children }) {
               : 'border-amber-500'
             : isActive
             ? 'text-green-700'
-            : 'text-amber-700'
+            : 'text-amber-600'
         }`
       )}
     >
@@ -26,7 +26,7 @@ export default function Badge({ isSubtle = false, isActive, children }) {
           className={cn(
             'relative h-1 w-1 rounded-full',
             `${isActive ? 'dark:bg-green-500' : 'dark:bg-amber-500'}`,
-            `${isActive ? 'bg-green-700' : 'bg-amber-700'}`
+            `${isActive ? 'bg-green-500' : 'bg-amber-500'}`
           )}
         />
       </div>
