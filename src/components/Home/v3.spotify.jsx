@@ -9,7 +9,7 @@ import SpotifyMiddleware from '../Spotify/middleware';
 export default function Home_Spotify() {
   return (
     <SectionContainer>
-      <SectionTitle>Recent Fav</SectionTitle>
+      <SectionTitle>Recent</SectionTitle>
       <SectionContent>
         <SpotifyMiddleware />
       </SectionContent>
