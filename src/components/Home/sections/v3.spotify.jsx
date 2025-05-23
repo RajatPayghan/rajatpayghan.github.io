@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {
   SectionContainer,
@@ -11,6 +13,7 @@ import { useIsMobile } from '@/components/Hooks/useIsMobile';
 import Badge from '@/components/Badge';
 import { Play } from 'lucide-react';
 import SpotifyMiddelware from '@/components/Spotify/middleware';
+import SpotifyServer from '@/components/Spotify/server';
 
 export default function Home_Spotify() {
   const isMobile = useIsMobile();
@@ -19,7 +22,7 @@ export default function Home_Spotify() {
     <SectionContainer>
       <SectionTitle>Recent Fav</SectionTitle>
       <SectionContent>
-        <SpotifyMiddelware isMobile={isMobile} />
+        <SpotifyServer isMobile={isMobile} />
       </SectionContent>
     </SectionContainer>
   );
