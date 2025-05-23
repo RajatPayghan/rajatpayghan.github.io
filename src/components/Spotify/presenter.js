@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Badge from '@/components/Badge';
 import { Play } from 'lucide-react';
 import { Spotify as SpotifyIcon } from '@/constants/icons';
@@ -8,8 +8,39 @@ import { cn } from '@/constants/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
 import '@/styles/spotify.css';
 
-export default function SpotifyPresenter({ song, isPlaying }) {
+export default function SpotifyPresenter({
+  song: initialSong,
+  isPlaying: initialIsPlaying,
+}) {
+  const [song, setSong] = useState(initialSong);
+  const [isPlaying, setIsPlaying] = useState(initialIsPlaying);
   const isMobile = useIsMobile();
+
+  const play = Number(song.durationPlaying);
+  const full = Number(song.durationFull);
+
+  const widthPercentage = full > 0 ? (play / full) * 100 : 0;
+
+  useEffect(() => {
+    const fetchSong = async () => {
+      try {
+        const res = await fetch('/api/spotify');
+        const data = await res.json();
+        setSong(data.song);
+        setIsPlaying(data.isPlaying);
+      } catch (err) {
+        console.error('Error fetching Spotify data:', err);
+      }
+    };
+
+    // Initial fetch
+    fetchSong();
+
+    const interval = setInterval(fetchSong, isPlaying ? 5_000 : 120_000);
+
+    return () => clearInterval(interval);
+  }, [isPlaying]);
+
   return (
     <div>
       <a href={song.spotifyUrl} rel='noopener noreferrer' target='_blank'>
@@ -48,14 +79,20 @@ export default function SpotifyPresenter({ song, isPlaying }) {
 
             <div className='timestamp'>
               {isPlaying ? 'Playing' : 'Played'}
-              <Badge
-                isSubtle={isPlaying ? false : true}
-                isActive={isPlaying ? true : false}
-              >
+              <Badge isSubtle={!isPlaying} isActive={isPlaying}>
                 {song.timestamp}
               </Badge>
             </div>
           </div>
+
+          {isPlaying && (
+            <div className='play-bar'>
+              <div
+                className='play-bar-progress'
+                style={{ width: `${widthPercentage}%` }}
+              />
+            </div>
+          )}
         </div>
       </a>
     </div>

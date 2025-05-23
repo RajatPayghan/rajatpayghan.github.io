@@ -19,5 +19,5 @@ export function formatLastPlayedTime(inputTime) {
     }
   }
 
-  return 'just now';
+  return 'Now';
 }

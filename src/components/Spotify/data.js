@@ -4,7 +4,6 @@ import qs from 'qs';
 
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`;
-const PLAYLIST_ENDPOINT = `https://api.spotify.com/v1/playlists`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async () => {
@@ -27,55 +26,11 @@ const getAccessToken = async () => {
   });
 
   try {
-    const response = await axios.post(
-      'https://accounts.spotify.com/api/token',
-      data,
-      { headers }
-    );
+    const response = await axios.post(TOKEN_ENDPOINT, data, { headers });
     // console.log(response.data.access_token);
     return response.data.access_token;
   } catch (error) {
     console.log(error.response ? error.response.data : error);
-  }
-};
-
-export const getPlaying = async () => {
-  try {
-    const access_token = await getAccessToken();
-
-    const response = await axios.get(NOW_PLAYING_ENDPOINT, {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
-    });
-
-    // If no content (nothing playing), Spotify responds 204, axios throws on non-2xx, so catch that below
-    if (response.status === 204) {
-      return {
-        isPlaying: false,
-      };
-    }
-
-    return {
-      trackName: response.data.item.name,
-      href: response.data.item.external_urls.spotify,
-      artists: response.data.item.artists[0].name,
-      albumName: response.data.item.album.name,
-      albumArt: response.data.item.album.images[1]?.url,
-      isPlaying: response.data.is_playing,
-    };
-  } catch (error) {
-    if (error.response?.status === 204) {
-      // No content, nothing playing
-      return {
-        isPlaying: false,
-      };
-    }
-    console.error(
-      'Error fetching now playing:',
-      error.response?.data || error.message
-    );
-    return null;
   }
 };
 
@@ -152,6 +107,9 @@ export const getPlayingContent = async () => {
   const album = song.item.album.name;
   const albumImageUrl = song.item.album.images[0].url;
   const spotifyUrl = song.item.external_urls.spotify;
+  const timestamp = formatLastPlayedTime(song.played_at);
+  const durationFull = song.item.duration_ms;
+  const durationPlaying = song.progress_ms;
 
   return {
     fallback: false,
@@ -162,7 +120,9 @@ export const getPlayingContent = async () => {
       album,
       albumImageUrl,
       spotifyUrl,
-      timestamp: 'Now',
+      timestamp,
+      durationFull,
+      durationPlaying,
     },
   };
 };

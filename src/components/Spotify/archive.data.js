@@ -1,5 +1,45 @@
 const querystring = require('querystring');
 
+export const getPlaying = async () => {
+  try {
+    const access_token = await getAccessToken();
+
+    const response = await axios.get(NOW_PLAYING_ENDPOINT, {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    });
+
+    // If no content (nothing playing), Spotify responds 204, axios throws on non-2xx, so catch that below
+    if (response.status === 204) {
+      return {
+        isPlaying: false,
+      };
+    }
+
+    return {
+      trackName: response.data.item.name,
+      href: response.data.item.external_urls.spotify,
+      artists: response.data.item.artists[0].name,
+      albumName: response.data.item.album.name,
+      albumArt: response.data.item.album.images[1]?.url,
+      isPlaying: response.data.is_playing,
+    };
+  } catch (error) {
+    if (error.response?.status === 204) {
+      // No content, nothing playing
+      return {
+        isPlaying: false,
+      };
+    }
+    console.error(
+      'Error fetching now playing:',
+      error.response?.data || error.message
+    );
+    return null;
+  }
+};
+
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
