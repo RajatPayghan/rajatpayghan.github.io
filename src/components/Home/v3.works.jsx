@@ -7,7 +7,7 @@ import {
   SectionTitle,
 } from '@/components/Sections';
 import { WORKS } from '@/constants/constants';
-import WorkRow from '../work-rows';
+import WorkRow from './work-rows';
 
 export default function Home_Works() {
   return (

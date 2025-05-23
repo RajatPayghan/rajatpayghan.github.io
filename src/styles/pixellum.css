@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.pixellum-title-image {
+  @apply size-6 p-1 rounded-full;
+  @apply bg-neutral-200 dark:bg-neutral-800;
+}
+
 .pixellum-container {
   @apply flex w-full flex-row-reverse mt-4;
   @apply gap-0 md:hover:gap-4 md:hover:w-[calc(100%+3rem)] md:hover:-translate-x-3;
@@ -38,4 +43,9 @@
   @apply size-4 md:size-8;
   @apply group-hover:scale-90;
   @apply text-neutral-200 group-hover:text-neutral-300 dark:text-neutral-700 dark:group-hover:text-[#8BFA4A];
+}
+
+.linkedin-pill {
+  @apply inline-block px-1 align-middle rounded-full bg-neutral-100 dark:bg-neutral-900;
+  @apply hover:bg-[#8BFA4A] dark:hover:bg-[#8BFA4A] hover:text-black;
 }

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { cn } from '@/constants/utils';
 import { useIsMobile } from '../Hooks/useIsMobile';

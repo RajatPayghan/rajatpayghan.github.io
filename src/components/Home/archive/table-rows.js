@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '../Hooks/useIsMobile';
+import { useIsMobile } from '../../Hooks/useIsMobile';
 import { ArrowRight, ArrowUpRight, MoveRight } from 'lucide-react';
-import Badge from '../Badge';
+import Badge from '../../Badge';
 
 export default function TableRow({
   isFirst,
   href,
   title,
   subtitle,
-  imgSrc,
   dateStart,
   dateEnd,
   isCurr,

@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import '@/styles/homepage.css';
 
-import { BlurFade } from '@/components/BlurFade/blur-fade';
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
 import { useTheme } from 'next-themes';
@@ -20,18 +19,12 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 const departureMono = localFont({
-  src: '../display-fonts/DepartureMono-Regular.woff2',
+  src: './display-fonts/DepartureMono-Regular.woff2',
   display: 'swap',
 });
 
 export default function Home_About() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const isMobile = useIsMobile();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <div className={cn('flex flex-col gap-8')}>
@@ -57,6 +50,7 @@ export default function Home_About() {
       >
         {isMobile ? (
           <>
+            {/* Mobile Heading */}
             <div className='mb-2 dark:text-neutral-50 text-neutral-900'>
               Hey, I'm <span className='italic'>Rajat —</span>
             </div>
@@ -69,6 +63,7 @@ export default function Home_About() {
           </>
         ) : (
           <>
+            {/* Desktop Heading */}
             <div>
               <span className='text-neutral-900 dark:text-neutral-50'>
                 Hey, I'm <span className='italic'>Rajat —</span>
@@ -95,9 +90,7 @@ export default function Home_About() {
       </div>
 
       {/* Social Links */}
-      <BlurFade delay={0.2}>
-        <Home_Socials />
-      </BlurFade>
+      <Home_Socials />
 
       {/* Divider */}
       <Separator decorative className='bg-neutral-100 dark:bg-neutral-900' />

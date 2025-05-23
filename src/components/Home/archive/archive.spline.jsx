@@ -1,7 +1,3 @@
-// This is the Spline section in the home page
-
-// Imports
-// -----------------------------------------------------------------
 import React from 'react';
 
 import {
@@ -9,8 +5,7 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/Sections';
-import SplineHome from '@/components/Home/spline-home';
-// -----------------------------------------------------------------
+import SplineHome from '@/components/Home/archive/spline-home';
 
 export default function Home_Spline() {
   return (

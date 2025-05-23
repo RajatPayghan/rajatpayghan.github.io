@@ -8,13 +8,11 @@ import { BlurFade } from '@/components/BlurFade/blur-fade';
 
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
 
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '@/components/Hooks/useIsMobile';
-import Home_Socials from '@/components/Home/sections/v2.about-online';
+import Home_Socials from '@/components/Home/v2.about-online';
 import { Separator } from '@/components/ui/separator';
+import { useIsMobile } from '@/components/Hooks/useIsMobile';
 // -----------------------------------------------------------------
 
 const libreBaskerville = Libre_Baskerville({
@@ -25,19 +23,12 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 const departureMono = localFont({
-  src: '../../components/homepage/display-fonts/DepartureMono-Regular.woff2',
+  src: '../../components/Home/display-fonts/DepartureMono-Regular.woff2',
   display: 'swap',
 });
 
 export default function Home_About() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const isMobile = useIsMobile();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div className={cn('flex flex-col gap-8')}>
       <div className='relative group'>
@@ -64,9 +55,7 @@ export default function Home_About() {
             </div>
             <div>
               <div>A creative dev crafting</div>
-              <div>
-                <span className='italic'>impactful</span> digital products.
-              </div>
+              <div>sleek digital products.</div>
             </div>
           </div>
         ) : (
@@ -79,9 +68,7 @@ export default function Home_About() {
               </span>{' '}
               a creative dev
             </div>
-            <div className='inline-block'>
-              crafting <span className='italic'>clean</span> digital products
-            </div>
+            <div className='inline-block'>crafting sleek digital products</div>
           </>
         )}
       </div>

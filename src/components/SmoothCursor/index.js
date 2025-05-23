@@ -1,10 +1,8 @@
 'use client';
 
-// Imports
-// -----------------------------------------------------------------
 import { motion, useSpring } from 'motion/react';
 import React, { useEffect, useRef, useState } from 'react';
-// -----------------------------------------------------------------
+import { useIsMobile } from '../Hooks/useIsMobile';
 
 const DefaultCursorSVG = () => {
   return (
@@ -98,7 +96,7 @@ const PointerCursorSVG = () => {
   );
 };
 
-export function SmoothCursor({
+export default function SmoothCursor({
   springConfig = {
     damping: 28,
     stiffness: 400,
@@ -211,29 +209,37 @@ export function SmoothCursor({
 
   const activeCursor = isPointer ? <PointerCursorSVG /> : <DefaultCursorSVG />;
 
+  const isDesktop = !useIsMobile();
+
   return (
-    <motion.div
-      style={{
-        position: 'fixed',
-        left: cursorX,
-        top: cursorY,
-        translateX: '-50%',
-        translateY: '-50%',
-        rotate: rotation,
-        scale: scale,
-        zIndex: 100,
-        pointerEvents: 'none',
-        willChange: 'transform',
-      }}
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{
-        type: 'spring',
-        stiffness: 400,
-        damping: 30,
-      }}
-    >
-      {activeCursor}
-    </motion.div>
+    <>
+      {isDesktop ? (
+        <motion.div
+          style={{
+            position: 'fixed',
+            left: cursorX,
+            top: cursorY,
+            translateX: '-50%',
+            translateY: '-50%',
+            rotate: rotation,
+            scale: scale,
+            zIndex: 100,
+            pointerEvents: 'none',
+            willChange: 'transform',
+          }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 400,
+            damping: 30,
+          }}
+        >
+          {activeCursor}
+        </motion.div>
+      ) : (
+        <></>
+      )}
+    </>
   );
 }

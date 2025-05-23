@@ -1,10 +1,7 @@
 'use client';
 
-// Imports
-// -----------------------------------------------------------------
-import { useRef } from 'react';
-import { AnimatePresence, motion, useInView } from 'motion/react';
-// -----------------------------------------------------------------
+import { useRef, Children, cloneElement } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 export function BlurFade({
   children,
@@ -17,6 +14,7 @@ export function BlurFade({
   inView = false,
   inViewMargin = '-50px',
   blur = '6px',
+  stagger = 0.2, // Control spacing between animations
   ...props
 }) {
   const ref = useRef(null);
@@ -39,24 +37,26 @@ export function BlurFade({
 
   const combinedVariants = variant || defaultVariants;
 
+  const childArray = Children.toArray(children);
+
   return (
-    <AnimatePresence>
-      <motion.div
-        ref={ref}
-        initial='hidden'
-        animate={isInView ? 'visible' : 'hidden'}
-        exit='hidden'
-        variants={combinedVariants}
-        transition={{
-          delay: 0.04 + delay,
-          duration,
-          ease: 'easeOut',
-        }}
-        className={className}
-        {...props}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <div ref={ref} className={className} {...props}>
+      {childArray.map((child, index) => (
+        <motion.div
+          key={index}
+          initial='hidden'
+          animate={isInView ? 'visible' : 'hidden'}
+          exit='hidden'
+          variants={combinedVariants}
+          transition={{
+            delay: delay + index * stagger,
+            duration,
+            ease: 'easeOut',
+          }}
+        >
+          {child}
+        </motion.div>
+      ))}
+    </div>
   );
 }

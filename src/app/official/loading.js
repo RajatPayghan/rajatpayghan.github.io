@@ -1,21 +1,14 @@
 'use client';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/constants/utils';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 export default function Loading() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div
       className={cn(
-        'relative flex items-center justify-center h-screen w-screen z-50',
+        'fixed flex items-center justify-center left-0 top-0 h-screen w-screen z-50',
         'bg-neutral-50 dark:bg-neutral-950 transition-colors duration-500'
       )}
     >
