@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from '@/constants/icons';
-import { useIsMobile } from '../Hooks/useIsMobile';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 export default function ThemeSwitcherButtonIcon() {
   const [mounted, setMounted] = useState(false);

@@ -2,7 +2,7 @@
 
 import { motion, useSpring } from 'motion/react';
 import React, { useEffect, useRef, useState } from 'react';
-import { useIsMobile } from '../Hooks/useIsMobile';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 const DefaultCursorSVG = () => {
   return (

@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes'; // ✅ Added for theme detection
 import { FEATURE_FLAGS } from '@/constants/feature-flags';
-import { useIsMobile } from '../Hooks/useIsMobile';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 export default function GlowingGridBackground() {
   const ref = useRef(null);

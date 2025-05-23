@@ -2,7 +2,7 @@
 import { ArrowUpRight, MoveRight } from 'lucide-react';
 
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '../Hooks/useIsMobile';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 export function OnlineLink({ title, url, isLast }) {
   const isMobile = useIsMobile();

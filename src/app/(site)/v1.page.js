@@ -13,7 +13,7 @@ import Home_Casual from '@/components/Home/v1.casual';
 import Home_WhatsNew from '@/components/Home/v1.whatsnew';
 import Home_Works from '@/components/Home/v3.works';
 import Home_Spotify from '@/components/Home/v2.spotify';
-import { useIsMobile } from '@/components/Hooks/useIsMobile';
+import { useIsMobile } from '@/components/hooks/useIsMobile';
 import { cn } from '@/constants/utils';
 import Home_Pixellum from '@/components/Home/v1.pixellum';
 

@@ -8,7 +8,7 @@ import {
 import { SONG } from '@/constants/one-place-changer';
 import { cn } from '@/constants/utils';
 import { Spotify } from '@/constants/icons';
-import { useIsMobile } from '@/components/Hooks/useIsMobile';
+import { useIsMobile } from '@/components/hooks/useIsMobile';
 import Badge from '@/components/Badge';
 import { Play } from 'lucide-react';
 

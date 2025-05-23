@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '../Hooks/useIsMobile';
+import { useIsMobile } from '../hooks/useIsMobile';
 import { ArrowRight, ArrowUpRight, MoveRight } from 'lucide-react';
 import Badge from '../Badge';
 import '@/styles/works.css'; // <-- Import the CSS file
