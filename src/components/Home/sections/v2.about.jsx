@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import '@/styles/homepage.css';
 
-import { BlurFade } from '@/components/common/blur-fade';
+import { BlurFade } from '@/components/BlurFade/blur-fade';
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
 import { useTheme } from 'next-themes';
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '@/components/hooks/useIsMobile';
+import { useIsMobile } from '@/components/Hooks/useIsMobile';
 import Home_Socials from './v2.about-online';
 import { Separator } from '@/components/ui/separator';
 

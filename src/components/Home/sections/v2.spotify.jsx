@@ -3,12 +3,12 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/homepage/sections';
+} from '@/components/Sections';
 import { SONG } from '@/constants/one-place-changer';
 import { cn } from '@/constants/utils';
 import { Spotify } from '@/constants/icons';
-import { useIsMobile } from '@/components/hooks/useIsMobile';
-import Badge from '@/components/common/badge';
+import { useIsMobile } from '@/components/Hooks/useIsMobile';
+import Badge from '@/components/Badge';
 import { Play } from 'lucide-react';
 
 export default function Home_Spotify() {

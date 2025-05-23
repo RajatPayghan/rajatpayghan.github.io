@@ -3,9 +3,9 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 
-import useShaderImageEffect from '@/components/hooks/useImageShaderEffect';
+import useShaderImageEffect from '@/components/Hooks/useImageShaderEffect';
 import { cn } from '@/constants/utils';
-import { NumberTicker } from '@/components/homepage/count-ticker';
+import { NumberTicker } from '@/components/Home/count-ticker';
 
 import '@/styles/shader.css';
 import { FEATURE_FLAGS } from '@/constants/feature-flags';

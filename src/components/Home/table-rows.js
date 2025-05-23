@@ -1,8 +1,8 @@
 import React from 'react';
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '../hooks/useIsMobile';
+import { useIsMobile } from '../Hooks/useIsMobile';
 import { ArrowRight, ArrowUpRight, MoveRight } from 'lucide-react';
-import Badge from '../common/badge';
+import Badge from '../Badge';
 
 export default function TableRow({
   isFirst,

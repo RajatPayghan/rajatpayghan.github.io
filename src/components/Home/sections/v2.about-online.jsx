@@ -1,5 +1,5 @@
 import React from 'react';
-import { OnlineLink } from '../online-link';
+import { OnlineLink } from '../../OnlineLink';
 import { SOCIALS } from '@/constants/constants';
 
 import { cn } from '@/constants/utils';

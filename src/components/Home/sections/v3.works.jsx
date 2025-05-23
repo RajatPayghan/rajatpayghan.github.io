@@ -5,7 +5,7 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/homepage/sections';
+} from '@/components/Sections';
 import { WORKS } from '@/constants/constants';
 import WorkRow from '../work-rows';
 

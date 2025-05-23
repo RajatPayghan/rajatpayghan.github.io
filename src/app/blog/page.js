@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { BlurFade } from '@/components/common/blur-fade';
+import { BlurFade } from '@/components/BlurFade/blur-fade';
 
 export default function Blog() {
   return (

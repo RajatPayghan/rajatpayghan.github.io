@@ -8,8 +8,8 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/homepage/sections';
-import SplineHome from '@/components/homepage/spline-home';
+} from '@/components/Sections';
+import SplineHome from '@/components/Home/spline-home';
 // -----------------------------------------------------------------
 
 export default function Home_Spline() {

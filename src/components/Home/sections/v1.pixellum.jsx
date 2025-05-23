@@ -3,13 +3,13 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/homepage/sections';
+} from '@/components/Sections';
 import '@/styles/pixellum.css';
 import { cn } from '@/constants/utils';
 
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import { OnlineLink } from '../online-link';
+import { OnlineLink } from '../../OnlineLink';
 import { ArrowUpRight, ArrowUpRightFromSquare } from 'lucide-react';
 
 const MAIL_WORK_WITH_US =

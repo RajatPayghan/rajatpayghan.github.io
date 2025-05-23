@@ -1,11 +1,11 @@
-import { ThemeProvider } from '@/components/layout/theme-provider';
+import { ThemeProvider } from '@/components/Layout/theme-provider';
 
 import '@/styles/globals.css';
 import '@/styles/font-control.css';
 
-import ScrollManager from '@/components/layout/scroll-manager';
-import Footer from '@/components/footer/footer';
-import GlowingGridBackground from '@/components/common/glowing-grid';
+import ScrollManager from '@/components/Layout/scroll-manager';
+import Footer from '@/components/Footer/footer';
+import GlowingGridBackground from '@/components/Background/glowing-grid';
 import { cn } from '@/constants/utils';
 
 export const metadata = {

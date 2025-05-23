@@ -4,7 +4,7 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/homepage/sections';
+} from '@/components/Sections';
 
 export default function Home_Casual() {
   return (

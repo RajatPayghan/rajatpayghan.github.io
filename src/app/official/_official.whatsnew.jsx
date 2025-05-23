@@ -3,7 +3,7 @@ import {
   SectionContainer,
   SectionContent,
   SectionTitle,
-} from '@/components/homepage/sections';
+} from '@/components/Sections';
 import { WHATSNEW } from '@/constants/one-place-changer';
 
 export default function Home_WhatsNew() {

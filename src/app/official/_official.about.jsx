@@ -4,7 +4,7 @@
 import React from 'react';
 import '@/styles/homepage.css';
 
-import { BlurFade } from '@/components/common/blur-fade';
+import { BlurFade } from '@/components/BlurFade/blur-fade';
 
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -12,8 +12,8 @@ import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '@/components/hooks/useIsMobile';
-import Home_Socials from '@/components/homepage/sections/v2.about-online';
+import { useIsMobile } from '@/components/Hooks/useIsMobile';
+import Home_Socials from '@/components/Home/sections/v2.about-online';
 import { Separator } from '@/components/ui/separator';
 // -----------------------------------------------------------------
 

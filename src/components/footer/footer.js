@@ -4,11 +4,11 @@ import { cn } from '@/constants/utils';
 import '@/styles/globals.css';
 import dynamic from 'next/dynamic';
 import { PinHead } from '@/constants/icons';
-import Badge from '../common/badge';
-import { useIsMobile } from '../hooks/useIsMobile';
+import Badge from '../Badge';
+import { useIsMobile } from '../Hooks/useIsMobile';
 import Goodbye from './goodbyes';
 import { Separator } from '../ui/separator';
-import ThemeSwitcherButtonIcon from '../layout/theme-switcher';
+import ThemeSwitcherButtonIcon from '../Layout/theme-switcher';
 
 const Time = dynamic(() => import('./footer-time'), {
   ssr: false,
