@@ -12,7 +12,7 @@ import Home_About from '@/components/Home/sections/v2.about';
 import Home_Casual from '@/components/Home/sections/v1.casual';
 import Home_WhatsNew from '@/components/Home/sections/v1.whatsnew';
 import Home_Works from '@/components/Home/sections/v3.works';
-import Home_Spotify from '@/components/Home/sections/v2.spotify';
+import Home_Spotify from '@/components/Home/sections/v3.spotify';
 import { useIsMobile } from '@/components/Hooks/useIsMobile';
 import { cn } from '@/constants/utils';
 import Home_Pixellum from '@/components/Home/sections/v1.pixellum';

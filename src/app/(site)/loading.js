@@ -15,7 +15,7 @@ export default function Loading() {
   return (
     <div
       className={cn(
-        'relative flex items-center justify-center h-screen w-screen z-50',
+        'fixed flex items-center justify-center left-0 top-0 h-screen w-screen z-50',
         'bg-neutral-50 dark:bg-neutral-950 transition-colors duration-500'
       )}
     >
