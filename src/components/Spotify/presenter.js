@@ -50,13 +50,9 @@ export default function SpotifyPresenter({
             <div className='song-info'>
               <div className='song-title'>{song.title}</div>
               <div className='song-meta'>
-                <span className='whitespace-nowrap overflow-hidden text-ellipsis'>
-                  {song.artist}
-                </span>
+                <span>{song.artist}</span>
                 <span>•</span>
-                <span className='whitespace-nowrap overflow-hidden text-ellipsis'>
-                  {song.album}
-                </span>
+                <span>{song.album}</span>
               </div>
             </div>
           </div>
@@ -79,7 +75,11 @@ export default function SpotifyPresenter({
 
             <div className='timestamp'>
               {isPlaying ? 'Playing' : 'Played'}
-              <Badge isSubtle={!isPlaying} isActive={isPlaying}>
+              <Badge
+                isSubtle={!isPlaying}
+                isActive={isPlaying}
+                className='md:group-hover:scale-105 transition-all duration-300'
+              >
                 {song.timestamp}
               </Badge>
             </div>

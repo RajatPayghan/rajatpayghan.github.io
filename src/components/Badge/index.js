@@ -1,7 +1,12 @@
 import { cn } from '@/constants/utils';
 import React from 'react';
 
-export default function Badge({ isSubtle = false, isActive, children }) {
+export default function Badge({
+  isSubtle = false,
+  isActive,
+  children,
+  className,
+}) {
   return (
     <div
       className={cn(
@@ -17,7 +22,8 @@ export default function Badge({ isSubtle = false, isActive, children }) {
             : isActive
             ? 'text-green-700'
             : 'text-amber-600'
-        }`
+        }`,
+        className
       )}
     >
       <div className='relative'>

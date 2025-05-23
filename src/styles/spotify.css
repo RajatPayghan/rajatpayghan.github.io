@@ -7,7 +7,7 @@
 }
 
 .spotify-card {
-  @apply flex flex-row gap-3 md:gap-4 p-0 w-full h-16  overflow-hidden
+  @apply flex flex-row gap-3 md:gap-4 p-0 w-full h-12 md:h-16  overflow-hidden
          dark:bg-neutral-900 bg-neutral-100 
          rounded-md;
 }
@@ -25,11 +25,11 @@
 }
 
 .song-title {
-  @apply text-lg;
+  @apply text-base md:text-lg;
 }
 
 .song-meta {
-  @apply flex flex-row gap-2 text-sm 
+  @apply flex flex-row gap-2 text-xs md:text-sm 
          text-neutral-400 dark:text-neutral-600;
 }
 
