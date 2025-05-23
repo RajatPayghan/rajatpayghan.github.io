@@ -2,6 +2,5 @@ import { getPlayingContent } from '@/components/Spotify/data'; // update path if
 
 export async function GET() {
   const data = await getPlayingContent();
-  console.log(data);
   return Response.json(data);
 }
