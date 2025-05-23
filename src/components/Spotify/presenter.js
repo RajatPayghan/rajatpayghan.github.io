@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 import { Spotify as SpotifyIcon } from '@/constants/icons';
 import { cn } from '@/constants/utils';
 
-export default function SpotifyPresenter({ SONG, isMobile }) {
+export default function SpotifyPresenter({ SONG }) {
   return (
     <div>
       <a href={SONG.hrefSpotify} rel='noopener noreferrer' target='_blank'>

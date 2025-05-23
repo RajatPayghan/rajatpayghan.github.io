@@ -16,6 +16,7 @@ const getAccessToken = async () => {
   const response = await fetch(TOKEN_ENDPOINT, {
     method: 'POST',
     headers: {
+      Accept: 'application/json',
       Authorization: `Basic ${basic}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     },
@@ -55,6 +56,8 @@ const getPlaylist = async (access_token, playlistId) => {
 async function getSpotifyStatus() {
   const { access_token } = await getAccessToken();
   const nowPlayingResponse = await getNowPlaying(access_token);
+
+  console.log(access_token);
 
   if (nowPlayingResponse.status > 204) {
     return { isPlaying: false };
