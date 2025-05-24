@@ -1,5 +1,5 @@
 .footer-container {
-  @apply relative mb-16 md:mb-24 md:px-0 flex flex-col w-full justify-center pt-10 sm:pt-20;
+  @apply relative mb-24 md:px-0 flex flex-col w-full justify-center pt-10 sm:pt-20;
 }
 
 .footer-inner {

@@ -34,7 +34,7 @@ export default function Footer() {
         <div className='footer-nav-row'>
           <div className='footer-links'>
             <div
-              className='underline md:no-underline md:hover:underline underline-offset-4'
+              className='underline md:no-underline text-xs md:hover:underline underline-offset-4'
               onClick={scrollToTop}
             >
               Go to Top ↑
