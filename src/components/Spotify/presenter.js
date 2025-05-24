@@ -63,13 +63,14 @@ export default function SpotifyPresenter({ song, isPlaying }) {
             </span>
 
             <div className='timestamp'>
-              {isPlaying ? 'Playing' : 'Played'}
+              <span className='text-neutral-400 dark:text-neutral-700'>
+                {isPlaying ? 'Playing' : 'Played'}
+              </span>
               <Badge
                 isSubtle={!isPlaying}
                 isActive={isPlaying}
                 className={cn(
-                  'md:group-hover:scale-105 transition-all duration-300',
-                  `${isPlaying && 'relative animate-bounce duration-1000'}`
+                  'md:group-hover:scale-105 transition-all duration-300'
                 )}
               >
                 {song.timestamp}

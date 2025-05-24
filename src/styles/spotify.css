@@ -90,13 +90,13 @@
 }
 
 .play-bar {
-  @apply w-full h-1 rounded-full;
+  @apply w-full h-1 rounded-sm;
   @apply md:group-hover:h-2;
   @apply transition-all duration-300;
   @apply bg-neutral-100 dark:bg-neutral-900;
 }
 
 .play-bar-progress {
-  @apply bg-green-400 h-full rounded animate-pulse;
+  @apply bg-green-400 h-full rounded-sm animate-pulse;
   transition: width 2s ease-in-out;
 }

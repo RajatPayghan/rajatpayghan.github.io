@@ -1,12 +1,8 @@
 'use client';
 
-import { SONG } from '@/constants/one-place-changer';
+import { useState, useEffect, useRef } from 'react';
 import SpotifyPresenter from './presenter';
-import { getPlayingContent } from './data';
-import SpotifyFallback from './fallback';
-import { Suspense } from 'react';
 import SpotifyLoading from './loading';
-import { useState, useEffect } from 'react';
 
 const defaultSong = {
   durationPlaying: 0,
@@ -28,39 +24,44 @@ export default function SpotifyMiddleware({
     typeof initialIsPlaying === 'boolean' ? initialIsPlaying : false
   );
 
+  const [isLoading, setIsLoading] = useState(true);
+  const isInitialFetchDone = useRef(false); // track if first fetch is done
+
   useEffect(() => {
     const fetchSong = async () => {
       try {
+        // Only show loader on the very first fetch
+        if (!isInitialFetchDone.current) {
+          setIsLoading(true);
+        }
+
         const res = await fetch('/api/spotify');
         const data = await res.json();
 
         if (data && data.song) {
-          setSong({
-            ...defaultSong, // Fill in missing fields if any
-            ...data.song,
-          });
+          setSong({ ...defaultSong, ...data.song });
           setIsPlaying(data.isPlaying ?? false);
         }
       } catch (err) {
         console.error('Error fetching Spotify data:', err);
+      } finally {
+        setIsLoading(false);
+        isInitialFetchDone.current = true; // mark initial fetch as done
       }
     };
 
     fetchSong();
 
     const interval = setInterval(fetchSong, isPlaying ? 5000 : 120000);
-
     return () => clearInterval(interval);
   }, [isPlaying]);
 
   return (
     <>
-      {false ? (
-        <SpotifyFallback />
+      {isLoading ? (
+        <SpotifyLoading />
       ) : (
-        <Suspense fallback={<SpotifyLoading />}>
-          <SpotifyPresenter isPlaying={isPlaying} song={song} />
-        </Suspense>
+        <SpotifyPresenter isPlaying={isPlaying} song={song} />
       )}
     </>
   );

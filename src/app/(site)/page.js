@@ -12,10 +12,7 @@ import Home_Pixellum from '@/components/Home/v1.pixellum';
 import SmoothCursor from '@/components/SmoothCursor';
 import Shade from '@/components/Background/shade';
 
-const loadingDelay = (time) => new Promise((res) => setTimeout(res, time));
-
 export default async function Home() {
-  await loadingDelay(2000);
   return (
     <>
       <ScrollBottomButton />
