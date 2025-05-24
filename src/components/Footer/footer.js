@@ -18,12 +18,12 @@ const Time = dynamic(() => import('./footer-time'), {
 export default function Footer() {
   const isDesktop = !useIsMobile();
   return (
-    <footer className='m:px-0 flex flex-col w-full justify-center  pt-10 sm:pt-20'>
+    <footer className='relative m:px-0 flex flex-col w-full justify-center  pt-10 sm:pt-20'>
       <div
         className={cn(
           'flex flex-col gap-2 justify-between',
           'pt-12 pb-8 md:pb-8',
-          'w-full max-w-main z-20',
+          'w-full max-w-main',
           'text-[16px]'
         )}
       >

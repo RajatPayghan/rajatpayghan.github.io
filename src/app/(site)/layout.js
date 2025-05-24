@@ -7,6 +7,7 @@ import GlowingGridBackground from '@/components/Background/glowing-grid';
 import { cn } from '@/constants/utils';
 import { Suspense } from 'react';
 import Loading from './loading';
+import Dock from '@/components/Dock';
 
 export const metadata = {
   title: 'Rajat Payghan',
@@ -27,8 +28,9 @@ export default async function RootLayout({ children }) {
                 <div className='width-controller spacing-padding-controller'>
                   <GlowingGridBackground />
                   {children}
-                  <Footer className='z-20' />
+                  <Footer />
                 </div>
+                {/* <Dock /> */}
               </main>
             </div>
           </Suspense>

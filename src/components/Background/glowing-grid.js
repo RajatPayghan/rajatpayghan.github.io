@@ -39,7 +39,7 @@ export default function GlowingGridBackground() {
   return (
     <>
       {FEATURE_FLAGS.showGlowBG && isDesktop && (
-        <div className='fixed inset-0 pointer-events-none z-0'>
+        <div className='fixed inset-0 pointer-events-none'>
           {/* Grid layer */}
           <div
             ref={ref}
