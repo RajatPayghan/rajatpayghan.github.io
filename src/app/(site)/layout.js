@@ -30,7 +30,7 @@ export default async function RootLayout({ children }) {
                   {children}
                   <Footer />
                 </div>
-                {/* <Dock /> */}
+                <Dock />
               </main>
             </div>
           </Suspense>

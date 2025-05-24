@@ -5,8 +5,10 @@ export default function Dock() {
   return (
     <div
       className={cn(
-        'bg-red-500 h-16 w-1/2 rounded-full',
-        'absolute right-1/2 translate-x-1/2 bottom-4'
+        'h-16 w-96 rounded-full',
+        'absolute right-1/2 translate-x-1/2 bottom-4',
+        'bg-neutral-200/60 dark:bg-neutral-700/60',
+        'backdrop-blur-md'
       )}
     ></div>
   );
