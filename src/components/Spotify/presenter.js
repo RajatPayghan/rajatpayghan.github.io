@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
 import Badge from '@/components/Badge';
 import { Play } from 'lucide-react';
 import { Spotify as SpotifyIcon } from '@/constants/icons';
@@ -8,12 +7,7 @@ import { cn } from '@/constants/utils';
 import { useIsMobile } from '../hooks/useIsMobile';
 import '@/styles/spotify.css';
 
-export default function SpotifyPresenter({
-  song: initialSong,
-  isPlaying: initialIsPlaying,
-}) {
-  const [song, setSong] = useState(initialSong);
-  const [isPlaying, setIsPlaying] = useState(initialIsPlaying);
+export default function SpotifyPresenter({ song, isPlaying }) {
   const isMobile = useIsMobile();
 
   const play = Number(song.durationPlaying);
@@ -21,32 +15,23 @@ export default function SpotifyPresenter({
 
   const widthPercentage = full > 0 ? (play / full) * 100 : 0;
 
-  useEffect(() => {
-    const fetchSong = async () => {
-      try {
-        const res = await fetch('/api/spotify');
-        const data = await res.json();
-        setSong(data.song);
-        setIsPlaying(data.isPlaying);
-      } catch (err) {
-        console.error('Error fetching Spotify data:', err);
-      }
-    };
-
-    // Initial fetch
-    fetchSong();
-
-    const interval = setInterval(fetchSong, isPlaying ? 5_000 : 120_000);
-
-    return () => clearInterval(interval);
-  }, [isPlaying]);
-
   return (
     <div>
       <a href={song.spotifyUrl} rel='noopener noreferrer' target='_blank'>
         <div className='spotify-container group'>
           <div className='spotify-card'>
-            <img src={song.albumImageUrl} className='album-image' />
+            <div className='album-image'>
+              {' '}
+              <img
+                src={song.albumImageUrl}
+                className={cn(
+                  'album-image',
+                  'transition-opacity duration-500 ease-in-out opacity-100 bg-neutral-100 dark:bg-neutral-900'
+                )}
+                alt='Album cover'
+              />
+            </div>
+
             <div className='song-info'>
               <div className='song-title'>{song.title}</div>
               <div className='song-meta'>
