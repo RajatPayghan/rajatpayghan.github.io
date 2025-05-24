@@ -1,0 +1,19 @@
+import React from 'react';
+import '@/styles/dock.css';
+import { MoveRight } from 'lucide-react';
+
+export default function DockContactButton({}) {
+  return (
+    <a href='mailto:rajat.payghan@gmail.com' className='flex group'>
+      <div className='dock-contact contact-hover'>
+        <span className='dock-item-text'>
+          <span>Send Mail</span>
+        </span>
+        <MoveRight size={12} />
+      </div>
+      <div className='dock-contact contact-default'>
+        <span className='dock-item-text'>Talk To Me</span>
+      </div>
+    </a>
+  );
+}

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { cn } from '@/constants/utils';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from '@/constants/icons';
 import { useIsMobile } from '../Hooks/useIsMobile';
 
-export default function ThemeSwitcherButtonIcon() {
+export function ThemeSwitcherButtonIconWithText() {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   const isMobile = useIsMobile();
@@ -39,5 +40,27 @@ export default function ThemeSwitcherButtonIcon() {
         )}
       </div>
     </a>
+  );
+}
+
+export function ThemeSwitcherButtonIcon({ classNameIcon }) {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  const isMobile = useIsMobile();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null; // ⛔ Prevent mismatched rendering on the server
+
+  return (
+    <div
+      className={cn(
+        'h-full grid place-items-center cursor-pointer',
+        `${classNameIcon}`
+      )}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+    >
+      {resolvedTheme === 'light' ? <Sun /> : <Moon />}
+    </div>
   );
 }

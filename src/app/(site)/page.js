@@ -30,10 +30,6 @@ export default async function Home() {
 
         <Home_Spotify />
       </BlurFade>
-
-      {FEATURE_FLAGS.enableSmoothCursor && <SmoothCursor />}
-
-      {FEATURE_FLAGS.showHomepageShade && <Shade />}
     </>
   );
 }
