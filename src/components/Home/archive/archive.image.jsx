@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 
-import useShaderImageEffect from '@/components/hooks/useImageShaderEffect';
+import useShaderImageEffect from '@/components/Hooks/useImageShaderEffect';
 import { cn } from '@/constants/utils';
 import { NumberTicker } from '@/components/Home/count-ticker';
 

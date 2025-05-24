@@ -1,6 +1,6 @@
 'use client';
 import { ArrowUpRight, MoveRight } from 'lucide-react';
-import { useIsMobile } from '../hooks/useIsMobile';
+import { useIsMobile } from '../Hooks/useIsMobile';
 import './OnlineLink.css';
 import '@/styles/font-control.css';
 

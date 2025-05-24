@@ -5,7 +5,7 @@ import '@/styles/globals.css';
 import dynamic from 'next/dynamic';
 import { PinHead } from '@/constants/icons';
 import Badge from '../Badge';
-import { useIsMobile } from '../hooks/useIsMobile';
+import { useIsMobile } from '../Hooks/useIsMobile';
 import Goodbye from './goodbyes';
 import { Separator } from '../ui/separator';
 import ThemeSwitcherButtonIcon from '../Layout/theme-switcher';

@@ -5,7 +5,7 @@ import Badge from '@/components/Badge';
 import { Play } from 'lucide-react';
 import { Spotify as SpotifyIcon } from '@/constants/icons';
 import { cn } from '@/constants/utils';
-import { useIsMobile } from '../hooks/useIsMobile';
+import { useIsMobile } from '../Hooks/useIsMobile';
 import '@/styles/spotify.css';
 import { SONG } from '@/constants/one-place-changer';
 

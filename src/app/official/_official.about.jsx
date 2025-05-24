@@ -12,7 +12,7 @@ import localFont from 'next/font/local';
 import { cn } from '@/constants/utils';
 import Home_Socials from '@/components/Home/v2.about-online';
 import { Separator } from '@/components/ui/separator';
-import { useIsMobile } from '@/components/hooks/useIsMobile';
+import { useIsMobile } from '@/components/Hooks/useIsMobile';
 // -----------------------------------------------------------------
 
 const libreBaskerville = Libre_Baskerville({
