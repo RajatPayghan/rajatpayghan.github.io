@@ -7,7 +7,7 @@ export default function DockContactButton({}) {
     <a href='mailto:rajat.payghan@gmail.com' className='flex group'>
       <div className='dock-contact contact-hover'>
         <span className='dock-item-text'>
-          <span>Send Mail</span>
+          <span>Send Email</span>
         </span>
         <MoveRight size={12} />
       </div>

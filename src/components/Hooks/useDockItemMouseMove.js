@@ -12,7 +12,7 @@ export function useDockItemHoverEffect() {
         const dx = e.clientX - (rect.left + rect.width / 2);
         const dy = e.clientY - (rect.top + rect.height / 2);
         const angle = Math.atan2(dy, dx);
-        const distance = 1; // max 2px
+        const distance = 2; // max 2px
         const x = Math.cos(angle) * distance;
         const y = Math.sin(angle) * distance;
         textEl.style.transform = `translate(${x}px, ${y}px)`;

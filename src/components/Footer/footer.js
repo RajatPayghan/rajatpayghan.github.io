@@ -8,11 +8,22 @@ import Goodbye from './goodbyes';
 import { Separator } from '../ui/separator';
 import { ThemeSwitcherButtonIconWithText } from '../Layout/theme-switcher';
 import '@/styles/footer.css';
+import { Button } from '../ui/button';
 
 const Time = dynamic(() => import('./footer-time'), {
   ssr: false,
   loading: () => <span>00:00 XX</span>,
 });
+
+const scrollToTop = () => {
+  const container = document.querySelector('.scroll-controller');
+  if (container) {
+    container.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+};
 
 export default function Footer() {
   const isDesktop = !useIsMobile();
@@ -21,15 +32,12 @@ export default function Footer() {
       <div className='footer-inner'>
         <Separator className='footer-separator' />
         <div className='footer-nav-row'>
-          <div className='footer-links peer'>
-            <Link href='/'>Home</Link>
-            <div className='footer-link-wrapper group'>
-              <Link href='/blog' className='footer-link'>
-                Blog
-              </Link>
-              <div className='footer-badge-hover md:peer-hover:opacity-100 '>
-                <Badge isActive={false}>Coming Soon</Badge>
-              </div>
+          <div className='footer-links'>
+            <div
+              className='underline md:no-underline md:hover:underline underline-offset-4'
+              onClick={scrollToTop}
+            >
+              Go to Top ↑
             </div>
           </div>
           <Goodbye />

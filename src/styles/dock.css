@@ -20,16 +20,16 @@
 @keyframes fadeInDock {
   from {
     opacity: 0;
-    transform: translateX(50%) translateY(8px);
+    transform: translateX(50%) translateY(8px) scale(95%);
   }
   to {
     opacity: 1;
-    transform: translateX(50%) translateY(0);
+    transform: translateX(50%) translateY(0) scale(100%);
   }
 }
 
 .dock-fade-in {
-  animation: fadeInDock 0.5s ease-out backwards;
+  animation: fadeInDock 0.3s ease-in-out forwards;
 }
 
 .dock-item {
@@ -66,8 +66,9 @@
 }
 
 .dock-item-text {
-  @apply relative flex w-fit text-base md:text-lg font-instrument transition-transform duration-300 ease-out;
-  /* @apply text-neutral-500 dark:text-neutral-600; */
+  @apply relative flex w-fit;
+  @apply text-base md:text-lg font-instrument;
+  @apply transition-transform duration-300 ease-out;
   pointer-events: none;
 }
 
