@@ -1,7 +1,6 @@
 'use client';
 
 import { cn } from '@/constants/utils';
-import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 export default function Loading() {
@@ -13,18 +12,8 @@ export default function Loading() {
       )}
     >
       <div className='flex flex-col items-center gap-6'>
-        {/* Spinner */}
-        <div className='relative'>
-          <div className='w-12 h-12 border border-neutral-200 dark:border-neutral-800 rounded-full animate-pulse' />
-          <div className='absolute inset-0 flex items-center justify-center'>
-            <span className='text-xs text-neutral-400 dark:text-neutral-600'></span>
-          </div>
-        </div>
-
-        {/* Text */}
-        <div className='text-center text-neutral-700 dark:text-neutral-300 font-instrument text-lg md:text-xl'>
-          <p>Just booting up the vibes...</p>
-          <p className='text-sm text-neutral-400 mt-2 italic'>Almost there.</p>
+        <div className='text-center text-neutral-700 dark:text-neutral-300 animate-pulse'>
+          <p className='font-instrument text-lg md:text-4xl'>Rajat Payghan</p>
         </div>
       </div>
     </div>

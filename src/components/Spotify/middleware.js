@@ -7,6 +7,8 @@ import { SONG } from '@/constants/one-place-changer';
 import SpotifyPresenter from './presenter';
 import { getPlayingContent } from './data';
 import SpotifyFallback from './fallback';
+import { Suspense } from 'react';
+import SpotifyLoading from './loading';
 
 export default async function SpotifyMiddleware({ isMobile }) {
   const { isPlaying, fallback, song } = await getPlayingContent();
@@ -16,7 +18,9 @@ export default async function SpotifyMiddleware({ isMobile }) {
       {fallback ? (
         <SpotifyFallback />
       ) : (
-        <SpotifyPresenter isPlaying={isPlaying} song={song} />
+        <Suspense fallback={<SpotifyLoading />}>
+          <SpotifyPresenter isPlaying={isPlaying} song={song} />
+        </Suspense>
       )}
     </>
   );
