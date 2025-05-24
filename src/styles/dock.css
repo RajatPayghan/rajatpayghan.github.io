@@ -83,7 +83,7 @@
 
 .contact-default {
   @apply text-nowrap;
-  @apply w-28 group-hover:w-0;
+  @apply w-[7.5rem] group-hover:w-0;
   @apply px-5 py-1 group-hover:p-0;
   @apply bg-[#8BFA4A] md:bg-neutral-100 md:dark:bg-neutral-900;
   @apply text-black md:text-inherit;
