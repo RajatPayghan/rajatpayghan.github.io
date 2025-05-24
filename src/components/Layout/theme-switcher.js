@@ -46,7 +46,6 @@ export function ThemeSwitcherButtonIconWithText() {
 export function ThemeSwitcherButtonIcon({ classNameIcon }) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
-  const isMobile = useIsMobile();
 
   useEffect(() => setMounted(true), []);
 

@@ -34,7 +34,7 @@ export default async function RootLayout({ children }) {
                 {FEATURE_FLAGS.showHomepageShade && <Shade />}
                 {FEATURE_FLAGS.enableSmoothCursor && <SmoothCursor />}
               </div>
-              <Dock />
+              {FEATURE_FLAGS.enableDock && <Dock />}
             </main>
           </div>
         </ThemeProvider>

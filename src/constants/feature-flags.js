@@ -1,5 +1,5 @@
 export const FEATURE_FLAGS = {
-  enableDock: false,
+  enableDock: true,
   darkMode: {
     enableSystem: true,
     defaultTheme: 'dark',
@@ -11,4 +11,5 @@ export const FEATURE_FLAGS = {
     loadingSecDelay: 0,
     loadingActive: false,
   },
+  scrollBottomButton: false,
 };

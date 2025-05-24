@@ -37,7 +37,7 @@ export default function Dock() {
 
       {!useIsMobile() && (
         <>
-          <ThemeSwitcherButtonIcon classNameIcon='dock-item px-0' />
+          <ThemeSwitcherButtonIcon classNameIcon='dock-item p-0' />
           <div className='h-6 w-[1px] bg-neutral-200 dark:bg-neutral-800' />
         </>
       )}
