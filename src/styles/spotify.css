@@ -21,16 +21,36 @@
 }
 
 .song-info {
-  @apply flex flex-col justify-center h-full gap-0;
+  @apply flex flex-col justify-center h-full gap-0 max-w-full min-w-0;
 }
 
 .song-title {
-  @apply text-base md:text-lg;
+  @apply text-sm md:text-lg overflow-hidden text-ellipsis whitespace-nowrap;
+  min-width: 0;
 }
 
 .song-meta {
-  @apply flex flex-row gap-2 text-xs md:text-sm 
-         text-neutral-400 dark:text-neutral-600;
+  @apply flex text-xs md:text-sm 
+         text-neutral-400 dark:text-neutral-600 
+         min-w-0 w-full overflow-hidden;
+}
+
+.song-meta-items {
+  @apply overflow-hidden text-ellipsis whitespace-nowrap;
+  min-width: 0;
+}
+
+.song-meta-separator {
+  @apply flex-shrink-0;
+}
+/* Ensure the artist doesn't shrink */
+.song-meta-items:first-child {
+  @apply flex-shrink-0;
+}
+
+/* Allow album to shrink and truncate */
+.song-meta-items:last-child {
+  @apply truncate;
 }
 
 .controls {

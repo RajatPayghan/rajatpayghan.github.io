@@ -33,11 +33,15 @@ export default function SpotifyPresenter({ song, isPlaying }) {
             </div>
 
             <div className='song-info'>
-              <div className='song-title'>{song.title}</div>
+              <div className='song-title truncate'>{song.title}</div>
               <div className='song-meta'>
-                <span>{song.artist}</span>
-                <span>•</span>
-                <span>{song.album}</span>
+                <div className='flex gap-2 min-w-0 w-full overflow-hidden'>
+                  <span className='song-meta-items flex-shrink-0'>
+                    {song.artist}
+                  </span>
+                  <span className='song-meta-separator'>•</span>
+                  <span className='song-meta-items truncate'>{song.album}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -63,7 +67,10 @@ export default function SpotifyPresenter({ song, isPlaying }) {
               <Badge
                 isSubtle={!isPlaying}
                 isActive={isPlaying}
-                className='md:group-hover:scale-105 transition-all duration-300'
+                className={cn(
+                  'md:group-hover:scale-105 transition-all duration-300',
+                  `${isPlaying && 'relative animate-bounce duration-1000'}`
+                )}
               >
                 {song.timestamp}
               </Badge>
