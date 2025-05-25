@@ -1,0 +1,36 @@
+/* === Main Footer Container === */
+.footer {
+  @apply relative flex flex-col w-full justify-center; /* Basic Layout */
+  @apply mt-24; /* Footer - 24rem below content */
+  @apply border-t border-neutral-200 dark:border-neutral-900; /* Top Border */
+  @apply py-8; /* I want a 8 rem cushion top & bottom */
+  @apply bg-blue-500/50;
+}
+
+/* === Footer Content === */
+.content {
+}
+
+/* === Footer Content - Top Half === */
+.content-top {
+}
+
+.link-wrapper {
+}
+
+.link {
+}
+
+/* === Footer Content - Bottom Half === */
+.content-bottom {
+}
+
+.placetime {
+}
+
+.copyright {
+}
+
+/* === Theme Container === */
+.theme {
+}

@@ -1,0 +1,49 @@
+/* === Footer Container === */
+.footer-container {
+  @apply relative w-full flex flex-col justify-center mt-10 sm:pt-20 mb-16;
+}
+
+/* === Footer Inner === */
+.footer-inner {
+  @apply w-full max-w-lg flex flex-col justify-between gap-4 pt-10 pb-8 text-[16px];
+  @apply mx-auto px-4 md:px-0; /* Horizontal padding control */
+}
+
+/* === Footer Separator === */
+.footer-separator {
+  @apply bg-neutral-200 dark:bg-neutral-900 mb-4;
+}
+
+/* === Footer Navigation Row === */
+.footer-nav {
+  @apply flex justify-between items-center w-full;
+}
+
+/* === Footer Links === */
+.footer-links {
+  @apply flex items-center gap-4;
+}
+
+.footer-top-link {
+  @apply text-xs underline md:no-underline md:hover:underline underline-offset-4 cursor-pointer;
+}
+
+/* === Footer Meta Section === */
+.footer-meta {
+  @apply flex justify-between items-center w-full;
+}
+
+/* === Footer Location === */
+.footer-location {
+  @apply flex items-center gap-1.5 text-sm text-neutral-400 dark:text-neutral-600;
+}
+
+/* === Footer Copyright === */
+.footer-copyright {
+  @apply text-sm text-neutral-400 dark:text-neutral-400;
+}
+
+/* === Footer Theme Switcher === */
+.footer-theme {
+  @apply w-full flex justify-center pt-4;
+}

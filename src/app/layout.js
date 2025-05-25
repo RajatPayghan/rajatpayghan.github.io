@@ -2,11 +2,9 @@ import { ThemeProvider } from '@/components/Layout/theme-provider';
 
 import '@/styles/globals.css';
 import '@/styles/font-control.css';
-import Footer from '@/components/Footer/footer';
+import Footer from '@/components/Footer/v2.footer';
 import GlowingGridBackground from '@/components/Background/glowing-grid';
 import { cn } from '@/constants/utils';
-import { Suspense } from 'react';
-import Loading from './(site)/archive.loading';
 import Dock from '@/components/Dock';
 import Shade from '@/components/Background/shade';
 import SmoothCursor from '@/components/SmoothCursor';
@@ -23,11 +21,8 @@ export default async function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <ThemeProvider>
           <div className={cn('app-shell')}>
-            <main
-              id='scroll-container'
-              className='scroll-controller centerize-controller'
-            >
-              <div className='width-controller spacing-padding-controller'>
+            <main id='scroll-container' className='container-wrapper'>
+              <div className='container-inner'>
                 <GlowingGridBackground />
                 {children}
                 <Footer />
