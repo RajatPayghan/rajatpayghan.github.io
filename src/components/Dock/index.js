@@ -9,7 +9,7 @@ import '@/styles/dock.css';
 
 const links = [
   { name: 'Home', href: '/' },
-  { name: 'Writing', href: '/blog' },
+  { name: 'Writing', href: '/writing' },
 ];
 
 export default function Dock() {
