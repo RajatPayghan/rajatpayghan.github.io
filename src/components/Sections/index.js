@@ -1,5 +1,6 @@
 import { cn } from '@/constants/utils';
 import { Newsreader } from 'next/font/google';
+
 const libreBaskerville = Newsreader({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -9,7 +10,7 @@ const libreBaskerville = Newsreader({
 
 export function SectionContainer(props) {
   return (
-    <div className='grid items-start gap-2 lg:gap-2 grid-cols-1' {...props} />
+    <div className='flex flex-col items-start gap-4 lg:gap-2' {...props} />
   );
 }
 
@@ -17,7 +18,7 @@ export function SectionTitle(props) {
   return (
     <div
       className={cn(
-        'lg:col-span-2 text-xl lg:text-normal text-neutral-400 pt-0 dark:text-neutral-500 italic tracking-wide',
+        'w-full text-xl lg:text-normal text-neutral-400 pt-0 dark:text-neutral-500 italic tracking-wide',
         `${libreBaskerville.className}`,
         'italic'
       )}
@@ -27,5 +28,5 @@ export function SectionTitle(props) {
 }
 
 export function SectionContent(props) {
-  return <div className='lg:col-span-10 text-base lg:text-lg' {...props} />;
+  return <div className='w-full lg:flex-1 text-base lg:text-lg' {...props} />;
 }
