@@ -16,7 +16,7 @@ export function ThemeSwitcherButtonIconWithText() {
   return (
     <a>
       <div
-        className='scale-90 cursor-pointer mb-16 md:mb-8'
+        className='cursor-pointer'
         onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       >
         {resolvedTheme === 'light' ? (

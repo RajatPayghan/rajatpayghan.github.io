@@ -12,7 +12,7 @@ export default function DockContactButton({}) {
         <MoveRight size={12} />
       </div>
       <div className='dock-contact contact-default'>
-        <span className='dock-item-text'>Talk To Me</span>
+        <span className='dock-item-text'>Let's Talk</span>
       </div>
     </a>
   );

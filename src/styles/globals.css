@@ -183,7 +183,7 @@
   .container-inner {
     @apply w-screen max-w-screen-sm min-h-min;
     @apply px-8;
-    @apply mb-20 mt-16;
+    @apply mb-24 mt-16;
   }
 }
 
