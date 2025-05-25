@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getBlogMetadata } from '@/lib/writing';
+import { BlurFade } from '@/components/BlurFade/blur-fade';
 
 export default function Writing() {
   const blogs = getBlogMetadata();
@@ -13,51 +14,55 @@ export default function Writing() {
       <div className='w-full max-w-4xl'>
         <h1 className='text-3xl font-bold mb-8 text-center'>Writing</h1>
         <div className='space-y-6'>
-          {sortedBlogs.map(({ slug, title, date, description, tags, test }) => (
-            <article
-              key={slug}
-              className='border-b border-gray-200 dark:border-gray-700 pb-6'
-            >
-              <Link
-                href={`/writing/${slug}`}
-                className='block hover:opacity-80 transition-opacity'
-              >
-                <h2 className='text-xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400'>
-                  {title}
-                </h2>
-                <div className='text-sm text-gray-500 dark:text-gray-400 mb-2'>
-                  {date &&
-                    new Date(date).toLocaleDateString('en-GB', {
-                      year: 'numeric',
-                      month: 'short',
-                      day: 'numeric',
-                    })}
-                </div>
-                {description && (
-                  <p className='text-gray-600 dark:text-gray-300 mb-3'>
-                    {description}
-                  </p>
-                )}
-                {test && (
-                  <p className='text-gray-600 dark:text-gray-300 mb-3'>
-                    {test}
-                  </p>
-                )}
-                {tags && tags.length > 0 && (
-                  <div className='flex flex-wrap gap-2'>
-                    {tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className='px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md'
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </Link>
-            </article>
-          ))}
+          <BlurFade className='flex flex-col gap-8'>
+            {sortedBlogs.map(
+              ({ slug, title, date, description, tags, test }) => (
+                <article
+                  key={slug}
+                  className='border-b border-gray-200 dark:border-gray-700 pb-6'
+                >
+                  <Link
+                    href={`/writing/${slug}`}
+                    className='block hover:opacity-80 transition-opacity'
+                  >
+                    <h2 className='text-xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400'>
+                      {title}
+                    </h2>
+                    <div className='text-sm text-gray-500 dark:text-gray-400 mb-2'>
+                      {date &&
+                        new Date(date).toLocaleDateString('en-GB', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric',
+                        })}
+                    </div>
+                    {description && (
+                      <p className='text-gray-600 dark:text-gray-300 mb-3'>
+                        {description}
+                      </p>
+                    )}
+                    {test && (
+                      <p className='text-gray-600 dark:text-gray-300 mb-3'>
+                        {test}
+                      </p>
+                    )}
+                    {tags && tags.length > 0 && (
+                      <div className='flex flex-wrap gap-2'>
+                        {tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className='px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md'
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </Link>
+                </article>
+              )
+            )}
+          </BlurFade>
         </div>
       </div>
     </div>
