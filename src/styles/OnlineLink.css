@@ -1,0 +1,47 @@
+/* === Online Link Wrapper === */
+.online-link {
+  @apply flex items-center; /* Flex Alignment */
+  @apply transition-all duration-300; /* Transition */
+}
+
+/* === Online Pill Button === */
+.online-pill {
+  @apply flex flex-row items-center gap-1; /* Flex & Spacing */
+  @apply px-4 py-2 rounded-full; /* Padding & Shape */
+  @apply border border-neutral-100 bg-neutral-50; /* Light Theme */
+  @apply dark:bg-neutral-900 dark:border-none; /* Dark Theme */
+  @apply dark:hover:text-white; /* Dark Hover */
+  @apply md:font-normal md:hover:font-medium; /* Font Weight (medium only) */
+  @apply transition-all duration-300 ease-in-out; /* Transition */
+}
+
+/* === Online Text === */
+.online-text {
+  @apply flex flex-row; /* Flex */
+  @apply transition-all duration-300 ease-in-out; /* Transition */
+}
+
+/* === Send Icon (Desktop Hover Effect) === */
+.online-send {
+  @apply ml-0 mr-1 w-0 overflow-hidden; /* Shrink by Default */
+  @apply grid place-items-center; /* Centering */
+  @apply transition-all duration-300 ease-in-out group-hover:w-8; /* Hover Expansion */
+}
+
+/* === Arrow Icon Wrapper === */
+.online-arrow-wrapper {
+  @apply ml-1 w-0 overflow-hidden; /* Hidden by Default */
+  @apply grid place-items-center; /* Centering */
+  @apply transition-all duration-300 ease-in-out group-hover:w-5; /* Hover Width */
+}
+
+/* === Arrow Icon === */
+.online-arrow-icon {
+  @apply opacity-0; /* Hidden by Default */
+  @apply transition-opacity duration-300 group-hover:opacity-100; /* Fade In */
+}
+
+/* === Mobile Icon === */
+.online-mobile-icon {
+  @apply text-green-700 dark:text-amber-400; /* Color Adaptation */
+}

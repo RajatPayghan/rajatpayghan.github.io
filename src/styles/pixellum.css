@@ -1,51 +1,60 @@
+/* === Tailwind Directives === */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* === Pixellum Title Image === */
 .pixellum-title-image {
-  @apply size-6 p-1 rounded-full;
-  @apply bg-neutral-200 dark:bg-neutral-800;
+  @apply size-6 p-1 rounded-full; /* Size & Shape */
+  @apply bg-neutral-200 dark:bg-neutral-800; /* Background */
 }
 
+/* === Pixellum Container === */
 .pixellum-container {
-  @apply flex w-full flex-row-reverse mt-4;
-  @apply gap-0 md:hover:gap-4 md:hover:w-[calc(100%+3rem)] md:hover:-translate-x-3;
-  @apply transform transition-all duration-300;
+  @apply flex w-full flex-row-reverse mt-4; /* Layout */
+  @apply gap-0 md:hover:gap-4 md:hover:w-[calc(100%+3rem)] md:hover:-translate-x-3; /* Hover Expansion (medium) */
+  @apply transform transition-all duration-300; /* Transition */
 }
 
+/* === Pixellum Card === */
 .pixellum-card {
-  @apply flex-1 scale-110 aspect-square;
-  @apply rounded-lg hover:rounded-2xl;
-  @apply shadow-sm hover:shadow-md;
-  @apply bg-cover;
-  @apply bg-neutral-100;
-  @apply border border-neutral-200 hover:border-[#8BFA4A];
-  @apply dark:bg-neutral-800;
-  @apply border dark:border-[#293A20] dark:hover:border-[#8BFA4A];
+  @apply flex-1 scale-110 aspect-square; /* Sizing & Scale */
+  @apply rounded-lg hover:rounded-2xl; /* Radius & Hover */
+  @apply shadow-sm hover:shadow-md; /* Shadow */
+  @apply bg-cover; /* Background Cover */
+  @apply bg-neutral-100 dark:bg-neutral-800; /* Background */
+  @apply border border-neutral-200 dark:border-[#293A20]; /* Border */
+  @apply hover:border-[#8BFA4A] dark:hover:border-[#8BFA4A]; /* Hover Border */
+  @apply transform transition-all duration-300; /* Transition */
+  @apply md:group-hover:rotate-0; /* Group Hover (medium) */
   /* @apply hover:-translate-y-1; */
-  @apply transform transition-all duration-300;
-  @apply md:group-hover:rotate-0;
 }
 
+/* === Pixellum Request Portfolio === */
 .pixellum-request-portfolio {
-  @apply flex flex-col justify-center align-middle items-center;
-  @apply text-xs md:text-sm;
-  @apply transition-all duration-300;
-  @apply bg-[#8BFA4A] text-black;
-  @apply dark:bg-[#8BFA4A] dark:text-black;
-  @apply md:bg-neutral-100 md:dark:bg-neutral-800;
-  @apply md:text-neutral-400 md:dark:text-neutral-500;
-  @apply md:hover:bg-[#8BFA4A] md:hover:text-black;
+  @apply flex flex-col justify-center align-middle items-center; /* Layout */
+  @apply text-xs md:text-sm; /* Text Size */
+  @apply transition-all duration-300; /* Transition */
+  @apply bg-[#8BFA4A] text-black; /* Primary Colour */
+  @apply dark:bg-[#8BFA4A] dark:text-black; /* Dark Mode */
+  @apply md:bg-neutral-100 md:dark:bg-neutral-800; /* Background (medium) */
+  @apply md:text-neutral-400 md:dark:text-neutral-500; /* Text (medium) */
+  @apply md:hover:bg-[#8BFA4A] md:hover:text-black; /* Hover (medium) */
 }
 
+/* === Pixellum Request Arrow === */
 .pixellum-request-arrow {
-  @apply absolute top-1 right-0 transition duration-300;
-  @apply size-4 md:size-8;
-  @apply group-hover:scale-90;
-  @apply text-neutral-200 group-hover:text-neutral-300 dark:text-neutral-700 dark:group-hover:text-[#8BFA4A];
+  @apply absolute top-1 right-0; /* Positioning */
+  @apply transition duration-300; /* Transition */
+  @apply size-4 md:size-8; /* Size */
+  @apply group-hover:scale-90; /* Scale on Hover */
+  @apply text-neutral-200 dark:text-neutral-700; /* Colour */
+  @apply group-hover:text-neutral-300 dark:group-hover:text-[#8BFA4A]; /* Hover Colour */
 }
 
+/* === LinkedIn Pill === */
 .linkedin-pill {
-  @apply inline-block px-1 align-middle rounded-full bg-neutral-100 dark:bg-neutral-900;
-  @apply hover:bg-[#8BFA4A] dark:hover:bg-[#8BFA4A] hover:text-black;
+  @apply inline-block px-1 align-middle rounded-full; /* Layout & Shape */
+  @apply bg-neutral-100 dark:bg-neutral-900; /* Background */
+  @apply hover:bg-[#8BFA4A] dark:hover:bg-[#8BFA4A] hover:text-black; /* Hover Colour */
 }

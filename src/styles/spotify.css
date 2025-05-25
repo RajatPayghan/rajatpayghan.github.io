@@ -1,102 +1,116 @@
+/* === Spotify Container === */
 .spotify-container {
-  @apply flex flex-col gap-4 p-2 w-full h-fit 
-         bg-neutral-100/20 dark:bg-neutral-900/50 
-         border border-neutral-200 dark:border-neutral-900 
-         rounded-md active:scale-95 
-         transition-all duration-300;
+  @apply flex flex-col gap-4 p-2 w-full h-fit; /* Layout */
+  @apply bg-neutral-100/20 dark:bg-neutral-900/50; /* Background */
+  @apply border border-neutral-200 dark:border-neutral-900; /* Border */
+  @apply rounded-md active:scale-95; /* Shape & Active */
+  @apply transition-all duration-300; /* Transition */
 }
 
+/* === Spotify Card === */
 .spotify-card {
-  @apply flex flex-row gap-3 md:gap-4 p-0 w-full h-12 md:h-16  overflow-hidden
-         dark:bg-neutral-900 bg-neutral-100 
-         rounded-md;
+  @apply flex flex-row gap-3 md:gap-4 p-0 w-full h-12 md:h-16; /* Layout */
+  @apply overflow-hidden; /* Truncation */
+  @apply bg-neutral-100 dark:bg-neutral-900; /* Background */
+  @apply rounded-md; /* Shape */
 }
 
+/* === Album Images === */
 .album-image {
-  @apply object-cover h-full aspect-square rounded-md;
+  @apply object-cover h-full aspect-square rounded-md; /* Standard Album */
 }
 
 .album-image-playing {
-  @apply object-cover h-full rounded-full;
+  @apply object-cover h-full rounded-full; /* Animated Album (Playing) */
 }
 
+/* === Song Info === */
 .song-info {
-  @apply flex flex-col justify-center h-full gap-0 max-w-full min-w-0;
+  @apply flex flex-col justify-center h-full gap-0 max-w-full min-w-0; /* Layout */
 }
 
+/* === Song Title === */
 .song-title {
-  @apply text-sm md:text-lg overflow-hidden text-ellipsis whitespace-nowrap;
+  @apply text-sm md:text-lg overflow-hidden text-ellipsis whitespace-nowrap; /* Text Truncation */
   min-width: 0;
 }
 
+/* === Song Meta === */
 .song-meta {
-  @apply flex text-xs md:text-sm 
-         text-neutral-400 dark:text-neutral-600 
-         min-w-0 w-full overflow-hidden;
+  @apply flex text-xs md:text-sm; /* Text Size */
+  @apply text-neutral-400 dark:text-neutral-600; /* Color */
+  @apply min-w-0 w-full overflow-hidden; /* Truncation */
 }
 
 .song-meta-items {
-  @apply overflow-hidden text-ellipsis whitespace-nowrap;
+  @apply overflow-hidden text-ellipsis whitespace-nowrap; /* Truncate Items */
   min-width: 0;
 }
 
 .song-meta-separator {
-  @apply flex-shrink-0;
+  @apply flex-shrink-0; /* Separator Fixed Size */
 }
-/* Ensure the artist doesn't shrink */
+
+/* Prevent artist from shrinking */
 .song-meta-items:first-child {
   @apply flex-shrink-0;
 }
 
-/* Allow album to shrink and truncate */
+/* Allow album name to shrink/truncate */
 .song-meta-items:last-child {
   @apply truncate;
 }
 
+/* === Playback Controls === */
 .controls {
-  @apply flex align-middle pr-1 justify-between 
-         w-full h-fit text-xs;
+  @apply flex align-middle pr-1 justify-between w-full h-fit text-xs; /* Layout */
 }
 
+/* === Play Label === */
 .play-label {
-  @apply flex flex-row gap-1 items-center 
-         text-neutral-400 dark:text-neutral-700 
-         dark:md:group-hover:text-green-400 
-         md:group-hover:text-green-600;
+  @apply flex flex-row gap-1 items-center; /* Layout */
+  @apply text-neutral-400 dark:text-neutral-700; /* Base Color */
+  @apply md:group-hover:text-green-600 dark:md:group-hover:text-green-400; /* Hover (medium) */
 }
 
+/* === Spotify Icons === */
 .spotify-icon-mobile {
-  @apply w-3 grayscale opacity-20;
+  @apply w-3 grayscale opacity-20; /* Mobile Icon */
 }
 
 .spotify-icon-desktop {
-  @apply w-0 group-hover:w-3 transition-all duration-300;
+  @apply w-0 group-hover:w-3; /* Desktop Hover In */
+  @apply transition-all duration-300; /* Transition */
 }
 
+/* === Play Icons === */
 .play-icon {
-  @apply fill-neutral-400 dark:fill-neutral-700;
+  @apply fill-neutral-400 dark:fill-neutral-700; /* Icon Fill */
 }
 
 .play-icon-mobile {
-  @apply hidden;
+  @apply hidden; /* Hidden on Mobile */
 }
 
 .play-icon-desktop {
-  @apply w-2 group-hover:w-0 transition-all duration-300;
+  @apply w-2 group-hover:w-0; /* Desktop Hover Out */
+  @apply transition-all duration-300; /* Transition */
 }
 
+/* === Timestamp Row === */
 .timestamp {
-  @apply flex flex-row gap-2 items-center;
+  @apply flex flex-row gap-2 items-center; /* Layout */
 }
 
+/* === Play Bar === */
 .play-bar {
-  @apply w-full h-1 rounded-sm;
-  @apply md:group-hover:h-2;
-  @apply transition-all duration-300;
-  @apply bg-neutral-100 dark:bg-neutral-900;
+  @apply w-full h-1 rounded-sm; /* Base Bar */
+  @apply md:group-hover:h-2; /* Hover Height (medium) */
+  @apply transition-all duration-300; /* Transition */
+  @apply bg-neutral-100 dark:bg-neutral-900; /* Background */
 }
 
 .play-bar-progress {
-  @apply bg-green-400 h-full rounded-sm animate-pulse;
+  @apply bg-green-400 h-full rounded-sm animate-pulse; /* Progress Animation */
   transition: width 2s ease-in-out;
 }

@@ -1,43 +1,60 @@
+/* === Footer Container === */
 .footer-container {
-  @apply relative mb-24 md:px-0 flex flex-col w-full justify-center pt-10 sm:pt-20;
+  @apply relative mb-24 md:px-0; /* Positioning & Margin */
+  @apply flex flex-col w-full justify-center; /* Layout */
+  @apply pt-10 sm:pt-20; /* Padding (top) */
 }
 
+/* === Footer Inner === */
 .footer-inner {
-  @apply flex flex-col gap-2 justify-between pt-12 pb-12 md:pb-8 w-full max-w-lg text-[16px];
+  @apply flex flex-col gap-2 justify-between; /* Layout */
+  @apply pt-12 pb-12 md:pb-8; /* Padding (vertical) */
+  @apply w-full max-w-lg text-[16px]; /* Width & Text Size */
 }
 
+/* === Footer Separator === */
 .footer-separator {
-  @apply dark:bg-neutral-900 bg-neutral-200 mb-6;
+  @apply dark:bg-neutral-900 bg-neutral-200; /* Background */
+  @apply mb-6; /* Margin Bottom */
 }
 
+/* === Footer Navigation Row === */
 .footer-nav-row {
-  @apply flex flex-row flex-1 items-center justify-between w-full;
+  @apply flex flex-row flex-1 items-center justify-between w-full; /* Layout */
+}
+
+/* === Footer Link Wrapper === */
+.footer-link-wrapper {
+  @apply relative w-fit flex gap-2; /* Layout & Spacing */
 }
 
 .footer-links {
-  @apply flex flex-row flex-1 items-center gap-4;
-}
-
-.footer-link-wrapper {
-  @apply relative w-fit flex gap-2;
+  @apply flex flex-row flex-1 items-center gap-4; /* Layout & Spacing */
 }
 
 .footer-link {
-  @apply text-neutral-400 dark:text-neutral-600;
+  @apply text-neutral-400 dark:text-neutral-600; /* Colour */
 }
 
+/* === Footer Badge Hover === */
 .footer-badge-hover {
-  @apply relative -translate-x-4 scale-75 md:translate-x-0 md:scale-100 md:opacity-0 transition-all duration-700 md:duration-300;
+  @apply relative -translate-x-4 scale-75; /* Transform (base) */
+  @apply md:translate-x-0 md:scale-100 md:opacity-0; /* Transform (medium) */
+  @apply transition-all duration-700 md:duration-300; /* Transition */
 }
 
+/* === Footer Location === */
 .footer-location {
-  @apply flex flex-row gap-1.5 text-sm dark:text-neutral-600 text-neutral-400;
+  @apply flex flex-row gap-1.5 text-sm; /* Layout & Text */
+  @apply dark:text-neutral-600 text-neutral-400; /* Colour */
 }
 
+/* === Footer Copyright === */
 .footer-copyright {
-  @apply text-sm flex flex-row gap-2 items-center;
+  @apply text-sm flex flex-row gap-2 items-center; /* Layout & Text */
 }
 
+/* === Footer Theme Toggle === */
 .footer-theme {
-  @apply w-full flex justify-center;
+  @apply w-full flex justify-center; /* Layout */
 }
