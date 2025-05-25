@@ -20,8 +20,8 @@ export default async function RootLayout({ children }) {
     <html lang='en' suppressHydrationWarning>
       <body suppressHydrationWarning>
         <ThemeProvider>
-          <div className={cn('app-shell')}>
-            <main id='scroll-container' className='container-wrapper'>
+          <div className='app-shell'>
+            <main className='container-wrapper'>
               <div className='container-inner'>
                 <GlowingGridBackground />
                 {children}

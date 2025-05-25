@@ -13,7 +13,7 @@ const Time = dynamic(() => import('./footer-time'), {
 });
 
 const scrollToTop = () => {
-  const container = document.querySelector('#scroll-container');
+  const container = document.querySelector('.container-wrapper');
   if (container) {
     container.scrollTo({
       top: 0,
@@ -48,7 +48,7 @@ export default function Footer() {
               </>
             )}
           </div>
-          <div className='copyright'>2025, Rajat Payghan</div>
+          <div className='copyright'>Rajat Payghan, 2025</div>
         </div>
       </div>
 

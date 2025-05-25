@@ -4,33 +4,41 @@
   @apply mt-24; /* Footer - 24rem below content */
   @apply border-t border-neutral-200 dark:border-neutral-900; /* Top Border */
   @apply py-8; /* I want a 8 rem cushion top & bottom */
-  @apply bg-blue-500/50;
 }
 
 /* === Footer Content === */
 .content {
+  @apply w-full max-w-lg flex flex-col justify-between gap-4 pt-10 pb-8 text-[16px];
+  @apply mx-auto px-4 md:px-0; /* Horizontal padding control */
 }
 
 /* === Footer Content - Top Half === */
 .content-top {
+  @apply flex justify-between items-center w-full;
 }
 
 .link-wrapper {
+  @apply flex items-center gap-4;
 }
 
 .link {
+  @apply text-xs underline md:no-underline md:hover:underline underline-offset-4 cursor-pointer;
 }
 
 /* === Footer Content - Bottom Half === */
 .content-bottom {
+  @apply flex justify-between items-center w-full;
 }
 
 .placetime {
+  @apply flex items-center gap-1.5 text-sm text-neutral-400 dark:text-neutral-600;
 }
 
 .copyright {
+  @apply text-sm text-neutral-400 dark:text-neutral-400;
 }
 
 /* === Theme Container === */
 .theme {
+  @apply w-full flex justify-center pt-4;
 }
