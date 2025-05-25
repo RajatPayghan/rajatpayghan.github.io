@@ -14,11 +14,10 @@ const Time = dynamic(() => import('./footer-time'), {
 
 const scrollToTop = () => {
   const container = document.querySelector('.container-wrapper');
-  if (container) {
-    container.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+  if (container instanceof HTMLElement && container.scrollTop > 0) {
+    container.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 };
 
