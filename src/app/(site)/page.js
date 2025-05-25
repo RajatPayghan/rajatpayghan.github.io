@@ -15,7 +15,7 @@ export default async function Home() {
     <>
       {FEATURE_FLAGS.scrollBottomButton && <ScrollBottomButton />}
 
-      <BlurFade className='flex flex-col gap-16 lg:gap-16 mt-16 md:mt-0'>
+      <BlurFade className='flex flex-col gap-16 lg:gap-16'>
         <Home_About />
 
         <Home_Casual />
