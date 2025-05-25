@@ -48,7 +48,7 @@ export const DOCK_ITEMS = [
       />
     ),
     label: 'Mail',
-    href: '/blog',
+    href: '/writing',
   },
 ];
 
