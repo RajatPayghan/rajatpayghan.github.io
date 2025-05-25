@@ -91,9 +91,9 @@ export const WORKS = [
     href: '',
     title: 'Freelance Designer',
     subtitle: 'Product Designer',
-    isCurr: true,
+    isCurr: false,
     dateStart: '2021',
-    dateEnd: 'Now',
+    dateEnd: '25',
     imgSrc: '/assets/work-logos/Logo-FD.avif',
   },
   {
