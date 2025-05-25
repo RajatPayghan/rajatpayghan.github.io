@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getAllPostsMetadata } from '@/lib/writing';
 import WorkRow from '@/components/Home/work-rows';
 import { OnlineLink } from '@/components/OnlineLink';
+import { BlurFade } from '@/components/BlurFade/blur-fade';
 
 export default function Writing() {
   const posts = getAllPostsMetadata();
@@ -11,12 +12,15 @@ export default function Writing() {
   const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
-    <div className='relative flex flex-col w-full min-h-[80%] gap-16'>
-      <div className='grid place-items-center font-instrument w-full h-36 md:p-16 text-7xl italic'>
-        Writings
+    <BlurFade className='relative flex flex-col w-full min-h-[80%] gap-8'>
+      <div className='flex flex-col gap-2 justify-end font-instrument w-full h-36 md:h-52'>
+        <span className='font-mono text-base md:text-lg italic text-neutral-700'>
+          /writing
+        </span>
+        <span className='text-5xl md:text-7xl'>Thoughts on Life</span>
       </div>
 
-      <div>
+      <div className='text-base'>
         This is my personal blog, a space where I share my thoughts, ideas and
         other interesting things I come across. I view it as some sort of a
         timecapsule, where I document my journey and see how I evolve over time.
@@ -24,7 +28,7 @@ export default function Writing() {
         more elaborate essays.
       </div>
 
-      <div>
+      <div className='flex flex-col gap-4 md:gap-2'>
         {sortedPosts.map(({ slug, title, date, description, tags }) => (
           <WorkRow
             href={'/writing/' + slug}
@@ -37,6 +41,6 @@ export default function Writing() {
           />
         ))}
       </div>
-    </div>
+    </BlurFade>
   );
 }
