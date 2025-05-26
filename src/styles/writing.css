@@ -1,0 +1,26 @@
+.hero-title {
+  @apply flex gap-0;
+  @apply text-4xl md:text-6xl leading-5;
+}
+
+.hero-title-text {
+  @apply transition-all duration-100;
+}
+
+.hero-title-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.hero-subtitle {
+  @apply font-mono text-base md:text-lg italic text-neutral-700;
+}

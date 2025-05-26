@@ -1,9 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
+import '@/styles/writing.css';
 import { getAllPostsMetadata } from '@/lib/writing';
 import WorkRow from '@/components/Home/work-rows';
-import { OnlineLink } from '@/components/OnlineLink';
 import { BlurFade } from '@/components/BlurFade/blur-fade';
+import TypingText from './typing';
+import Link from 'next/link';
 
 export default function Writing() {
   const posts = getAllPostsMetadata();
@@ -14,10 +15,15 @@ export default function Writing() {
   return (
     <BlurFade className='relative flex flex-col w-full min-h-[80%] gap-8'>
       <div className='flex flex-col gap-2 justify-end font-instrument w-full h-36 md:h-52'>
-        <span className='font-mono text-base md:text-lg italic text-neutral-700'>
-          /writing
+        <span className='hero-subtitle'>/writing</span>
+        <span className='hero-title'>
+          <TypingText
+            text='Notes From My Life...'
+            speed={70}
+            className='hero-title-text'
+          />
+          <span className='hero-title-cursor'>|</span>
         </span>
-        <span className='text-5xl md:text-7xl'>Thoughts on Life</span>
       </div>
 
       <div className='text-base'>
@@ -30,15 +36,9 @@ export default function Writing() {
 
       <div className='flex flex-col gap-4 md:gap-2'>
         {sortedPosts.map(({ slug, title, date, description, tags }) => (
-          <WorkRow
-            href={'/writing/' + slug}
-            title={title}
-            subtitle={tags}
-            dateStart={date}
-            dateEnd={''}
-            isCurr={false}
-            key={slug}
-          />
+          <Link href={'/writing/' + slug} key={slug}>
+            {title}
+          </Link>
         ))}
       </div>
     </BlurFade>
