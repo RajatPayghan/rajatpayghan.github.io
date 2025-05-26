@@ -4,8 +4,6 @@ import { getAllPostsMetadata } from '@/lib/writing';
 import { BlurFade } from '@/components/BlurFade/blur-fade';
 import TypingText from '../../components/TypingDiv/typing';
 import Link from 'next/link';
-import { cn } from '@/constants/utils';
-import { unstable_ViewTransition as ViewTransition } from 'react';
 import { ArrowUpLeft } from 'lucide-react';
 
 export default function Writing() {

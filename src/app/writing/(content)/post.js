@@ -3,6 +3,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { getPostMetadataAction } from './middleware.js';
+import { BlurFade } from '@/components/BlurFade/blur-fade.js';
 
 export function PostName() {
   const pathname = usePathname();
@@ -69,5 +70,6 @@ export function PostName() {
     );
   }
 
-  return <div>{metadata.title}</div>;
+  // TODO : Create a Post Metadata Card
+  return <BlurFade key={pathname}>{metadata.title}</BlurFade>;
 }

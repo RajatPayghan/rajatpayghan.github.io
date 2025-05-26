@@ -4,6 +4,7 @@ import { BlurFade } from '@/components/BlurFade/blur-fade';
 import Link from 'next/link';
 import { MoveLeft } from 'lucide-react';
 import { PostName } from './post';
+import { WritingContentWrapper } from './contentwrapper';
 
 export default function WritingLayout({ children }) {
   return (
@@ -21,14 +22,15 @@ export default function WritingLayout({ children }) {
         </Link>
         <span className='hero-title'>
           <PostName />
-          {/* <span className='hero-title-cursor'>|</span> */}
         </span>
       </div>
 
       <div className='w-full h-px bg-neutral-200 dark:bg-neutral-900' />
 
       <div className='flex flex-col gap-8'>
-        <div className='flex flex-col gap-4 md:gap-2'>{children}</div>
+        <div className='flex flex-col gap-4 md:gap-2'>
+          <WritingContentWrapper>{children}</WritingContentWrapper>
+        </div>
       </div>
     </BlurFade>
   );
