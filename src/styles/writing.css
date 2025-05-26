@@ -1,9 +1,14 @@
 .hero-title {
   @apply flex gap-0;
-  @apply text-4xl md:text-6xl leading-5;
+  @apply font-instrument text-4xl md:text-5xl leading-5;
 }
 
 .hero-title-text {
+  @apply transition-all duration-100;
+}
+
+.hero-title-text-post {
+  @apply font-instrument text-3xl md:text-5xl leading-5;
   @apply transition-all duration-100;
 }
 

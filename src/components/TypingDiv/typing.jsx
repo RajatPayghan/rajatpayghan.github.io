@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const wait = (msDelay) => new Promise((res) => setTimeout(res, msDelay));
 
-export default function TypingText({ text, speed = 500 }) {
+export default function TypingText({ delay, text, speed = 70 }) {
   const [displayedLength, setDisplayedLength] = useState(0);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function TypingText({ text, speed = 500 }) {
     if (!text) return;
 
     const startTyping = async () => {
-      await wait(1000); // 300ms delay before typing starts
+      await wait(delay); // 300ms delay before typing starts
       let i = 0;
       const interval = setInterval(() => {
         i++;
