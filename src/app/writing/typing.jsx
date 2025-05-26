@@ -2,19 +2,31 @@
 
 import { useEffect, useState } from 'react';
 
+const wait = (msDelay) => new Promise((res) => setTimeout(res, msDelay));
+
 export default function TypingText({ text, speed = 500 }) {
   const [displayedLength, setDisplayedLength] = useState(0);
 
   useEffect(() => {
     setDisplayedLength(0); // Reset when text or speed changes
     if (!text) return;
-    let i = 0;
-    const interval = setInterval(() => {
-      i++;
-      setDisplayedLength(i);
-      if (i >= text.length) clearInterval(interval);
-    }, speed * 2);
-    return () => clearInterval(interval);
+
+    const startTyping = async () => {
+      await wait(1000); // 300ms delay before typing starts
+      let i = 0;
+      const interval = setInterval(() => {
+        i++;
+        setDisplayedLength(i);
+        if (i >= text.length) clearInterval(interval);
+      }, speed);
+      return interval;
+    };
+
+    const intervalPromise = startTyping();
+
+    return () => {
+      intervalPromise.then((interval) => clearInterval(interval));
+    };
   }, [text, speed]);
 
   return (

@@ -1,7 +1,6 @@
 import React from 'react';
 import '@/styles/writing.css';
 import { getAllPostsMetadata } from '@/lib/writing';
-import WorkRow from '@/components/Home/work-rows';
 import { BlurFade } from '@/components/BlurFade/blur-fade';
 import TypingText from './typing';
 import Link from 'next/link';
@@ -25,7 +24,6 @@ export default function Writing() {
           <span className='hero-title-cursor'>|</span>
         </span>
       </div>
-
       <div className='text-base'>
         This is my personal blog, a space where I share my thoughts, ideas and
         other interesting things I come across. I view it as some sort of a
