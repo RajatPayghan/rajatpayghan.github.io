@@ -113,9 +113,9 @@
 
 /* Post-specific hero title text */
 .hero-title-text-post {
-  @apply relative md:-translate-y-2;
-  @apply font-instrument text-3xl md:text-4xl;
-  @apply leading-[3rem] md:leading-[4rem];
+  @apply relative md:-translate-y-1;
+  @apply font-instrument text-3xl md:text-[42px];
+  @apply leading-[2.5rem] md:leading-[3.5rem];
   @apply transition-all duration-100;
   @apply text-neutral-800 dark:text-neutral-200;
 }
