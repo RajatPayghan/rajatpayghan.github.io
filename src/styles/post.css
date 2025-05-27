@@ -1,0 +1,74 @@
+/* ======================
+   POST HEADER COMPONENTS
+   ====================== */
+
+/* Loading states */
+.post-loading {
+  @apply animate-pulse;
+}
+
+.loading-title {
+  @apply h-8 bg-neutral-300 dark:bg-neutral-700 rounded mb-4;
+}
+
+.loading-meta {
+  @apply h-4 bg-neutral-300 dark:bg-neutral-700 rounded w-1/4 mb-2;
+}
+
+.loading-description {
+  @apply h-4 bg-neutral-300 dark:bg-neutral-700 rounded w-3/4 mb-6;
+}
+
+.loading-text {
+  @apply text-neutral-400 dark:text-neutral-600 animate-pulse;
+}
+
+/* Error states */
+.post-error {
+  @apply max-w-4xl mx-auto p-6;
+}
+
+.error-title {
+  @apply text-2xl font-bold text-red-600 dark:text-red-400;
+}
+
+.error-message {
+  @apply text-neutral-600 dark:text-neutral-400 mt-2;
+}
+
+.error-text {
+  @apply text-red-600 dark:text-red-400;
+}
+
+/* Post metadata card */
+.post-metadata-card {
+  @apply flex flex-col gap-4;
+}
+
+.post-title-wrapper {
+  @apply flex flex-col;
+}
+
+/* Post metadata section */
+.post-meta {
+  @apply flex flex-col gap-3 text-sm;
+}
+
+.post-meta-date {
+  @apply text-neutral-500 dark:text-neutral-400 font-mono;
+}
+
+.post-meta-description {
+  @apply text-neutral-600 dark:text-neutral-300 leading-relaxed;
+}
+
+.post-meta-tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.post-meta-tag {
+  @apply px-3 py-1 rounded-full text-xs;
+  @apply bg-neutral-100 dark:bg-neutral-800;
+  @apply text-neutral-600 dark:text-neutral-300;
+  @apply border border-neutral-200 dark:border-neutral-700;
+}

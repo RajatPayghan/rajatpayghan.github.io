@@ -1,4 +1,7 @@
 import React from 'react';
+
+// Icons & Styles
+import '@/styles/post.css';
 import '@/styles/writing.css';
 import { MoveLeft } from 'lucide-react';
 
@@ -6,13 +9,13 @@ import { MoveLeft } from 'lucide-react';
 import { PageLayout } from '@/components/Writing/page-layout';
 import { WritingHeader } from '@/components/Writing/writing-header';
 import { NavigationLink } from '@/components/Writing/navigation-link';
-import { PostHeader } from '@/components/Writing/post-name';
+import { PostHeader } from '@/components/Writing/post-header';
 import { ContentLayout } from '@/components/Writing/layout-content';
 import { WritingContentWrapper } from './contentwrapper';
 
 export default function WritingLayout({ children }) {
   return (
-    <PageLayout stagger={0.3}>
+    <PageLayout stagger={0.3} /* The stagger is for BlurFade stagger */>
       <WritingHeader
         navigationLink={
           <NavigationLink
