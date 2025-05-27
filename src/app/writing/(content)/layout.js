@@ -8,30 +8,32 @@ import { WritingContentWrapper } from './contentwrapper';
 
 export default function WritingLayout({ children }) {
   return (
-    <BlurFade
-      stagger={0.3}
-      className='relative flex flex-col w-full min-h-[80%] gap-16 mt-36'
-    >
-      <div className='flex flex-col md:flex-row relative align-middle'>
-        <Link
-          href={'/writing'}
-          className='absolute -left-1/4 top-0 translate-y-2 flex gap-1 place-items-center text-neutral-400 dark:text-neutral-700'
-        >
+    // COMPONENT SUGGESTION: Same PageLayout component as in writing/page.js could be used here
+    <BlurFade stagger={0.3} className='writing-container'>
+      {/* COMPONENT SUGGESTION: This header pattern is identical to writing/page.js - extract WritingHeader */}
+      <header className='writing-header'>
+        {/* COMPONENT SUGGESTION: Same NavigationLink component pattern */}
+        <Link href='/writing' className='writing-content-nav-link'>
           <MoveLeft size={16} />
           <span>Writing</span>
         </Link>
-        <span className='hero-title'>
+
+        {/* COMPONENT SUGGESTION: PostHeader component - combines PostName with hero styling */}
+        <h1 className='hero-title'>
           <PostName />
-        </span>
-      </div>
+        </h1>
+      </header>
 
-      <div className='w-full h-px bg-neutral-200 dark:bg-neutral-900' />
+      {/* COMPONENT SUGGESTION: Same SectionDivider component */}
+      <div className='section-divider' />
 
-      <div className='flex flex-col gap-8'>
-        <div className='flex flex-col gap-4 md:gap-2'>
+      {/* COMPONENT SUGGESTION: Consider if this wrapper structure is needed or can be simplified */}
+      <main className='writing-content'>
+        <section className='content-wrapper'>
+          {/* COMPONENT SUGGESTION: WritingContentWrapper might be doing redundant wrapping */}
           <WritingContentWrapper>{children}</WritingContentWrapper>
-        </div>
-      </div>
+        </section>
+      </main>
     </BlurFade>
   );
 }
