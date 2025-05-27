@@ -54,14 +54,28 @@ const components = {
     );
   },
 
-  code: ({ children, ...props }) => {
-    const codeHTML = highlight(children);
+  code: ({ children, className = '', ...props }) => {
+    const isBlock = className.includes('language-');
+
+    if (isBlock) {
+      const lang = className.replace('language-', '');
+      const highlighted = highlight(children); // or use Shiki's `highlighter.codeToHtml` if you switch
+      return (
+        <pre className='mdx-code-block'>
+          <code
+            className={`language-${lang}`}
+            dangerouslySetInnerHTML={{ __html: highlighted }}
+            {...props}
+          />
+        </pre>
+      );
+    }
+
+    // Inline code fallback
     return (
-      <code
-        className='mdx-code'
-        dangerouslySetInnerHTML={{ __html: codeHTML }}
-        {...props}
-      />
+      <code className='mdx-inline-code' {...props}>
+        {children}
+      </code>
     );
   },
 
