@@ -1,7 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { getPostMetadataAction } from '@/app/writing/(content)/middleware.js';
+import { getPostMetadataAction } from '@/components/Writing/middleware.js';
 
 export function usePostMetadata() {
   const pathname = usePathname();

@@ -11,7 +11,7 @@ import { WritingHeader } from '@/components/Writing/writing-header';
 import { NavigationLink } from '@/components/Writing/navigation-link';
 import { PostHeader } from '@/components/Writing/post-header';
 import { ContentLayout } from '@/components/Writing/layout-content';
-import { WritingContentWrapper } from './contentwrapper';
+import { WritingContentWrapper } from '../../../components/Writing/contentwrapper';
 
 export default function WritingLayout({ children }) {
   return (
