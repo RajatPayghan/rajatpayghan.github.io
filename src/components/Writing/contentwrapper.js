@@ -7,7 +7,7 @@ export function WritingContentWrapper({ children }) {
   const pathname = usePathname();
 
   return (
-    <BlurFade key={pathname} stagger={0.3}>
+    <BlurFade key={pathname} delay={0.7}>
       {children}
     </BlurFade>
   );
