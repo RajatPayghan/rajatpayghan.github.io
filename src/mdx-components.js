@@ -64,7 +64,7 @@ const components = {
       return (
         <pre className='mdx-code-block'>
           <code
-            className={`language-${lang}`}
+            className={`language-${lang} mdx-code`} // CODE FONT SIZE CONTROL HERE
             dangerouslySetInnerHTML={{ __html: highlighted }}
             {...props}
           />

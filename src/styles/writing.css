@@ -5,26 +5,25 @@
 /* Main container for writing pages */
 .writing-container {
   @apply relative flex flex-col w-full min-h-[80%];
-  margin-top: 9rem; /* mt-36 = 144px = 9rem */
-  gap: 4rem; /* gap-16 = 64px = 4rem */
+  @apply mt-16 md:mt-36; /* mt-36 = 144px = 9rem */
+  @apply gap-16;
 }
 
 /* Header section with title and navigation */
 .writing-header {
-  @apply flex flex-col md:flex-row relative;
-  align-items: center; /* align-middle -> items-center */
+  @apply flex flex-col gap-16 md:flex-row relative;
+  align-items: left; /* align-middle -> items-center */
 }
 
 /* Navigation links */
 .writing-nav-link {
-  @apply absolute flex gap-1 text-neutral-400 dark:text-neutral-700;
-  left: -25%; /* -left-1/4 */
-  top: 25%; /* top-1/4 */
-  align-items: center; /* place-items-center -> items-center */
+  @apply static md:absolute flex gap-1 text-neutral-400 dark:text-neutral-700;
+  @apply md:-left-1/4;
+  @apply md:top-1/4;
 }
 
 .writing-content-nav-link {
-  @apply absolute top-0 flex gap-1 text-neutral-400 dark:text-neutral-700;
+  @apply static md:absolute top-0 flex gap-1 text-neutral-400 dark:text-neutral-700;
   left: -25%; /* -left-1/4 */
   transform: translateY(0.5rem); /* translate-y-2 */
   align-items: center; /* place-items-center -> items-center */
@@ -108,7 +107,7 @@
 
 /* Post-specific hero title text */
 .hero-title-text-post {
-  @apply font-instrument text-3xl md:text-5xl leading-5;
+  @apply font-instrument text-4xl md:text-5xl leading-10;
   @apply transition-all duration-100;
 }
 

@@ -4,40 +4,40 @@
 
 /* Headings */
 .mdx-h1 {
-  @apply text-3xl md:text-4xl font-bold;
-  @apply text-neutral-900 dark:text-neutral-100;
-  @apply mb-8 mt-12 first:mt-0;
+  @apply relative text-lg md:text-2xl font-hanken font-medium;
+  @apply text-neutral-800 dark:text-neutral-200;
+  @apply mb-6 mt-10 first:mt-0;
   @apply leading-tight;
+  @apply pb-4 border-b border-neutral-100 dark:border-neutral-900;
 }
 
 .mdx-h2 {
-  @apply text-2xl md:text-3xl font-semibold;
-  @apply text-neutral-800 dark:text-neutral-200;
-  @apply mb-6 mt-10;
+  @apply relative text-base md:text-xl font-hanken font-medium;
+  @apply text-neutral-700 dark:text-neutral-300;
+  @apply mb-5 mt-8;
   @apply leading-tight;
-  @apply border-b border-neutral-200 dark:border-neutral-800;
   @apply pb-2;
 }
 
 .mdx-h3 {
-  @apply text-xl md:text-2xl font-medium;
-  @apply text-neutral-800 dark:text-neutral-200;
-  @apply mb-4 mt-8;
+  @apply text-base md:text-lg font-hanken;
+  @apply text-neutral-700 dark:text-neutral-300;
+  @apply mb-4 mt-6;
   @apply leading-snug;
 }
 
 .mdx-h4 {
-  @apply text-lg md:text-xl font-medium;
-  @apply text-neutral-700 dark:text-neutral-300;
-  @apply mb-3 mt-6;
+  @apply text-sm md:text-base font-hanken;
+  @apply text-neutral-600 dark:text-neutral-400;
+  @apply mb-3 mt-5;
   @apply leading-snug;
 }
 
 /* Paragraphs */
 .mdx-paragraph {
-  @apply text-base md:text-lg;
-  @apply text-neutral-700 dark:text-neutral-300;
-  @apply mb-6 leading-relaxed;
+  @apply text-sm md:text-base;
+  @apply text-neutral-600 dark:text-neutral-400;
+  @apply mb-5 leading-relaxed;
   @apply max-w-none;
 }
 
@@ -75,18 +75,23 @@
 
 /* Links */
 .mdx-link {
-  @apply inline-flex items-center gap-1;
-  @apply text-blue-600 dark:text-blue-400;
-  @apply hover:text-blue-800 dark:hover:text-blue-300;
+  @apply relative inline-flex items-center gap-1;
+  @apply text-sky-600 dark:text-sky-600;
+  @apply hover:text-sky-800 dark:hover:text-sky-300;
   @apply underline underline-offset-2;
-  @apply decoration-blue-300 dark:decoration-blue-600;
-  @apply hover:decoration-blue-500 dark:hover:decoration-blue-400;
+  @apply decoration-sky-300 dark:decoration-sky-600;
+  @apply hover:decoration-sky-500 dark:hover:decoration-sky-400;
   @apply transition-all duration-300;
   @apply font-medium;
 }
 
 .mdx-link:hover {
   @apply decoration-2;
+}
+
+.mdx-link:hover::after {
+  content: '↗ ';
+  @apply text-sm relative top-0 right-0;
 }
 
 /* Code */
@@ -98,7 +103,7 @@
 }
 
 .mdx-code {
-  @apply text-xs font-mono text-neutral-800 dark:text-neutral-200;
+  @apply text-xs md:text-sm font-mono text-neutral-800 dark:text-neutral-200;
 }
 
 .mdx-inline-code {
@@ -146,12 +151,12 @@
 
 /* Blockquote */
 .mdx-blockquote {
-  @apply border-l-4 border-blue-500 dark:border-blue-400;
+  @apply border-l-4 border-sky-500 dark:border-sky-400;
   @apply pl-6 py-2 my-8;
-  @apply bg-blue-50 dark:bg-blue-950/30;
+  @apply bg-sky-50 dark:bg-sky-950/30;
   @apply rounded-r-lg;
   @apply italic;
-  @apply text-blue-900 dark:text-blue-100;
+  @apply text-sky-900 dark:text-sky-100;
   @apply text-base md:text-lg;
   @apply leading-relaxed;
 }
