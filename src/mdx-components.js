@@ -1,101 +1,101 @@
 import React from 'react';
 import Link from 'next/link';
 import { highlight } from 'sugar-high';
+import '@/styles/mdx-components.css';
 
 const components = {
-  h1: (props) => <h1 className='font-medium pt-12 mb-0' {...props} />,
-  h2: (props) => (
-    <h2
-      className='text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3'
-      {...props}
-    />
-  ),
-  h3: (props) => (
-    <h3
-      className='text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3'
-      {...props}
-    />
-  ),
-  h4: (props) => <h4 className='font-medium' {...props} />,
-  p: (props) => (
-    <p className='text-gray-800 dark:text-zinc-300 leading-snug' {...props} />
-  ),
-  ol: (props) => (
-    <ol
-      className='text-gray-800 dark:text-zinc-300 list-decimal pl-5 space-y-2'
-      {...props}
-    />
-  ),
-  ul: (props) => (
-    <ul
-      className='text-gray-800 dark:text-zinc-300 list-disc pl-5 space-y-1'
-      {...props}
-    />
-  ),
-  li: (props) => <li className='pl-1' {...props} />,
-  em: (props) => <em className='font-medium' {...props} />,
-  strong: (props) => <strong className='font-medium' {...props} />,
+  h1: (props) => <h1 className='mdx-h1' {...props} />,
+
+  h2: (props) => <h2 className='mdx-h2' {...props} />,
+
+  h3: (props) => <h3 className='mdx-h3' {...props} />,
+
+  h4: (props) => <h4 className='mdx-h4' {...props} />,
+
+  p: (props) => <p className='mdx-paragraph' {...props} />,
+
+  ol: (props) => <ol className='mdx-ordered-list' {...props} />,
+
+  ul: (props) => <ul className='mdx-unordered-list' {...props} />,
+
+  li: (props) => <li className='mdx-list-item' {...props} />,
+
+  em: (props) => <em className='mdx-emphasis' {...props} />,
+
+  strong: (props) => <strong className='mdx-strong' {...props} />,
+
   a: ({ href, children, ...props }) => {
-    const className =
-      'text-blue-500 hover:text-blue-700 dark:text-gray-400 hover:dark:text-gray-300 dark:underline dark:underline-offset-2 dark:decoration-gray-800';
     if (href?.startsWith('/')) {
       return (
-        <Link href={href} className={className} {...props}>
+        <Link href={href} className='mdx-link' {...props}>
           {children}
         </Link>
       );
     }
+
     if (href?.startsWith('#')) {
       return (
-        <a href={href} className={className} {...props}>
+        <a href={href} className='mdx-link' {...props}>
           {children}
         </a>
       );
     }
+
     return (
       <a
         href={href}
         target='_blank'
         rel='noopener noreferrer'
-        className={className}
+        className='mdx-link'
         {...props}
       >
         {children}
       </a>
     );
   },
+
   code: ({ children, ...props }) => {
     const codeHTML = highlight(children);
-    return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+    return (
+      <code
+        className='mdx-code'
+        dangerouslySetInnerHTML={{ __html: codeHTML }}
+        {...props}
+      />
+    );
   },
+
   Table: ({ data }) => (
-    <table>
-      <thead>
+    <table className='mdx-table'>
+      <thead className='mdx-table-header'>
         <tr>
           {data.headers.map((header, index) => (
-            <th key={index}>{header}</th>
+            <th key={index} className='mdx-table-header-cell'>
+              {header}
+            </th>
           ))}
         </tr>
       </thead>
       <tbody>
         {data.rows.map((row, index) => (
-          <tr key={index}>
+          <tr key={index} className='mdx-table-row'>
             {row.map((cell, cellIndex) => (
-              <td key={cellIndex}>{cell}</td>
+              <td key={cellIndex} className='mdx-table-cell'>
+                {cell}
+              </td>
             ))}
           </tr>
         ))}
       </tbody>
     </table>
   ),
-  blockquote: (props) => (
-    <blockquote
-      className='ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-zinc-600 dark:text-zinc-300'
-      {...props}
-    />
-  ),
+
+  blockquote: (props) => <blockquote className='mdx-blockquote' {...props} />,
 };
 
 export function useMDXComponents(otherComponents) {
-  return { ...otherComponents, ...components };
+  return {
+    ...otherComponents,
+    ...components,
+  };
 }
