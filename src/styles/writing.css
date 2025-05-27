@@ -4,18 +4,18 @@
 
 /* Main container for writing pages */
 
-/* FIXME : Check and Change margin top on mobile */
+/* DONE : Check and Change margin top on mobile */
 
 .writing-container {
   @apply relative flex flex-col w-full min-h-[80%];
-  @apply mt-16 md:mt-36;
-  @apply gap-16;
+  @apply mt-0 md:mt-36;
+  @apply gap-12 md:gap-16;
 }
 
-/* FIXME : Check and Change margin gap on mobile */
+/* DONE : Check and Change margin gap on mobile */
 /* Header section with title and navigation */
 .writing-header {
-  @apply relative flex flex-col gap-16 md:flex-row;
+  @apply relative flex flex-col gap-8 md:flex-row;
   align-items: left; /* align-middle -> items-center */
 }
 
@@ -40,7 +40,7 @@
 
 /* Section divider line */
 .section-divider {
-  @apply w-full h-px bg-neutral-200 dark:bg-neutral-900;
+  @apply w-full h-px border-b border-neutral-200 dark:border-neutral-900;
 }
 
 /* Main content area */

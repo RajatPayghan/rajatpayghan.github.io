@@ -4,7 +4,7 @@
 
 /* Post metadata card */
 .post-metadata-card {
-  @apply flex flex-col gap-10;
+  @apply flex flex-col gap-6 md:gap-10;
 }
 
 .post-title-wrapper {
