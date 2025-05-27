@@ -19,7 +19,7 @@ export default function Writing() {
     <PageLayout stagger={1}>
       <WritingHeader
         navigationLink={
-          <NavigationLink href='/' icon={ArrowUpLeft}>
+          <NavigationLink href='/' icon={ArrowUpLeft} variant='content'>
             Home
           </NavigationLink>
         }

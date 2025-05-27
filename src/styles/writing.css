@@ -103,12 +103,14 @@
 /* Hero title text with transitions */
 .hero-title-text {
   @apply transition-all duration-100;
+  @apply text-neutral-800 dark:text-neutral-100;
 }
 
 /* Post-specific hero title text */
 .hero-title-text-post {
   @apply font-instrument text-4xl md:text-5xl leading-10;
   @apply transition-all duration-100;
+  @apply text-neutral-800 dark:text-neutral-200;
 }
 
 /* Animated cursor */

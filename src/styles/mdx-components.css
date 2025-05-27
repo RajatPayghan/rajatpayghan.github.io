@@ -89,11 +89,6 @@
   @apply decoration-2;
 }
 
-.mdx-link:hover::after {
-  content: '↗ ';
-  @apply text-sm relative top-0 right-0;
-}
-
 /* Code */
 .mdx-code-block {
   @apply my-6 overflow-x-auto rounded-lg;
