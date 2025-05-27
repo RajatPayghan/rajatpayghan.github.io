@@ -38,16 +38,6 @@ export default function Writing() {
       <div className='w-full h-px bg-neutral-200 dark:bg-neutral-900' />
 
       <div className='flex flex-col gap-8'>
-        {/* <div className='text-base'>
-          This is my personal blog, a space where I share my thoughts, ideas and
-          other interesting things I come across. I view it as some sort of a
-          timecapsule, where I document my journey and see how I evolve over
-          time. On here, you will find notes (aka fleeting thoughts), regular
-          posts and more elaborate essays. Brain dumps, explorations, and how-to
-          guides. I write about different topics, such as design system,
-          accessibility, start ups and user/dev experience.
-        </div> */}
-
         <div className='flex flex-col gap-4 md:gap-2'>
           {sortedPosts.map(({ slug, title, date, description, tags }) => (
             <Link href={'/writing/' + slug} key={slug}>
@@ -59,22 +49,3 @@ export default function Writing() {
     </BlurFade>
   );
 }
-
-// ==================================
-
-/*
-
-
-import { motion } from 'framer-motion';
-
-<motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ delay: 700, duration: 1 }} // delay in seconds!
->
-  <span className='bg-red-500/30 p-4 text-white'>Back</span>
-</motion.div>
-
-
-
-*/
