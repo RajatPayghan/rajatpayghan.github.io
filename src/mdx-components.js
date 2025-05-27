@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { highlight } from 'sugar-high';
 import '@/styles/mdx-components.css';
+import '@/styles/sugar-high-varibles.css';
 
 const components = {
   h1: (props) => <h1 className='mdx-h1' {...props} />,
@@ -72,37 +73,22 @@ const components = {
     }
 
     // Inline code fallback
+    const inlineHighlighted = highlight(children);
     return (
-      <code className='mdx-inline-code' {...props}>
-        {children}
-      </code>
+      <code
+        className='mdx-inline-code'
+        dangerouslySetInnerHTML={{ __html: inlineHighlighted }}
+        {...props}
+      />
     );
   },
 
-  Table: ({ data }) => (
-    <table className='mdx-table'>
-      <thead className='mdx-table-header'>
-        <tr>
-          {data.headers.map((header, index) => (
-            <th key={index} className='mdx-table-header-cell'>
-              {header}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.rows.map((row, index) => (
-          <tr key={index} className='mdx-table-row'>
-            {row.map((cell, cellIndex) => (
-              <td key={cellIndex} className='mdx-table-cell'>
-                {cell}
-              </td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  ),
+  table: (props) => <table className='mdx-table' {...props} />,
+  thead: (props) => <thead className='mdx-table-header' {...props} />,
+  tbody: (props) => <tbody {...props} />,
+  tr: (props) => <tr className='mdx-table-row' {...props} />,
+  th: (props) => <th className='mdx-table-header-cell' {...props} />,
+  td: (props) => <td className='mdx-table-cell' {...props} />,
 
   blockquote: (props) => <blockquote className='mdx-blockquote' {...props} />,
 };

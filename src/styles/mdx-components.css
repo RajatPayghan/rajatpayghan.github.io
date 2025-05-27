@@ -91,32 +91,21 @@
 
 /* Code */
 .mdx-code-block {
-  @apply my-6;
-  @apply overflow-x-auto;
-  @apply rounded-lg;
-  @apply bg-neutral-100 dark:bg-neutral-800;
-  @apply border border-neutral-200 dark:border-neutral-700;
+  @apply my-6 overflow-x-auto rounded-lg;
+  @apply bg-neutral-100 dark:bg-neutral-900;
+  @apply border border-neutral-200 dark:border-neutral-800;
   @apply p-4;
 }
 
 .mdx-code {
-  @apply px-3 py-2 rounded-lg;
-  @apply bg-neutral-100 dark:bg-neutral-800;
-  @apply border border-neutral-200 dark:border-neutral-700;
-  @apply text-sm font-mono;
-  @apply text-neutral-800 dark:text-neutral-200;
-  @apply overflow-x-auto;
-  @apply block my-6;
+  @apply text-xs font-mono text-neutral-800 dark:text-neutral-200;
 }
 
 .mdx-inline-code {
-  @apply px-1.5 py-0.5 rounded-md;
-  @apply bg-neutral-100 dark:bg-neutral-800;
-  @apply text-sm font-mono;
-  @apply text-neutral-800 dark:text-neutral-200;
-  @apply break-words;
-  @apply border border-neutral-200 dark:border-neutral-700;
-  @apply mx-1;
+  @apply px-1.5 py-0.5 mx-1 rounded-md break-words;
+  @apply bg-neutral-100 dark:bg-neutral-900;
+  @apply text-xs font-mono text-neutral-800 dark:text-neutral-200;
+  @apply border border-neutral-200 dark:border-neutral-800;
 }
 
 /* Table */
