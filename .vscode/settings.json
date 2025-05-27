@@ -8,5 +8,6 @@
     "**/CVS": true,
     "**/*.git": true
   },
-  "explorerExclude.backup": {}
+  "explorerExclude.backup": {},
+  "todo-tree.tree.showBadges": true
 }

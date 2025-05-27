@@ -3,15 +3,19 @@
    ====================== */
 
 /* Main container for writing pages */
+
+/* FIXME : Check and Change margin top on mobile */
+
 .writing-container {
   @apply relative flex flex-col w-full min-h-[80%];
-  @apply mt-16 md:mt-36; /* mt-36 = 144px = 9rem */
+  @apply mt-16 md:mt-36;
   @apply gap-16;
 }
 
+/* FIXME : Check and Change margin gap on mobile */
 /* Header section with title and navigation */
 .writing-header {
-  @apply relative flex flex-col gap-16 md:flex-row relative;
+  @apply relative flex flex-col gap-16 md:flex-row;
   align-items: left; /* align-middle -> items-center */
 }
 

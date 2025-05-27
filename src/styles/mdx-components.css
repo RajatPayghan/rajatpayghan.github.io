@@ -2,9 +2,11 @@
    MDX TYPOGRAPHY COMPONENTS
    ====================== */
 
+/* FIXME : Bump up all sizes by 1 */
+
 /* Headings */
 .mdx-h1 {
-  @apply relative text-lg md:text-2xl font-hanken font-medium;
+  @apply relative text-xl md:text-2xl font-hanken font-medium;
   @apply text-neutral-800 dark:text-neutral-200;
   @apply mb-6 mt-10 first:mt-0;
   @apply leading-tight;
@@ -12,7 +14,7 @@
 }
 
 .mdx-h2 {
-  @apply relative text-base md:text-xl font-hanken font-medium;
+  @apply relative text-lg md:text-xl font-hanken font-medium;
   @apply text-neutral-700 dark:text-neutral-300;
   @apply mb-5 mt-8;
   @apply leading-tight;
@@ -20,14 +22,14 @@
 }
 
 .mdx-h3 {
-  @apply text-base md:text-lg font-hanken;
+  @apply text-lg md:text-lg font-hanken;
   @apply text-neutral-700 dark:text-neutral-300;
   @apply mb-4 mt-6;
   @apply leading-snug;
 }
 
 .mdx-h4 {
-  @apply text-sm md:text-base font-hanken;
+  @apply text-base md:text-base font-hanken;
   @apply text-neutral-600 dark:text-neutral-400;
   @apply mb-3 mt-5;
   @apply leading-snug;
@@ -35,7 +37,7 @@
 
 /* Paragraphs */
 .mdx-paragraph {
-  @apply text-sm md:text-base;
+  @apply text-base md:text-base;
   @apply text-neutral-600 dark:text-neutral-400;
   @apply mb-5 leading-relaxed;
   @apply max-w-none;
