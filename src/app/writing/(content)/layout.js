@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { useState } from 'react';
 
 // Icons & Styles
 import '@/styles/post.css';
@@ -14,6 +17,7 @@ import { ContentLayout } from '@/components/Writing/layout-content';
 import { WritingContentWrapper } from '../../../components/Writing/contentwrapper';
 
 export default function WritingLayout({ children }) {
+  const [isPostHeaderLoaded, setIsPostHeaderLoaded] = useState(false);
   return (
     <PageLayout stagger={0.3} /* The stagger is for BlurFade stagger */>
       <WritingHeader
@@ -28,7 +32,7 @@ export default function WritingLayout({ children }) {
           </NavigationLink>
         }
       >
-        <PostHeader />
+        <PostHeader onLoad={() => setIsPostHeaderLoaded(true)} />
       </WritingHeader>
 
       <div className='section-divider' />
@@ -40,7 +44,9 @@ export default function WritingLayout({ children }) {
           - Triggers BlurFade animation on path changes
           - Maintains server/client boundary properly
         */}
-        <WritingContentWrapper>{children}</WritingContentWrapper>
+        {isPostHeaderLoaded && (
+          <WritingContentWrapper>{children}</WritingContentWrapper>
+        )}
       </ContentLayout>
     </PageLayout>
   );
