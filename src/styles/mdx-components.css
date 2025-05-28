@@ -2,8 +2,6 @@
    MDX TYPOGRAPHY COMPONENTS
    ====================== */
 
-/* DONE : Bump up all sizes by 1 */
-
 /* Headings */
 .mdx-h1 {
   @apply relative w-fit text-xl md:text-2xl font-hanken font-medium;

@@ -3,16 +3,12 @@
    ====================== */
 
 /* Main container for writing pages */
-
-/* DONE : Check and Change margin top on mobile */
-
 .writing-container {
-  @apply relative flex flex-col w-full min-h-[80%];
+  @apply relative flex flex-col w-full min-h-[600px];
   @apply mt-0 md:mt-36;
   @apply gap-12 md:gap-16;
 }
 
-/* DONE : Check and Change margin gap on mobile */
 /* Header section with title and navigation */
 .writing-header {
   @apply relative flex flex-col gap-8 md:flex-row;

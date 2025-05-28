@@ -9,6 +9,7 @@ import Dock from '@/components/Dock';
 import Shade from '@/components/Background/shade';
 import SmoothCursor from '@/components/SmoothCursor';
 import { FEATURE_FLAGS } from '@/constants/feature-flags';
+import ScrollToTopOnReroute from '@/components/ScrollManager/scroll-to-top-on-link';
 
 export const metadata = {
   title: 'Rajat Payghan',
@@ -19,6 +20,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <ScrollToTopOnReroute />
         <ThemeProvider>
           <div className='app-shell'>
             <main className='container-wrapper'>

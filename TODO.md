@@ -1,5 +1,5 @@
 - TODO Font issues
 - TODO Refactor pages structure
 - TODO Spotify
-- DONE Extract classes to css files
-- DONE Clean up positioning issues
+- Extract classes to css files
+- Clean up positioning issues
