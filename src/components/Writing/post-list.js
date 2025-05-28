@@ -7,12 +7,12 @@ export function PostsList({ posts }) {
   const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
-    <main className='writing-content'>
+    <div className='writing-content'>
       <section className='content-wrapper'>
         {sortedPosts.map((post) => (
           <PostListItem key={post.slug} post={post} />
         ))}
       </section>
-    </main>
+    </div>
   );
 }
