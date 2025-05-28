@@ -4,6 +4,7 @@
 
 /* Main container for writing pages */
 .writing-container {
+  @apply font-hanken;
   @apply relative flex flex-col w-full min-h-[600px];
   @apply mt-0 md:mt-36;
   @apply gap-12 md:gap-16;

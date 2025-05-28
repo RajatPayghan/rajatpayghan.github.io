@@ -1,3 +1,5 @@
+import Badge from '@/components/Badge';
+
 export const metadata = {
   title: 'My way of using Conventional Commits',
   date: '2025-05-28',
@@ -7,4 +9,14 @@ export const metadata = {
   tags: ['dev.logs', 'portfolio'],
 };
 
-Writing a git commit message is hard. Especially for multi-factored bug fixes. It's especially tricky to write down why a commit made aeons agao doesnt work with your current setup, and why
+## The problem
+
+Writing a git commit message is hard. Especially for multi-factored bug fixes. It's especially tricky to write down which multitude of unchanged files were reponsible for the obscure bug you are targeting. Why that one line of CSS in your globals.css which hadn't been causing a problem for aeons suddenly decides to turn up to create problems which cant even be successfully replicated. Was this personal ? Yes. But that's a story for another day.
+
+Due to the small scale, the code and the structure of the repo changed quite frequently. New folders were added regularly, defunct ones deleted, functions merged and complete page versions changed. During the development of the [writing page](/writing), I started with `@next/mdx` along with `app/` routing, went to `next-mdx-remote`to make it work with a local folder in the project, came back to`app/`routing and finally made peace with it. All while git was going crazy tracking the five`page.mdx` pages across folders as my routing logic changed. I could have just reverted changes and started a new branch, but disorganised me had added parallel changes to different files in the same commit. So I needed to refactor in branch.
+
+In the [homepage](/), the current page is the Version V3.2, with each version having its own `archive.Vx.page.js` file stored "just in case" because in commits I couldn't keep track of where I changed which page.
+
+## Here comes the saviour
+
+Currently, I came across this awesome specification for git commits called [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Struggling from small code problems while developing this website, it was difficult to manage what I was changing and where the changes were made.
