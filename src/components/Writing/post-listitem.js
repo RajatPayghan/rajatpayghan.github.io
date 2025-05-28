@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import UnderlineLinkWithBG from '../UnderlineToBGLink';
 
 export function PostListItem({ post }) {
   const { slug, title, date, description, tags } = post;
 
   return (
     <Link href={`/writing/${slug}`} className='post-link'>
-      <article className='post-item'>
+      <UnderlineLinkWithBG label={title} />
+      {/* <article className='post-item'>
         <h2 className='post-title'>{title}</h2>
-        {/* Add these styles to your CSS file */}
         {date && <time className='post-date'>{date}</time>}
         {description && <p className='post-description'>{description}</p>}
         {tags && tags.length > 0 && (
@@ -19,7 +20,7 @@ export function PostListItem({ post }) {
             ))}
           </div>
         )}
-      </article>
+      </article> */}
     </Link>
   );
 }
