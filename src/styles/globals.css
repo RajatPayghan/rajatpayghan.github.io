@@ -94,7 +94,6 @@
     @apply dark:font-normal font-normal;
     @apply text-neutral-700 dark:text-neutral-400;
     @apply tracking-normal leading-normal md:leading-normal;
-    overscroll-behavior: none;
   }
 
   /* Dark mode html background override */
@@ -176,7 +175,7 @@
   }
 
   .container-wrapper {
-    @apply h-screen overflow-y-auto no-scrollbar overscroll-none;
+    @apply h-screen overflow-y-auto no-scrollbar;
     @apply flex flex-1 justify-center;
   }
 
