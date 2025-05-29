@@ -1,5 +1,4 @@
 // SERVER COMPONENT - List of posts with sorting
-import Link from 'next/link';
 import { PostListItem } from './post-listitem';
 
 export function PostsList({ posts }) {

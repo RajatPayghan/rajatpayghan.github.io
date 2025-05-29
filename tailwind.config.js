@@ -1,4 +1,4 @@
-// TODO : Create FluidType from the following Source
+// XXX : Create FluidType from the following Source
 // Source : https://www.hunterjennings.dev/writing/fluid-typography-configuration
 
 /** @type {import('tailwindcss').Config} */

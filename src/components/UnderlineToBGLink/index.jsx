@@ -26,11 +26,11 @@ const UnderlineToBackground = ({
   // Define text and underline colors based on theme
   const themeColors = {
     light: {
-      text: '#0a0a0a',
-      underline: '#8BFA4A',
+      text: '#1a1a1a',
+      underline: '#8bfa4a',
     },
     dark: {
-      text: '#000000',
+      text: '#1a1a1a',
       underline: '#8BFA4A',
     },
   };

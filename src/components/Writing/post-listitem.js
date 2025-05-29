@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import UnderlineLinkWithBG from '../UnderlineToBGLink';
-import { formatLastPlayedTime } from '@/lib/utils';
+import { formatDateForPostList } from '@/lib/utils';
 import { cn } from '@/constants/utils';
 
 export function PostListItem({ post }) {
@@ -11,23 +11,15 @@ export function PostListItem({ post }) {
       href={`/writing/${slug}`}
       className={cn('', 'flex text-md items-center')}
     >
-      <UnderlineLinkWithBG label={title} />
+      <UnderlineLinkWithBG
+        label={title}
+        underlinePaddingRatio={0}
+        underlineHeightRatio={0.005}
+      />
       <div className='w-32 bg-transparent flex-1 h-px' />
-      <div className='w-fit'>{formatLastPlayedTime(date)}</div>
-      {/* <article className='post-item'>
-        <h2 className='post-title'>{title}</h2>
-        {date && <time className='post-date'>{date}</time>}
-        {description && <p className='post-description'>{description}</p>}
-        {tags && tags.length > 0 && (
-          <div className='post-tags'>
-            {tags.map((tag) => (
-              <span key={tag} className='post-tag'>
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </article> */}
+      <div className='w-fit text-sm font-mono text-neutral-400 dark:text-neutral-700'>
+        {formatDateForPostList(date)}
+      </div>
     </Link>
   );
 }

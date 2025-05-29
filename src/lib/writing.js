@@ -1,4 +1,9 @@
 /**
+ * IMPORTANT: Metadata Format
+ *
+ */
+
+/**
  * @fileoverview Utilities for managing MDX blog posts with metadata extraction
  * @author RajatPayghan
  * @version 2.0.0

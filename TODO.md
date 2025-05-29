@@ -1,5 +1,9 @@
-- TODO Font issues
-- TODO Refactor pages structure
-- TODO Spotify
-- Extract classes to css files
-- Clean up positioning issues
+
+# Todos
+
+TODO Font issues
+TODO Refactor pages structure
+TODO Spotify
+
+FIXME : Standardise Metadata
+FIXME : Add documentation to how post metadata flows
