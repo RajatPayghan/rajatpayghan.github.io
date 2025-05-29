@@ -1,5 +1,3 @@
-'use client';
-
 /*
  * Conponent imported from fancy components
  *
@@ -7,31 +5,37 @@
  * @Source : https://www.fancycomponents.dev/docs/components/text/underline-to-background
  */
 
+'use client';
+
 import { useEffect, useRef } from 'react';
-import { color, motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { useTheme } from 'next-themes';
 
-export default function UnderlineLinkWithBG({
+const UnderlineToBackground = ({
   label,
   className,
   onClick,
   transition = { type: 'spring', damping: 30, stiffness: 300 },
-
-  // Default to 10% of font size
   underlineHeightRatio = 0.1,
-
-  // Default to 1% of font size
   underlinePaddingRatio = 0.01,
-
-  targetTextColorLight = '#20f',
-  targetTextColorDark = '#fef',
-  targetBorderColorLight = 'bg-[#20f]',
-  targetBorderColorDark = 'bg-[#8BFA4A]',
   ...props
-}) {
+}) => {
   const textRef = useRef(null);
   const { theme } = useTheme();
-  const isDarkMode = theme === 'dark';
+
+  // Define text and underline colors based on theme
+  const themeColors = {
+    light: {
+      text: '#0a0a0a',
+      underline: '#8BFA4A',
+    },
+    dark: {
+      text: '#000000',
+      underline: '#8BFA4A',
+    },
+  };
+
+  const activeColors = themeColors[theme] || themeColors.light;
 
   useEffect(() => {
     const updateUnderlineStyles = () => {
@@ -39,6 +43,7 @@ export default function UnderlineLinkWithBG({
         const fontSize = parseFloat(getComputedStyle(textRef.current).fontSize);
         const underlineHeight = fontSize * underlineHeightRatio;
         const underlinePadding = fontSize * underlinePaddingRatio;
+
         textRef.current.style.setProperty(
           '--underline-height',
           `${underlineHeight}px`
@@ -58,15 +63,9 @@ export default function UnderlineLinkWithBG({
 
   const underlineVariants = {
     initial: {
-      backgroundColor: isDarkMode
-        ? targetBorderColorDark
-        : targetBorderColorLight,
       height: 'var(--underline-height)',
     },
     target: {
-      backgroundColor: isDarkMode
-        ? targetBorderColorDark
-        : targetBorderColorLight,
       height: '100%',
       transition: transition,
     },
@@ -77,7 +76,7 @@ export default function UnderlineLinkWithBG({
       color: 'currentColor',
     },
     target: {
-      color: isDarkMode ? targetTextColorDark : targetTextColorLight,
+      color: activeColors.text,
       transition: transition,
     },
   };
@@ -87,24 +86,25 @@ export default function UnderlineLinkWithBG({
       className={`relative inline-block cursor-pointer ${className}`}
       whileHover='target'
       onClick={onClick}
+      // key={theme}
       ref={textRef}
       {...props}
     >
       <motion.div
-        className={`absolute ${targetBorderColorLight} dark:${targetBorderColorDark} w-full`}
+        className='absolute w-full'
         style={{
+          backgroundColor: activeColors.underline,
           height: 'var(--underline-height)',
           bottom: 'calc(-1 * var(--underline-padding))',
         }}
         variants={underlineVariants}
         aria-hidden='true'
       />
-      <motion.span
-        variants={textVariants}
-        className='px-1 text-current relative'
-      >
+      <motion.span variants={textVariants} className='text-current relative'>
         {label}
       </motion.span>
     </motion.span>
   );
-}
+};
+
+export default UnderlineToBackground;
