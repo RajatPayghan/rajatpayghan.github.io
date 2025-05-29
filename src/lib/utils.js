@@ -48,7 +48,7 @@ export function formatDateForPostList(inputTime) {
     const date = past.toLocaleDateString('en-GB', { day: 'numeric' });
     const month = past.toLocaleDateString('en-GB', { month: 'short' });
     const year = past.toLocaleDateString('en-GB', { year: '2-digit' });
-    return `${date}${getOrdinalSuffix(date)} ${month} '${year}`;
+    return `${date}${getOrdinalSuffix(date)} ${month}`;
   }
 
   const units = [

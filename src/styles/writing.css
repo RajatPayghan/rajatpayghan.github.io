@@ -48,53 +48,37 @@
 }
 
 /* Posts/content wrapper */
-.content-wrapper {
-  @apply flex flex-col gap-4 md:gap-2;
+.content-wrapper-post-list {
+  @apply flex flex-col gap-6 md:gap-2;
+}
+
+.content-wrapper-year-list {
+  @apply flex flex-col gap-16 md:gap-16;
 }
 
 /* ======================
-   POST COMPONENTS
+   /writing PAGE POST LIST COMPONENTS
    ====================== */
 
 /* Post list item container */
 .post-link {
-  @apply block transition-colors duration-200;
-}
-
-.post-link:hover {
-  @apply text-neutral-600 dark:text-neutral-300;
-}
-
-/* Individual post item */
-.post-item {
-  @apply border border-transparent rounded-lg p-4 transition-all duration-200;
-}
-
-.post-item:hover {
-  @apply border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50;
+  @apply flex items-start md:items-center gap-2;
+  @apply text-sm md:text-base;
+  @apply transition-all duration-300;
+  @apply md:p-2 rounded-lg;
+  @apply md:hover:pr-4;
+  @apply md:hover:bg-white md:border md:border-[#8bfa4a]/0 md:hover:border-[#8bfa4a];
+  @apply md:hover:dark:bg-neutral-900 md:dark:border-none;
 }
 
 /* Post title */
 .post-title {
-  @apply text-lg font-medium mb-2;
+  @apply dark:group-hover:text-[#8bfa4a] flex-1 min-w-0;
 }
 
 /* Post metadata */
 .post-date {
-  @apply text-sm text-neutral-500 dark:text-neutral-400 mb-2;
-}
-
-.post-description {
-  @apply text-neutral-600 dark:text-neutral-300 text-sm mb-3 line-clamp-2;
-}
-
-/* Post tags */
-.post-tags {
-  @apply flex flex-wrap gap-2;
-}
-
-.post-tag {
-  @apply text-xs px-2 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300;
+  @apply w-fit text-xs md:text-sm font-mono text-neutral-400 dark:text-neutral-700 flex-shrink-0 pl-1 md:pl-0;
 }
 
 /* ======================

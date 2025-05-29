@@ -1,10 +1,13 @@
 
 # Todos
 
-TODO Font issues
+TODO Blogs : On shoulder of giants, Uses, Death of the browser company, Spotify Widget
 TODO Refactor pages structure
-TODO Spotify
+Font issues
+Spotify
 
-FIXME : Standardise Metadata
 FIXME : Add documentation to how post metadata flows
-FIXME : Add `type` metadata to post metadara for post, note, essay
+Standardise Metadata
+Add `type` metadata to post metadara for post, note, essay
+Decorator pattern in '@/lib/writing.js'
+Map based on years

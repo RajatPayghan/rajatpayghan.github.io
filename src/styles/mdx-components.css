@@ -11,9 +11,14 @@
   @apply pb-4;
 }
 
+.mdx-h1::before {
+  content: '# ';
+  @apply hidden md:flex absolute -left-8 font-bold text-neutral-400 dark:text-neutral-800;
+}
+
 .mdx-h2 {
   @apply relative text-lg md:text-xl font-medium;
-  @apply text-neutral-400 dark:text-neutral-300;
+  @apply text-neutral-400 dark:text-neutral-600;
   @apply mb-3 md:mb-5 mt-12;
   @apply leading-tight;
 }
