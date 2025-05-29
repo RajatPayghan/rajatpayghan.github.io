@@ -13,6 +13,7 @@ export const metadata = {
   tags: ['', ''],
   isPublished: false,
   isFeatured: false,
+  type: 'post',
   image: './index.avif',
 };
 ```
@@ -28,6 +29,7 @@ export const metadata = {
   tags: ['', ''], // Make sure there is always a tag
   isPublished: false, // Mark true when ready to publish
   isFeatured: false, // If featuring, mark this a true
+  type: 'post', // Types can be 'note', 'post' and 'essay'
   image: './index.avif', // Preffered use is avif format
   ...otherMetadata
 };
