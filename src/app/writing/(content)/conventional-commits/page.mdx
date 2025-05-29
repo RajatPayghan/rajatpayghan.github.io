@@ -9,7 +9,7 @@ export const metadata = {
   tags: ['dev.logs', 'portfolio'],
 };
 
-## The problem
+# The problem
 
 Writing a git commit message is hard. Especially for multi-factored bug fixes. It's especially tricky to write down which multitude of unchanged files were reponsible for the obscure bug you are targeting. Why that one line of CSS in your globals.css which hadn't been causing a problem for aeons suddenly decides to turn up to create problems which cant even be successfully replicated. Was this personal ? Yes. But that's a story for another day.
 
@@ -20,3 +20,12 @@ In the [homepage](/), the current page is the Version V3.2, with each version ha
 ## Here comes the saviour
 
 Currently, I came across this awesome specification for git commits called [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Struggling from small code problems while developing this website, it was difficult to manage what I was changing and where the changes were made.
+
+```bash
+Fix !: Render children onLoad in writing post
+
+Added a conditional render using useState for loaded, which is updated by <PostHeader onLoad={} />
+
+BREAKING CHANGE : I made writing/(content)/layout.js a client component
+
+```

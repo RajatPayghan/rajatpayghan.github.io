@@ -100,7 +100,10 @@ const UnderlineToBackground = ({
         variants={underlineVariants}
         aria-hidden='true'
       />
-      <motion.span variants={textVariants} className='text-current relative'>
+      <motion.span
+        variants={textVariants}
+        className='text-current p-1 relative'
+      >
         {label}
       </motion.span>
     </motion.span>

@@ -12,14 +12,14 @@
 
 /* Header section with title and navigation */
 .writing-header {
-  @apply relative flex flex-col gap-8 md:flex-row;
+  @apply relative flex flex-col gap-8 lg:flex-row;
   align-items: left; /* align-middle -> items-center */
 }
 
 /* Navigation links */
 .writing-nav-link {
   @apply static md:absolute flex gap-1;
-  @apply text-neutral-400 dark:text-neutral-700;
+  @apply font-instrument text-neutral-400 dark:text-neutral-700;
   @apply md:hover:gap-2;
   @apply transition-all duration-700;
   @apply md:-left-1/4;
@@ -28,6 +28,7 @@
 
 .writing-content-nav-link {
   @apply static md:absolute top-0 flex gap-1 text-neutral-400 dark:text-neutral-700;
+  @apply font-instrument;
   @apply md:hover:gap-2;
   @apply transition-all duration-700;
   left: -25%; /* -left-1/4 */
@@ -42,7 +43,7 @@
 
 /* Main content area */
 .writing-content {
-  @apply flex flex-col;
+  @apply flex flex-col justify-center;
   gap: 2rem; /* gap-8 = 32px = 2rem */
 }
 

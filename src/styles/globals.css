@@ -184,6 +184,12 @@
     @apply px-8;
     @apply mb-24 mt-16;
   }
+
+  .container-inner-writing {
+    @apply w-screen max-w-screen-md min-h-min;
+    @apply px-8;
+    @apply mb-24 mt-16;
+  }
 }
 
 /* === Custom Text Styles === */

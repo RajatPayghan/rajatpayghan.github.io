@@ -4,19 +4,18 @@
 
 /* Headings */
 .mdx-h1 {
-  @apply relative w-fit text-xl md:text-2xl   font-medium;
-  @apply text-neutral-800 dark:text-neutral-200;
+  @apply relative w-fit text-xl md:text-2xl font-medium;
+  @apply capitalize text-neutral-800 dark:text-neutral-200;
   @apply mb-6 mt-10 first:mt-0;
   @apply leading-tight;
-  @apply pb-4 border-b-2 border-dashed border-neutral-100/50 dark:border-neutral-900/50;
+  @apply pb-4;
 }
 
 .mdx-h2 {
-  @apply relative text-lg md:text-xl   font-medium;
-  @apply text-neutral-700 dark:text-neutral-300;
-  @apply mb-3 md:mb-5 mt-8;
+  @apply relative text-lg md:text-xl font-medium;
+  @apply text-neutral-400 dark:text-neutral-300;
+  @apply mb-3 md:mb-5 mt-12;
   @apply leading-tight;
-  @apply pb-2;
 }
 
 .mdx-h3 {
@@ -35,10 +34,11 @@
 
 /* Paragraphs */
 .mdx-paragraph {
-  @apply text-base text-pretty md:text-lg;
-  @apply text-neutral-600 dark:text-neutral-400;
-  @apply mb-5 leading-relaxed;
-  @apply max-w-none;
+  @apply font-sans text-base text-pretty md:text-lg; /* Font changed to geist */
+  @apply leading-7 md:leading-8 tracking-wider;
+  @apply text-neutral-800 dark:text-neutral-300;
+  @apply mb-5;
+  /* @apply max-w-none; */
 }
 
 /* Lists */
@@ -92,8 +92,8 @@
 /* Code */
 .mdx-code-block {
   @apply my-6 overflow-x-auto rounded-lg;
-  @apply bg-neutral-100 dark:bg-neutral-900;
-  @apply border border-neutral-200 dark:border-neutral-800;
+  @apply bg-neutral-50/50 dark:bg-neutral-900;
+  @apply border border-neutral-100 dark:border-neutral-800;
   @apply p-4;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .mdx-inline-code {
-  @apply px-1.5 py-0.5 mx-1 rounded-md break-words;
+  @apply px-0.5  py-0.5 mx-1 rounded-md break-words;
   @apply bg-neutral-100 dark:bg-neutral-900;
   @apply text-xs font-mono text-neutral-800 dark:text-neutral-200;
   @apply border border-neutral-200 dark:border-neutral-800;

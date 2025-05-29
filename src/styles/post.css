@@ -12,8 +12,9 @@
 }
 
 .post-meta-description {
-  @apply font-hanken text-base md:text-lg;
-  @apply font-hanken text-neutral-600 dark:text-neutral-400;
+  @apply font-hanken;
+  @apply text-base md:text-lg;
+  @apply text-neutral-600 dark:text-neutral-400;
 }
 
 .post-other-meta {
@@ -27,7 +28,7 @@
 }
 
 .post-meta-date {
-  @apply text-sm text-neutral-500 dark:text-neutral-400;
+  @apply text-sm text-neutral-700 dark:text-neutral-300;
   @apply flex items-center h-6;
 }
 
