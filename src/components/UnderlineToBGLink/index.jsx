@@ -1,5 +1,5 @@
 /*
- * Conponent imported from fancy components
+ * Component imported from fancy components
  *
  * @usage : <UnderlineLinkWithBG label='Cool Underline Link' onClick={() => ()}
  * @Source : https://www.fancycomponents.dev/docs/components/text/underline-to-background
@@ -86,7 +86,7 @@ const UnderlineToBackground = ({
       className={`relative inline-block cursor-pointer ${className}`}
       whileHover='target'
       onClick={onClick}
-      // key={theme}
+      // Removed key={theme} - this was causing the component to remount
       ref={textRef}
       {...props}
     >
@@ -98,11 +98,21 @@ const UnderlineToBackground = ({
           bottom: 'calc(-1 * var(--underline-padding))',
         }}
         variants={underlineVariants}
+        // Add animate prop to smoothly transition background color on theme change
+        animate={{
+          backgroundColor: activeColors.underline,
+        }}
+        transition={transition}
         aria-hidden='true'
       />
       <motion.span
         variants={textVariants}
         className='text-current p-1 relative'
+        // Add animate prop to smoothly transition text color on theme change
+        animate={{
+          color: 'currentColor', // This will use the CSS currentColor which should update with theme
+        }}
+        transition={transition}
       >
         {label}
       </motion.span>
