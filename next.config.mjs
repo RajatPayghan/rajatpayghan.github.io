@@ -13,7 +13,6 @@ const nextConfig = {
 
   experimental: {
     mdxRs: true,
-    viewTransition: true,
   },
 };
 

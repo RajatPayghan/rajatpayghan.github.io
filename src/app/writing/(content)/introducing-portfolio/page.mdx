@@ -1,3 +1,9 @@
+import SplineHome from '@/components/Home/archive/spline-home';
+import MediaContainer from '@/components/Writing/container-media.js';
+import BlogImage from '@/components/Writing/container-image.js';
+import Image from 'react';
+import WebsiteV1Image from './Website-V1.jpg';
+
 export const metadata = {
   title: 'Introducing my portfolio website',
   date: '2025-06-01',
@@ -13,6 +19,23 @@ export const metadata = {
 
 Look Mom – I made my own website!
 
-And honestly, it took me soo long. Way longer than I expected. The idea stemmed as a simple portfolio website in 2023, right when I started feelancing as a Digital Product Designer. I wanted to showcase my work online (mostly because every freelance designer I looked up to had one), so I tried creating one on webflow, then shifted to framer when I co-founded studio.pixellum. But that didnt work out too well. Then, due to uni and internships, this project was kept on hold.
+And honestly, it took me soo long. Way longer than I expected. The idea started as a simple portfolio in 2023 when I began freelancing as a Digital Product Designer. I wanted to showcase my work online (mostly because every freelance designer I looked up to had one), so I tried Webflow (too complicated), then Framer (when I co-founded studio.pixellum). But that didn't work out. Then university and internships put this project on hold.
 
-In September 2024, I decided to can the lure of 'website builders', and decided to
+# The start of something code
+
+In September 2024, I decided to can the lure of 'website builders', and started developing my website in next.js and react. I had some familiarity with the stack, and with just a sprinkle of simple sections, my first website version V1 came into existance.
+
+<MediaContainer>
+  <BlogImage src={WebsiteV1Image} alt='Version 1 of my website, Oct 2024' />
+</MediaContainer>
+
+Fun fact, the small robot is an interactive spline element. Feel free to mess around with it
+
+<MediaContainer>
+  <SplineHome
+    sceneLink={'https://prod.spline.design/MWg7T9pvG4cTrW9r/scene.splinecode'}
+    className='w-full'
+  />
+</MediaContainer>
+
+Then soon, in Feb 2024, I got some free time in my hands, and added support for dark mode, changed the overall feel of the website and added a cool image shader for my profile photo.
