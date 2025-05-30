@@ -1,9 +1,12 @@
 /**
  *
- * SERVER COMPONENT - List of posts with sorting
+ * CLIENT COMPONENT - List of posts with sorting
+ * Made client to support filtering based on state change of filter button
+ * TODO Filter button
  *
  */
 
+'use client';
 import { PostListItem } from './post-listitem';
 
 // Helper function: Sort posts by date (newest first)
@@ -43,6 +46,7 @@ function groupPostsByYear(posts) {
   }, {});
 }
 
+// TODO Move the tage & type filter logic inside this component
 export function PostsList({ posts, filterTag = '', filterType = '' }) {
   const sortedPosts = sortPostsByDate(posts);
   const publishedPosts = getPublishedPosts(sortedPosts);
@@ -54,6 +58,8 @@ export function PostsList({ posts, filterTag = '', filterType = '' }) {
 
   return (
     <div className='writing-content'>
+      {/* Future filtering options */}
+
       <section className='content-wrapper-year-list'>
         {Object.entries(postsByYear)
           .sort(([a], [b]) => b - a) // Sort years newest first
@@ -61,7 +67,7 @@ export function PostsList({ posts, filterTag = '', filterType = '' }) {
             <div key={year} className='content-wrapper-post-list'>
               <div className='flex gap-4 items-center text-neutral-400 dark:text-neutral-600'>
                 <div>{year}</div>
-                <div className='w-full h-px bg-neutral-100 dark:bg-neutral-800' />
+                <div className='w-full h-px bg-neutral-100 dark:bg-neutral-900' />
               </div>
               {yearPosts.map((post) => (
                 <PostListItem key={post.slug} post={post} />

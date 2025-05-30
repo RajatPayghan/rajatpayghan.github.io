@@ -29,7 +29,8 @@ export default function Writing() {
 
       <div className='section-divider' />
 
-      <PostsList posts={posts} />
+      {/* Might need to refactor this page if need arises for tag filtering */}
+      <PostsList posts={posts} filterTag='' filterType='' />
     </PageLayout>
   );
 }
