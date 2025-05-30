@@ -10,7 +10,7 @@ export const metadata = {
   date: 'YYYY-MM-DD',
   readTime: 'About X mins',
   description: '',
-  tags: ['', ''],
+  tags: [],
   isPublished: false,
   isFeatured: false,
   type: 'post',
