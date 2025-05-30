@@ -15,6 +15,7 @@ export const metadata = {
   isFeatured: false,
   type: 'post',
   image: './index.avif',
+  excerpt: ''
 };
 ```
 
@@ -31,6 +32,15 @@ export const metadata = {
   isFeatured: false, // If featuring, mark this a true
   type: 'post', // Types can be 'note', 'post' and 'essay'
   image: './index.avif', // Preffered use is avif format
+  excerpt: ''
   ...otherMetadata
 };
 ```
+
+## Steps to add a metedata element
+
+1. Go to @/lib/writing.js
+2. For all function getAllPostsMetadata(), getPostBySlug(slug), getPostMetadataBySlug(slug) add the new metadata
+3. In other pages, add the function you want
+4. Adding new metadata is backwards compatible
+5. Take care new functions in /writing/page.js etc are backwards compatible.

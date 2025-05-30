@@ -103,6 +103,7 @@ export function getAllPostsMetadata() {
       isFeatured: metadata.isFeatured || false,
       type: metadata.type || 'post',
       image: metadata.image || '',
+      excerpt: metadata.excerpt || '',
       ...metadata, // Spread any additional metadata fields
     };
   });
@@ -161,6 +162,7 @@ export function getPostBySlug(slug) {
       isFeatured: metadata.isFeatured || false,
       type: metadata.type || 'post',
       image: metadata.image || '',
+      excerpt: metadata.excerpt || '',
       ...metadata, // Include any additional metadata fields
     },
   };
@@ -216,6 +218,7 @@ export function getPostMetadataBySlug(slug) {
     isFeatured: metadata.isFeatured || false,
     type: metadata.type || 'post',
     image: metadata.image || '',
+    excerpt: metadata.excerpt || '',
     ...metadata, // Include any additional metadata fields
   };
 }
