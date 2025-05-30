@@ -19,6 +19,14 @@ Writing a git commit message is hard. Especially for multi-factored bug fixes. I
 
 Due to the small scale, the code and the structure of the repo changed quite frequently. New folders were added regularly, defunct ones deleted, functions merged and complete page versions changed. During the development of the [writing page](/writing), I started with `@next/mdx` along with `app/` routing, went to `next-mdx-remote`to make it work with a local folder in the project, came back to`app/`routing and finally made peace with it. All while git was going crazy tracking the five`page.mdx` pages across folders as my routing logic changed. I could have just reverted changes and started a new branch, but disorganised me had added parallel changes to different files in the same commit. So I needed to refactor in branch.
 
+```bash
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
 In the [homepage](/), the current page is the Version V3.2, with each version having its own `archive.Vx.page.js` file stored "just in case" because in commits I couldn't keep track of where I changed which page.
 
 ## Here comes the saviour
