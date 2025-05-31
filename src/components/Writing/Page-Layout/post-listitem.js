@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 import { formatDateForPostList } from '@/lib/utils';
-import PostIcon from './post-icon';
-import { useIsMobile } from '../Hooks/useIsMobile';
+import PostIcon from '../Post-Meta/post-icon';
+import { useIsMobile } from '../../Hooks/useIsMobile';
 
 export function PostListItem({ post }) {
   const { slug, title, date, readTime, tags, type, isFeatured } = post;

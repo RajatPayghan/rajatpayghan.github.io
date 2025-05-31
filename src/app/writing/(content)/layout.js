@@ -9,12 +9,12 @@ import '@/styles/Writing/writing.css';
 import { MoveLeft } from 'lucide-react';
 
 // Server Components
-import { PageLayout } from '@/components/Writing/page-layout';
-import { WritingHeader } from '@/components/Writing/writing-header';
-import { NavigationLink } from '@/components/Writing/navigation-link';
-import { PostHeader } from '@/components/Writing/post-header';
-import { ContentLayout } from '@/components/Writing/layout-content';
-import { WritingContentWrapper } from '@/components/Writing/content-wrapper';
+import { PageLayout } from '@/components/Writing/Page-Layout/page-layout';
+import { WritingHeader } from '@/components/Writing/Page-Layout/writing-header';
+import { NavigationLink } from '@/components/Writing/Page-Layout/navigation-link';
+import { PostHeader } from '@/components/Writing/Post-Meta/post-header';
+import { ContentLayout } from '@/components/Writing/Page-Layout/layout-content';
+import { WritingContentWrapper } from '@/components/Writing/Post-Components/content-wrapper';
 
 export default function WritingLayout({ children }) {
   const [isPostHeaderLoaded, setIsPostHeaderLoaded] = useState(false);

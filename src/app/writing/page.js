@@ -4,13 +4,13 @@ import { getAllPostsMetadata } from '@/lib/writing';
 import { ArrowUpLeft } from 'lucide-react';
 
 // Server Components
-import { PageLayout } from '@/components/Writing/page-layout';
-import { WritingHeader } from '@/components/Writing/writing-header';
-import { NavigationLink } from '@/components/Writing/navigation-link';
-import { PostsList } from '@/components/Writing/post-list';
+import { PageLayout } from '@/components/Writing/Page-Layout/page-layout';
+import { WritingHeader } from '@/components/Writing/Page-Layout/writing-header';
+import { NavigationLink } from '@/components/Writing/Page-Layout/navigation-link';
+import { PostsList } from '@/components/Writing/Page-Layout/post-list';
 
 // Client Component
-import { HeroTitle } from '@/components/Writing/hero-title';
+import { HeroTitle } from '@/components/Writing/Page-Layout/hero-title';
 
 export default function Writing() {
   const posts = getAllPostsMetadata();

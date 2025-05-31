@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { usePostMetadata } from '../Hooks/usePostMetadata';
+import { usePostMetadata } from '../../Hooks/usePostMetadata';
 // import { LoadingState } from './LoadingState';
 // import { ErrorState } from './ErrorState';
 import { PostMetadataCard } from './post-metadata-card';
