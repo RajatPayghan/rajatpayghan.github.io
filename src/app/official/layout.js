@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@/components/Layout/theme-provider';
 
 import '@/styles/globals.css';
-import '@/styles/font-control.css';
+import '@/styles/Home/font-control.css';
 import Footer from '@/components/Footer/v1.footer';
 import GlowingGridBackground from '@/components/Background/glowing-grid';
 import { cn } from '@/constants/utils';

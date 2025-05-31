@@ -4,8 +4,8 @@ import React from 'react';
 import { useState } from 'react';
 
 // Icons & Styles
-import '@/styles/post.css';
-import '@/styles/writing.css';
+import '@/styles/Writing/post.css';
+import '@/styles/Writing/writing.css';
 import { MoveLeft } from 'lucide-react';
 
 // Server Components

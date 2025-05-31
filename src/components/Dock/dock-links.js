@@ -1,5 +1,4 @@
 import React from 'react';
-import '@/styles/dock.css';
 import Link from 'next/link';
 import { cn } from '@/constants/utils';
 import { useDockItemHoverEffect } from '../Hooks/useDockItemMouseMove';

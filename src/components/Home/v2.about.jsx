@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import '@/styles/homepage.css';
+import '@/styles/Home/homepage.css';
 
 import { Libre_Baskerville } from 'next/font/google';
 import localFont from 'next/font/local';

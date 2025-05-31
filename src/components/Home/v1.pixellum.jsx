@@ -4,7 +4,7 @@ import {
   SectionContent,
   SectionTitle,
 } from '@/components/Sections';
-import '@/styles/pixellum.css';
+import '@/styles/Home/pixellum.css';
 
 import { OnlineLink } from '../OnlineLink';
 import { ArrowUpRight } from 'lucide-react';

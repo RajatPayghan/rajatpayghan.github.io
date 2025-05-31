@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
+import '@/styles/Layout/dock.css';
 import { useIsMobile } from '../Hooks/useIsMobile';
 import { ThemeSwitcherButtonIcon } from '../Layout/theme-switcher';
 import DockContactButton from './contact-button';
 import DockLinks from './dock-links';
-import '@/styles/dock.css';
 
 const links = [
   { name: 'Home', href: '/' },

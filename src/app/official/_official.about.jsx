@@ -2,7 +2,7 @@
 // Imports
 // -----------------------------------------------------------------
 import React from 'react';
-import '@/styles/homepage.css';
+import '@/styles/Home/homepage.css';
 
 import { BlurFade } from '@/components/BlurFade/blur-fade';
 

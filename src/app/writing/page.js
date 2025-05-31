@@ -1,5 +1,5 @@
 import React from 'react';
-import '@/styles/writing.css';
+import '@/styles/Writing/writing.css';
 import { getAllPostsMetadata } from '@/lib/writing';
 import { ArrowUpLeft } from 'lucide-react';
 

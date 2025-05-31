@@ -5,7 +5,7 @@ import { PinHead } from '@/constants/icons';
 import { useIsMobile } from '../Hooks/useIsMobile';
 import dynamic from 'next/dynamic';
 import { ThemeSwitcherButtonIconWithText } from '../Layout/theme-switcher';
-import '@/styles/v2.footer.css';
+import '@/styles/Layout/v2.footer.css';
 
 const Time = dynamic(() => import('./footer-time'), {
   ssr: false,

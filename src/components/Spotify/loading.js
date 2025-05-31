@@ -1,5 +1,5 @@
 'use client';
-import '@/styles/spotify.css';
+import '@/styles/Home/spotify.css';
 import { useIsMobile } from '../Hooks/useIsMobile';
 
 export default function SpotifyLoading() {

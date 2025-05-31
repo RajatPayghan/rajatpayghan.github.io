@@ -1,5 +1,4 @@
 import React from 'react';
-import '@/styles/dock.css';
 import { MoveRight } from 'lucide-react';
 
 export default function DockContactButton({}) {

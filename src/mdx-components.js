@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { highlight } from 'sugar-high';
-import '@/styles/mdx-components.css';
-import '@/styles/sugar-high-varibles.css';
+import '@/styles/Writing/mdx-components.css';
+import '@/styles/Writing/sugar-high-varibles.css';
 
 const components = {
   h1: (props) => <h1 className='mdx-h1' {...props} />,
