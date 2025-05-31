@@ -34,10 +34,11 @@ function filterPostsByType(posts, type) {
   return type ? posts.filter((post) => post.type === type) : posts;
 }
 
-// Helper function: Group posts by year
+// Helper function: Group posts by year - FIXED for hydration
 function groupPostsByYear(posts) {
   return posts.reduce((groups, post) => {
-    const year = new Date(post.date).getFullYear();
+    // Extract year directly from YYYY-MM-DD format - most efficient
+    const year = parseInt(post.date.split('-')[0], 10);
     if (!groups[year]) {
       groups[year] = [];
     }
@@ -48,13 +49,13 @@ function groupPostsByYear(posts) {
 
 // TODO Move the tage & type filter logic inside this component
 export function PostsList({ posts, filterTag = '', filterType = '' }) {
-  const sortedPosts = sortPostsByDate(posts);
-  const publishedPosts = getPublishedPosts(sortedPosts);
+  const publishedPosts = getPublishedPosts(posts);
   const tagPosts = filterPostsByTag(publishedPosts, filterTag);
-  const typePosts = filterPostsByType(tagPosts, filterType);
+  const typePosts = filterPostsByType(publishedPosts, filterType);
+  const sortedPosts = sortPostsByDate(publishedPosts);
 
   // Group by year
-  const postsByYear = groupPostsByYear(typePosts);
+  const postsByYear = groupPostsByYear(sortedPosts);
 
   return (
     <div className='writing-content'>

@@ -14,7 +14,7 @@ export const metadata = {
   isPublished: false,
   isFeatured: false,
   type: 'post',
-  image: './index.avif',
+  image: '',
   excerpt: ''
 };
 ```
