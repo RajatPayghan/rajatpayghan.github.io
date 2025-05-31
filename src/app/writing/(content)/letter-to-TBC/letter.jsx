@@ -15,7 +15,7 @@ export default function Letter({ text = '' }) {
 
           {/* Letter content */}
           <div className='relative'>
-            <pre className='font-sans text-neutral-800 dark:text-neutral-200 leading-relaxed whitespace-pre-wrap text-base md:text-lg'>
+            <pre className='font-sans text-neutral-800 dark:text-neutral-200 leading-relaxed whitespace-pre-wrap text-xs md:text-lg'>
               {text}
             </pre>
           </div>
