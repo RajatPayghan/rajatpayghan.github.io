@@ -2,13 +2,11 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { PinHead } from '@/constants/icons';
-import Badge from '../Badge';
 import { useIsMobile } from '../Hooks/useIsMobile';
 import Goodbye from './goodbyes';
 import { Separator } from '../ui/separator';
 import { ThemeSwitcherButtonIconWithText } from '../Layout/theme-switcher';
-import '@/styles/v1.footer.css';
-import { Button } from '../ui/button';
+import '@/styles/Layout/v1.footer.css';
 
 const Time = dynamic(() => import('./footer-time'), {
   ssr: false,
