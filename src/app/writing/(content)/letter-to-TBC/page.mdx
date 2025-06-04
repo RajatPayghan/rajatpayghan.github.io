@@ -1,22 +1,26 @@
 import QuoteBox from '@/components/Writing/Post-Components/quote-box.js';
 import BlogImage from '@/components/Writing/Post-Components/container-image.js';
+import MediaContainer from '@/components/Writing/Post-Components/container-media.js';
 import ImageDiaInvite from './Dia_Invite.jpg';
 import Letter from './letter.jsx';
 
 export const metadata = {
   title: 'Re: Letter to Arc, 2025',
-  date: '2025-06-01',
-  readTime: 'About 6 mins',
-  description: '',
+  date: '2025-06-03',
+  readTime: 'About 5 mins',
+  description:
+    'My thoughts and reply to the Letter to Arc Members, 2025 by The Browser Company. Into a world of Arc, Dia and everything in between.',
   tags: ['arc-browser'],
   isPublished: true,
-  isFeatured: true,
+  isFeatured: false,
   type: 'post',
   image: '',
-  excerpt: '',
+  excerpt:
+    "I felt betrayed by the direction Arc has taken. Here's my side of the story, as someone who has lived and worked inside the browser for years.",
 };
 
-<Letter text="Dear Josh (And The Browser Company),
+<Letter>
+Dear Josh (And The Browser Company),
 
 I feel betrayed.
 
@@ -26,11 +30,11 @@ But it's not.
 
 Arc has been a constant companion throughout my four years as a CS Undergrad. I have designed great apps in it, developed beautiful websites and managed people & products with it. It has been my own locker of tabs, organized by spaces and decorated by boosts. A crazy, messy place of joy.
 
-But now you've pivoted away from the place you call 'your home on the internet' . I read your Letter to Arc members ,2025. And let me just say, I felt let down. how easily you walked away from Arc, a software loved by everyone who experiences it. A software that has provided me loads of joy and tons of help.
+But now you've pivoted away from the place you call "your home on the internet". I read your Letter to Arc Members, 2025. And let me just say, I felt let down—how easily you walked away from Arc, a software loved by everyone who experiences it. A software that has provided me loads of joy and tons of help.
 
 So, I hope, you hear my side of the story. The story of Arc Browser, from the eyes of an avid fan.
 
-"/>
+</Letter>
 
 # Hold up Rajat, but what is Arc
 
@@ -38,7 +42,7 @@ So, I hope, you hear my side of the story. The story of Arc Browser, from the ey
 
 Arc is a browser.......
 
-Hold on, you were expecting something more, weren’t you ? Judging by my ol' dramatic enactment of woe, you might be think I lost something life changing, something out of this world.
+Hold on, you were expecting something more, weren't you? Judging by my ol' dramatic enactment of woe, you might be think I lost something life changing, something out of this world.
 
 Let me tell you, Arc truly _was_ out of this world. In its own unique way, it kind of was.
 
@@ -50,26 +54,24 @@ Arc was my _hammer space_. In a more realistic example for 2000's Indian kids wa
 
 So yes, calling it 'just a browser' doesn't capture what Arc meant to me.
 
-# So what really happened ?
+# So what really happened?
 
 As all montages go, let's start, from the very beginning.
 
 <QuoteBox
-  text={
-    '...the browser is the most important software in your life — and it wasn’t getting the attention it deserved.'
-  }
-  subtext={'Josh Miller, The Browser Company'}
+  text="...the browser is the most important software in your life — and it wasn't getting the attention it deserved."
+  subtext='Josh Miller, The Browser Company'
 />
 
-According to _The Browser Company_, they built Arc because "the browser is the most important software in your life; and it wasn’t getting the attention it deserved". And after its launch, the humble browser did get its well deserved long pending attention.
+According to _The Browser Company_, they built Arc because "the browser is the most important software in your life; and it wasn't getting the attention it deserved". And after its launch, the humble browser did get its well deserved long pending attention.
 
 Never in a million years, ever since I first touched Internet Explorer on my Windows Vista, did I imagine the browser having a fan following.
 
-The OS ? Sure.
+The OS? Sure.
 
-A weird digital paperclip which gives unsolicited advice ? Maybe.
+A weird digital paperclip which gives unsolicited advice? Maybe.
 
-A tool whose sole purpose is to be a window to the internet ? Never
+A tool whose sole purpose is to be a window to the internet? Never
 
 And yet, here in 2025, we have an ardent fan following of Arc, a simple browser. It's not the most popular, most used, or fastest. Its not ultra secure like Brave, anonymous like Onion, default like Chrome or efficient like Safari. Its not even the lightest or snappiest browser out there.
 
@@ -93,28 +95,29 @@ Is it slow and bloated? Yes. Does it need a fresh new start? Maybe, yes. But don
 
 At this point, I don't know if Dia will be 'so radically different' that I can't migrate from Arc completely. Will the features I love survive the AI makeover onslaught? And honestly, what's stopping you from abandoning Dia when the next shiny thing comes along?
 
-# So, what's up with Dia ?
+# So, what's the deal with Dia?
 
 Dia is an AI browser with somewhat meh capabilities. At least for now. It's still in alpha testing, with the testers being predominantly college students, some YouTubers, and some Arc users. I have applied for Dia and haven't yet received an invite.
 
-<BlogImage src={ImageDiaInvite} alt='Applied for Dia, the colours are 💖 tho' />
+<MediaContainer>
+  <BlogImage
+    src={ImageDiaInvite}
+    alt='Applied for Dia, the colours are 💖 tho'
+  />
+</MediaContainer>
 
 Just to give some more context, Dia is essentially a next-gen barebones AI-equipped browser for the masses. Built from the ground up on the SDK that built Arc. It aims to shed the baggage of bloatware that plagued Arc, with most of the "unused" features being taken out.
 
-Speaking of features being taken out, here is an extract about the same from the original article by TBC
-
-Only 5.52% of DAUs use more than one Space regularly. Only 4.17% use Live Folders (including GitHub Live Folders). It's 0.4% for one of our favorite features, Calendar Preview on Hover.
+Speaking of features being taken out, here is an extract about the same from the original article by TBC:
 
 <QuoteBox
-  text={
-    'Only 5.52% of DAUs use more than one Space regularly. Only 4.17% use Live Folders (including GitHub Live Folders). It's 0.4% for one of our favorite features, Calendar Preview on Hover. By contrast, core features in Dia, like chatting with tabs and personalization features, are used by 40% and 37% of DAUs respectively.'
-  }
-  subtext={'Letter to Arc members 2025, The Browser Company'}
+  text="Only 5.52% of DAUs use more than one Space regularly. Only 4.17% use Live Folders (including GitHub Live Folders). It's 0.4% for one of our favorite features, Calendar Preview on Hover. By contrast, core features in Dia, like chatting with tabs and personalization features, are used by 40% and 37% of DAUs respectively."
+  subtext='Letter to Arc members 2025, The Browser Company'
 />
 
 Wow. Out of millions of users, only about 5.5% use Spaces. But, out of maybe a couple thousand alpha testers, those testers who are specifically here to test out the only feature in Dia namely AI tabs, only 40% of the users use the feature.
 
-So essentially, you're comparing established users with varied needs to alpha testers specifically recruited to test AI features. And not even half of those alpha testers actively use the _only_ feature on your new product!
+> So essentially, you're comparing established users with varied needs to alpha testers specifically recruited to test AI features. And not even half of those alpha testers actively use the _only_ feature on your new product!
 
 Wow.
 
@@ -126,6 +129,6 @@ Have guardrails and counter metrics.
 
 And, as Josh rightfully mentioned in his [recent video with MKBHD](https://www.youtube.com/watch?v=pzF7S8zc1IQ), communicate better. Not like a salesman, like you have been doing recently. But like the avid internet admirer we loved during the early days of arc.
 
-# What I need from my browser ?
+# What I need from my browser?
 
-_New blog coming soon about this topic. Stay Tuned!_
+New blog coming soon about this topic. Stay Tuned!

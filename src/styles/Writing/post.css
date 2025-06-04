@@ -37,7 +37,7 @@
 }
 
 .post-meta-tag {
-  @apply flex items-center gap-1 h-6 capitalize;
+  @apply flex items-center gap-1 h-6;
   @apply text-sm text-neutral-600 dark:text-neutral-300;
   @apply dark:hover:text-sky-400 hover:text-sky-600;
   @apply transition-all duration-300;
