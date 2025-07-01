@@ -22,7 +22,7 @@ export default async function Home() {
 
         <Home_Works />
 
-        <Home_Pixellum />
+        {/* <Home_Pixellum /> */}
 
         <Home_WhatsNew />
 
