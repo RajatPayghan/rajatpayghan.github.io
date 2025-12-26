@@ -1,8 +1,8 @@
 export const WHATSNEW = {
-  work: 'I recently completed my final semester as a Computer Science undergraduate at BITS Pilani. In the latter half of 2024, I worked as a Process Intern at The Adecco Group, where I enhanced global pricing processes and developed cross-department tools to improve efficiency.',
+  work: "I recently started my journey at Wells Fargo as a Software Engineer, where I'm building systems and applications that power critical operations in Wealth and Investment Management Technology.",
   casual: '',
   lastLine:
-    'On the side, I’ve been tinkering with my personal website (yes, the one you’re on) in Next.js and listening to Adam Pearce.',
+    "On the (lighter) side, I completed a 10km marathon in Hyderabad, survived Devil's Circuit in Bangalore, and somehow got corpo-pressured into playing pickleball. The last one was definitely not on my 2025 Bingo.",
 };
 
 // For coverSrc, go to inspect on web spotify and grab the image cdn url

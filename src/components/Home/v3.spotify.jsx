@@ -9,7 +9,7 @@ import SpotifyMiddleware from '../Spotify/middleware';
 export default function Home_Spotify() {
   return (
     <SectionContainer>
-      <SectionTitle>Recent</SectionTitle>
+      <SectionTitle>3.5mm Jack</SectionTitle>
       <SectionContent>
         <SpotifyMiddleware />
       </SectionContent>
