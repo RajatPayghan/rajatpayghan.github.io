@@ -6,6 +6,7 @@ import { useIsMobile } from '../Hooks/useIsMobile';
 import dynamic from 'next/dynamic';
 import { ThemeSwitcherButtonIconWithText } from '../Layout/theme-switcher';
 import '@/styles/Layout/v2.footer.css';
+import { FEATURE_FLAGS } from '@/constants/feature-flags';
 
 const Time = dynamic(() => import('./footer-time'), {
   ssr: false,
@@ -29,7 +30,10 @@ export default function Footer() {
       <div className='content'>
         <div className='content-top'>
           <div className='link-wrapper'>
-            <div className='link' onClick={scrollToTop}>
+            <div
+              className='link'
+              onClick={scrollToTop}
+            >
               Go to Top ↑
             </div>
           </div>
@@ -51,9 +55,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className='theme'>
-        <ThemeSwitcherButtonIconWithText />
-      </div>
+      {/* TODO : Change this logic. Add a spacer to the end */}
+      {FEATURE_FLAGS.themeControls.enableTheming ? (
+        <div className='theme'>
+          <ThemeSwitcherButtonIconWithText />
+        </div>
+      ) : (
+        <div className='theme' />
+      )}
     </footer>
   );
 }

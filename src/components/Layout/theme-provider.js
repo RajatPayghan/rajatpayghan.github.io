@@ -10,8 +10,8 @@ export function ThemeProvider({ children }) {
   return (
     <NextThemesProvider
       attribute='class'
-      defaultTheme={FEATURE_FLAGS.darkMode.defaultTheme} // From lib/feature-flags
-      enableSystem={FEATURE_FLAGS.darkMode.enableSystem} // From lib/feature-flags
+      defaultTheme={FEATURE_FLAGS.themeControls.defaultTheme} // From lib/feature-flags
+      enableSystem={FEATURE_FLAGS.themeControls.enableSystem} // From lib/feature-flags
     >
       {children}
     </NextThemesProvider>
