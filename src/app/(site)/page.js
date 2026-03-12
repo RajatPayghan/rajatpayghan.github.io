@@ -26,7 +26,7 @@ export default async function Home() {
 
         <Home_WhatsNew />
 
-        <Home_Spotify />
+        {/* <Home_Spotify /> */}
       </BlurFade>
     </>
   );
