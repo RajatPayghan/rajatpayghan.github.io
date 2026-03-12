@@ -3,9 +3,9 @@ import ScrollBottomButton from '@/components/ScrollToBottom';
 
 // Sections
 import { BlurFade } from '@/components/BlurFade/blur-fade';
-import Home_About from '@/app/official/_official.about';
-import Home_Casual from '@/app/official/_official.casual';
-import Home_WhatsNew from '@/app/official/_official.whatsnew';
+import Home_About from '@/app/_official/_official.about';
+import Home_Casual from '@/app/_official/_official.casual';
+import Home_WhatsNew from '@/app/_official/_official.whatsnew';
 import Home_Works from '@/components/Home/v3.works';
 import Home_Spotify from '@/components/Home/v3.spotify';
 import Home_Pixellum from '@/components/Home/v1.pixellum';
